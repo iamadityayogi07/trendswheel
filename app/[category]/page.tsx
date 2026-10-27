@@ -38,21 +38,30 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
   const popular = getPopularPosts(6, c.slug);
 
   return (
-    <div className="container-page py-6">
+    <>
       {categorySchemas(c, posts).map((s, i) => (
         <JsonLd key={i} data={s} />
       ))}
-      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: c.name }]} />
+      <div className="hero-band">
+        <header className="container-page py-8 sm:py-12">
+          <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: c.name }]} />
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <span className="chip">{c.name}</span>
+            <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-ink-2 ring-1 ring-line">{posts.length} articles</span>
+          </div>
+          <h1 className="font-display mt-4 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">{copy?.heading ?? c.name}</h1>
+          <div className="mt-4 h-1 w-16 rounded-full bg-brand" aria-hidden="true" />
+          <div className="mt-6 grid gap-5 text-[1.05rem] leading-relaxed text-ink-2 lg:grid-cols-2 lg:gap-10">
+            {copy?.intro.map((t) => (
+              <p key={t} className="border-l-4 border-brand/30 pl-5">
+                {t}
+              </p>
+            ))}
+          </div>
+        </header>
+      </div>
 
-      <header className="mt-6 max-w-3xl">
-        <h1 className="font-display text-3xl font-bold leading-tight sm:text-4xl">{copy?.heading ?? c.name}</h1>
-        {copy?.intro.map((t) => (
-          <p key={t} className="mt-4 text-lg text-ink-2">
-            {t}
-          </p>
-        ))}
-      </header>
-
+      <div className="container-page py-6">
       {picks.length > 0 && (
         <section className="card mt-8 p-5" aria-labelledby="start-here">
           <h2 id="start-here" className="font-display text-xl font-bold">
@@ -138,6 +147,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
             </Link>
           ))}
       </nav>
-    </div>
+      </div>
+    </>
   );
 }
