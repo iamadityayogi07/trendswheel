@@ -99,7 +99,7 @@ export default function HomePage() {
 
       <AdUnit kind="inFeed" />
 
-      {sections.map(({ c, posts: ps, total }, i) => (
+      {sections.map(({ c, posts: ps, total }) => (
         <Fragment key={c.slug}>
         <section className="mt-12" aria-labelledby={`cat-${c.slug}`}>
           <div className="flex items-end justify-between gap-4">
@@ -118,7 +118,7 @@ export default function HomePage() {
             ))}
           </ul>
         </section>
-        {(i === 1 || i === sections.length - 1) && <AdUnit kind="display" />}
+        <AdUnit kind="display" />
         </Fragment>
       ))}
 

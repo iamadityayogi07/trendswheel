@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import JsonLd from '@/components/JsonLd';
+import AdUnit from '@/components/ads/AdUnit';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
 import LoadMore from '@/components/post/LoadMore';
 import PostCard from '@/components/post/PostCard';
@@ -41,6 +42,8 @@ export default async function AuthorPage({ params }: { params: Promise<Params> }
         </div>
       </header>
 
+      <AdUnit kind="display" />
+
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
       <section className="mt-10 min-w-0" aria-labelledby="author-posts">
         <h2 id="author-posts" className="font-display text-2xl font-bold">
@@ -53,6 +56,7 @@ export default async function AuthorPage({ params }: { params: Promise<Params> }
             ))}
           </LoadMore>
         </div>
+        <AdUnit kind="display" />
       </section>
 
       {popular.length > 0 && (
@@ -70,6 +74,10 @@ export default async function AuthorPage({ params }: { params: Promise<Params> }
               ))}
             </ul>
           </section>
+          <AdUnit kind="display" className="!mb-0" />
+          <div className="sticky top-24">
+            <AdUnit kind="display" className="!mt-0" />
+          </div>
         </aside>
       )}
       </div>

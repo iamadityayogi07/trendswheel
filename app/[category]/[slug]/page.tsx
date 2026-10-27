@@ -168,6 +168,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
               </div>
             )}
           </section>
+          <AdUnit kind="display" />
         </article>
 
         <aside className="hidden lg:block" aria-label="Sidebar">

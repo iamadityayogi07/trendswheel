@@ -121,6 +121,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
               </ul>
             </section>
           )}
+          <AdUnit kind="display" className="!my-0" />
           <section aria-labelledby="side-cats" className="rounded-2xl border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-5 shadow-sm">
             <h2 id="side-cats" className="font-display flex items-center gap-2.5 text-xl font-bold">
               <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
@@ -144,6 +145,9 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
               ))}
             </ul>
           </section>
+          <div className="sticky top-24">
+            <AdUnit kind="display" className="!my-0" />
+          </div>
         </div>
       </aside>
       </div>
@@ -151,6 +155,8 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       {copy && <EditorialNote note={copy.note} />}
 
       <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
+
+      <AdUnit kind="display" />
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="mt-12">
@@ -167,6 +173,8 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
           </ul>
         </section>
       )}
+
+      <AdUnit kind="display" />
 
       <nav aria-label="Other categories" className="mt-10 flex flex-wrap gap-2">
         {getCategories()
