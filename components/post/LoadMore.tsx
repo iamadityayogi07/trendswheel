@@ -24,7 +24,7 @@ export default function LoadMore({ children, initial = 12, step = 12, className 
       {shown < items.length && (
         <div className="mt-8 text-center">
           <button type="button" className="btn btn-outline" onClick={() => setShown((s) => s + step)}>
-            Load more articles ({items.length - shown} left)
+            Load more articles
           </button>
         </div>
       )}
