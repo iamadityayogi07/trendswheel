@@ -120,8 +120,9 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
         {getCategories()
           .filter((x) => x.slug !== c.slug)
           .map((x) => (
-            <Link key={x.slug} href={categoryUrl(x.slug)} className="btn btn-outline">
+            <Link key={x.slug} href={categoryUrl(x.slug)} className="group inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-line bg-white px-5 py-2 font-bold text-ink no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white hover:shadow-md">
               {x.name}
+              <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
             </Link>
           ))}
       </nav>
