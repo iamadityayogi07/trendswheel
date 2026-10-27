@@ -7,10 +7,11 @@ import Breadcrumbs from '@/components/post/Breadcrumbs';
 import Faq from '@/components/post/Faq';
 import LoadMore from '@/components/post/LoadMore';
 import PostCard from '@/components/post/PostCard';
-import { categoryCopy, editorialPoints } from '@/config/category-content';
+import EditorialNote from '@/components/category/EditorialNote';
+import { categoryCopy } from '@/config/category-content';
 import { getCategories, getCategory, getPopularPosts, getPostsByCategory } from '@/lib/content';
 import { categoryMetadata, categorySchemas } from '@/lib/seo';
-import { categoryUrl, postUrl, staticPageUrl } from '@/lib/url';
+import { categoryUrl, postUrl } from '@/lib/url';
 
 export const dynamicParams = false;
 
@@ -96,30 +97,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
 
       <AdUnit kind="display" />
 
-      {copy && (
-        <section className="card my-8 p-5">
-          <h2 className="font-display text-xl font-bold">How We Write These</h2>
-          <p className="mt-3 text-ink-2">{copy.note}</p>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-3">
-            {editorialPoints.map((e) => (
-              <li key={e.title}>
-                <strong className="block">{e.title}</strong>
-                <span className="text-sm text-ink-2">
-                  {e.text}
-                  {e.link && (
-                    <>
-                      {' '}
-                      <Link href={staticPageUrl('contact-us')} className="font-semibold text-brand-strong underline">
-                        Contact page
-                      </Link>
-                    </>
-                  )}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {copy && <EditorialNote note={copy.note} />}
 
       <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
 
