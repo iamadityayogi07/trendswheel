@@ -108,11 +108,8 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
             Popular Articles
           </h2>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {popular.map((p, i) => (
-              <li key={p.slug} className="relative rounded-2xl border border-line bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
-                <span className="absolute -left-2 -top-2 z-10 flex size-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white shadow-md" aria-hidden="true">
-                  {i + 1}
-                </span>
+            {popular.map((p) => (
+              <li key={p.slug} className="rounded-2xl border border-line bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
                 <PostCard post={p} compact />
               </li>
             ))}
