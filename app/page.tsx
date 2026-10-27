@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AboutSection from '@/components/home/AboutSection';
+import TrustSection from '@/components/home/TrustSection';
 import AdUnit from '@/components/ads/AdUnit';
 import JsonLd from '@/components/JsonLd';
 import Faq from '@/components/post/Faq';
 import PostCard from '@/components/post/PostCard';
-import { homeFaq, trustBadges, trustParagraphs } from '@/config/home-content';
+import { homeFaq } from '@/config/home-content';
 import { HOME_TITLE } from '@/config/site';
 import { getAllPosts, getCategories, getPostsByCategory, getSite, readingMinutes, stripHtml } from '@/lib/content';
 import { formatDate } from '@/lib/format';
 import { imageSet } from '@/lib/images';
 import { faqSchema, homeMetadata, websiteSchema } from '@/lib/seo';
-import { absoluteUrl, archiveUrl, categoryUrl, postUrl, staticPageUrl } from '@/lib/url';
+import { absoluteUrl, archiveUrl, categoryUrl, postUrl } from '@/lib/url';
 
 export const metadata: Metadata = homeMetadata(HOME_TITLE);
 
@@ -114,47 +116,10 @@ export default function HomePage() {
         </section>
       ))}
 
-      <section className="card mt-14 grid gap-6 p-6 md:grid-cols-[1.2fr_1fr] md:p-8" aria-labelledby="who">
-        <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-brand-strong">Who We Are</p>
-          <h2 id="who" className="font-display mt-1 text-2xl font-bold">
-            {site.aboutHeading}
-          </h2>
-          <div className="page-body mt-3" dangerouslySetInnerHTML={{ __html: site.aboutContent ?? `<p>${site.tagline}</p>` }} />
-          <p className="mt-4">
-            <Link href={staticPageUrl('about-us')} className="btn">
-              Learn more about us
-            </Link>
-          </p>
-        </div>
-        {site.aboutImage && (
-          <img src={site.aboutImage} alt={site.aboutImageAlt ?? site.name} width={460} height={460} loading="lazy" decoding="async" className="mx-auto w-full max-w-sm rounded-xl object-cover" />
-        )}
-      </section>
+      <AboutSection site={site} />
+      <TrustSection />
 
-      <section className="mt-14" aria-labelledby="trust">
-        <h2 id="trust" className="font-display text-2xl font-bold">
-          Why Trust Us
-        </h2>
-        <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {trustBadges.map((b) => (
-            <li key={b.title} className="card p-4">
-              <strong className="block">{b.title}</strong>
-              <span className="text-sm text-ink-2">{b.text}</span>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-5 max-w-3xl space-y-3 text-ink-2">
-          {trustParagraphs.map((t) => (
-            <p key={t}>{t}</p>
-          ))}
-          <p>
-            Spotted something outdated? <Link href={staticPageUrl('contact-us')} className="font-semibold text-brand-strong underline">Use the Contact page</Link> and let us know - we&apos;d rather fix it than have people finding out it doesn&apos;t work anymore.
-          </p>
-        </div>
-      </section>
-
-      <Faq items={homeFaq} heading="Frequently Asked Questions" />
+      <Faq items={homeFaq} heading="Frequently Asked Questions" centered />
       </div>
     </>
   );
