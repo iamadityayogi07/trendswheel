@@ -9,9 +9,9 @@ export default function AboutSection({ site }: { site: Site }) {
       className="relative mt-16 overflow-hidden rounded-[28px] border border-line bg-gradient-to-br from-brand-soft via-white to-surface-2 p-6 sm:p-10 lg:p-14"
     >
       <div className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-brand/10 blur-3xl" aria-hidden="true" />
-      <div className="relative">
+      <div className="relative flow-root">
         {site.aboutImage && (
-          <div className="relative mx-auto mb-10 w-full max-w-lg">
+          <div className="relative mx-auto mb-8 w-full max-w-md lg:float-right lg:mb-6 lg:ml-12 lg:mt-0 lg:w-[42%]">
             <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl bg-brand/20" aria-hidden="true" />
             <img
               src={site.aboutImage}
