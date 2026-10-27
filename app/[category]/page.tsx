@@ -121,6 +121,29 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
               </ul>
             </section>
           )}
+          <section aria-labelledby="side-cats" className="rounded-2xl border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-5 shadow-sm">
+            <h2 id="side-cats" className="font-display flex items-center gap-2.5 text-xl font-bold">
+              <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+              Hot Categories
+            </h2>
+            <ul className="mt-4 space-y-2">
+              {getCategories().map((x) => (
+                <li key={x.slug}>
+                  <Link
+                    href={categoryUrl(x.slug)}
+                    aria-current={x.slug === c.slug ? 'page' : undefined}
+                    className="group flex min-h-12 items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 no-underline transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white hover:shadow-md aria-[current=page]:border-brand aria-[current=page]:bg-brand-soft"
+                  >
+                    <span className="font-display font-bold">{x.name}</span>
+                    <span className="flex items-center gap-2">
+                      <span className="rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-bold text-brand-strong transition group-hover:bg-white/20 group-hover:text-white">{getPostsByCategory(x.slug).length}</span>
+                      <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </aside>
       </div>
