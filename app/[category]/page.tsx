@@ -9,7 +9,7 @@ import LoadMore from '@/components/post/LoadMore';
 import PostCard from '@/components/post/PostCard';
 import EditorialNote from '@/components/category/EditorialNote';
 import { categoryCopy } from '@/config/category-content';
-import { getCategories, getCategory, getPopularPosts, getPostsByCategory } from '@/lib/content';
+import { getAllPosts, getCategories, getCategory, getPopularPosts, getPostsByCategory } from '@/lib/content';
 import { categoryMetadata, categorySchemas } from '@/lib/seo';
 import { categoryUrl, postUrl } from '@/lib/url';
 
@@ -36,7 +36,11 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
     const p = posts.find((x) => x.slug === slug);
     return p ? [{ post: p, why }] : [];
   });
-  const popular = getPopularPosts(6, c.slug);
+  const popular = getPopularPosts(5, c.slug);
+  const related = getAllPosts()
+    .filter((p) => p.category.slug !== c.slug)
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 6);
 
   return (
     <>
@@ -63,6 +67,8 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       </div>
 
       <div className="container-page py-6">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
+      <div className="min-w-0">
       {picks.length > 0 && (
         <section className="card mt-8 p-5" aria-labelledby="start-here">
           <h2 id="start-here" className="font-display text-xl font-bold">
@@ -86,7 +92,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
           All {c.name} articles
         </h2>
         <div className="mt-5">
-          <LoadMore initial={12} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <LoadMore initial={12} className="grid gap-6 sm:grid-cols-2">
             {posts.flatMap((p, i) => {
               const card = <PostCard key={p.slug} post={p} priority={i < 2} />;
               return card;
@@ -96,21 +102,43 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       </section>
 
       <AdUnit kind="display" />
+      </div>
+
+      <aside aria-label="Sidebar">
+        <div className="space-y-8">
+          {popular.length > 0 && (
+            <section aria-labelledby="popular" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+              <h2 id="popular" className="font-display flex items-center gap-2.5 text-xl font-bold">
+                <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+                Popular Articles
+              </h2>
+              <ul className="mt-4 space-y-2">
+                {popular.map((p) => (
+                  <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
+                    <PostCard post={p} compact />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
+      </aside>
+      </div>
 
       {copy && <EditorialNote note={copy.note} />}
 
       <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
 
-      {popular.length > 0 && (
-        <section aria-labelledby="popular" className="mt-12 rounded-[28px] border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-6 sm:p-8">
-          <h2 id="popular" className="font-display flex items-center gap-3 text-2xl font-bold sm:text-3xl">
+      {related.length > 0 && (
+        <section aria-labelledby="related" className="mt-12">
+          <h2 id="related" className="font-display flex items-center gap-3 text-2xl font-bold sm:text-3xl">
             <span className="h-7 w-1.5 rounded-full bg-brand" aria-hidden="true" />
-            Popular Articles
+            Related Articles
           </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {popular.map((p) => (
-              <li key={p.slug} className="rounded-2xl border border-line bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
-                <PostCard post={p} compact />
+          <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((p) => (
+              <li key={p.slug}>
+                <PostCard post={p} />
               </li>
             ))}
           </ul>
