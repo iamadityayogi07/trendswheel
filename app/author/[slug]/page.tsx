@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
 import LoadMore from '@/components/post/LoadMore';
 import PostCard from '@/components/post/PostCard';
-import { getAuthor, getAuthors, getPostsByAuthor } from '@/lib/content';
+import { getAuthor, getAuthors, getPopularPosts, getPostsByAuthor } from '@/lib/content';
 import { authorMetadata, authorSchemas } from '@/lib/seo';
 
 export const dynamicParams = false;
@@ -24,6 +24,7 @@ export default async function AuthorPage({ params }: { params: Promise<Params> }
   const a = getAuthor(slug);
   if (!a) notFound();
   const posts = getPostsByAuthor(a.slug);
+  const popular = getPopularPosts(5);
 
   return (
     <div className="container-page py-6">
@@ -40,18 +41,38 @@ export default async function AuthorPage({ params }: { params: Promise<Params> }
         </div>
       </header>
 
-      <section className="mt-10" aria-labelledby="author-posts">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
+      <section className="mt-10 min-w-0" aria-labelledby="author-posts">
         <h2 id="author-posts" className="font-display text-2xl font-bold">
           Articles by {a.name} ({posts.length})
         </h2>
         <div className="mt-5">
-          <LoadMore initial={12} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <LoadMore initial={12} className="grid gap-6 sm:grid-cols-2">
             {posts.map((p) => (
               <PostCard key={p.slug} post={p} />
             ))}
           </LoadMore>
         </div>
       </section>
+
+      {popular.length > 0 && (
+        <aside aria-label="Sidebar" className="lg:mt-10">
+          <section aria-labelledby="popular" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+            <h2 id="popular" className="font-display flex items-center gap-2.5 text-xl font-bold">
+              <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+              Popular Articles
+            </h2>
+            <ul className="mt-4 space-y-2">
+              {popular.map((p) => (
+                <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
+                  <PostCard post={p} compact />
+                </li>
+              ))}
+            </ul>
+          </section>
+        </aside>
+      )}
+      </div>
     </div>
   );
 }
