@@ -67,8 +67,6 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       </div>
 
       <div className="container-page py-6">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
-      <div className="min-w-0">
       {picks.length > 0 && (
         <section className="card mt-8 p-5" aria-labelledby="start-here">
           <h2 id="start-here" className="font-display text-xl font-bold">
@@ -87,6 +85,8 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
         </section>
       )}
 
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
+      <div className="min-w-0">
       <section className="mt-10" aria-labelledby="all-posts">
         <h2 id="all-posts" className="font-display text-2xl font-bold">
           All {c.name} articles
@@ -104,7 +104,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       <AdUnit kind="display" />
       </div>
 
-      <aside aria-label="Sidebar">
+      <aside aria-label="Sidebar" className="lg:mt-10">
         <div className="space-y-8">
           {popular.length > 0 && (
             <section aria-labelledby="popular" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
