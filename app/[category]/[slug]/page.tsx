@@ -161,33 +161,47 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
         </article>
 
         <aside className="hidden lg:block" aria-label="Sidebar">
-          <div className="sticky top-24 space-y-8">
+          <div className="space-y-8">
             {popular.length > 0 && (
-              <section>
-                <h2 className="font-display text-xl font-bold">Popular Articles</h2>
-                <ul className="mt-4 space-y-4">
+              <section aria-labelledby="side-popular" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+                <h2 id="side-popular" className="font-display flex items-center gap-2.5 text-xl font-bold">
+                  <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+                  Popular Articles
+                </h2>
+                <ul className="mt-4 space-y-2">
                   {popular.map((p) => (
-                    <li key={p.slug}>
+                    <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
                       <PostCard post={p} compact />
                     </li>
                   ))}
                 </ul>
               </section>
             )}
-            <section>
-              <h2 className="font-display text-xl font-bold">Hot Categories</h2>
-              <ul className="mt-3 divide-y divide-line rounded-xl border border-line bg-surface">
+            <section aria-labelledby="side-cats" className="rounded-2xl border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-5 shadow-sm">
+              <h2 id="side-cats" className="font-display flex items-center gap-2.5 text-xl font-bold">
+                <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+                Hot Categories
+              </h2>
+              <ul className="mt-4 space-y-2">
                 {getCategories().map((c) => (
                   <li key={c.slug}>
-                    <Link href={categoryUrl(c.slug)} className="flex min-h-11 items-center justify-between px-4 no-underline hover:bg-surface-2">
-                      <span className="font-semibold">{c.name}</span>
-                      <span className="text-sm text-muted">{getPostsByCategory(c.slug).length}</span>
+                    <Link
+                      href={categoryUrl(c.slug)}
+                      className="group flex min-h-12 items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 no-underline transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white hover:shadow-md"
+                    >
+                      <span className="font-display font-bold">{c.name}</span>
+                      <span className="flex items-center gap-2">
+                        <span className="rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-bold text-brand-strong transition group-hover:bg-white/20 group-hover:text-white">{getPostsByCategory(c.slug).length}</span>
+                        <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
+                      </span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </section>
-            <AdUnit kind="display" className="!my-0" />
+            <div className="sticky top-24">
+              <AdUnit kind="display" className="!my-0" />
+            </div>
           </div>
         </aside>
       </div>
