@@ -30,7 +30,7 @@ export default function TrustSection() {
           </li>
         ))}
       </ul>
-      <div className="mx-auto mt-8 max-w-4xl space-y-4 rounded-2xl bg-surface-2 p-6 text-[1.05rem] text-ink-2 sm:p-8">
+      <div className="mt-8 w-full space-y-4 rounded-2xl bg-surface-2 p-6 text-[1.05rem] text-ink-2 sm:p-8">
         {trustParagraphs.map((t) => (
           <p key={t}>{t}</p>
         ))}
