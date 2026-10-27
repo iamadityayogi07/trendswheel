@@ -1,0 +1,14 @@
+[
+  {
+    "url": "/",
+    "error": "lighthouse failed (is Chrome installed?)"
+  },
+  {
+    "url": "/how-to/find-hidden-apps-android",
+    "error": "lighthouse failed (is Chrome installed?)"
+  },
+  {
+    "url": "/how-to",
+    "error": "lighthouse failed (is Chrome installed?)"
+  }
+]

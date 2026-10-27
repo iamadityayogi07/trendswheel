@@ -1,0 +1,62 @@
+[
+  {
+    "name": "1  URL and slug parity",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "1b Text parity (body, title, meta description, h1)",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "2  Content present in static HTML",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "3  Per-page title/description/canonical/h1/noindex",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "4  Local images resolve",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "5  Internal links resolve",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "12 No orphan posts (each linked from another page)",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "12b Related/Read-next block on every post",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "6  Sitemap",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "7  robots.txt and ads.txt",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "8  AdSense script + publisher ID",
+    "ok": true,
+    "problems": []
+  },
+  {
+    "name": "x  _headers does not block indexing",
+    "ok": true,
+    "problems": []
+  }
+]

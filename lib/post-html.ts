@@ -1,6 +1,5 @@
 // Presentation-only processing of the stored post HTML. Visible text is never changed:
 // we add heading ids, wrap tables, add image attributes and split into segments so ads can sit between them.
-import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 import { SITE_URL } from '@/config/site';

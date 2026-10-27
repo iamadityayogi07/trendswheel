@@ -16,6 +16,9 @@ for (const f of fs.readdirSync(postsDir)) {
 }
 for (const c of JSON.parse(fs.readFileSync(path.join(ROOT, 'content', 'categories.json'), 'utf8'))) if (c.featuredImage) sources.add(c.featuredImage);
 sources.add('/images/post-placeholder.webp');
+const site = JSON.parse(fs.readFileSync(path.join(ROOT, 'content', 'site.json'), 'utf8'));
+if (site.logo) sources.add(site.logo);
+sources.add('/settings/trendswheel-logo-dark-d38b5d.png');
 
 let made = 0;
 for (const src of sources) {

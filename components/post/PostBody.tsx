@@ -25,12 +25,15 @@ export async function getPostBody(html: string): Promise<{ segments: string[]; t
 export default function PostBody({ segments }: { segments: string[] }) {
   return (
     <>
-      {segments.map((html, i) => (
-        <div key={i}>
-          <div className="prose-tw" dangerouslySetInnerHTML={{ __html: html }} />
-          {i < segments.length - 1 && <AdUnit kind="inArticle" />}
-        </div>
-      ))}
+      <div data-post-body="1">
+        {segments.map((html, i) => (
+          <div key={i}>
+            <div className="prose-tw" dangerouslySetInnerHTML={{ __html: html }} />
+            {i < segments.length - 1 && <AdUnit kind="inArticle" />}
+          </div>
+        ))}
+      </div>
+      <div data-post-body-end="1" hidden />
     </>
   );
 }

@@ -16,12 +16,18 @@ export default function ConsentBanner() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    try {
-      if (localStorage.getItem(KEY) === 'true') window.gtag?.('consent', 'update', { ad_storage: 'granted', analytics_storage: 'granted' });
+    // Deferred so the first client render matches the server HTML (no banner), then the banner appears if needed.
+    const t = setTimeout(() => {
+      let accepted = false;
+      try {
+        accepted = localStorage.getItem(KEY) === 'true';
+      } catch {
+        /* storage blocked */
+      }
+      if (accepted) window.gtag?.('consent', 'update', { ad_storage: 'granted', analytics_storage: 'granted' });
       else setShow(true);
-    } catch {
-      setShow(true);
-    }
+    }, 0);
+    return () => clearTimeout(t);
   }, []);
 
   if (!show) return null;
