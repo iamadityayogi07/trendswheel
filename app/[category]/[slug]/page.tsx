@@ -127,16 +127,22 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
 
           <AdUnit kind="display" />
 
-          <nav aria-label="Previous and next articles" className="my-8 grid gap-4 sm:grid-cols-2">
-            <Link href={postUrl(previous.category.slug, previous.slug)} className="card block p-4 no-underline hover:border-brand">
-              <span className="text-sm font-semibold text-brand-strong">‹ Previous Article</span>
-              <span className="mt-1 block font-bold leading-snug">{previous.title}</span>
-              <span className="mt-1 block text-sm text-muted">{formatDate(previous.updatedAt)}</span>
+          <nav aria-label="Previous and next articles" className="my-10 grid gap-4 sm:grid-cols-2">
+            <Link href={postUrl(previous.category.slug, previous.slug)} className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-5 no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft/50 hover:shadow-md">
+              <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xl font-bold text-brand-strong transition group-hover:-translate-x-1 group-hover:bg-brand group-hover:text-white">←</span>
+              <span className="min-w-0">
+                <span className="text-xs font-bold uppercase tracking-wide text-brand-strong">‹ Previous Article</span>
+                <span className="font-display mt-1 block font-bold leading-snug transition group-hover:text-brand-strong">{previous.title}</span>
+                <span className="mt-1 block text-sm text-muted">{formatDate(previous.updatedAt)}</span>
+              </span>
             </Link>
-            <Link href={postUrl(next.category.slug, next.slug)} className="card block p-4 text-right no-underline hover:border-brand">
-              <span className="text-sm font-semibold text-brand-strong">Next Article ›</span>
-              <span className="mt-1 block font-bold leading-snug">{next.title}</span>
-              <span className="mt-1 block text-sm text-muted">{formatDate(next.updatedAt)}</span>
+            <Link href={postUrl(next.category.slug, next.slug)} className="group relative flex flex-row-reverse items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-5 text-right no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft/50 hover:shadow-md">
+              <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xl font-bold text-brand-strong transition group-hover:translate-x-1 group-hover:bg-brand group-hover:text-white">→</span>
+              <span className="min-w-0">
+                <span className="text-xs font-bold uppercase tracking-wide text-brand-strong">Next Article ›</span>
+                <span className="font-display mt-1 block font-bold leading-snug transition group-hover:text-brand-strong">{next.title}</span>
+                <span className="mt-1 block text-sm text-muted">{formatDate(next.updatedAt)}</span>
+              </span>
             </Link>
           </nav>
 
@@ -149,14 +155,18 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
                 <PostCard key={p.slug} post={p} sizes="(min-width: 640px) 340px, 100vw" />
               ))}
             </div>
-            <h2 className="font-display mt-10 text-2xl font-bold">Related posts</h2>
-            <ul className="mt-4 space-y-4">
-              {related.slice(2).map((p) => (
-                <li key={p.slug}>
-                  <PostCard post={p} compact />
-                </li>
-              ))}
-            </ul>
+            {related.length > 2 && (
+              <div className="lg:hidden">
+                <h2 className="font-display mt-10 text-2xl font-bold">Related posts</h2>
+                <ul className="mt-4 space-y-4">
+                  {related.slice(2).map((p) => (
+                    <li key={p.slug}>
+                      <PostCard post={p} compact />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         </article>
 
@@ -170,6 +180,21 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
                 </h2>
                 <ul className="mt-4 space-y-2">
                   {popular.map((p) => (
+                    <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
+                      <PostCard post={p} compact />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            {related.length > 2 && (
+              <section aria-labelledby="side-related" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+                <h2 id="side-related" className="font-display flex items-center gap-2.5 text-xl font-bold">
+                  <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+                  Related posts
+                </h2>
+                <ul className="mt-4 space-y-2">
+                  {related.slice(2).map((p) => (
                     <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
                       <PostCard post={p} compact />
                     </li>
