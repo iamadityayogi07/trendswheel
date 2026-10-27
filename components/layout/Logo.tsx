@@ -14,9 +14,9 @@ export default function Logo({ priority = false }: { priority?: boolean }) {
           srcSet={light.srcSet}
           sizes={light.sizes}
           alt={`${site.name} logo`}
-          width={84}
-          height={48}
-          className="h-12 w-auto"
+          width={98}
+          height={56}
+          className="h-14 w-auto"
           {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })}
         />
       </picture>

@@ -43,6 +43,10 @@ export default function SearchBox({ className = '' }: { className?: string }) {
       <label htmlFor={id} className="sr-only">
         Search articles
       </label>
+      <svg className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m20 20-3.5-3.5" />
+      </svg>
       <input
         id={id}
         type="search"
@@ -58,10 +62,10 @@ export default function SearchBox({ className = '' }: { className?: string }) {
           setOpen(true);
         }}
         onKeyDown={(e) => e.key === 'Escape' && setOpen(false)}
-        className="h-11 w-full rounded-full border border-line bg-surface px-4 text-base text-ink placeholder:text-muted"
+        className="h-11 w-full rounded-full border border-transparent bg-surface-2 pl-11 pr-4 text-base text-ink placeholder:text-muted transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand-soft"
       />
       {open && term.length >= 2 && (
-        <ul className="absolute right-0 z-50 mt-2 max-h-96 w-[min(92vw,380px)] overflow-auto rounded-xl border border-line bg-surface p-1 shadow-lg">
+        <ul className="absolute right-0 z-50 mt-2 border-line max-h-96 w-[min(92vw,380px)] overflow-auto rounded-xl border border-line bg-surface p-1 shadow-lg">
           {results.length === 0 && <li className="px-3 py-3 text-sm text-muted">{items ? 'No matching articles.' : 'Searching...'}</li>}
           {results.map((r) => (
             <li key={r.url}>
