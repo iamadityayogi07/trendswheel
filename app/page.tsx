@@ -42,11 +42,13 @@ export default function HomePage() {
           </h1>
           <p className="mt-4 text-lg text-ink-2">{site.tagline}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href={archiveUrl()} className="btn">
+            <Link href={archiveUrl()} className="group inline-flex min-h-12 items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-strong px-7 py-3 font-bold text-white no-underline shadow-lg shadow-brand/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand/40">
               Browse all articles
+              <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
             </Link>
-            <Link href={categoryUrl('how-to')} className="btn btn-outline">
+            <Link href={categoryUrl('how-to')} className="group inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-line bg-white px-7 py-3 font-bold text-ink no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft hover:text-brand-strong hover:shadow-md">
               Android how-to guides
+              <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
             </Link>
           </div>
         </div>
