@@ -102,13 +102,17 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
 
       {popular.length > 0 && (
-        <section aria-labelledby="popular" className="mt-10">
-          <h2 id="popular" className="font-display text-2xl font-bold">
+        <section aria-labelledby="popular" className="mt-12 rounded-[28px] border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-6 sm:p-8">
+          <h2 id="popular" className="font-display flex items-center gap-3 text-2xl font-bold sm:text-3xl">
+            <span className="h-7 w-1.5 rounded-full bg-brand" aria-hidden="true" />
             Popular Articles
           </h2>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {popular.map((p) => (
-              <li key={p.slug}>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {popular.map((p, i) => (
+              <li key={p.slug} className="relative rounded-2xl border border-line bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg">
+                <span className="absolute -left-2 -top-2 z-10 flex size-8 items-center justify-center rounded-full bg-brand text-sm font-bold text-white shadow-md" aria-hidden="true">
+                  {i + 1}
+                </span>
                 <PostCard post={p} compact />
               </li>
             ))}
