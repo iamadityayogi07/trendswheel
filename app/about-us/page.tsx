@@ -100,9 +100,9 @@ export default function AboutPage() {
             </h2>
             <p className="mt-1 italic text-muted">The people behind the articles.</p>
           </div>
-          <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-6 flex flex-wrap justify-center gap-6">
             {team.map((m) => (
-              <li key={m.slug} className="card">
+              <li key={m.slug} className="card w-full max-w-sm text-center sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] lg:min-w-64">
                 <Link href={authorUrl(m.slug)} className="block" tabIndex={-1} aria-hidden="true">
                   <img
                     src={m.avatar!}
