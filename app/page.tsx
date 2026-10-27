@@ -6,7 +6,7 @@ import Faq from '@/components/post/Faq';
 import PostCard from '@/components/post/PostCard';
 import { homeFaq, trustBadges, trustParagraphs } from '@/config/home-content';
 import { HOME_TITLE } from '@/config/site';
-import { getAllPosts, getCategories, getPostsByCategory, getSite, readingMinutes } from '@/lib/content';
+import { getAllPosts, getCategories, getPostsByCategory, getSite, readingMinutes, stripHtml } from '@/lib/content';
 import { formatDate } from '@/lib/format';
 import { imageSet } from '@/lib/images';
 import { faqSchema, homeMetadata, websiteSchema } from '@/lib/seo';
@@ -27,14 +27,15 @@ export default function HomePage() {
   const faqLd = faqSchema(homeFaq, `${absoluteUrl('/')}#faq`);
 
   return (
-    <div className="container-page py-6">
+    <>
       <JsonLd data={websiteSchema()} />
       {faqLd && <JsonLd data={faqLd} />}
 
-      <section aria-labelledby="hero-title" className="grid items-center gap-6 lg:grid-cols-2">
+      <div className="hero-band">
+      <section aria-labelledby="hero-title" className="container-page grid items-center gap-8 py-10 lg:grid-cols-2 lg:py-14">
         <div>
           <p className="text-sm font-bold uppercase tracking-wide text-brand-strong">{site.name}</p>
-          <h1 id="hero-title" className="font-display mt-2 text-4xl font-bold leading-tight sm:text-5xl">
+          <h1 id="hero-title" className="font-display mt-2 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             Tech News, App Reviews &amp; How-To Guides
           </h1>
           <p className="mt-4 text-lg text-ink-2">{site.tagline}</p>
@@ -63,15 +64,17 @@ export default function HomePage() {
                 {featured.title}
               </Link>
             </h2>
-            {featured.description && <p className="mt-2 line-clamp-3 text-ink-2">{featured.description}</p>}
+            {featured.description && <p className="mt-2 line-clamp-3 text-ink-2">{stripHtml(featured.description)}</p>}
             <p className="mt-3 text-sm text-muted">
               {formatDate(featured.updatedAt)} · {readingMinutes(featured.html)} min read
             </p>
           </div>
         </article>
       </section>
+      </div>
 
-      <section className="mt-14" aria-labelledby="latest">
+      <div className="container-page pb-6">
+      <section className="mt-12" aria-labelledby="latest">
         <div className="flex items-end justify-between gap-4">
           <h2 id="latest" className="font-display text-2xl font-bold sm:text-3xl">
             Latest articles
@@ -152,6 +155,7 @@ export default function HomePage() {
       </section>
 
       <Faq items={homeFaq} heading="Frequently Asked Questions" />
-    </div>
+      </div>
+    </>
   );
 }

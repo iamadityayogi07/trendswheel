@@ -10,7 +10,7 @@ const linkCls = 'inline-flex min-h-11 items-center rounded-lg px-3 font-semibold
 export default function Header() {
   const categories = getCategories();
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur shadow-[0_1px_0_#e2e8f0]">
       <div className="container-page flex h-16 items-center gap-3">
         <Logo priority />
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { type Post, readingMinutes } from '@/lib/content';
+import { type Post, readingMinutes, stripHtml } from '@/lib/content';
 import { formatDate } from '@/lib/format';
 import { imageSet } from '@/lib/images';
 import { categoryUrl, postUrl } from '@/lib/url';
@@ -65,7 +65,7 @@ export default function PostCard({ post, excerpt = true, priority = false, compa
             {post.title}
           </Link>
         </h3>
-        {excerpt && post.description && <p className="mt-2 line-clamp-3 text-ink-2">{post.description}</p>}
+        {excerpt && post.description && <p className="mt-2 line-clamp-3 text-ink-2">{stripHtml(post.description)}</p>}
         <p className="mt-auto pt-3 text-sm text-muted">
           <time dateTime={post.updatedAt}>{formatDate(post.updatedAt)}</time> · {readingMinutes(post.html)} min read
         </p>
