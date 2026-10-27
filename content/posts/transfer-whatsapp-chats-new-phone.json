@@ -1,0 +1,34 @@
+{
+  "id": 9,
+  "slug": "transfer-whatsapp-chats-new-phone",
+  "title": "How to Move WhatsApp Chats to a New Android Phone",
+  "html": "<p>To move WhatsApp to a new Android phone, back up on the old phone, install WhatsApp on the new one and sign in with the same phone number, then choose how to restore: from the cloud backup, or directly from the old phone over Wi-Fi. You cannot move your chats to a new phone number, and chats on the new phone cannot be merged with the old history.</p>\n\n<p><em>Last updated: 10 Oct 2026.</em></p>\n\n<p>I did not move my chats to a new phone for this post. On 11 Oct 2026 I checked the WhatsApp backup screens on a vivo V23 Pro running Android 14 (Funtouch OS 14). The steps for the new phone come from WhatsApp&#039;s own help pages listed in Sources.</p>\n\n<h2>Before you start</h2>\n\n<ul>\n  <li>Keep your old phone and its SIM working until the move is done.</li>\n  <li>Use the same phone number on the new phone. Google's page says you cannot transfer WhatsApp data to a new phone number. If you are changing numbers, change the number in WhatsApp on the old phone first.</li>\n  <li>Sign in to the same Google account on both phones.</li>\n  <li>Have a stable internet connection.</li>\n</ul>\n<!-- SOURCE: https://support.google.com/android/answer/14669513 (Transfer WhatsApp data to a new Android) -->\n\n<h2>The steps</h2>\n\n<ol>\n  <li>Back up on the old phone. Open WhatsApp and tap You at the bottom right, then Chats, then Chat backup, and tap Back up. In older versions of WhatsApp the same screen is under More at the top right, then Settings, then Chats, then Chat backup.</li>\n  <li>Install WhatsApp on the new phone from the Play Store and sign in with the same phone number.</li>\n  <li>Restore. When WhatsApp offers it, choose one:\n    <ul>\n      <li>Transfer from old phone, which restores over Wi-Fi.</li>\n      <li>Restore from backup, which restores from the cloud. Google's page recommends this if your backup is up to date.</li>\n    </ul>\n  </li>\n</ol>\n<!-- SOURCE: https://support.google.com/android/answer/14669513 -->\n\n<p>Google's page also says you cannot merge chat history created on the new phone with the chat history from your old phone. So do the restore when you first set up WhatsApp on the new phone, not after you have started using it.</p>\n\n<figure><img src=\"/posts/evidence/wa-chat-backup.webp\" alt=\"WhatsApp Settings Chats Chat backup screen showing the last backup time, with the account name hidden\" width=\"741\" height=\"1568\" loading=\"lazy\"><figcaption>WhatsApp Chat backup screen</figcaption></figure>\n\n<h2>If something goes wrong</h2>\n\n<ul>\n  <li>The restore option does not appear: check that you used the same number and the same Google account on both phones.</li>\n  <li>Your newest chats are missing: the backup was older than your latest messages. Back up again on the old phone, and restore again.</li>\n  <li>Keep the old phone until you have checked that your chats, media and groups are on the new one.</li>\n</ul>\n\n<p>On my vivo V23 Pro the current WhatsApp opens its settings from the You tab at the bottom right, then Chats, then Chat backup. The Chat backup screen shows the time and size of the last backup, a Back up button, the Google account used, Automatic backups (mine was set to Weekly), and switches for Back up using cellular and Include video in chats. Both switches were off on my phone. There is also an End-to-end encrypted backup option, which was off for me. I only opened this screen and did not restore a backup.</p>\n\n<h2>Protect the account while you move</h2>\n\n<p>Never share the six-digit verification code WhatsApp sends when you set up the new phone. Turn on two-step verification in WhatsApp. If you receive a code you did not ask for, read <a href=\"/how-to/otp-codes-you-didnt-request\">what that can mean</a>.</p>\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Back up WhatsApp on the old phone.</li>\n  <li>Install on the new phone with the same number and Google account.</li>\n  <li>Restore from backup or transfer over Wi-Fi, then check your chats.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/google-account-security-checklist-2026\">Google account security checklist</a></li>\n  <li><a href=\"/how-to/sim-swap-scam-how-to-protect-your-phone-number-2026\">SIM swap scam: signs and what to do</a></li>\n  <li><a href=\"/tech/what-happens-to-your-old-phone-number\">What happens to your old phone number</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/android/answer/14669513\" rel=\"noopener\">Transfer WhatsApp data to a new Android (Android Help)</a></li>\n</ul>",
+  "excerpt": "<p>The steps to move WhatsApp to a new Android phone with your chats intact, the two restore options, and the limits: same phone number, and no merging of old and new chat history.</p>",
+  "description": "<p>The steps to move WhatsApp to a new Android phone with your chats intact, the two restore options, and the limits: same phone number, and no merging of old and new chat history.</p>",
+  "metaTitle": "How to Move WhatsApp Chats to a New Android Phone",
+  "metaDescription": "Back up WhatsApp on the old phone, sign in with the same number on the new one, then restore from the cloud or transfer by Wi-Fi. Steps from Google.",
+  "metaKeywords": "transfer whatsapp chats new phone, whatsapp backup android, restore whatsapp chat backup, whatsapp same number new phone, transfer from old phone",
+  "publishedAt": "2025-11-02T23:22:04+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "transfer whatsapp chats new phone",
+    "whatsapp backup android",
+    "restore whatsapp chat backup",
+    "whatsapp same number new phone",
+    "transfer from old phone"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/how-to-transfer-whatsapp-chats-to-a-new-phone-4936.webp",
+  "thumbnailImage": "/posts/thumb_how-to-transfer-whatsapp-chats-to-a-new-phone-4936.webp",
+  "altImage": "Illustration of two phones side by side, one showing chat bubbles and the other a cloud transfer icon with a progress ring",
+  "faq": [],
+  "impressions": 949,
+  "oldPath": "/how-to/transfer-whatsapp-chats-new-phone"
+}

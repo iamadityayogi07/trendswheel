@@ -1,0 +1,143 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import AdUnit from '@/components/ads/AdUnit';
+import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/post/Breadcrumbs';
+import Faq from '@/components/post/Faq';
+import LoadMore from '@/components/post/LoadMore';
+import PostCard from '@/components/post/PostCard';
+import { categoryCopy, editorialPoints } from '@/config/category-content';
+import { getCategories, getCategory, getPopularPosts, getPostsByCategory } from '@/lib/content';
+import { categoryMetadata, categorySchemas } from '@/lib/seo';
+import { categoryUrl, postUrl, staticPageUrl } from '@/lib/url';
+
+export const dynamicParams = false;
+
+type Params = { category: string };
+
+export const generateStaticParams = (): Params[] => getCategories().map((c) => ({ category: c.slug }));
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { category } = await params;
+  const c = getCategory(category);
+  return c ? categoryMetadata(c) : {};
+}
+
+export default async function CategoryPage({ params }: { params: Promise<Params> }) {
+  const { category } = await params;
+  const c = getCategory(category);
+  if (!c) notFound();
+
+  const posts = getPostsByCategory(c.slug);
+  const copy = categoryCopy[c.slug];
+  const picks = (copy?.picks ?? []).flatMap(([slug, why]) => {
+    const p = posts.find((x) => x.slug === slug);
+    return p ? [{ post: p, why }] : [];
+  });
+  const popular = getPopularPosts(6, c.slug);
+
+  return (
+    <div className="container-page py-6">
+      {categorySchemas(c, posts).map((s, i) => (
+        <JsonLd key={i} data={s} />
+      ))}
+      <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: c.name }]} />
+
+      <header className="mt-6 max-w-3xl">
+        <h1 className="font-display text-3xl font-bold leading-tight sm:text-4xl">{copy?.heading ?? c.name}</h1>
+        {copy?.intro.map((t) => (
+          <p key={t} className="mt-4 text-lg text-ink-2">
+            {t}
+          </p>
+        ))}
+      </header>
+
+      {picks.length > 0 && (
+        <section className="card mt-8 p-5" aria-labelledby="start-here">
+          <h2 id="start-here" className="font-display text-xl font-bold">
+            Start here
+          </h2>
+          <ul className="mt-3 space-y-2">
+            {picks.map(({ post, why }) => (
+              <li key={post.slug}>
+                <Link href={postUrl(post.category.slug, post.slug)} className="font-bold text-brand-strong underline underline-offset-2">
+                  {post.title}
+                </Link>
+                <span className="text-ink-2"> – {why}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <section className="mt-10" aria-labelledby="all-posts">
+        <h2 id="all-posts" className="font-display text-2xl font-bold">
+          All {c.name} articles
+        </h2>
+        <div className="mt-5">
+          <LoadMore initial={12} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.flatMap((p, i) => {
+              const card = <PostCard key={p.slug} post={p} priority={i < 2} />;
+              return card;
+            })}
+          </LoadMore>
+        </div>
+      </section>
+
+      <AdUnit kind="display" />
+
+      {copy && (
+        <section className="card my-8 p-5">
+          <h2 className="font-display text-xl font-bold">How We Write These</h2>
+          <p className="mt-3 text-ink-2">{copy.note}</p>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-3">
+            {editorialPoints.map((e) => (
+              <li key={e.title}>
+                <strong className="block">{e.title}</strong>
+                <span className="text-sm text-ink-2">
+                  {e.text}
+                  {e.link && (
+                    <>
+                      {' '}
+                      <Link href={staticPageUrl('contact-us')} className="font-semibold text-brand-strong underline">
+                        Contact page
+                      </Link>
+                    </>
+                  )}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
+
+      {popular.length > 0 && (
+        <section aria-labelledby="popular" className="mt-10">
+          <h2 id="popular" className="font-display text-2xl font-bold">
+            Popular Articles
+          </h2>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {popular.map((p) => (
+              <li key={p.slug}>
+                <PostCard post={p} compact />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <nav aria-label="Other categories" className="mt-10 flex flex-wrap gap-2">
+        {getCategories()
+          .filter((x) => x.slug !== c.slug)
+          .map((x) => (
+            <Link key={x.slug} href={categoryUrl(x.slug)} className="btn btn-outline">
+              {x.name}
+            </Link>
+          ))}
+      </nav>
+    </div>
+  );
+}

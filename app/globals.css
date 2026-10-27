@@ -1,0 +1,145 @@
+@import 'tailwindcss';
+
+/* ---------- Design tokens (single source of truth) ---------- */
+:root {
+  --brand: #e64a19; /* TrendsWheel orange, kept from the old site */
+  --brand-strong: #b83310; /* AA text/button colour on light surfaces (6.1:1 on white) */
+  --brand-soft: #fdece6;
+  --bg: #f6f5f3;
+  --surface: #ffffff;
+  --surface-2: #f0eeea;
+  --ink: #15181d;
+  --ink-2: #3b424d;
+  --muted: #5b6370;
+  --line: #e4e0d9;
+  --ring: #1d4ed8;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgb(20 24 30 / 6%), 0 6px 20px rgb(20 24 30 / 6%);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #ff7043;
+    --brand-strong: #ff8a65;
+    --brand-soft: #2a1a14;
+    --bg: #0f1216;
+    --surface: #171b21;
+    --surface-2: #1e232b;
+    --ink: #eceef1;
+    --ink-2: #c8ccd3;
+    --muted: #9aa3b0;
+    --line: #2a303a;
+    --ring: #8ab4ff;
+    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 6px 20px rgb(0 0 0 / 30%);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-sans: var(--font-body), system-ui, sans-serif;
+  --font-display: var(--font-heading), var(--font-body), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 4px; }
+a { color: inherit; }
+img { max-width: 100%; height: auto; }
+
+.container-page { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: 16px; }
+.container-narrow { width: 100%; max-width: 760px; margin-inline: auto; padding-inline: 16px; }
+.font-display { font-family: var(--font-heading), var(--font-body), system-ui, sans-serif; }
+
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--brand-strong); color: #fff;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600; transition: top 0.15s;
+}
+.skip-link:focus { top: 12px; }
+
+/* ---------- Cards, chips, buttons ---------- */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.chip {
+  display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--brand-strong); background: var(--brand-soft); border-radius: 999px; padding: 4px 10px; text-decoration: none; line-height: 1.3;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 20px;
+  border-radius: 999px; font-weight: 700; text-decoration: none; cursor: pointer; border: 2px solid transparent;
+  background: var(--brand-strong); color: #fff;
+}
+@media (prefers-color-scheme: dark) { .btn { color: #1a0d08; } }
+.btn:hover { filter: brightness(1.06); }
+.btn-outline { background: transparent; color: var(--brand-strong); border-color: var(--brand-strong); }
+@media (prefers-color-scheme: dark) { .btn-outline { color: var(--brand-strong); } }
+.thumb { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; display: block; background: var(--surface-2); }
+.muted { color: var(--muted); }
+
+/* ---------- Ad slots ---------- */
+.ad-slot { margin: 28px auto; text-align: center; width: 100%; overflow: hidden; }
+.ad-label { display: block; font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+
+/* ---------- Article typography ---------- */
+.prose-tw { font-size: 1.0625rem; line-height: 1.75; color: var(--ink-2); overflow-wrap: anywhere; }
+@media (min-width: 768px) { .prose-tw { font-size: 1.125rem; } }
+.prose-tw > * + * { margin-top: 1.1em; }
+.prose-tw h2 { font-family: var(--font-heading), var(--font-body), sans-serif; font-size: 1.6rem; line-height: 1.25; color: var(--ink); margin-top: 2em; font-weight: 700; }
+.prose-tw h3 { font-family: var(--font-heading), var(--font-body), sans-serif; font-size: 1.28rem; line-height: 1.3; color: var(--ink); margin-top: 1.6em; font-weight: 700; }
+.prose-tw h4 { font-weight: 700; color: var(--ink); margin-top: 1.4em; }
+.prose-tw a { color: var(--brand-strong); text-decoration: underline; text-underline-offset: 3px; }
+.prose-tw ul, .prose-tw ol { padding-left: 1.4em; }
+.prose-tw ul { list-style: disc; }
+.prose-tw ol { list-style: decimal; }
+.prose-tw li + li { margin-top: 0.4em; }
+.prose-tw li::marker { color: var(--brand-strong); }
+.prose-tw img { border-radius: var(--radius-sm); height: auto; max-width: 100%; display: block; margin-inline: auto; }
+.prose-tw figure { margin-block: 1.4em; }
+.prose-tw figcaption { font-size: 0.9rem; color: var(--muted); text-align: center; margin-top: 6px; }
+.prose-tw blockquote { border-left: 4px solid var(--brand); padding: 4px 0 4px 16px; color: var(--ink); font-style: italic; background: var(--surface-2); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.prose-tw pre { background: #11151a; color: #e6e9ee; padding: 14px; border-radius: var(--radius-sm); overflow-x: auto; font-size: 0.9rem; }
+.prose-tw code { font-size: 0.92em; background: var(--surface-2); padding: 2px 5px; border-radius: 4px; }
+.prose-tw pre code { background: none; padding: 0; }
+.prose-tw iframe, .prose-tw video { max-width: 100%; aspect-ratio: 16 / 9; height: auto; width: 100%; border: 0; }
+.prose-tw .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.prose-tw table { border-collapse: collapse; min-width: 520px; width: 100%; font-size: 0.95rem; }
+.prose-tw th, .prose-tw td { border-bottom: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+.prose-tw th { background: var(--surface-2); color: var(--ink); }
+.prose-tw hr { border: 0; border-top: 1px solid var(--line); }
+
+/* Legal / static page body */
+.page-body { color: var(--ink-2); line-height: 1.75; }
+.page-body > * + * { margin-top: 1em; }
+.page-body h3 { font-family: var(--font-heading), var(--font-body), sans-serif; color: var(--ink); font-size: 1.25rem; margin-top: 1.8em; font-weight: 700; }
+.page-body ul { list-style: disc; padding-left: 1.4em; }
+.page-body a { color: var(--brand-strong); text-decoration: underline; text-underline-offset: 3px; }
+
+details > summary { cursor: pointer; list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .chev { transform: rotate(180deg); }
+.chev { transition: transform 0.15s; }

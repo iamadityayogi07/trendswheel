@@ -1,0 +1,34 @@
+{
+  "id": 137,
+  "slug": "can-your-employer-see-what-you-do-on-work-laptop",
+  "title": "Can Your Employer See What You Do on a Work Laptop?",
+  "html": "<p>It depends on what your employer has installed. For one common tool, Microsoft Intune, Microsoft publishes a plain list of what the company can and cannot see. Other tools can see more. So treat a work laptop as visible to your employer, keep personal things off it, and ask your IT team what they collect.</p>\n\n<p><em>Last updated: 10 Oct 2026. This is general information, not legal advice.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>What Microsoft says about Intune</h2>\n\n<p>Intune is a tool companies use to manage laptops and phones. Microsoft's help page says your organisation can never see these on a device enrolled in Intune: calling and web browsing history, email and text messages, contacts, calendar, passwords, pictures (including the camera roll), and the content of documents you create.</p>\n<!-- SOURCE: https://learn.microsoft.com/en-us/intune/user-help/enrollment/data-visibility (What info can your organization see when you enroll your device?) -->\n\n<p>It says your organisation can always see: the device owner, name, serial number, model, manufacturer, operating system and version, and IMEI.</p>\n\n<p>It adds that your organisation might see more in some cases, such as:</p>\n<ul>\n  <li>the full phone number of a corporate-owned device (only the last four digits on a personal device);</li>\n  <li>your storage space, if you are getting support for an app install;</li>\n  <li>the location of a lost corporate-owned device, though not a personal device;</li>\n  <li>the apps installed: all apps on most corporate-owned devices, and only the managed (work) apps on a personal device, though some configurations allow more;</li>\n  <li>on a corporate-owned Windows device: hardware and operating system information, installed certificate details, file paths and file names, user and group information, registry and event log entries, and details about running processes.</li>\n</ul>\n<!-- SOURCE: https://learn.microsoft.com/en-us/intune/user-help/enrollment/data-visibility -->\n\n<h2>What this does not tell you</h2>\n\n<p>That list covers Intune enrollment. Employers also use other tools. Security software, network filters, email and chat systems, and some monitoring products collect different data, and Microsoft's page does not describe them. Your employer's acceptable-use or IT policy is the document that says what is collected. We have not confirmed what Indian rules require a company to tell its employees, so we do not state it here.</p>\n\n\n\n<h2>What to do</h2>\n\n<ul>\n  <li>Read your company's IT or acceptable-use policy. If it is vague, ask your IT or HR team what is collected on your laptop and phone.</li>\n  <li>Keep personal accounts, banking and private files off a work device. A work device belongs to the company, and you may have to return it.</li>\n  <li>Use your own phone for personal calls and chats, and check what your employer's apps on it can see (the Company Portal app shows the ownership type under Device Details).</li>\n  <li>Do not install monitoring-evasion tools or unapproved software on a work device. It can break your company's rules and create a security risk.</li>\n</ul>\n<!-- SOURCE: https://learn.microsoft.com/en-us/intune/user-help/enrollment/data-visibility (Company Portal: Device Details shows the ownership type) -->\n\n<p>If you work remotely, check that your home network and accounts are safe: <a href=\"/how-to/google-account-security-checklist-2026\">Google account checklist</a>.</p>\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Read the policy and ask IT what is collected.</li>\n  <li>Keep personal things on a personal device.</li>\n  <li>Check Device Details in the Company Portal app if your company uses Intune.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/android-app-permissions-privacy-checkup\">Which app permissions to check on Android</a></li>\n  <li><a href=\"/tech/can-other-apps-see-installed-apps-android\">Can other apps see what you have installed</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://learn.microsoft.com/en-us/intune/user-help/enrollment/data-visibility\" rel=\"noopener\">What info can your organization see when you enroll your device? (Microsoft Intune, Microsoft Learn)</a></li>\n</ul>",
+  "excerpt": "<p>What one widely used device-management tool says your employer can see on a work laptop or phone, what it says they cannot, and the questions to ask your IT team about everything else.</p>",
+  "description": "<p>What one widely used device-management tool says your employer can see on a work laptop or phone, what it says they cannot, and the questions to ask your IT team about everything else.</p>",
+  "metaTitle": "Can Your Employer See What You Do on a Work Laptop?",
+  "metaDescription": "What Microsoft Intune says your employer can and cannot see on a work device, why other tools can see more, and how to find out what applies to you.",
+  "metaKeywords": "can employer see work laptop, intune what can employer see, work device monitoring, company laptop privacy, byod privacy",
+  "publishedAt": "2026-09-11T06:34:16+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "Tech",
+    "slug": "tech"
+  },
+  "tags": [
+    "can employer see work laptop",
+    "intune what can employer see",
+    "work device monitoring",
+    "company laptop privacy",
+    "byod privacy"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/can-your-employer-see-what-you-do-on-your-work-laptop-3762.webp",
+  "thumbnailImage": "/posts/thumb_can-your-employer-see-what-you-do-on-your-work-laptop-3762.webp",
+  "altImage": "Illustration of a work laptop on a desk with monitoring dashboards and data icons behind it",
+  "faq": [],
+  "impressions": 167,
+  "oldPath": "/tech/can-your-employer-see-what-you-do-on-work-laptop"
+}

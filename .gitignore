@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env*
+*.log
+next-env.d.ts
+tsconfig.tsbuildinfo
+.vercel
+public/_img

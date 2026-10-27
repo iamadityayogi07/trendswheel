@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "How-To",
+    "slug": "how-to",
+    "metaTitle": "How-To Guides | Step-by-Step Tutorials & Smart Tips - TrendsWheel (2026)",
+    "metaDescription": "Easy step-by-step How-To guides and tutorials on TrendsWheel. Learn how to use apps, fix common tech issues and try smart digital hacks.",
+    "metaKeywords": "how to, tech tutorials, app how-to, step by step guide, troubleshooting, tech help, DIY tech, digital tips, 2026 guides",
+    "faq": [
+      {
+        "title": "Are these how-to guides suitable for beginners?",
+        "description": "Yes. Every guide is written in plain language with clear, numbered steps, so you can follow along even if you are not tech-savvy."
+      },
+      {
+        "title": "Do the how-to guides cover both Android and iPhone?",
+        "description": "Most guides cover Android in depth, and we note the iPhone/iOS steps wherever the process differs, so the instructions work across devices."
+      },
+      {
+        "title": "How often are the how-to guides updated?",
+        "description": "We revisit popular guides whenever the software, settings menus or app interfaces change, so the steps stay accurate for the latest versions."
+      },
+      {
+        "title": "Do I need any paid tools to follow these tutorials?",
+        "description": "No. Our tutorials rely on built-in settings and free apps wherever possible, and we clearly flag anything optional or paid."
+      }
+    ],
+    "featuredImage": "/assets/category/cat_1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Apps",
+    "slug": "apps",
+    "metaTitle": "Best Apps & Reviews | Trending Mobile Apps & Tools 2026 - TrendsWheel",
+    "metaDescription": "Explore the best mobile apps, productivity tools and trending reviews on TrendsWheel. Find top Android and iOS apps, AI tools and must-have downloads.",
+    "metaKeywords": "mobile apps, app reviews, best apps 2026, android apps, ios apps, AI tools, productivity apps, trending apps, latest app updates",
+    "faq": [
+      {
+        "title": "How do you choose which apps to review?",
+        "description": "We pick apps based on reader demand and real-world usefulness, testing them hands-on rather than relying on store ratings."
+      },
+      {
+        "title": "Are the recommended apps free or paid?",
+        "description": "We cover both. Each review clearly states whether an app is free, freemium or paid, and what the paid tiers actually unlock."
+      },
+      {
+        "title": "Do you review both Android and iOS apps?",
+        "description": "Yes. We cover apps across Android and iOS, and note when features or pricing differ between the two platforms."
+      },
+      {
+        "title": "Are your app links affiliate links?",
+        "description": "Some may be. Any affiliate relationship is disclosed clearly, and it never affects which apps we recommend or how we rate them."
+      }
+    ],
+    "featuredImage": "/assets/category/cat_2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Tech",
+    "slug": "tech",
+    "metaTitle": "Latest Tech News & Trends | Gadgets, AI & Innovations 2026 - TrendsWheel",
+    "metaDescription": "Get the latest technology news, gadget updates, AI innovations, and tech trends for 2026 on TrendsWheel. Stay ahead with daily insights into the future of tech.",
+    "metaKeywords": "tech news, technology trends 2026, gadgets, AI news, future tech, innovation, latest tech updates, tech industry news",
+    "faq": [
+      {
+        "title": "How often is the Tech section updated?",
+        "description": "We publish new tech news and analysis regularly, with major stories updated as they develop."
+      },
+      {
+        "title": "Are the tech reviews independent and unbiased?",
+        "description": "Yes. Our reviews are editorially independent, and any review units or affiliate relationships are disclosed clearly within the article."
+      },
+      {
+        "title": "Do you cover budget devices as well as flagships?",
+        "description": "Yes. We cover the full range — from budget and mid-range devices to flagships — and focus on real-world value, not just headline specs."
+      },
+      {
+        "title": "Can I suggest a gadget or product for review?",
+        "description": "Absolutely. Use our contact page to pitch a product or topic and our editorial team will take a look."
+      }
+    ],
+    "featuredImage": "/assets/category/cat_3.webp"
+  },
+  {
+    "id": 4,
+    "name": "Social",
+    "slug": "social",
+    "metaTitle": "Social Media Trends & Viral Updates 2026 - TrendsWheel",
+    "metaDescription": "The latest social media trends, viral topics and creator updates on TrendsWheel, including what's trending on Instagram, X and YouTube.",
+    "metaKeywords": "social media trends, viral news, influencers, instagram trends, youtube trends, tiktok updates, online trends 2026, digital marketing trends",
+    "faq": [
+      {
+        "title": "Which social media platforms do you cover?",
+        "description": "We cover the major platforms — including Instagram, YouTube, X, Facebook and emerging apps — focusing on the changes that actually affect users and creators."
+      },
+      {
+        "title": "How often are social media trends and updates posted?",
+        "description": "We publish new social coverage regularly, tracking algorithm changes, new features and viral trends as they happen."
+      },
+      {
+        "title": "Do you explain algorithm and feature changes?",
+        "description": "Yes. We break down platform algorithm updates and new features in plain language, and what they mean for your reach and privacy."
+      },
+      {
+        "title": "Can I suggest a social media topic to cover?",
+        "description": "Definitely. Use our contact page to suggest a platform, trend or feature and our team will consider it for coverage."
+      }
+    ],
+    "featuredImage": "/assets/category/cat_4.webp"
+  }
+]

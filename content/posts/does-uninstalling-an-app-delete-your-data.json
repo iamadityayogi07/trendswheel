@@ -1,0 +1,34 @@
+{
+  "id": 135,
+  "slug": "does-uninstalling-an-app-delete-your-data",
+  "title": "Does Uninstalling an App Delete Your Data?",
+  "html": "<p>Uninstalling an Android app removes the app and the files it kept in its own storage on your phone. It does not delete your account, the data the company already holds, or files the app saved to shared storage such as photos and downloads. To remove those, you have to ask the company to delete your account.</p>\n\n<p><em>Last updated: 10 Oct 2026.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>What uninstalling removes</h2>\n\n<p>Android's developer documentation says that an app's own storage, both internal and its private folders on external storage, is removed when the app is uninstalled. Google's help page for deleting apps says you can add a deleted app back later, and that apps you bought can be reinstalled without paying again.</p>\n<!-- SOURCE: https://developer.android.com/training/data-storage (storage comparison: app-specific files removed on uninstall) -->\n<!-- SOURCE: https://support.google.com/googleplay/answer/13627402 (Delete apps on your Android device) -->\n\n<h2>What stays on your phone</h2>\n\n<p>Files an app saves to shared storage are not removed when it is uninstalled. That covers photos, videos, music, documents and downloads that the app saved where other apps can see them. Look in your Gallery, Files app and Downloads folder.</p>\n<!-- SOURCE: https://developer.android.com/training/data-storage -->\n\n<p>Google also offers Archive as an alternative to a full uninstall: the app is removed, but its icon and your personal data stay on your phone, ready for you to reinstall.</p>\n<!-- SOURCE: https://support.google.com/googleplay/answer/13627402 -->\n\n<h2>What stays with the company</h2>\n\n<p>Uninstalling does not tell the app's developer to delete your account. Your login, your profile and what you did in the app are held by the company, not by your phone, and nothing on Google's help page says uninstalling changes that. Google's page for subscriptions also says uninstalling the app does not cancel a subscription.</p>\n<!-- SOURCE: https://support.google.com/googleplay/answer/7018481 (Cancel, pause or change a subscription on Google Play: \"When you uninstall the app, your subscription won't cancel.\") -->\n\n<h2>How to ask for deletion</h2>\n\n<ol>\n  <li>Look inside the app first. Google Play's policy says an app that lets you create an account must also give you an in-app way to delete that account and its data.</li>\n  <li>If you already uninstalled it, use the web link. The same policy requires a web link where you can ask for deletion of your account and data, without having to reinstall the app. It is shown on the app's Play Store listing, in the Data safety section.</li>\n  <li>Deactivating is not deleting. Google's policy says temporary deactivation or \"freezing\" an account does not count as account deletion.</li>\n  <li>Keep a record of the request: a screenshot or the confirmation email.</li>\n</ol>\n<!-- SOURCE: https://support.google.com/googleplay/android-developer/answer/13327111 (Understanding Google Play's app account deletion requirements) -->\n\n\n<h2>Before you uninstall</h2>\n\n<ul>\n  <li>Cancel any subscription in the Play Store first: <a href=\"/how-to/how-to-find-forgotten-subscriptions\">how to find forgotten subscriptions</a>.</li>\n  <li>Export or back up anything you want to keep from the app.</li>\n  <li>Remove the app's access to your Google account at myaccount.google.com/linkedapps if you signed in with Google.</li>\n</ul>\n\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Cancel subscriptions, then uninstall.</li>\n  <li>Check Files and Gallery for what the app left in shared storage.</li>\n  <li>Use the in-app or web option to delete the account.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/android-app-permissions-privacy-checkup\">Which app permissions to check on Android</a></li>\n  <li><a href=\"/tech/can-other-apps-see-installed-apps-android\">Can other apps see what you have installed</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://developer.android.com/training/data-storage\" rel=\"noopener\">Data and file storage overview (Android Developers)</a></li>\n  <li><a href=\"https://support.google.com/googleplay/answer/13627402\" rel=\"noopener\">Delete apps on your Android device (Google Play Help)</a></li>\n  <li><a href=\"https://support.google.com/googleplay/android-developer/answer/13327111\" rel=\"noopener\">Understanding Google Play's app account deletion requirements (Play Console Help)</a></li>\n  <li><a href=\"https://support.google.com/googleplay/answer/7018481\" rel=\"noopener\">Cancel, pause or change a subscription on Google Play (Google Play Help)</a></li>\n</ul>",
+  "excerpt": "<p>What uninstalling an Android app removes, what it leaves behind on your phone, and why your account and cloud data stay with the company until you ask for deletion.</p>",
+  "description": "<p>What uninstalling an Android app removes, what it leaves behind on your phone, and why your account and cloud data stay with the company until you ask for deletion.</p>",
+  "metaTitle": "Does Uninstalling an App Delete Your Data?",
+  "metaDescription": "Uninstalling removes the app and its files on your phone, but not your account or what the company already holds. What stays, and how to ask for deletion.",
+  "metaKeywords": "does uninstalling an app delete data, delete app account, google play account deletion, app data after uninstall, archive apps android",
+  "publishedAt": "2026-09-09T07:13:46+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "Apps",
+    "slug": "apps"
+  },
+  "tags": [
+    "does uninstalling an app delete data",
+    "delete app account",
+    "google play account deletion",
+    "app data after uninstall",
+    "archive apps android"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/does-uninstalling-an-app-delete-your-data-what-actually-stays-behind-7498.webp",
+  "thumbnailImage": "/posts/thumb_does-uninstalling-an-app-delete-your-data-what-actually-stays-behind-7498.webp",
+  "altImage": "Illustration of a phone with layers of cached files, account data and downloads left behind after an app is removed",
+  "faq": [],
+  "impressions": 251,
+  "oldPath": "/apps/does-uninstalling-an-app-delete-your-data"
+}

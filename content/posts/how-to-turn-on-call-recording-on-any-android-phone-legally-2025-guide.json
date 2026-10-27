@@ -1,0 +1,34 @@
+{
+  "id": 56,
+  "slug": "how-to-turn-on-call-recording-on-any-android-phone-legally-2025-guide",
+  "title": "Call Recording on Android: How to Turn It On and What to Know First",
+  "html": "<p>Whether you can record a call, and how, depends on your phone and your country. Google's Phone app has call recording on some phones, and it tells both people on the call that it is on. Google also says it is up to you to follow the laws on recording phone conversations, and that some laws require everyone on the call to agree. Check the law that applies to you before you press record.</p>\n\n<p><em>Last updated: 10 Oct 2026. This is general information, not legal advice.</em></p>\n\n<p>I tested this on a vivo V23 Pro running Android 14 (Funtouch OS 14), in Google&#039;s Phone app, on 10 Oct 2026.</p>\n\n<h2>Is it available on your phone?</h2>\n\n<p>Google's help page says call recording in the Phone app needs Android 9 or newer on non-Pixel phones, or a Pixel 6 or newer with Android 14 or newer, plus the latest version of the Phone app. It is only available in supported countries and regions.</p>\n<!-- SOURCE: https://support.google.com/phoneapp/answer/9803950 (Record phone calls in the Phone app) -->\n\n<!-- SOURCE: https://support.google.com/phoneapp/answer/9803950 (exact wording from the official page; checked on 2026-10-10) -->\n<p>On a vivo V23 Pro running Android 14, in India, the Google Phone app shows a Record option under More on the call screen, and an announcement plays when recording starts. I tested this in the Google Phone app only, not in the phone maker&#039;s own dialer.</p>\n\n<h2>How to turn it on</h2>\n\n<p>In the Phone app, open Settings, then Call Recording. You can choose to record calls from unknown numbers automatically, or from selected contacts. You can also record a single call from the call screen when the option is offered.</p>\n<!-- SOURCE: https://support.google.com/phoneapp/answer/9803950 -->\n\n<figure><img src=\"/posts/evidence/cr-call-recording-settings.webp\" alt=\"Google Phone app Settings Call Recording screen\" width=\"713\" height=\"1568\" loading=\"lazy\"><figcaption>Call Recording settings</figcaption></figure>\n\n<h2>What the other person is told</h2>\n\n<p>When recording starts, Google says both participants are notified with a disclosure that the call is being recorded. Recordings stay on your device: Google says calls are not saved or backed up off the device.</p>\n<!-- SOURCE: https://support.google.com/phoneapp/answer/9803950 -->\n\n<h2>The law</h2>\n\n<p>Indian law on recording a call you are part of is not covered here, and this page is not legal advice. If a recording could matter later, for example in a dispute, ask a lawyer before you rely on it.</p>\n\n<p>Google's own warning applies everywhere: some laws require everyone on the call to consent. If you are unsure, tell the other person you are recording, and keep recordings to what you need.</p>\n\n<h2>Safer habits</h2>\n\n<ul>\n  <li>Record only when you need to, and tell the other person.</li>\n  <li>Keep recordings secure: they can include private information. See <a href=\"/how-to/android-app-permissions-privacy-checkup\">which apps can use your microphone</a>.</li>\n  <li>Be careful with third-party recorder apps: check what permissions they ask for before you install one.</li>\n</ul>\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Check whether your phone's Phone app offers call recording.</li>\n  <li>Find out what the law says where you live before you use it.</li>\n  <li>Turn it on only for the calls that need it.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/how-to-block-spam-calls-and-texts-on-android-2026\">How to block spam calls and texts</a></li>\n  <li><a href=\"/how-to/how-to-report-online-fraud-cybercrime-1930-india-2026\">How to report online fraud in India</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/phoneapp/answer/9803950\" rel=\"noopener\">Record phone calls in the Phone app (Phone app Help)</a></li>\n</ul>",
+  "excerpt": "<p>How call recording works in Google's Phone app, where to find it, what both people on the call are told, and why Google leaves the legal check to you.</p>",
+  "description": "<p>How call recording works in Google's Phone app, where to find it, what both people on the call are told, and why Google leaves the legal check to you.</p>",
+  "metaTitle": "Call Recording on Android: How to Turn It On and the Rules",
+  "metaDescription": "How to turn on call recording in the Google Phone app, what the other person hears, where recordings are kept, and why you must check the law where you live.",
+  "metaKeywords": "call recording android, google phone call recording, record calls legally india, call recording announcement, android call recorder settings",
+  "publishedAt": "2025-11-25T07:31:41+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "call recording android",
+    "google phone call recording",
+    "record calls legally india",
+    "call recording announcement",
+    "android call recorder settings"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/how-to-turn-on-call-recording-on-any-android-phone-legally-in-2026-7795.webp",
+  "thumbnailImage": "/posts/thumb_how-to-turn-on-call-recording-on-any-android-phone-legally-in-2026-7795.webp",
+  "altImage": "Illustration of a phone call screen with a Record button, next to a Check Local Laws note",
+  "faq": [],
+  "impressions": 1703,
+  "oldPath": "/how-to/how-to-turn-on-call-recording-on-any-android-phone-legally-2025-guide"
+}

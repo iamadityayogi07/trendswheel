@@ -1,0 +1,24 @@
+{
+  "name": "TrendsWheel",
+  "tagline": "Premium technology coverage: how-to guides, tech news, apps and social platform reporting.",
+  "baseUrl": "https://trendswheel.com",
+  "lang": "en",
+  "adsensePublisherId": "ca-pub-1412589887378400",
+  "gaMeasurementId": "G-0R1CTGQCDG",
+  "email": "info@trendswheel.com",
+  "address": "452001, Indore, India",
+  "phone": "+918839497272",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/trendswheel/",
+    "instagram": "https://www.instagram.com/trendswheelblogs",
+    "x": "https://x.com/trendswheelblog",
+    "youtube": "https://www.youtube.com/@trendswheel-blogs",
+    "pinterest": "https://www.pinterest.com/trendswheelblogs"
+  },
+  "logo": "/settings/trendswheel-logo-3471a0.png",
+  "favicon": "/settings/trendswheel-favicon-3cf207.png",
+  "aboutHeading": "About TrendsWheel",
+  "aboutContent": "<p><strong>TrendsWheel</strong> is an independent tech blog from Indore, India. It publishes step-by-step guides for Android phones, with a focus on security, privacy and staying safe from online fraud in India.</p>\n\n<p>The site is run by Aditya Yogi, a full stack developer, together with Deepak Singh. You can read more about each of them on their author pages.</p>\n\n<p>You can find almost anything online, but it is hard to find one clear, complete guide that is also up to date. Apps and phones change their settings very often, and many websites still show steps that no longer match what you see on your screen. Aditya started TrendsWheel to fix that: guides on Android, apps and online safety that are complete, easy to follow and kept current as things change.</p>\n\n<p>When a guide is about a setting on a phone, Aditya tries the steps on his own phone first, a vivo V23 Pro running Android 14, and the guide says so and gives the date. If something could not be tested, for example on another brand, the guide says that too instead of guessing. For facts we use official sources only, such as Google and phone makers&#039; help pages, RBI and Sanchar Saathi. If you find a mistake or a step that no longer works, write to info@trendswheel.com and we will fix the guide and change its Last updated date.</p>\n\n<p>Facts and menu paths in our guides come from the source named at the bottom of each article. Where we could not open an official page, the article says so instead of guessing. Each article shows when it was last updated.</p>\n\n<p>TrendsWheel is supported by advertising. We pick topics based on questions readers ask. If a post ever includes affiliate links, it will say so at the top.</p>\n\n<p>Found a mistake, or a step that does not match your phone? Tell us on the <a href=\"/contact-us\">Contact page</a> and we will check it.</p>",
+  "aboutImage": "/settings/trendswheel-about-us-feb969.jpg",
+  "aboutImageAlt": "TrendsWheel — making technology simple, secure and accessible for everyone"
+}

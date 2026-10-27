@@ -1,0 +1,35 @@
+{
+  "id": 86,
+  "slug": "what-is-esim-and-how-it-works-in-india-2025-updated-guide",
+  "title": "eSIM in India: What It Is and How to Get One on Jio, Airtel and Vi",
+  "html": "<p>An eSIM is a digital SIM that is stored on the phone instead of on a plastic card. In India you ask your operator for it, usually through its app, confirm with an OTP and a verification call, and then download the eSIM profile on the phone. Expect to wait: operators publish waiting periods, and some block SMS for a while after activation.</p>\r\n\r\n<p><em>Last updated: 10 Oct 2026. The operator steps below are what each operator&#39;s own page said on that date. Check the page before you start.</em></p>\r\n\r\n<p>Sources last checked: 10 Oct 2026.</p>\r\n\r\n<h2>What an eSIM is</h2>\r\n\r\n<p>Google describes an eSIM as a digital SIM that lets you activate a cellular plan without inserting a physical SIM card. Your phone must support eSIM, and your operator must support it too.</p>\r\n<!-- SOURCE: https://support.google.com/pixelphone/answer/16115470 (Set up a new eSIM, Pixel Phone Help) -->\r\n\r\n<h2>On the phone (Android)</h2>\r\n\r\n<p>On a Pixel the path is Settings, then Network and internet, then SIMs, then Add SIM, then Set up an eSIM. Google says that if you did not buy the phone from your operator, you should first ask whether they support eSIM and confirm your device&#39;s IMEI. If the SIM is not detected automatically, you may need to activate the eSIM through the operator first. Other brands use similar menus.</p>\r\n<!-- SOURCE: https://support.google.com/pixelphone/answer/16115470 -->\r\n\r\n<h2>What the operators say</h2>\r\n\r\n<h3>Airtel</h3>\r\n\r\n<p>Airtel&#39;s page says you request an eSIM in the Airtel app (Home, shortcuts, upgrade to eSIM), choose your device and enter its 32-digit EID, then enter the OTP sent to your registered Airtel number. You then get a verification call about 10 minutes after submitting, and confirm by voice. After you download the profile the eSIM activates within about 2 hours. The page lists an active Airtel postpaid connection as a requirement and says the whole process has to be completed within 4 hours or the request is cancelled.</p>\r\n<!-- SOURCE: https://www.airtel.in/esim/ -->\r\n\r\n<h3>Jio</h3>\r\n\r\n<p>Jio&#39;s page says to open the MyJio app, search for &quot;Switch to eSIM&quot;, verify your email with an OTP, then submit the OTP sent to your mobile number. It says that as per DoT guidelines a 2-hour cooling period applies after you submit. You then answer an automated call from +91 2235072222 and press the number it asks for. If the call is missed, you can SMS RECALL to 199. You have to give the EID of the device.</p>\r\n<!-- SOURCE: https://www.jio.com/jcms/esim/ -->\r\n\r\n<h3>Vi</h3>\r\n\r\n<p>Vi&#39;s page says to log in to the Vi app, go to Help, then Activate eSIM, enter the 32-digit EID, verify the OTP, and text &quot;eSIMY&quot; to 199 within 15 minutes. You download the eSIM profile after 15 minutes from the phone&#39;s Add eSIM option. It also says incoming and outgoing SMS, including OTPs, are barred for 24 hours after eSIM activation, as per Government regulations, and that eSIM is not yet available in some regions (HP, JK, OR, NE and Assam).</p>\r\n<!-- SOURCE: https://www.myvi.in/esim -->\r\n\r\n<h2>Why the waiting periods matter</h2>\r\n\r\n<p>These steps (OTPs, a call, a cooling period, SMS barred after activation) put extra checks around a SIM change. A SIM change is also how SIM swap scams work. If you get an eSIM or SIM-change message you did not ask for, act at once: see <a href=\"/how-to/sim-swap-scam-how-to-protect-your-phone-number-2026\">SIM swap steps</a>. Never share the OTP for an eSIM request, and keep your EID private.</p>\r\n\r\n<h2>Before you switch</h2>\r\n\r\n<ul>\r\n\t<li>Keep your old SIM until the eSIM works.</li>\r\n\t<li>Plan for the waiting period: do not switch just before something that needs an OTP, such as a payment you must make that day.</li>\r\n\t<li>Move your accounts if you change numbers: <a href=\"/tech/what-happens-to-your-old-phone-number\">what happens to your old number</a>.</li>\r\n</ul>\r\n\r\n<h2>What to do next</h2>\r\n\r\n<ol>\r\n\t<li>Check that your phone supports eSIM and find its EID.</li>\r\n\t<li>Read your operator&#39;s current eSIM page, then request it in the app.</li>\r\n\t<li>Expect OTPs, a verification call and a waiting period.</li>\r\n</ol>\r\n\r\n<h2>Related guides</h2>\r\n\r\n<ul>\r\n\t<li><a href=\"/how-to/how-to-report-online-fraud-cybercrime-1930-india-2026\">How to report online fraud in India</a></li>\r\n\t<li><a href=\"/how-to/how-to-enable-android-anti-theft-protection-2025-step-by-step-guide\">Android anti-theft protection</a></li>\r\n</ul>\r\n\r\n<h2>Sources</h2>\r\n\r\n<ul>\r\n\t<li><a href=\"https://www.airtel.in/esim/\" rel=\"noopener\">Airtel eSIM (Airtel)</a></li>\r\n\t<li><a href=\"https://www.jio.com/jcms/esim/\" rel=\"noopener\">Jio eSIM (Jio)</a></li>\r\n\t<li><a href=\"https://www.myvi.in/esim\" rel=\"noopener\">Vi eSIM (Vi)</a></li>\r\n\t<li><a href=\"https://support.google.com/pixelphone/answer/16115470\" rel=\"noopener\">Set up a new eSIM (Pixel Phone Help)</a></li>\r\n</ul>",
+  "excerpt": "<p>What an eSIM is, the Android setup path, and the steps the three big operators publish: the app, the EID, the OTP, the verification call and the waiting period before it works.</p>",
+  "description": "<p>What an eSIM is, the Android setup path, and the steps the three big operators publish: the app, the EID, the OTP, the verification call and the waiting period before it works.</p>",
+  "metaTitle": "eSIM in India: What It Is and How to Get One",
+  "metaDescription": "What an eSIM is, how to set one up on Android, and what Jio, Airtel and Vi say about getting one: apps, OTPs, a verification call and waiting periods.",
+  "metaKeywords": "esim india, jio esim, airtel esim, vi esim, how to activate esim android, eid number esim",
+  "publishedAt": "2025-12-07T03:03:17+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "Tech",
+    "slug": "tech"
+  },
+  "tags": [
+    "esim india",
+    "jio esim",
+    "airtel esim",
+    "vi esim",
+    "how to activate esim android",
+    "eid number esim"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/esim-in-india-what-it-is-and-how-to-get-one-on-jio-airtel-and-vi-9194.webp",
+  "thumbnailImage": "/posts/thumb_esim-in-india-what-it-is-and-how-to-get-one-on-jio-airtel-and-vi-9194.webp",
+  "altImage": "Illustration of a phone's SIM manager with an eSIM chip, next to Jio, Airtel and Vi SIM cards and India Gate",
+  "faq": [],
+  "impressions": 1326,
+  "oldPath": "/tech/what-is-esim-and-how-it-works-in-india-2025-updated-guide"
+}

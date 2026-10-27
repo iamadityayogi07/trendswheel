@@ -1,0 +1,34 @@
+{
+  "id": 141,
+  "slug": "lost-authenticator-app-recovery",
+  "title": "Lost Your Authenticator App or Phone? How to Get Back In",
+  "html": "<p>If you lose the phone that holds your authenticator app, you can usually still get in, but only if you prepared one of these: a device that is still signed in, saved backup codes, codes synced to your account, or recovery details on file. Try them in that order. Then set up the app again on the new phone and save new backup codes.</p>\n\n<p><em>Last updated: 10 Oct 2026. The steps below are for a Google account. Other services have their own process.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>1. Use another device that is still signed in</h2>\n\n<p>If you are still signed in to your Google account on a laptop, a tablet or another phone, you can use it to add a new second step (a passkey, an authenticator app or Google prompts) in Security and sign-in, under 2-Step Verification. Do it before you sign out of that device.</p>\n<!-- SOURCE: https://support.google.com/accounts/answer/185839 (Turn on 2-Step Verification) -->\n\n<h2>2. Use your backup codes</h2>\n\n<p>Google lists backup codes as one of the second steps: eight-digit codes for emergencies. If you saved them, use one at the sign-in prompt. When you are back in, generate a new set and store it somewhere other than the phone.</p>\n<!-- SOURCE: https://support.google.com/accounts/answer/185839 -->\n\n<h2>3. If you used Google Authenticator and signed in to it</h2>\n\n<p>Google says that when you sign in to your Google Account inside Google Authenticator, your codes are synced to your account. Install the app on the new phone, sign in with the same Google account, and the codes come back. For this to work you needed to be signed in on the old phone. If your codes were not synced, Google says you must visit each site where you set up the authenticator, remove the old codes and link the new device.</p>\n<!-- SOURCE: https://support.google.com/accounts/answer/1066447 (Get verification codes with Google Authenticator) -->\n\n<p>If the old phone was lost or stolen and your codes were synced, you can remove them by removing that device from your Google account.</p>\n\n<h2>4. Google account recovery</h2>\n\n<p>If none of that works, use Google's account recovery page and answer the questions as best you can. Google says wrong guesses do not lock you out of the recovery process, and there is no limit on how many times you can try. It also says you cannot call Google for help signing in, and that changes to recovery information can take up to 7 days to take effect. So set your recovery phone and email in advance.</p>\n<!-- SOURCE: https://support.google.com/accounts/answer/7682439 (Sign in to your Google Account / recover) -->\n\n<h2>Other apps and banks</h2>\n\n<p>Each service has its own way back, and it often involves proving who you are. Look for \"lost access to authenticator\" or \"use a backup code\" on the sign-in page.</p>\n\n\n\n<h2>Next time: be ready</h2>\n\n<ul>\n  <li>Save backup codes in a safe place that is not the phone.</li>\n  <li>Sync your authenticator codes, or move to a passkey. See <a href=\"/how-to/two-factor-authentication-2fa-explained-secure-accounts-2026\">two-factor authentication explained</a>.</li>\n  <li>Keep your recovery phone and email current: <a href=\"/how-to/google-account-security-checklist-2026\">Google account checklist</a>.</li>\n  <li>Before you change or wipe a phone, move your authenticator first. If an account was already taken over, see <a href=\"/how-to/what-to-do-when-your-accounts-go-wrong\">what to do when your accounts go wrong</a>.</li>\n</ul>\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Use a signed-in device or a backup code to get in.</li>\n  <li>Set up your authenticator or passkey again on the new phone.</li>\n  <li>Generate new backup codes and store them away from the phone.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/what-happens-to-your-online-accounts-when-you-die-2026\">What happens to your online accounts when you die</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/accounts/answer/185839\" rel=\"noopener\">Turn on 2-Step Verification (Google Account Help)</a></li>\n  <li><a href=\"https://support.google.com/accounts/answer/1066447\" rel=\"noopener\">Get verification codes with Google Authenticator (Google Account Help)</a></li>\n  <li><a href=\"https://support.google.com/accounts/answer/7682439\" rel=\"noopener\">Recover your Google Account or Gmail (Google Account Help)</a></li>\n</ul>",
+  "excerpt": "<p>The ways back into an account when your authenticator app is gone: another signed-in device, backup codes, synced codes, and account recovery. Plus how to avoid it next time.</p>",
+  "description": "<p>The ways back into an account when your authenticator app is gone: another signed-in device, backup codes, synced codes, and account recovery. Plus how to avoid it next time.</p>",
+  "metaTitle": "Lost Your Authenticator App or Phone? How to Get Back In",
+  "metaDescription": "Lost the phone with your authenticator app? Use backup codes, synced codes in Google Authenticator or account recovery, then set up again.",
+  "metaKeywords": "lost authenticator app, google authenticator new phone, backup codes, google account recovery, 2-step verification lost phone",
+  "publishedAt": "2026-09-15T02:18:31+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "lost authenticator app",
+    "google authenticator new phone",
+    "backup codes",
+    "google account recovery",
+    "2-step verification lost phone"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/lost-your-authenticator-app-how-to-get-back-into-your-accounts-2519.webp",
+  "thumbnailImage": "/posts/thumb_lost-your-authenticator-app-how-to-get-back-into-your-accounts-2519.webp",
+  "altImage": "Illustration of a locked phone on a dark floor beside a key, a printed code card, a security key and an envelope",
+  "faq": [],
+  "impressions": 192,
+  "oldPath": "/how-to/lost-authenticator-app-recovery"
+}

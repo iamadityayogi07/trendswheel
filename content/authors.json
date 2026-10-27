@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi",
+    "bio": "Aditya Yogi founded TrendsWheel and writes most of its guides on Android, privacy and staying safe from online fraud in India. He has worked as a full stack developer for five years. He works mainly with PHP and Laravel, building SaaS products, REST APIs and business web apps, and he builds mobile apps with Flutter. His puzzle game ArrowMaze is live on Google Play.",
+    "shortBio": "Full stack developer with five years in tech. Founder of TrendsWheel, writing guides on Android, privacy and online safety in India.",
+    "metaBio": "Full stack developer and founder of TrendsWheel, writing step-by-step guides on Android, apps, AI tools and social media.",
+    "avatar": "/uploads/users/1000496151-622fb1.jpg",
+    "isAdmin": true
+  },
+  {
+    "id": 2,
+    "name": "Deepak Singh",
+    "slug": "deepak-singh",
+    "bio": "Deepak Singh is a full stack developer and writes TrendsWheel's guides on mobile apps, Android tools and social media privacy settings. He has worked as a full stack developer for six years. His work history is on his LinkedIn profile.",
+    "shortBio": "Full stack developer and writer at TrendsWheel, writing about mobile apps, Android tools and social media privacy settings.",
+    "metaBio": "Mobile application developer and writer at TrendsWheel, writing practical guides on mobile apps, Android tools and social media settings.",
+    "avatar": "/web-assets/media/team/deepak-singh.jpg",
+    "isAdmin": false
+  },
+  {
+    "id": 3,
+    "name": "Simnan Ali",
+    "slug": "simnan-ali",
+    "bio": "Simnan Ali is a senior web developer working on AI technology, with 3 years of experience. At TrendsWheel he writes about AI tools and the technology behind them.",
+    "shortBio": "Senior web developer at TrendsWheel, working on AI technology with 3 years of experience. Writes about AI tools and the technology behind them.",
+    "metaBio": "Senior web developer with 3 years of experience in AI technology, writing about AI tools for TrendsWheel.",
+    "avatar": null,
+    "isAdmin": false
+  }
+]

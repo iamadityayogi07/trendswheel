@@ -1,0 +1,35 @@
+{
+  "name": "trendswheel-next",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "export": "node scripts/export-content.mjs",
+    "prebuild": "node scripts/prebuild-images.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "verify": "node scripts/verify.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "new-post": "node scripts/new-post.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.3",
+    "mysql2": "^3.24.6",
+    "serve": "^14.2.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
+  }
+}

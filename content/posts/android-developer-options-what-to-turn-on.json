@@ -1,0 +1,35 @@
+{
+  "id": 151,
+  "slug": "android-developer-options-what-to-turn-on",
+  "title": "Android Developer Options: What Is Worth Turning On",
+  "html": "<p>Developer options is a hidden menu made for people who build apps. To unlock it, open About phone, find Build number, and tap it 7 times. Most of what is inside is for debugging, and you can ignore it. A few settings are useful to everyone: Stay awake, Show taps, and the animation scales. USB debugging is useful only when you need it, and it should be off the rest of the time.</p>\r\n\r\n<p><em>Last updated: 10 Oct 2026. The menu is in the same place on most phones, but the name of the screen you start from varies.</em></p>\r\n\r\n<p>I checked these steps on a vivo V23 Pro running Android 14 (Funtouch OS 14, security update January 2025) on 10 Oct 2026.</p>\r\n\r\n<h2>How to turn Developer options on</h2>\r\n\r\n<ol>\r\n\t<li>Open Settings and go to About phone.</li>\r\n\t<li>Find Build number and tap it 7 times. You will see the message &quot;You are now a developer!&quot;.</li>\r\n\t<li>Go back. Developer options now appears in Settings, usually at the bottom or under System.</li>\r\n</ol>\r\n\r\n<p>Android&#39;s developer documentation lists where Build number is on several phones. On a Google Pixel it is Settings, then About phone, then Build number. On a Samsung Galaxy it is Settings, then About phone, then Software information, then Build number. On a OnePlus it is Settings, then About phone, then Build number.</p>\r\n<!-- SOURCE: https://developer.android.com/studio/debug/dev-options (Configure on-device developer options) -->\r\n\r\n<p>On my vivo V23 Pro (Funtouch OS 14), Developer options were hidden until I tapped Build number in the About phone section. After that, Developer options appeared inside Settings, then System, near the bottom of the list, below Reset options, Multiple users and Device clone. Opening it shows an On switch at the top, and the Drawing section lists Window animation scale, Transition animation scale and Animator duration scale, all set to 1x by default.</p>\r\n\r\n<h2>Settings an ordinary user may find useful</h2>\r\n\r\n<ul>\r\n\t<li>Stay awake. The screen stays on while the phone is charging. Useful on a desk or when following a long set of instructions.</li>\r\n\t<li>Show taps. A circle appears under your finger when you touch the screen. Useful if you record your screen to show someone else a step.</li>\r\n\t<li>Window, Transition and Animator animation scale. These set how fast animations play. Android&#39;s documentation says a lower scale results in a faster speed. Setting them to 0.5x or off makes the interface feel quicker. It does not make apps load faster.</li>\r\n</ul>\r\n<!-- SOURCE: https://developer.android.com/studio/debug/dev-options -->\r\n\r\n<h2>USB debugging: turn it on only when you need it</h2>\r\n\r\n<p>USB debugging lets your phone talk to a computer through Android Debug Bridge (adb). Developers need it. You may need it for a specific job, for example when a guide tells you to connect the phone to a PC. It has security implications, so switch it off when you are done, and never accept a &quot;Allow USB debugging?&quot; prompt from a computer you do not own.</p>\r\n<!-- SOURCE: https://developer.android.com/studio/debug/dev-options (USB debugging) -->\r\n\r\n<h2>Options to leave alone</h2>\r\n\r\n<ul>\r\n\t<li>Don&#39;t keep activities. Android&#39;s documentation says it destroys every activity as soon as you leave it. It is a testing tool. It makes apps reload when you switch back to them.</li>\r\n\t<li>Background process limit. It caps the number of processes that can run in the background at one time. If you set it low, apps you switched away from will reload more.</li>\r\n\t<li>Mock location app, Force 4x MSAA, GPU rendering and similar. These are for testing app behaviour, not for everyday use.</li>\r\n</ul>\r\n<!-- SOURCE: https://developer.android.com/studio/debug/dev-options -->\r\n\r\n<p>If your real goal is a faster or longer-lasting phone, our guides on <a href=\"/how-to/android-phone-slow-fixes\">why Android phones are slow</a> and <a href=\"/how-to/android-battery-drain-fixes\">battery drain</a> cover the settings that make a difference without Developer options.</p>\r\n\r\n<h2>What to do next</h2>\r\n\r\n<ol>\r\n\t<li>Tap Build number 7 times only if you have a reason to open the menu.</li>\r\n\t<li>Use Stay awake or Show taps if they help, and leave the rest alone.</li>\r\n\t<li>Turn USB debugging off when a task is finished.</li>\r\n</ol>\r\n\r\n<h2>Related guides</h2>\r\n\r\n<ul>\r\n\t<li><a href=\"/how-to/is-my-android-phone-hacked\">Is my Android phone hacked? What to check</a></li>\r\n</ul>\r\n\r\n<h2>Sources</h2>\r\n\r\n<ul>\r\n\t<li><a href=\"https://developer.android.com/studio/debug/dev-options\" rel=\"noopener\">Configure on-device developer options (Android Developers)</a></li>\r\n</ul>",
+  "excerpt": "<p>Developer options are tools for app developers. Here is how to unlock them, the handful of settings an ordinary user may find useful, and the ones to leave alone.</p>",
+  "description": "<p>Developer options are tools for app developers. Here is how to unlock them, the handful of settings an ordinary user may find useful, and the ones to leave alone.</p>",
+  "metaTitle": "Android Developer Options: What Is Worth Turning On",
+  "metaDescription": "How to unlock Developer options on Android, the few settings that are useful for normal users, and the ones to leave alone. From Android's own docs.",
+  "metaKeywords": "android developer options, enable developer options, build number tap seven times, usb debugging, animation scale, stay awake android",
+  "publishedAt": "2026-10-10T11:48:11+05:30",
+  "updatedAt": "2026-10-11T08:20:17+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "android developer options",
+    "enable developer options",
+    "build number tap seven times",
+    "usb debugging",
+    "animation scale",
+    "stay awake android"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/android-developer-options-what-is-worth-turning-on-3524.webp",
+  "thumbnailImage": "/posts/thumb_android-developer-options-what-is-worth-turning-on-3524.webp",
+  "altImage": "Illustration of an Android Developer options screen with USB debugging and Stay awake switches turned on",
+  "faq": [],
+  "impressions": 324,
+  "oldPath": "/how-to/android-developer-options-what-to-turn-on"
+}

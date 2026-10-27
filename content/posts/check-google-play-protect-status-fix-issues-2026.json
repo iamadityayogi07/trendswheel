@@ -1,0 +1,34 @@
+{
+  "id": 107,
+  "slug": "check-google-play-protect-status-fix-issues-2026",
+  "title": "How to Check Google Play Protect and Fix Common Problems",
+  "html": "<p>Play Protect is on by default. To check it, open the Play Store, tap your profile picture, then tap Play Protect. You can see when your phone was last scanned and start a scan from there. If your phone is reported as not Play Protect certified, that is a different problem, and it matters because Google says an uncertified device may not be secure.</p>\n\n<p><em>Last updated: 10 Oct 2026.</em></p>\n\n<p>I opened Play Protect from the Play Store on a vivo V23 Pro running Android 14 on 10 Oct 2026. It showed &quot;No harmful apps found&quot;, the time of the last scan, a Scan button, a list of recently scanned apps and a settings icon.</p>\n\n<h2>What Play Protect does</h2>\n\n<p>Google says Play Protect checks your apps and devices for harmful behaviour. It checks apps before you download them from the Play Store, checks your device for potentially harmful apps from other sources, warns you about them, and may deactivate or remove harmful apps. Google's developer pages say it scans devices once every day, and runs a real-time check when you try to install an app from outside the Play Store. The most harmful apps are removed automatically and less severe ones are disabled.</p>\n<!-- SOURCE: https://support.google.com/android/answer/2812853 (Use Google Play Protect) -->\n<!-- SOURCE: https://developers.google.com/android/play-protect/client-protections (On-device protections) -->\n\n<h2>Check that it is on, and run a scan</h2>\n\n<ol>\n  <li>Open the Play Store and tap your profile picture.</li>\n  <li>Tap Play Protect.</li>\n  <li>Look at the last-scanned time and the list of scanned apps. If the screen offers a Scan option, tap it to scan all apps now.</li>\n  <li>Open the settings from that screen and make sure \"Scan apps with Play Protect\" is turned on.</li>\n</ol>\n<!-- SOURCE: https://support.google.com/android/answer/2812853 -->\n<!-- SOURCE: https://developers.google.com/android/play-protect/client-protections (users can start a full-device scan at any time, and see when the device was last scanned) -->\n\n<p>If it warns you about an app, the usual choice is to uninstall it. If you do not recognise the app, uninstall it first and ask questions later. See <a href=\"/how-to/is-my-android-phone-hacked\">our phone check</a> for the rest.</p>\n\n<figure><img src=\"/posts/evidence/pp-play-protect-screen.webp\" alt=\"Play Store Play Protect screen showing the last scan time and the scan setting\" width=\"713\" height=\"1568\" loading=\"lazy\"><figcaption>Play Protect screen</figcaption></figure>\n\n<h2>Play Protect certification: a different check</h2>\n\n<p>\"Certified\" means the device is licensed to use Google apps and has passed Android compatibility testing. To see your status, open the Play Store, tap your profile picture, then Settings, then About. Google says an uncertified device may not be secure, may not get Android system or app updates, may have Google apps that are not real, and may not have a secure backup. You can check whether your model is on Google's list of certified devices.</p>\n<!-- SOURCE: https://support.google.com/googleplay/answer/7165974 (Check & fix Play Protect certification status) -->\n\n<p>If your phone shows as uncertified, ask the seller or the maker why, and check your model against Google's list of certified devices.</p>\n\n\n\n<h2>If Play Protect seems stuck or off</h2>\n\n<ul>\n  <li>Check that you are signed in to the Play Store and have a connection. Google's scan contacts Google's servers for the latest information.</li>\n  <li>Update Android (Settings, System, Software update) and the Play Store, then try again.</li>\n  <li>If you turned scanning off earlier, turn \"Scan apps with Play Protect\" back on.</li>\n</ul>\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Open Play Protect and check the last scan.</li>\n  <li>Turn \"Scan apps with Play Protect\" on if it is off.</li>\n  <li>Check the certification status in Settings, About.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/android-safe-mode-explained-2026\">Android Safe mode explained</a></li>\n  <li><a href=\"/how-to/android-app-permissions-privacy-checkup\">Which app permissions to check on Android</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/android/answer/2812853\" rel=\"noopener\">Use Google Play Protect to help keep your apps safe and your data private (Android Help)</a></li>\n  <li><a href=\"https://developers.google.com/android/play-protect/client-protections\" rel=\"noopener\">On-device protections (Google Play Protect)</a></li>\n  <li><a href=\"https://support.google.com/googleplay/answer/7165974\" rel=\"noopener\">Check and fix Play Protect certification status (Google Play Help)</a></li>\n</ul>",
+  "excerpt": "<p>Where to find Play Protect, how to make sure scanning is on, how to run a scan, and what the device certification status means when it says your phone is not certified.</p>",
+  "description": "<p>Where to find Play Protect, how to make sure scanning is on, how to run a scan, and what the device certification status means when it says your phone is not certified.</p>",
+  "metaTitle": "How to Check Google Play Protect and Fix Common Problems",
+  "metaDescription": "Check that Play Protect is on, run a scan, see when your phone was last scanned, and what 'uncertified device' means. Steps from Google's help pages.",
+  "metaKeywords": "google play protect status, play protect scan, play protect certification, device not certified, harmful apps android",
+  "publishedAt": "2026-02-24T05:20:12+05:30",
+  "updatedAt": "2026-10-11T08:20:17+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "google play protect status",
+    "play protect scan",
+    "play protect certification",
+    "device not certified",
+    "harmful apps android"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/how-to-check-google-play-protect-status--fix-security-issues-on-android-2026-guide-8114.webp",
+  "thumbnailImage": "/posts/thumb_how-to-check-google-play-protect-status--fix-security-issues-on-android-2026-guide-8114.webp",
+  "altImage": "Illustration of a Play Protect screen on a phone, with the text Is Your Phone Safe? Check Play Protect Now",
+  "faq": [],
+  "impressions": 971,
+  "oldPath": "/how-to/check-google-play-protect-status-fix-issues-2026"
+}

@@ -1,0 +1,34 @@
+{
+  "id": 139,
+  "slug": "someone-is-using-my-email-address",
+  "title": "Getting Emails Meant for Someone Else? Why It Happens and What to Do",
+  "html": "<p>Getting mail meant for someone else almost always has a plain reason: Gmail ignores dots in addresses, someone typed your address when signing up, or a person set up forwarding to your address by mistake. Check each cause below before you assume your account has been hacked.</p>\n\n<p><em>Last updated: 10 Oct 2026. This page covers Gmail; other providers have their own help pages.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>Reasons you get someone else's email</h2>\n\n<ul>\n  <li>Dots in the address. Gmail ignores periods. If your address is johnsmith@gmail.com, you also receive mail sent to john.smith@gmail.com. Google's words: you own all the dotted versions of your address. Someone with a similar name may be giving out the wrong version.</li>\n  <li>An accidental or false sign-up. Someone used your address for a newsletter, a shop or a promotion.</li>\n  <li>Forwarding. Someone may have set up automatic forwarding from their Gmail to yours.</li>\n  <li>Bcc. If you were added by Bcc, your address may not appear at the top of the message.</li>\n  <li>Gmail and Googlemail. In some regions, @gmail.com and @googlemail.com reach the same inbox.</li>\n</ul>\n<!-- SOURCE: https://support.google.com/mail/answer/10313 (Getting someone else's mail) -->\n\n<h2>How to check for forwarding</h2>\n\n<p>Open a message that looks like it was sent to you by mistake. Tap or click More next to Reply, then Show original, and look for \"X-Forwarded-For\". If you see it, someone is forwarding their messages to your address. Google suggests contacting that person to let them know about the mistake.</p>\n<!-- SOURCE: https://support.google.com/mail/answer/10313 -->\n\n\n\n<h2>How to stop it</h2>\n\n<ol>\n  <li>For newsletters and promotions: open the email, tap Unsubscribe next to the sender's name, then tap Unsubscribe or Go to website in the pop-up. It may take a few days to stop.</li>\n  <li>For anything else: report it as spam, or block the sender. Blocking does not unsubscribe you; future mail from that sender just goes to Spam.</li>\n  <li>Do not reply to the sender, and do not click links in a message that is not for you. If it asks you to confirm something, ignore it.</li>\n</ol>\n<!-- SOURCE: https://support.google.com/mail/answer/15433283 (Unsubscribe from an email) -->\n<!-- SOURCE: https://support.google.com/mail/answer/15621070 (Manage your subscriptions in Gmail) -->\n\n<p>See <a href=\"/how-to/still-getting-emails-after-unsubscribing\">what to do if emails continue after unsubscribing</a>.</p>\n\n<h2>When it might mean someone is in your account</h2>\n\n<p>Mail meant for someone else is not a sign of a hack by itself. These are:</p>\n<ul>\n  <li>sent messages you did not write,</li>\n  <li>security alerts about a new sign-in or a changed password,</li>\n  <li>a forwarding rule or filter you did not create in Gmail settings,</li>\n  <li>a device in your account you do not recognise.</li>\n</ul>\n<p>If you see any of these, follow Google's steps for securing a compromised account: review your devices and security events, change your password, and turn on 2-Step Verification. Our <a href=\"/how-to/google-account-security-checklist-2026\">Google account checklist</a> goes through it.</p>\n<!-- SOURCE: https://support.google.com/accounts/answer/6294825 (Secure a hacked or compromised Google Account) -->\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Look at one misdirected message with Show original.</li>\n  <li>Unsubscribe or report spam.</li>\n  <li>Check Gmail settings for forwarding or filters you did not create.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/how-to-check-if-your-email-was-in-a-data-breach-2026\">How to check if your email was in a data breach</a></li>\n  <li><a href=\"/how-to/two-factor-authentication-2fa-explained-secure-accounts-2026\">Two-factor authentication explained</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/mail/answer/10313\" rel=\"noopener\">Getting someone else's mail (Gmail Help)</a></li>\n  <li><a href=\"https://support.google.com/mail/answer/15433283\" rel=\"noopener\">Unsubscribe from an email (Gmail Help)</a></li>\n  <li><a href=\"https://support.google.com/mail/answer/15621070\" rel=\"noopener\">Manage your subscriptions in Gmail (Gmail Help)</a></li>\n  <li><a href=\"https://support.google.com/accounts/answer/6294825\" rel=\"noopener\">Secure a hacked or compromised Google Account (Google Account Help)</a></li>\n</ul>",
+  "excerpt": "<p>Why mail meant for someone else lands in your Gmail inbox, how to find out which reason applies, how to stop it, and the signs that mean someone is actually in your account.</p>",
+  "description": "<p>Why mail meant for someone else lands in your Gmail inbox, how to find out which reason applies, how to stop it, and the signs that mean someone is actually in your account.</p>",
+  "metaTitle": "Getting Emails Meant for Someone Else? Why and What to Do",
+  "metaDescription": "Why you get someone else's email on Gmail: dotted addresses, accidental sign-ups, forwarding, Bcc. How to check, stop it, and spot a real hack.",
+  "metaKeywords": "getting someone else's emails, someone using my email address, gmail dots in address, x-forwarded-for, unsubscribe unwanted signup",
+  "publishedAt": "2026-09-12T18:35:04+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "getting someone else's emails",
+    "someone using my email address",
+    "gmail dots in address",
+    "x-forwarded-for",
+    "unsubscribe unwanted signup"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/someone-is-using-my-email-address-what-to-do-3235.webp",
+  "thumbnailImage": "/posts/thumb_someone-is-using-my-email-address-what-to-do-3235.webp",
+  "altImage": "Illustration of a desk with email envelopes spreading to a laptop and phone, with a red blocked stamp over one of them",
+  "faq": [],
+  "impressions": 249,
+  "oldPath": "/how-to/someone-is-using-my-email-address"
+}

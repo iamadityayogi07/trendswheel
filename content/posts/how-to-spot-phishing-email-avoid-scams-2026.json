@@ -1,0 +1,34 @@
+{
+  "id": 128,
+  "slug": "how-to-spot-phishing-email-avoid-scams-2026",
+  "title": "How to Spot a Phishing Email or Message and What to Do",
+  "html": "<p>A phishing message tries to get you to hand over a password, an OTP, card or UPI details, or to install something. Before you click anything, check three things: who really sent it, where the link really goes, and whether it is pushing you to hurry. If it fails any of them, go to the real site or app yourself instead of using the message.</p>\n\n<p><em>Last updated: 10 Oct 2026.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>The signs</h2>\n\n<p>Google's Gmail help says phishing messages may:</p>\n<ul>\n  <li>ask for your personal or financial information,</li>\n  <li>ask you to click a link or download software,</li>\n  <li>impersonate a reputable organisation such as your bank, a social media site or your workplace,</li>\n  <li>look exactly like a message from an organisation or person you trust.</li>\n</ul>\n<!-- SOURCE: https://support.google.com/mail/answer/8253 (Avoid and report phishing emails) -->\n\n<p>In India the same pattern arrives by SMS, WhatsApp and calls. The Sanchar Saathi portal lists the kinds of messages people report: KYC updates, bank account, SIM, gas or electricity, someone claiming to be a government official, and sextortion.</p>\n<!-- SOURCE: https://sancharsaathi.gov.in/sfc/ -->\n\n<h2>Three checks before you click</h2>\n\n<ol>\n  <li>The sender. Check that the email address matches the name shown. Be suspicious of a message from a bank or company that comes from a free email address.</li>\n  <li>The link. On a computer, hover over it. Google says that if the address does not match the text of the link, it might lead to a phishing site. On many phones you can press and hold a link to see its address before you open it.</li>\n  <li>The push. Messages that say your account will be blocked today, or that you must verify now, want you to act before you think.</li>\n</ol>\n<!-- SOURCE: https://support.google.com/mail/answer/8253 -->\n\n<p>If a message asks you to enter your Gmail password after you click, Google says do not enter it: go directly to the website you want to use. Google also says it never asks for your password in an email, message or phone call.</p>\n<!-- SOURCE: https://support.google.com/accounts/answer/46526 (Make your account more secure) -->\n\n\n\n\n<h2>How to report it</h2>\n\n<ul>\n  <li>Gmail: on a computer, open the message, click the More menu (three dots) next to Reply, and choose Report phishing.</li>\n  <li>Calls, SMS and WhatsApp in India: report them on Chakshu at Sanchar Saathi. The portal asks you to report within 30 days.</li>\n  <li>Suspect numbers, websites and links: the National Cyber Crime Reporting Portal has a Report Suspect facility for phone numbers, websites, email addresses and social media links.</li>\n</ul>\n<!-- SOURCE: https://support.google.com/mail/answer/8253 -->\n<!-- SOURCE: https://sancharsaathi.gov.in/sfc/ -->\n<!-- SOURCE: https://cybercrime.gov.in/ -->\n\n\n\n<h2>If you already clicked or entered something</h2>\n\n<ol>\n  <li>Change the password for that account now, and anywhere else you use it. See <a href=\"/how-to/google-account-security-checklist-2026\">our Google account checklist</a>.</li>\n  <li>For a Google account, open myaccount.google.com/notifications to check recent activity, as Google suggests.</li>\n  <li>If you shared a card or UPI detail, or money has moved, follow <a href=\"/how-to/how-to-report-online-fraud-cybercrime-1930-india-2026\">our fraud reporting steps</a> straight away.</li>\n  <li>If you shared an OTP, read <a href=\"/how-to/otp-codes-you-didnt-request\">what that means</a> and act on it.</li>\n  <li>If you installed an app from a link, run a Play Protect scan and see <a href=\"/how-to/is-my-android-phone-hacked\">our phone check</a>.</li>\n</ol>\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Check sender, link and urgency before you tap.</li>\n  <li>Go to the real app or site yourself.</li>\n  <li>Report the message, then delete it.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/still-getting-emails-after-unsubscribing\">Emails after unsubscribing</a></li>\n  <li><a href=\"/how-to/what-to-do-when-your-accounts-go-wrong\">If an account is already hacked or locked: what to do first</a></li>\n  <li><a href=\"/how-to/someone-is-using-my-email-address\">Getting emails meant for someone else</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/mail/answer/8253\" rel=\"noopener\">Avoid and report phishing emails (Gmail Help)</a></li>\n  <li><a href=\"https://support.google.com/accounts/answer/46526\" rel=\"noopener\">Make your account more secure (Google Account Help)</a></li>\n  <li><a href=\"https://sancharsaathi.gov.in/sfc/\" rel=\"noopener\">Chakshu: report suspected fraud communication (Sanchar Saathi)</a></li>\n  <li><a href=\"https://cybercrime.gov.in/\" rel=\"noopener\">National Cyber Crime Reporting Portal</a></li>\n</ul>",
+  "excerpt": "<p>How to tell a phishing email or text from a real one, the quick checks to run before you click, how to report it, and the steps if you already entered a password.</p>",
+  "description": "<p>How to tell a phishing email or text from a real one, the quick checks to run before you click, how to report it, and the steps if you already entered a password.</p>",
+  "metaTitle": "How to Spot a Phishing Email or Message and What to Do",
+  "metaDescription": "The signs of a phishing email or message, how to check the sender and link, how to report it in Gmail and on Chakshu, and what to do if you already clicked.",
+  "metaKeywords": "phishing email how to spot, report phishing gmail, fake kyc message, chakshu sanchar saathi, clicked phishing link what to do",
+  "publishedAt": "2026-08-07T04:07:50+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "phishing email how to spot",
+    "report phishing gmail",
+    "fake kyc message",
+    "chakshu sanchar saathi",
+    "clicked phishing link what to do"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/how-to-spot-a-phishing-email-a-2026-guide-to-avoiding-online-scams-7587.webp",
+  "thumbnailImage": "/posts/thumb_how-to-spot-a-phishing-email-a-2026-guide-to-avoiding-online-scams-7587.webp",
+  "altImage": "Illustration of a laptop showing a suspicious Verify Your Account email under a magnifying glass, with security alerts",
+  "faq": [],
+  "impressions": 300,
+  "oldPath": "/how-to/how-to-spot-phishing-email-avoid-scams-2026"
+}

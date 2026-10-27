@@ -1,0 +1,34 @@
+{
+  "id": 145,
+  "slug": "can-other-apps-see-installed-apps-android",
+  "title": "Can Other Apps See Which Apps You Have Installed on Android?",
+  "html": "<p>Since Android 11, an app can no longer see every app on your phone by default. Android shows it a filtered list. To see the full list, an app has to declare a special permission, and apps from the Play Store need Google's approval for it. That helps, but it does not cover apps from outside the Play Store.</p>\n\n<p><em>Last updated: 10 Oct 2026. This is a technical topic; the sources are Google's developer documentation and Play policy.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>What Android changed</h2>\n\n<p>Android's developer documentation says that when an app targets Android 11 (API level 30) or higher and asks about other installed apps, the system filters the answer by default. The stated reason is that Google Play considers the list of installed apps to be personal and sensitive user data. Some packages are always visible. An app that needs to see more can say so in its manifest with a <code>&lt;queries&gt;</code> element, which lets it see only the specific apps it needs.</p>\n<!-- SOURCE: https://developer.android.com/training/package-visibility (Package visibility filtering on Android 11) -->\n\n<h2>The broad permission</h2>\n\n<p>For rare cases there is the QUERY_ALL_PACKAGES permission, which gives visibility of the whole list. The documentation says that if you publish on Google Play, use of this permission is subject to approval. Play's policy says the inventory of installed apps is personal and sensitive information. The permission is allowed only when seeing all apps is the app's core function, and the permitted uses it names are device search, antivirus apps, file managers and browsers. Selling or sharing app inventory data from Play apps for analytics or ad monetisation is not allowed.</p>\n<!-- SOURCE: https://developer.android.com/training/package-visibility -->\n<!-- SOURCE: https://support.google.com/googleplay/android-developer/answer/10158779 (Use of the broad package (App) visibility (QUERY_ALL_PACKAGES) permission) -->\n\n<h2>What this does not guarantee</h2>\n\n<ul>\n  <li>The rule applies to apps that target Android 11 or higher and to phones running Android 11 or higher. We did not find an official statement for older apps or phones, so do not assume they are covered.</li>\n  <li>Apps installed from outside the Play Store do not go through Google Play's approval.</li>\n  <li>An app approved for a legitimate purpose, such as a browser or an antivirus app, can still see your list.</li>\n</ul>\n\n<h2>What you can check on your phone</h2>\n\n<ul>\n  <li>Keep Android updated, since the privacy rules arrive with newer versions: Settings, System, Software update.</li>\n  <li>Install apps from the Play Store, and read the Data safety section and requested permissions before you install.</li>\n  <li>Review apps that can install other apps: Settings, Apps, Special app access, Install unknown apps.</li>\n  <li>Remove apps you no longer use. The steps are in <a href=\"/how-to/android-app-permissions-privacy-checkup\">our permissions guide</a>.</li>\n</ul>\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Update Android to a version that applies the rule.</li>\n  <li>Prefer Play Store apps, and check their permissions and Data safety section.</li>\n  <li>Remove apps you do not use.</li>\n</ol>\n\n<h2>Related guides</h2>\n<ul>\n  <li><a href=\"/how-to/check-google-play-protect-status-fix-issues-2026\">How to check Google Play Protect</a></li>\n  <li><a href=\"/how-to/android-safe-mode-explained-2026\">Android Safe mode explained</a></li>\n  <li><a href=\"/how-to/find-hidden-apps-android\">How to find hidden apps on Android</a></li>\n</ul>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://developer.android.com/training/package-visibility\" rel=\"noopener\">Package visibility filtering on Android (Android Developers)</a></li>\n  <li><a href=\"https://support.google.com/googleplay/android-developer/answer/10158779\" rel=\"noopener\">Use of the broad package (App) visibility (QUERY_ALL_PACKAGES) permission (Play Console Help)</a></li>\n</ul>",
+  "excerpt": "<p>What Android 11's package visibility rule changed, what Google Play requires before an app can see your full app list, and what you can check on your own phone.</p>",
+  "description": "<p>What Android 11's package visibility rule changed, what Google Play requires before an app can see your full app list, and what you can check on your own phone.</p>",
+  "metaTitle": "Can Other Apps See Which Apps You Have Installed on Android?",
+  "metaDescription": "Since Android 11, apps see only part of your app list unless Google Play approves it. What the rule covers, what it does not, and what you can check.",
+  "metaKeywords": "can apps see installed apps android, package visibility android 11, QUERY_ALL_PACKAGES, app inventory privacy, android privacy",
+  "publishedAt": "2026-09-28T05:38:24+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "Tech",
+    "slug": "tech"
+  },
+  "tags": [
+    "can apps see installed apps android",
+    "package visibility android 11",
+    "QUERY_ALL_PACKAGES",
+    "app inventory privacy",
+    "android privacy"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/can-other-apps-see-whats-installed-on-your-android-phone-5436.webp",
+  "thumbnailImage": "/posts/thumb_can-other-apps-see-whats-installed-on-your-android-phone-5436.webp",
+  "altImage": "Illustration of a phone's installed apps list seen through a magnifying glass, with an eye icon watching",
+  "faq": [],
+  "impressions": 111,
+  "oldPath": "/tech/can-other-apps-see-installed-apps-android"
+}

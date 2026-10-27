@@ -1,0 +1,34 @@
+{
+  "id": 142,
+  "slug": "otp-codes-you-didnt-request",
+  "title": "Getting OTP Codes You Didn't Request? What It Can Mean",
+  "html": "<p>An OTP you did not ask for does not tell you one thing. It can be a stranger who mistyped their own number. It can be someone who typed only your phone number on a login or sign-up screen. It can be someone who started a password reset. It can be someone who already knows your password and hit your second step. Do not share the code, read the message for clues, and decide what to do from the pattern.</p>\n\n<p><em>Last updated: 10 Oct 2026.</em></p>\n\n<p>Sources last checked: 10 Oct 2026.</p>\n\n<h2>Read the message first</h2>\n\n<ul>\n  <li>Who it names. The service name tells you which account to look at.</li>\n  <li>What it is for. Login, password reset, a new sign-up or a payment are different events.</li>\n  <li>When it arrived. Screenshot it before you delete it. If you later talk to a bank, the time matters.</li>\n</ul>\n\n<h2>One code or many?</h2>\n\n<ul>\n  <li>One code, then nothing. Often a mistyped number or someone testing a sign-up screen. Do not reply, and do not tap links in the message.</li>\n  <li>Several codes from the same service over days. That can mean repeated attempts on that account. Act today: change that password and turn on a stronger second step.</li>\n  <li>Dozens at once from many services. This looks like deliberate flooding. A real alert about your bank, your email or your accounts can get buried in it, so when the flood stops, go through your bank messages and your accounts' security pages for that time window.</li>\n</ul>\n\n<h2>A caller who wants the code is a scammer</h2>\n\n<p>If an OTP arrives and someone calls straight after, saying they are from your bank and need the code to \"cancel\" or \"stop\" a transaction, do not give it. The RBI's advice is not to share your password, PIN, OTP, CVV or UPI PIN with anyone, not even a bank official. The RBI also says that banks and other payment system operators never ask for these details.</p>\n<!-- SOURCE: https://rbi.org.in/commonman/English/scripts/PressReleases.aspx?Id=3232 (RBI: Password, PIN, OTP) -->\n\n<p>Hang up. Call your bank back on the number on your card or in its official app, never on a number the caller gives you.</p>\n\n\n\n\n<h2>What to do in the first few minutes</h2>\n\n<ol>\n  <li>Do not enter the code anywhere, and do not tap links in the message. Open the app or site yourself.</li>\n  <li>If it names a service you use, check that account's recent activity and signed-in devices, sign out any you do not recognise, and change the password.</li>\n  <li>Change the same password anywhere else you used it.</li>\n  <li>For a Google account, use Google's steps: review security events and your devices, turn on 2-Step Verification, and change your password.</li>\n  <li>If it names your bank or a UPI app, call the bank on its official number and ask whether anything is in progress.</li>\n</ol>\n<!-- SOURCE: https://support.google.com/accounts/answer/6294825 (Secure a hacked or compromised Google Account) -->\n\n<p>If money has moved, go straight to <a href=\"/how-to/how-to-report-online-fraud-cybercrime-1930-india-2026\">our fraud reporting steps</a>. If the account was taken over, see <a href=\"/how-to/what-to-do-when-your-accounts-go-wrong\">what to do when your accounts go wrong</a>.</p>\n\n\n\n\n<h2>Reduce how often this happens</h2>\n\n<ul>\n  <li>Use a different password on every site, and a passkey where it is offered.</li>\n  <li>Move off SMS codes where you can. See <a href=\"/how-to/two-factor-authentication-2fa-explained-secure-accounts-2026\">our guide to two-factor authentication</a>.</li>\n  <li>Ask your mobile operator how to protect your number from being moved to another SIM: see <a href=\"/how-to/sim-swap-scam-how-to-protect-your-phone-number-2026\">our SIM swap guide</a>.</li>\n  <li>Turn on login and transaction alerts in your banking and payment apps.</li>\n</ul>\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Screenshot the message, then do not use the code.</li>\n  <li>Check the named account's activity and change its password.</li>\n  <li>Never read a code to a caller. Call your bank back on the official number.</li>\n</ol>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://rbi.org.in/commonman/English/scripts/PressReleases.aspx?Id=3232\" rel=\"noopener\">Password, PIN, OTP (Reserve Bank of India)</a></li>\n  <li><a href=\"https://support.google.com/accounts/answer/6294825\" rel=\"noopener\">Secure a hacked or compromised Google Account (Google Account Help)</a></li>\n</ul>",
+  "excerpt": "<p>An OTP you did not ask for has several possible causes. How to read the message, what to do in the first few minutes, and why you should never read a code out to a caller.</p>",
+  "description": "<p>An OTP you did not ask for has several possible causes. How to read the message, what to do in the first few minutes, and why you should never read a code out to a caller.</p>",
+  "metaTitle": "OTP Codes You Didn't Request? What It Can Mean",
+  "metaDescription": "An unrequested OTP can be a typo, a login attempt, or the start of a scam call. How to read the message, what to do, and who must never get the code.",
+  "metaKeywords": "otp you didn't request, unrequested otp, otp scam call, never share otp, unknown otp bank india",
+  "publishedAt": "2026-09-17T04:42:49+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "otp you didn't request",
+    "unrequested otp",
+    "otp scam call",
+    "never share otp",
+    "unknown otp bank india"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/getting-otp-codes-you-didnt-request-what-it-actually-means-4403.webp",
+  "thumbnailImage": "/posts/thumb_getting-otp-codes-you-didnt-request-what-it-actually-means-4403.webp",
+  "altImage": "Illustration of a key in a door lock with a light trail leading to a phone showing a six-digit code, beside an envelope",
+  "faq": [],
+  "impressions": 185,
+  "oldPath": "/how-to/otp-codes-you-didnt-request"
+}

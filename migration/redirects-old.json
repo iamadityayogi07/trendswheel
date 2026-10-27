@@ -1,0 +1,560 @@
+[
+  {
+    "from_path": "/apps/apps-that-drain-battery-in-background-android",
+    "to_path": "/how-to/android-battery-drain-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/apps-using-too-much-mobile-data-in-background-android",
+    "to_path": "/how-to/reduce-mobile-data-usage-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/nearby-share-vs-quick-share-whats-the-difference-in-2025-latest-update",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-satellite-messaging-in-android-phones-explained-simply-2025-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/7-best-ai-chatbot-apps-for-personal-business-use-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/iqoo-15-review-is-it-worth-buying-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-use-google-gemini-ai-on-android-step-by-step-guide-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-rcs-messaging-on-android-how-it-works-2025-explained",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/how-to-find-trending-topics-in-your-niche-fast",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/increase-twitter-x-engagement-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/social-media-tools-every-creator-should-know",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-start-an-online-side-hustle-in-2025-beginner-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/why-your-phone-feels-slow-even-with-8gb-or-12gb-ram-2025-explained",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/someone-is-using-my-email-address",
+    "to_path": "/how-to/someone-is-using-my-email-address",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/still-getting-emails-after-unsubscribing",
+    "to_path": "/how-to/still-getting-emails-after-unsubscribing",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-improve-website-speed-for-better-seo-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-make-money-online-without-investment-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-start-a-youtube-channel-and-grow-fast-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/how-to-create-blog-website",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/about",
+    "to_path": "/about-us",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/contact",
+    "to_path": "/contact-us",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-android-battery-saver-apps-2025",
+    "to_path": "/how-to/android-battery-drain-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-check-battery-health-on-any-android-phone-2025-working-methods",
+    "to_path": "/how-to/android-battery-drain-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/stop-android-system-apps-battery-drain-without-root",
+    "to_path": "/how-to/android-battery-drain-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-disable-background-data-for-individual-apps-on-android-2026-guide",
+    "to_path": "/how-to/reduce-mobile-data-usage-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-reduce-mobile-data-usage-on-android-without-apps-2025-guide",
+    "to_path": "/how-to/reduce-mobile-data-usage-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/android-fast-after-reset-but-slow-again-fix-2026",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/android-phone-problems-fixes-2026-complete-guide",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/check-apps-running-in-background-android-2026-guide",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-clear-cache-on-any-android-phone-2025-guide-boost-speed-free-storage",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-factory-reset-android-without-losing-data-2026",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-remove-unused-apps-fast-android-2026",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-speed-up-your-android-phone-in-2025",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-ram-expansion-should-you-turn-it-off-2025-guide",
+    "to_path": "/how-to/android-phone-slow-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/apps-you-should-delete-right-now-on-android-2026",
+    "to_path": "/how-to/android-app-permissions-privacy-checkup",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/apps-using-camera-microphone-android-check-stop",
+    "to_path": "/how-to/android-app-permissions-privacy-checkup",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-check-fix-dangerous-app-permissions-on-android-2025-complete-guide",
+    "to_path": "/how-to/android-app-permissions-privacy-checkup",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/is-your-phone-listening-how-to-stop-google-apps-tracking-2026",
+    "to_path": "/how-to/android-app-permissions-privacy-checkup",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/android-privacy-dashboard-explained-how-to-see-which-apps-track-you-2025",
+    "to_path": "/how-to/android-app-permissions-privacy-checkup",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-check-if-your-phone-is-hacked-or-spied-on-2025-complete-safety-guide",
+    "to_path": "/how-to/is-my-android-phone-hacked",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-check-remove-phone-virus-malware-2026",
+    "to_path": "/how-to/is-my-android-phone-hacked",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/enable-hidden-features-on-android-1415-unlock-advanced-settings-2025-guide",
+    "to_path": "/how-to/android-developer-options-what-to-turn-on",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-enable-hidden-developer-options-in-android-1415-step-by-step-2025-guide",
+    "to_path": "/how-to/android-developer-options-what-to-turn-on",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-recover-deleted-photos-without-any-app-100-working-methods",
+    "to_path": "/how-to/recover-deleted-photos-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/recover-deleted-photos-google-photos",
+    "to_path": "/how-to/recover-deleted-photos-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-hidden-gallery-apps-for-private-photos-2025-top-secure-private-vault-apps",
+    "to_path": "/how-to/find-hidden-apps-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-find-hidden-apps-in-android-2025-easy-step-by-step-guide",
+    "to_path": "/how-to/find-hidden-apps-android",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/social/how-to-hide-followers-and-last-active-on-instagram-in-2025-complete-privacy-guide",
+    "to_path": "/social/how-to-protect-your-privacy-on-social-media-2026",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/10-best-chrome-extensions-to-boost-productivity-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/10-best-high-quality-screen-recorder-apps-for-android-iphone-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-android-apps-productivity",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-android-utility-apps-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-apps-to-remove-background-noise-from-audio-2025-expert-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-budget-tracking-apps-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-photo-editing-apps-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/remove-background-free-online",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-check-sensors-working-android-2026",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-download-instagram-reels-without-any-app",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-force-90hz120hz-refresh-rate-on-any-phone-2025-working-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-ai-powered-fitness-apps-to-stay-healthy-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/best-ai-productivity-apps-for-remote-workers-2026",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/chatgpt-vs-gemini-vs-copilot-which-ai-app-wins-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/apps/top-free-ai-chat-apps",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-use-ai-tools-to-save-time",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-use-chatgpt-for-daily-productivity-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/ai-tools-2026-complete-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/ai-tools-future-work",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/apple-m4-chip-features",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/jobs-ai-cannot-replace-next-10-years-2026",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/tech-trends-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/realme-p4x-review-2025-full-specs-performance-verdict",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/grow-on-threads-app",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/how-to-make-viral-ai-reels-for-free-beginner-friendly-2025-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/how-to-mute-someone-on-instagram-without-unfollowing-2025-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/how-to-use-instagram-broadcast-channels-full-guide-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/how-to-use-youtube-create-app-for-reels-shorts-editing-2025-tips",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/instagram-growth-2025-the-ultimate-guide-to-boost-reach-followers-engagement-master-hub-post",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/foldable-laptops-future",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/future-of-electric-cars-and-charging-tech-in-india",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/nearby-share-vs-quick-share-difference-2026",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-5g-technology-explained-simply-2025-edition",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-cloud-gaming",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-satellite-connectivity-in-smartphones-2025-full-explanation",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/facebook-reels-vs-instagram-reels-which-gets-more-views-in-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/social/youtube-shorts-vs-instagram-reels",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/difference-between-wi-fi-6-wi-fi-6e-wi-fi-7-simple-comparison-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/fast-charging-vs-super-fast-charging-whats-the-difference-full-comparison-2025",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-on-device-ai-in-smartphones-npu-explained-2026",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-private-dns-should-you-use-it-in-2025-full-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/what-is-ufs-storage-difference-between-ufs-31-vs-ufs-40-2025-simple-guide",
+    "to_path": null,
+    "status_code": 410,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/fix-google-play-store-download-pending",
+    "to_path": "/how-to/common-android-problems-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/how-to/how-to-fix-app-crashes-on-android-step-by-step-guide",
+    "to_path": "/how-to/common-android-problems-fixes",
+    "status_code": 301,
+    "active": 1
+  },
+  {
+    "from_path": "/tech/why-is-my-phone-overheating-causes-fixes",
+    "to_path": "/how-to/common-android-problems-fixes",
+    "status_code": 301,
+    "active": 1
+  }
+]

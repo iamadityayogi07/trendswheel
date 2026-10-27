@@ -1,0 +1,34 @@
+{
+  "id": 118,
+  "slug": "android-safe-mode-explained-2026",
+  "title": "Android Safe Mode: How to Turn It On and Off, and What It Tells You",
+  "html": "<p>Safe mode starts the phone with only its built-in apps, so you can tell whether a downloaded app is behind a problem. If the problem goes away in Safe mode, an app you installed is likely the cause. Remove recently installed apps one at a time, restarting normally after each, until the problem stops.</p>\n\n<p><em>Last updated: 10 Oct 2026. The key combination depends on the brand and the model.</em></p>\n\n<p>I checked the Safe mode option on a vivo V23 Pro running Android 14 (Funtouch OS 14) on 10 Oct 2026. I got as far as the Safe mode prompt and tapped Cancel, so I did not restart into Safe mode on this phone. The Pixel and Samsung steps below come from Google and Samsung and I did not try them myself.</p>\n\n<h2>What Safe mode does</h2>\n\n<p>Google's help says safe mode removes some Home screen widgets and is a way to check whether downloaded apps are causing a problem. Samsung describes it as running the basic operating system with most third-party apps disabled.</p>\n<!-- SOURCE: https://support.google.com/pixelphone/answer/2852139 (Find problem apps by rebooting to safe mode: Pixel) -->\n<!-- SOURCE: https://www.samsung.com/in/support/mobile-devices/safe-mode-on-samsung-phones/ -->\n\n<h2>Pixel</h2>\n\n<ul>\n  <li>Pixel 6 and later, to turn on: press and hold the Power and Volume up buttons for a few seconds, then touch and hold Power off or Restart, and tap OK.</li>\n  <li>Pixel 5a and earlier, to turn on: press and hold Power, tap Power off. When the animation starts, press and hold Volume down until the animation ends and the phone starts in safe mode.</li>\n  <li>To turn off, Pixel 6 and later: press and hold Power and Volume up for a few seconds, then tap Restart. On Pixel 5a and earlier, press and hold Power for about 30 seconds, or until it restarts.</li>\n</ul>\n<!-- SOURCE: https://support.google.com/pixelphone/answer/2852139 -->\n\n<h2>Samsung Galaxy</h2>\n\n<ul>\n  <li>To turn on, method 1: press the Volume down and Power keys together (or tap the Power icon in the quick panel), press and hold Power off, then tap Safe mode.</li>\n  <li>To turn on, method 2: switch the phone on, and when the Samsung logo appears hold the Volume down key.</li>\n  <li>To turn off: restart the phone, or tap the Safe mode notification and tap Turn off. The phone restarts.</li>\n</ul>\n<p>Samsung notes that screens and settings vary by model and software version, and that the side key should be set to open the Power off menu for the first method.</p>\n<!-- SOURCE: https://www.samsung.com/in/support/mobile-devices/safe-mode-on-samsung-phones/ -->\n\n<h2>Other brands</h2>\n\n<p>The steps differ for Xiaomi, Redmi, realme, Oppo, Vivo, OnePlus, Motorola and others. Check your maker's support page for your model.</p>\n\n<p>On my vivo V23 Pro (Funtouch OS 14), pressing and holding Power off in the power menu opens a box titled &quot;Reboot to safe mode&quot;. It says: &quot;Do you want to reboot into safe mode? This will disable all third party applications you have installed. They will be restored when you reboot again.&quot; The buttons are Cancel and OK. I tapped Cancel, so I have not seen the restart itself or the way back out on this phone.</p>\n\n\n<h2>Use Safe mode to find the problem app</h2>\n\n<ol>\n  <li>Start the phone in Safe mode and use it normally. Does the problem go away?</li>\n  <li>If it does, leave Safe mode and remove the apps you installed recently, one at a time. Restart normally after each.</li>\n  <li>When the problem stops, the last app you removed was the cause. You can install the others again.</li>\n</ol>\n<!-- SOURCE: https://support.google.com/android/answer/7665064 (Find problem apps by rebooting to safe mode on Android) -->\n\n<p>If the problem does not go away in Safe mode, the cause is not a downloaded app. Look at <a href=\"/how-to/android-phone-slow-fixes\">slowness fixes</a> or <a href=\"/how-to/android-battery-drain-fixes\">battery drain</a>, or see a service centre. If you suspect harmful software, see <a href=\"/how-to/is-my-android-phone-hacked\">our phone check</a>.</p>\n\n\n\n<h2>What to do next</h2>\n\n<ol>\n  <li>Start in Safe mode and test the problem.</li>\n  <li>Remove recent apps one at a time, restarting normally each time.</li>\n  <li>If nothing changes, the app is not the cause.</li>\n</ol>\n\n<h2>Sources</h2>\n<ul>\n  <li><a href=\"https://support.google.com/pixelphone/answer/2852139\" rel=\"noopener\">Find problem apps by rebooting to safe mode (Pixel Phone Help)</a></li>\n  <li><a href=\"https://support.google.com/android/answer/7665064\" rel=\"noopener\">Find problem apps by rebooting to safe mode on Android (Android Help)</a></li>\n  <li><a href=\"https://www.samsung.com/in/support/mobile-devices/safe-mode-on-samsung-phones/\" rel=\"noopener\">How to enable Safe mode on Samsung phones (Samsung India)</a></li>\n</ul>",
+  "excerpt": "<p>Safe mode starts your phone with only its built-in apps. Here is how to turn it on and off on Pixel and Samsung phones, and how to use it to find a problem app.</p>",
+  "description": "<p>Safe mode starts your phone with only its built-in apps. Here is how to turn it on and off on Pixel and Samsung phones, and how to use it to find a problem app.</p>",
+  "metaTitle": "Android Safe Mode: How to Turn It On and Off",
+  "metaDescription": "What Safe mode does, how to start and leave it on Pixel and Samsung phones, and how to find the app causing a problem. Steps from Google and Samsung.",
+  "metaKeywords": "android safe mode, how to turn off safe mode, samsung safe mode, pixel safe mode, find problem app android",
+  "publishedAt": "2026-07-19T07:14:17+05:30",
+  "updatedAt": "2026-10-11T08:40:35+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "android safe mode",
+    "how to turn off safe mode",
+    "samsung safe mode",
+    "pixel safe mode",
+    "find problem app android"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/android-safe-mode-explained-what-it-is-why-it-happens--how-to-turn-it-off-2026-guide-3604.webp",
+  "thumbnailImage": "/posts/thumb_android-safe-mode-explained-what-it-is-why-it-happens--how-to-turn-it-off-2026-guide-3604.webp",
+  "altImage": "Illustration of a phone in Safe mode inside a glass cylinder, with app and chip icons floating around it",
+  "faq": [],
+  "impressions": 381,
+  "oldPath": "/how-to/android-safe-mode-explained-2026"
+}
