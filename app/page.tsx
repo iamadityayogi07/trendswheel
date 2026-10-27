@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import Link from 'next/link';
 import AboutSection from '@/components/home/AboutSection';
 import TrustSection from '@/components/home/TrustSection';
@@ -98,8 +99,9 @@ export default function HomePage() {
 
       <AdUnit kind="inFeed" />
 
-      {sections.map(({ c, posts: ps, total }) => (
-        <section key={c.slug} className="mt-12" aria-labelledby={`cat-${c.slug}`}>
+      {sections.map(({ c, posts: ps, total }, i) => (
+        <Fragment key={c.slug}>
+        <section className="mt-12" aria-labelledby={`cat-${c.slug}`}>
           <div className="flex items-end justify-between gap-4">
             <h2 id={`cat-${c.slug}`} className="font-display text-2xl font-bold">
               {c.name}
@@ -116,10 +118,14 @@ export default function HomePage() {
             ))}
           </ul>
         </section>
+        {(i === 1 || i === sections.length - 1) && <AdUnit kind="display" />}
+        </Fragment>
       ))}
 
       <AboutSection site={site} />
       <TrustSection />
+
+      <AdUnit kind="display" />
 
       <Faq items={homeFaq} heading="Frequently Asked Questions" centered />
       </div>
