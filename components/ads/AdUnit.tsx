@@ -52,7 +52,6 @@ export default function AdUnit({ kind = 'display', className = '' }: { kind?: Ad
   const common = { className: 'adsbygoogle', 'data-ad-client': ADSENSE_CLIENT, 'data-ad-slot': slot } as const;
   return (
     <aside className={`ad-slot ${className}`} aria-label="Advertisement" ref={box} style={{ minHeight: adMinHeight[kind] }}>
-      <span className="ad-label">Advertisement</span>
       {kind === 'inArticle' && (
         <ins {...common} style={{ display: 'block', textAlign: 'center' }} data-ad-layout="in-article" data-ad-format="fluid" />
       )}
