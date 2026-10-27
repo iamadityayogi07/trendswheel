@@ -6,14 +6,19 @@ export default function Faq({ items, heading, headingLevel = 2, centered = false
   if (!list.length) return null;
   const H = `h${headingLevel}` as 'h2' | 'h3';
   return (
-    <section className="my-12" aria-labelledby="faq-heading">
-      <div className={centered ? 'text-center' : ''}>
+    <section className={`my-12 ${centered ? '' : 'rounded-[28px] border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-6 sm:p-10 lg:grid lg:grid-cols-[300px_1fr] lg:gap-12'}`} aria-labelledby="faq-heading">
+      <div className={centered ? 'text-center' : 'lg:sticky lg:top-28 lg:self-start'}>
+        {!centered && (
+          <span className="mb-4 flex size-14 items-center justify-center rounded-2xl bg-brand text-2xl font-bold text-white shadow-lg" aria-hidden="true">
+            ?
+          </span>
+        )}
         <H id="faq-heading" className="font-display text-3xl font-bold sm:text-4xl">
           {heading}
         </H>
         <div className={`mt-3 h-1 w-14 rounded-full bg-brand ${centered ? 'mx-auto' : ''}`} aria-hidden="true" />
       </div>
-      <div className="mx-auto mt-8 max-w-3xl space-y-3">
+      <div className={`space-y-3 ${centered ? 'mx-auto mt-8 max-w-3xl' : 'mt-8 lg:mt-0'}`}>
         {list.map((f, i) => (
           <details key={i} className="group rounded-2xl border border-line bg-white shadow-sm transition open:border-brand/40 open:bg-brand-soft/40 open:shadow-md" open={i === 0}>
             <summary className="flex min-h-14 items-center justify-between gap-4 px-5 py-4 text-left font-display text-lg font-bold leading-snug">
