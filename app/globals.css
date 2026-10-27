@@ -138,3 +138,16 @@ details > summary { cursor: pointer; list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 details[open] .chev { transform: rotate(180deg); }
 .chev { transition: transform 0.15s; }
+
+/* Legal pages (privacy policy): sectioned long-form text */
+.legal-body { color: var(--ink-2); line-height: 1.8; font-size: 1.05rem; }
+.legal-body > * + * { margin-top: 1em; }
+.legal-body h3 { font-family: var(--font-heading), var(--font-body), sans-serif; color: var(--ink); font-size: 1.3rem; font-weight: 700; margin-top: 2em; padding: 0 0 0.5em 14px; border-bottom: 1px solid var(--line); border-left: 4px solid var(--brand); line-height: 1.3; }
+.legal-body h3:first-child { margin-top: 0; }
+.legal-body strong { color: var(--ink); }
+.legal-body ul { list-style: none; padding: 0; }
+.legal-body li { position: relative; padding-left: 1.9rem; }
+.legal-body li + li { margin-top: 0.55em; }
+.legal-body li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 1.05rem; height: 1.05rem; border-radius: 999px; background: var(--brand-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b83310' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center / 70% no-repeat; }
+.legal-body a { color: var(--brand-strong); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: rgb(230 74 25 / 0.35); text-underline-offset: 3px; }
+.legal-body a:hover { background: var(--brand-soft); text-decoration-color: var(--brand-strong); }
