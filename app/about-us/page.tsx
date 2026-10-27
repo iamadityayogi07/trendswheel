@@ -45,14 +45,32 @@ export default function AboutPage() {
       <JsonLd data={simplePageSchema('AboutPage', 'About Us - TrendsWheel', 'Learn more about TrendsWheel, our vision, mission, and purpose.', path)} />
       <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'About Us' }]} />
 
-      <section className="mt-6 grid items-center gap-8 lg:grid-cols-[1fr_1.4fr]">
-        {site.aboutImage && (
-          <img src={site.aboutImage} alt={site.aboutImageAlt ?? site.name} width={460} height={460} fetchPriority="high" className="mx-auto w-full max-w-md rounded-2xl object-cover" />
-        )}
-        <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-brand-strong">Who We Are</p>
-          <h1 className="font-display mt-1 text-4xl font-bold">{site.aboutHeading}</h1>
-          <div className="page-body mt-4" dangerouslySetInnerHTML={{ __html: site.aboutContent ?? `<p>${site.tagline}</p>` }} />
+      <section aria-labelledby="who" className="relative mt-6 overflow-hidden rounded-[28px] border border-line bg-gradient-to-br from-brand-soft via-white to-surface-2 p-6 sm:p-10 lg:p-14">
+        <div className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-brand/10 blur-3xl" aria-hidden="true" />
+        <div className="relative flow-root">
+          {site.aboutImage && (
+            <div className="relative mx-auto mb-8 w-full max-w-md lg:float-right lg:mb-6 lg:ml-12 lg:mt-0 lg:w-[42%]">
+              <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl bg-brand/20" aria-hidden="true" />
+              <img
+                src={site.aboutImage}
+                alt={site.aboutImageAlt ?? site.name}
+                width={460}
+                height={460}
+                fetchPriority="high"
+                className="relative aspect-square w-full rounded-3xl border-4 border-white object-cover shadow-xl"
+              />
+            </div>
+          )}
+          <div className="w-full">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-strong shadow-sm ring-1 ring-line">
+              <span className="size-2 rounded-full bg-brand" aria-hidden="true" />
+              Who We Are
+            </p>
+            <h1 id="who" className="font-display mt-4 text-3xl font-bold leading-tight sm:text-4xl">
+              {site.aboutHeading}
+            </h1>
+            <div className="page-body mt-5 max-w-none text-[1.05rem]" dangerouslySetInnerHTML={{ __html: site.aboutContent ?? `<p>${site.tagline}</p>` }} />
+          </div>
         </div>
       </section>
 
