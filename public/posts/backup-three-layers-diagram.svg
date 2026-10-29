@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="Diagram: your phone feeds three backup layers, Google device backup, Google Photos, and WhatsApp plus a contacts file, and a second copy sits on a computer or drive">
+  <rect width="1000" height="560" rx="24" fill="#ffffff" stroke="#e2e8f0"/>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e64a19"/></marker>
+  </defs>
+  <!-- phone -->
+  <rect x="40" y="150" width="150" height="250" rx="26" fill="#0f172a"/>
+  <rect x="50" y="162" width="130" height="226" rx="18" fill="#fff1ec"/>
+  <text x="115" y="262" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Your</text>
+  <text x="115" y="290" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#0f172a">phone</text>
+  <!-- arrows -->
+  <path d="M190 225 C 250 225, 250 90, 310 90" fill="none" stroke="#e64a19" stroke-width="3" marker-end="url(#ar)"/>
+  <path d="M190 275 L 310 275" fill="none" stroke="#e64a19" stroke-width="3" marker-end="url(#ar)"/>
+  <path d="M190 325 C 250 325, 250 460, 310 460" fill="none" stroke="#e64a19" stroke-width="3" marker-end="url(#ar)"/>
+  <!-- cards -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="310" y="30" width="400" height="120" rx="18" fill="#fff1ec" stroke="#fdba9f"/>
+    <text x="334" y="68" font-size="15" font-weight="700" fill="#b83310" letter-spacing="1.5">LAYER 1</text>
+    <text x="334" y="98" font-size="24" font-weight="700" fill="#0f172a">Google backup (device data)</text>
+    <text x="334" y="126" font-size="17" fill="#334155">Apps, call history, contacts, settings, SMS</text>
+
+    <rect x="310" y="215" width="400" height="120" rx="18" fill="#fff1ec" stroke="#fdba9f"/>
+    <text x="334" y="253" font-size="15" font-weight="700" fill="#b83310" letter-spacing="1.5">LAYER 2</text>
+    <text x="334" y="283" font-size="24" font-weight="700" fill="#0f172a">Google Photos backup</text>
+    <text x="334" y="311" font-size="17" fill="#334155">Photos and videos, checked per item</text>
+
+    <rect x="310" y="400" width="400" height="120" rx="18" fill="#fff1ec" stroke="#fdba9f"/>
+    <text x="334" y="438" font-size="15" font-weight="700" fill="#b83310" letter-spacing="1.5">LAYER 3</text>
+    <text x="334" y="468" font-size="24" font-weight="700" fill="#0f172a">WhatsApp + contacts file</text>
+    <text x="334" y="496" font-size="17" fill="#334155">Chat backup, exported contacts copy</text>
+
+    <!-- second copy -->
+    <rect x="760" y="215" width="210" height="120" rx="18" fill="#0f172a"/>
+    <text x="865" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#fdba9f" letter-spacing="1.5">SECOND PLACE</text>
+    <text x="865" y="292" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">PC or drive</text>
+    <text x="865" y="318" text-anchor="middle" font-size="15" fill="#cbd5e1">once a month</text>
+  </g>
+  <path d="M710 90 C 735 90, 735 240, 760 260" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#ar)"/>
+  <path d="M710 275 L 760 275" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#ar)"/>
+  <path d="M710 460 C 735 460, 735 310, 760 290" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#ar)"/>
+</svg>
