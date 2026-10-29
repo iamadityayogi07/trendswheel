@@ -96,7 +96,7 @@ export const authorMetadata = (a: Author, postCount: number) =>
   });
 
 // ---- JSON-LD ----
-const logoObject = () => ({ '@type': 'ImageObject', url: absoluteUrl(LOGO_PATH), width: 250, height: 60 });
+const logoObject = () => ({ '@type': 'ImageObject', url: absoluteUrl(LOGO_PATH), width: 162, height: 162 });
 const publisher = () => ({ '@type': 'Organization', name: SITE_NAME, logo: logoObject() });
 
 export const organizationSchema = () => ({
@@ -105,7 +105,8 @@ export const organizationSchema = () => ({
   '@id': `${SITE_URL}#organization`,
   name: SITE_NAME,
   url: SITE_URL,
-  logo: absoluteUrl(LOGO_PATH),
+  logo: logoObject(),
+  image: absoluteUrl(LOGO_PATH),
   description: ORGANIZATION_DESCRIPTION,
   sameAs: ORGANIZATION_SAME_AS,
 });
@@ -113,9 +114,11 @@ export const organizationSchema = () => ({
 export const websiteSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${SITE_URL}#website`,
   name: SITE_NAME,
   url: SITE_URL,
-  publisher: publisher(),
+  inLanguage: 'en',
+  publisher: { '@id': `${SITE_URL}#organization` },
 });
 
 export function faqSchema(items: FaqItem[], id: string) {
