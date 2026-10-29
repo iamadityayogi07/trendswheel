@@ -25,7 +25,12 @@ export default function HomePage() {
   const hero = imageSet(featured.featuredImage, '(min-width: 1024px) 560px, 100vw');
   const shown = new Set([featured.slug, ...latest.map((p) => p.slug)]);
   const sections = getCategories()
-    .map((c) => ({ c, posts: getPostsByCategory(c.slug).filter((p) => !shown.has(p.slug)).slice(0, 3), total: getPostsByCategory(c.slug).length }))
+    .map((c) => {
+      const all = getPostsByCategory(c.slug);
+      // Prefer posts not already shown above; a small category still lists its newest posts so none goes missing.
+      const unseen = all.filter((p) => !shown.has(p.slug));
+      return { c, posts: (unseen.length >= 3 ? unseen : all).slice(0, 3), total: all.length };
+    })
     .filter((s) => s.posts.length > 0);
   const faqLd = faqSchema(homeFaq, `${absoluteUrl('/')}#faq`);
 
