@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Your account in the centre, connected to many third-party apps, with one connection being removed">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/><stop offset="0.6" stop-color="#ffffff"/><stop offset="1" stop-color="#f4f6f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1100" cy="60" r="160" fill="#e64a19" opacity="0.08"/>
+  <circle cx="60" cy="610" r="140" fill="#e64a19" opacity="0.07"/>
+  <text x="70" y="150" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#b83310" letter-spacing="3">ACCOUNT SECURITY CHECK</text>
+  <text x="70" y="235" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#0f172a">Which apps can still</text>
+  <text x="70" y="308" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#0f172a">access your</text>
+  <text x="70" y="381" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#e64a19">Instagram, Facebook</text>
+  <text x="70" y="454" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#e64a19">and Google login?</text>
+  <text x="70" y="515" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#334155">Find them and remove the ones you do not use</text>
+  <!-- hub diagram -->
+  <g transform="translate(900 315)">
+    <g stroke="#94a3b8" stroke-width="3" fill="none">
+      <line x1="0" y1="0" x2="-140" y2="-170"/>
+      <line x1="0" y1="0" x2="130" y2="-175"/>
+      <line x1="0" y1="0" x2="-175" y2="40"/>
+      <line x1="0" y1="0" x2="170" y2="50"/>
+      <line x1="0" y1="0" x2="-110" y2="190"/>
+    </g>
+    <line x1="0" y1="0" x2="100" y2="185" stroke="#e64a19" stroke-width="3" stroke-dasharray="8 7"/>
+    <circle r="62" fill="#0f172a"/>
+    <text y="-4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#ffffff">YOUR</text>
+    <text y="22" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#ffffff">ACCOUNT</text>
+    <g fill="#ffffff" stroke="#cbd5e1" stroke-width="2">
+      <circle cx="-140" cy="-170" r="38"/><circle cx="130" cy="-175" r="38"/><circle cx="-175" cy="40" r="38"/><circle cx="170" cy="50" r="38"/><circle cx="-110" cy="190" r="38"/>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#334155" text-anchor="middle">
+      <text x="-140" y="-165">App</text><text x="130" y="-170">App</text><text x="-175" y="45">App</text><text x="170" y="55">App</text><text x="-110" y="195">App</text>
+    </g>
+    <circle cx="100" cy="185" r="38" fill="#fff1ec" stroke="#e64a19" stroke-width="3" stroke-dasharray="6 5"/>
+    <path d="M84 169l32 32M116 169l-32 32" stroke="#e64a19" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

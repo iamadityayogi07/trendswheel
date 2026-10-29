@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="Where to find connected apps: Google at myaccount.google.com/linkedapps, Facebook under Settings and Apps and websites, Instagram under Settings and Apps and Websites">
+  <rect width="1000" height="440" rx="24" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="40" y="60" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#0f172a">Where to look on each platform</text>
+  <rect x="40" y="76" width="72" height="4" rx="2" fill="#e64a19"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(40 110)">
+      <rect width="290" height="290" rx="20" fill="#fff1ec" stroke="#fdba9f"/>
+      <circle cx="46" cy="52" r="24" fill="#e64a19"/><text x="46" y="60" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">1</text>
+      <text x="84" y="60" font-size="26" font-weight="800" fill="#0f172a">Google</text>
+      <text x="24" y="116" font-size="17" fill="#334155">Open this page:</text>
+      <text x="24" y="146" font-size="17" font-weight="700" fill="#b83310">myaccount.google.com</text>
+      <text x="24" y="170" font-size="17" font-weight="700" fill="#b83310">/linkedapps</text>
+      <text x="24" y="218" font-size="16" fill="#334155">Check: Sign in with Google,</text>
+      <text x="24" y="242" font-size="16" fill="#334155">Linked account, Access to</text>
+      <text x="24" y="266" font-size="16" fill="#334155">your Google Account</text>
+    </g>
+    <g transform="translate(355 110)">
+      <rect width="290" height="290" rx="20" fill="#fff1ec" stroke="#fdba9f"/>
+      <circle cx="46" cy="52" r="24" fill="#e64a19"/><text x="46" y="60" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">2</text>
+      <text x="84" y="60" font-size="26" font-weight="800" fill="#0f172a">Facebook</text>
+      <text x="24" y="116" font-size="17" fill="#334155">Profile picture, then:</text>
+      <text x="24" y="146" font-size="17" font-weight="700" fill="#b83310">Settings &amp; privacy</text>
+      <text x="24" y="170" font-size="17" font-weight="700" fill="#b83310">Settings, Apps and websites</text>
+      <text x="24" y="218" font-size="16" fill="#334155">Tabs: Active, Expired,</text>
+      <text x="24" y="242" font-size="16" fill="#334155">Removed. Tap Remove next</text>
+      <text x="24" y="266" font-size="16" fill="#334155">to the app</text>
+    </g>
+    <g transform="translate(670 110)">
+      <rect width="290" height="290" rx="20" fill="#fff1ec" stroke="#fdba9f"/>
+      <circle cx="46" cy="52" r="24" fill="#e64a19"/><text x="46" y="60" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">3</text>
+      <text x="84" y="60" font-size="26" font-weight="800" fill="#0f172a">Instagram</text>
+      <text x="24" y="116" font-size="17" fill="#334155">Settings, then:</text>
+      <text x="24" y="146" font-size="17" font-weight="700" fill="#b83310">Apps and Websites</text>
+      <text x="24" y="170" font-size="17" font-weight="700" fill="#b83310">(name varies by version)</text>
+      <text x="24" y="218" font-size="16" fill="#334155">Open the Active tab, then</text>
+      <text x="24" y="242" font-size="16" fill="#334155">tap Remove next to the</text>
+      <text x="24" y="266" font-size="16" fill="#334155">app and confirm</text>
+    </g>
+  </g>
+</svg>
