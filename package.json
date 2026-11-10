@@ -7,6 +7,7 @@
     "prebuild": "node scripts/prebuild-images.mjs",
     "dev": "next dev",
     "build": "next build",
+    "deploy": "wrangler deploy out --name trendswheel --compatibility-date 2026-10-23",
     "verify": "node scripts/verify.mjs",
     "lighthouse": "node scripts/lighthouse.mjs",
     "new-post": "node scripts/new-post.mjs",
