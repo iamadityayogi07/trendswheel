@@ -7,3 +7,4 @@ next-env.d.ts
 tsconfig.tsbuildinfo
 .vercel
 public/_img
+AGENTS.md

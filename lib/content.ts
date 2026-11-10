@@ -88,7 +88,7 @@ type Store = { site: Site; categories: Category[]; authors: Author[]; posts: Pos
 let store: Store | null = null;
 
 function load(): Store {
-  if (store) return store;
+  if (process.env.NODE_ENV === 'production' && store) return store;
   const site = readJson('site.json', siteSchema);
   const categories = readJson('categories.json', z.array(categorySchema));
   const authors = readJson('authors.json', z.array(authorSchema));
