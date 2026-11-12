@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Laravel versus Next.js blog hosting cost comparison chart">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="0.6" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.09"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1100" cy="70" r="180" fill="#e64a19" opacity="0.08"/>
+  <circle cx="90" cy="610" r="150" fill="#e64a19" opacity="0.06"/>
+  
+  <!-- Left Column -->
+  <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">HOSTING COST &amp; ARCHITECTURE</text>
+  <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#0f172a">Laravel vs Next.js:</text>
+  <text x="70" y="298" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#0f172a">Real Blog Hosting</text>
+  <text x="70" y="371" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#e64a19">Costs Compared</text>
+  <text x="70" y="435" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#475569">Shared cPanel vs Cloud VPS vs Static Edge CDN</text>
+  
+  <!-- Metric Pills -->
+  <g transform="translate(70 480)">
+    <rect width="175" height="48" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="87" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">3-Year TCO</text>
+    <rect x="190" width="175" height="48" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="277" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">RAM &amp; CPU Tax</text>
+    <rect x="380" width="175" height="48" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="467" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">CMS Trade-offs</text>
+  </g>
+  
+  <!-- Bottom Banner -->
+  <g transform="translate(70 550)">
+    <rect width="530" height="44" rx="10" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#b91c1c">Annual Savings: ₹12,021 saved every single year</text>
+  </g>
+  
+  <!-- Right Column / Comparison Cards -->
+  <g transform="translate(680 75)" filter="url(#shadow)">
+    <!-- Card 1: Laravel -->
+    <rect x="0" y="0" width="460" height="220" rx="20" fill="#ffffff" stroke="#fecaca" stroke-width="2"/>
+    <rect x="0" y="0" width="460" height="48" rx="20" fill="#fee2e2"/>
+    <rect x="0" y="28" width="460" height="20" fill="#fee2e2"/>
+    <text x="25" y="32" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#991b1b">DYNAMIC LARAVEL BLOG (PHP + MYSQL)</text>
+    
+    <text x="25" y="85" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#64748b">Shared / Managed Hosting</text>
+    <text x="25" y="125" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#b91c1c">₹12,021 to ₹32,000</text>
+    <text x="355" y="125" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#64748b">/ year</text>
+    <text x="25" y="155" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#334155">&#x2022; PHP-FPM memory boots on every request</text>
+    <text x="25" y="178" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#334155">&#x2022; Continuous MySQL database crash &amp; connection risks</text>
+    <text x="25" y="201" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#334155">&#x2022; Requires recurring monthly server payments</text>
+    
+    <!-- VS Badge -->
+    <circle cx="230" cy="235" r="24" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+    <text x="230" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#ffffff">VS</text>
+    
+    <!-- Card 2: Next.js -->
+    <g transform="translate(0 250)">
+      <rect x="0" y="0" width="460" height="220" rx="20" fill="#ffffff" stroke="#bbf7d0" stroke-width="2"/>
+      <rect x="0" y="0" width="460" height="48" rx="20" fill="#dcfce7"/>
+      <rect x="0" y="28" width="460" height="20" fill="#dcfce7"/>
+      <text x="25" y="32" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#166534">STATIC NEXT.JS ON CLOUDFLARE PAGES</text>
+      
+      <text x="25" y="85" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#64748b">Static Edge CDN Export</text>
+      <text x="25" y="128" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#15803d">₹0</text>
+      <text x="95" y="125" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#15803d">FREE FOREVER</text>
+      <text x="25" y="155" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#334155">&#x2022; Pre-rendered HTML served in &lt;50ms from edge</text>
+      <text x="25" y="178" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#334155">&#x2022; Zero database overhead, zero maintenance fees</text>
+      <text x="25" y="201" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#334155">&#x2022; Unlimited bandwidth &amp; automatic SSL included</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Step-by-step developer checklist for migrating away from GoDaddy cPanel">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="0.6" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="80" r="180" fill="#e64a19" opacity="0.08"/>
+  <circle cx="80" cy="620" r="160" fill="#e64a19" opacity="0.06"/>
+  
+  <!-- Left Header -->
+  <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">STEP-BY-STEP DEVELOPER GUIDE</text>
+  <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">Leaving GoDaddy:</text>
+  <text x="70" y="295" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">How to Migrate</text>
+  <text x="70" y="365" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#e64a19">Without Losing Data,</text>
+  <text x="70" y="435" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#e64a19">Images or SEO</text>
+  <text x="70" y="495" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#475569">Gzipped MySQL export, server zipping &amp; Cloudflare DNS</text>
+  
+  <!-- Pill Badges -->
+  <g transform="translate(70 535)">
+    <rect width="165" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="82" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">cPanel Backup</text>
+    <rect x="180" width="165" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="262" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Zero Downtime</text>
+    <rect x="360" width="165" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="442" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">301 Redirects</text>
+  </g>
+  
+  <!-- Right Card / Checklist Graphic -->
+  <g transform="translate(740 85)" filter="url(#shadow)">
+    <rect width="390" height="460" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <rect width="390" height="65" rx="24" fill="#0f172a"/>
+    <rect y="40" width="390" height="25" fill="#0f172a"/>
+    <text x="30" y="42" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#ffffff">MIGRATION CHECKLIST</text>
+    <circle cx="355" cy="33" r="8" fill="#10b981"/>
+    
+    <!-- Step 1 -->
+    <g transform="translate(25 95)">
+      <circle cx="22" cy="22" r="18" fill="#e64a19"/>
+      <path d="M14 22l6 6 10-12" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="19" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Export MySQL (Gzip)</text>
+      <text x="55" y="38" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Avoid 504 gateway timeouts</text>
+    </g>
+    
+    <!-- Step 2 -->
+    <g transform="translate(25 175)">
+      <circle cx="22" cy="22" r="18" fill="#e64a19"/>
+      <path d="M14 22l6 6 10-12" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="19" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Zip Media in cPanel</text>
+      <text x="55" y="38" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Single archive, preserve paths</text>
+    </g>
+    
+    <!-- Step 3 -->
+    <g transform="translate(25 255)">
+      <circle cx="22" cy="22" r="18" fill="#e64a19"/>
+      <path d="M14 22l6 6 10-12" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="19" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Preserve 301 Redirects</text>
+      <text x="55" y="38" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Carry over .htaccess rules</text>
+    </g>
+    
+    <!-- Step 4 -->
+    <g transform="translate(25 335)">
+      <circle cx="22" cy="22" r="18" fill="#10b981"/>
+      <path d="M14 22l6 6 10-12" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="19" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Switch DNS to Cloudflare</text>
+      <text x="55" y="38" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Keep domain, point nameservers</text>
+    </g>
+    
+    <!-- Footer status -->
+    <rect x="25" y="405" width="340" height="36" rx="18" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="195" y="428" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#166534">COMPLETED IN UNDER 60 MINUTES</text>
+  </g>
+</svg>
