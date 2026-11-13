@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Comparison of free developer blog hosting platforms: Cloudflare Pages, GitHub Pages, Vercel, and Netlify">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f0f4f8"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="70" r="180" fill="#e64a19" opacity="0.08"/>
+  <circle cx="80" cy="620" r="160" fill="#e64a19" opacity="0.06"/>
+  
+  <!-- Left Column: Title & Context -->
+  <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">HANDS-ON DEVELOPER BENCHMARK</text>
+  <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">Free Blog Hosting</text>
+  <text x="70" y="295" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">That Actually Works:</text>
+  <text x="70" y="365" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#e64a19">4 Platforms Tested</text>
+  <text x="70" y="425" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#475569">Real bandwidth limits, AdSense rules &amp; hidden overage traps</text>
+  
+  <!-- Feature Badges -->
+  <g transform="translate(70 475)">
+    <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="90" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Zero Ad Injection</text>
+    <rect x="195" width="180" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="285" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Custom Domains</text>
+    <rect x="390" width="180" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="480" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Unlimited SSL</text>
+  </g>
+  
+  <!-- Warning callout -->
+  <g transform="translate(70 545)">
+    <rect width="530" height="44" rx="10" fill="#fef3c7" stroke="#fcd34d"/>
+    <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#92400e">No sketchy cPanel hosts &#x2022; Only genuine developer edge networks</text>
+  </g>
+  
+  <!-- Right Column: 4 Platform Cards Grid -->
+  <g transform="translate(680 75)" filter="url(#shadow)">
+    <!-- Grid Background Container -->
+    <rect width="460" height="480" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <rect width="460" height="55" rx="24" fill="#0f172a"/>
+    <rect y="35" width="460" height="20" fill="#0f172a"/>
+    <text x="25" y="36" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#ffffff">PLATFORM COMPARISON MATRIX</text>
+    
+    <!-- Platform 1: Cloudflare Pages (Winner) -->
+    <g transform="translate(20 75)">
+      <rect width="420" height="88" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="14" fill="#16a34a"/>
+      <path d="M22 28l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="52" y="33" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#166534">Cloudflare Pages (Best Overall)</text>
+      <rect x="330" y="16" width="75" height="24" rx="12" fill="#15803d"/>
+      <text x="367" y="32" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800" fill="#ffffff">WINNER</text>
+      <text x="52" y="58" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; Unlimited bandwidth &amp; requests &#x2022; 500 builds/mo</text>
+      <text x="52" y="75" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#166534" font-weight="700">&#x2713; Full AdSense &amp; commercial monetization allowed</text>
+    </g>
+    
+    <!-- Platform 2: GitHub Pages -->
+    <g transform="translate(20 175)">
+      <rect width="420" height="88" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="14" fill="#0f172a"/>
+      <text x="28" y="33" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#ffffff">GH</text>
+      <text x="52" y="33" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#0f172a">GitHub Pages</text>
+      <text x="52" y="58" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; 1 GB repo limit &#x2022; 100 GB/month soft traffic limit</text>
+      <text x="52" y="75" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#dc2626">&#x2717; No native 301 redirects or custom response headers</text>
+    </g>
+    
+    <!-- Platform 3: Vercel Hobby -->
+    <g transform="translate(20 275)">
+      <rect width="420" height="88" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+      <polygon points="28,15 15,38 41,38" fill="#0f172a"/>
+      <text x="52" y="33" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#0f172a">Vercel Hobby</text>
+      <text x="52" y="58" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; Best Next.js DX &#x2022; 100 GB edge network bandwidth</text>
+      <text x="52" y="75" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#dc2626" font-weight="700">&#x26A0; Strict non-commercial ToS (AdSense violates Hobby)</text>
+    </g>
+    
+    <!-- Platform 4: Netlify -->
+    <g transform="translate(20 375)">
+      <rect width="420" height="88" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="14" fill="#0ea5e9"/>
+      <text x="28" y="33" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800" fill="#ffffff">NET</text>
+      <text x="52" y="33" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#0f172a">Netlify Free Tier</text>
+      <text x="52" y="58" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; 100 free form submissions &#x2022; 300 build minutes/mo</text>
+      <text x="52" y="75" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#dc2626">&#x26A0; $55/block surprise overage fee if bandwidth exceeds 100 GB</text>
+    </g>
+  </g>
+</svg>
