@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080f1e" />
+      <stop offset="50%" stop-color="#0f1e38" />
+      <stop offset="100%" stop-color="#030814" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#38bdf8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Shield & Lock abstract shapes -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="2" fill="none">
+    <path d="M 600 80 L 750 140 L 750 340 C 750 430 600 500 600 500 C 600 500 450 430 450 340 L 450 140 Z" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#38bdf8" />
+    <text x="40" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">AUTHENTICATOR APP GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Best 2FA Authenticator Apps for Android:</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">Aegis vs Bitwarden vs Google</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Encrypted Offline Backups, Open-Source Security and Avoiding Account Lockout
+    </text>
+  </g>
+
+  <!-- 3 App Matrix Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- App 1: Aegis -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">AEGIS (BEST OVERALL)</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">100% Free &amp; Open Source</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Backups: AES-256 encrypted file</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Biometrics: Fingerprint unlock</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Gold Standard: Zero cloud lock-in</text>
+    </g>
+
+    <!-- App 2: 2FAS -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#f97316" stroke-width="1" />
+      <rect x="18" y="18" width="130" height="24" rx="6" fill="#f97316" fill-opacity="0.2" />
+      <text x="83" y="34" text-anchor="middle" fill="#fb923c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2FAS (SEAMLESS SYNC)</text>
+      <text x="18" y="70" fill="#fb923c" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Cross-Platform Open Source</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Backups: Encrypted Google Drive</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Browser: One-click 2FA push</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Android + PC + iPhone</text>
+    </g>
+
+    <!-- App 3: Google Authenticator -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="145" height="24" rx="6" fill="#64748b" fill-opacity="0.2" />
+      <text x="90" y="34" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">GOOGLE AUTHENTICATOR</text>
+      <text x="18" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Proprietary / Closed Source</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Sync: Google Account Cloud</text>
+      <text x="18" y="118" fill="#f87171" font-family="system-ui, sans-serif" font-size="13">Warning: If Google locks, you lose 2FA</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Verdict: Basic but risky single point</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel App Reviews &#x2022; Practical Two-Factor Authentication Security Guide</text>
+  </g>
+</svg>

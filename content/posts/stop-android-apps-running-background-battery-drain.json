@@ -1,0 +1,48 @@
+{
+  "id": 170,
+  "slug": "stop-android-apps-running-background-battery-drain",
+  "title": "How to Stop Android Apps from Running in the Background and Draining Battery",
+  "html": "<p>You leave your phone on the bedside table with 82% charge before going to sleep. Seven hours later, you wake up to find it at 64%&mdash;without a single incoming phone call, alarm, or active screen time. What happened?</p>\n\n<p><em>Last updated: 25 Nov 2026. This battery guide debunks common myths about swiping apps away in Recents and provides step-by-step instructions for Samsung One UI, Xiaomi HyperOS, and stock Android.</em></p>\n\n<p>The culprit is rarely a dying physical battery. In over 85% of cases, overnight battery bleed is driven by <strong>background wakelocks</strong>: rogue apps repeatedly waking your phone's processor from low-power sleep states to poll ad networks, refresh unneeded feeds, or sync location data.</p>\n\n<p>Here is how to identify and neutralize background battery hogs once and for all, using modern Android power management settings.</p>\n\n<h2>The Huge Myth: Why Swiping Apps Away in &quot;Recents&quot; Makes Battery Worse</h2>\n\n<p>For more than a decade, smartphone users have developed a compulsive habit: opening the Recent Apps switcher and swiping every card away, or tapping &quot;Close All.&quot;</p>\n\n<p><strong>Stop doing this.</strong> On modern Android systems (Android 11 through Android 16), apps in the background are kept in a frozen, suspended state in RAM. Cached RAM draws virtually zero additional power. However, when you swipe an app away, Android unloads it completely from memory.</p>\n\n<p>When you inevitably reopen WhatsApp, Instagram, or Maps ten minutes later, your phone must spin up the CPU at maximum frequency, read gigabytes of assets from flash storage, and initialize background libraries. Doing this 30 times a day drains significantly more battery than letting Android freeze them naturally.</p>\n\n<h2>Method 1: Switch Greedy Apps to &quot;Restricted&quot; Battery Mode</h2>\n\n<p>Android provides a granular three-tier battery control for every installed application:</p>\n\n<div class=\"table-wrapper\">\n<table>\n  <thead>\n    <tr>\n      <th>Tier</th>\n      <th>Behavior</th>\n      <th>Best Used For</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Unrestricted</strong></td>\n      <td>Allows app to run in background without any OS limits. High battery consumption.</td>\n      <td>VPNs, fitness trackers, smartwatches.</td>\n    </tr>\n    <tr>\n      <td><strong>Optimized (Default)</strong></td>\n      <td>Android manages background limits dynamically based on how often you use the app.</td>\n      <td>Messaging apps (WhatsApp, Telegram), email.</td>\n    </tr>\n    <tr>\n      <td><strong>Restricted</strong></td>\n      <td>App is strictly prohibited from running services or holding wakelocks in the background.</td>\n      <td>Shopping apps, social media, games, food delivery.</td>\n    </tr>\n  </tbody>\n</table>\n</div>\n\n<p>To change an app's tier:</p>\n\n<ol>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Apps</strong> &rarr; <strong>See all apps</strong>.</li>\n  <li>Select apps you only use when actively opened (e.g., Flipkart, Amazon, Zomato, Swiggy, Instagram, Facebook).</li>\n  <li>Tap <strong>App battery usage</strong> (or <em>Battery</em>).</li>\n  <li>Change from <em>Optimized</em> to <strong>Restricted</strong>.</li>\n</ol>\n\n<div class=\"info-box\">\n<p><strong>Important Notification Note:</strong> Do not put WhatsApp, Slack, or banking OTP apps into Restricted mode, or you may not receive incoming calls or urgent notifications until you open them.</p>\n</div>\n\n<h2>Method 2: Turn Off Background Data for Non-Essential Apps</h2>\n\n<p>Many apps ping remote analytics servers every 90 seconds while your phone is in your pocket. Cutting background cellular and Wi-Fi access permanently silences them:</p>\n\n<ol>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Apps</strong>.</li>\n  <li>Select the target app &rarr; tap <strong>Mobile data &amp; Wi-Fi</strong>.</li>\n  <li>Toggle <strong>&quot;Background data&quot;</strong> to <strong>OFF</strong>.</li>\n</ol>\n\n<p>The app will continue functioning normally whenever you open it on screen, but the second you lock your phone or switch away, it cannot consume data or wake the cellular modem.</p>\n\n<h2>Method 3: OEM Specific Fixes (Samsung, Xiaomi, OnePlus)</h2>\n\n<p>Different smartphone manufacturers include specialized battery engines that allow even deeper hibernation:</p>\n\n<h3>1. Samsung One UI (Galaxy Phones)</h3>\n<ul>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Battery</strong> &rarr; <strong>Background usage limits</strong>.</li>\n  <li>Enable <strong>&quot;Put unused apps to sleep&quot;</strong>.</li>\n  <li>Tap <strong>Deep sleeping apps</strong> &rarr; tap the <strong>+</strong> icon &rarr; add all shopping, food, ride-sharing, and streaming apps. Apps in Deep Sleep never run in the background, only waking when you tap their icon.</li>\n</ul>\n\n<h3>2. Xiaomi / Redmi / POCO (HyperOS / MIUI)</h3>\n<ul>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Apps</strong> &rarr; <strong>Manage apps</strong> &rarr; <strong>Permissions</strong> &rarr; <strong>Autostart</strong>.</li>\n  <li>Turn off autostart for all apps except essential messaging and email.</li>\n  <li>Under <em>Battery saver</em> for individual apps, choose <strong>&quot;Restrict background apps&quot;</strong>.</li>\n</ul>\n\n<h3>3. OnePlus / Realme / Oppo (OxygenOS / ColorOS)</h3>\n<ul>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Battery</strong> &rarr; <strong>More settings</strong> &rarr; <strong>App battery management</strong>.</li>\n  <li>Select offending apps and toggle off <strong>&quot;Allow background activity&quot;</strong> and <strong>&quot;Allow auto-launch&quot;</strong>.</li>\n</ul>\n\n<h2>How to Check Your Real Overnight Battery Drain</h2>\n\n<p>To verify if your changes worked:</p>\n\n<ol>\n  <li>Charge your phone to 100% in the evening.</li>\n  <li>Before bed, check <strong>Settings &rarr; Battery &rarr; Battery usage</strong>.</li>\n  <li>In the morning, examine the graph for the 7-hour idle window.</li>\n  <li>A healthy Android device with properly configured background permissions should lose between <strong>2% to 4%</strong> overnight. If it loses 10% or more, check the breakdown table directly below the graph to see which app claimed CPU foreground/background time while the screen was off.</li>\n</ol>",
+  "excerpt": "<p>Does your Android battery drop 15% to 25% overnight while you sleep? Learn the difference between App Standby, Restricted battery mode, and why constantly swiping apps away in Recents actually drains more battery.</p>",
+  "description": "<p>Practical guide on how to stop Android apps from running in the background and draining battery. Step-by-step instructions for Samsung, Xiaomi, and stock Android.</p>",
+  "metaTitle": "How to Stop Background Apps Draining Battery on Android",
+  "metaDescription": "Stop overnight battery drain on Android. Step-by-step guide to Restricted battery mode, Deep Sleep on Samsung, background data limits, and recents switcher facts.",
+  "metaKeywords": "stop background apps android, fix android overnight battery drain, samsung deep sleeping apps setup, restricted battery mode android 2026, phone battery draining fast",
+  "publishedAt": "2026-11-25T13:14:00+05:30",
+  "updatedAt": "2026-11-25T13:14:00+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "Android Battery Life",
+    "Battery Drain",
+    "Background Apps",
+    "Samsung Deep Sleep",
+    "Smartphone Tips",
+    "How-To"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/stop-background-apps-featured.svg",
+  "thumbnailImage": "/posts/stop-background-apps-featured.svg",
+  "altImage": "Stopping background apps and battery drain on Android using restricted battery mode",
+  "faq": [
+    {
+      "title": "Does closing all apps in the Recent Apps switcher save battery?",
+      "description": "No. Force-closing apps unloads them from RAM. Re-opening them requires the CPU to work harder, consuming more battery than letting Android keep them in an inactive cached state."
+    },
+    {
+      "title": "What happens when you put an app into Restricted battery mode?",
+      "description": "An app in Restricted mode cannot run background services, wake the CPU, or fetch background updates when you are not actively using it. Notifications might be delayed until you open the app."
+    },
+    {
+      "title": "How much battery should an Android phone lose overnight?",
+      "description": "A healthy Android phone with reasonable background sync settings should lose only 2% to 4% over a 7-to-8 hour sleep period on Wi-Fi."
+    }
+  ],
+  "impressions": 0,
+  "oldPath": "/how-to/stop-android-apps-running-background-battery-drain"
+}

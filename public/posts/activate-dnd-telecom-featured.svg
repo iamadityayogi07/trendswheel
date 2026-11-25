@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="How to activate strict DND on Jio, Airtel, and Vi using TRAI 1909 system">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="70" r="180" fill="#e64a19" opacity="0.08"/>
+  <circle cx="80" cy="620" r="160" fill="#e64a19" opacity="0.06"/>
+  
+  <!-- Left Header -->
+  <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">TRAI CONSUMER PROTECTION GUIDE</text>
+  <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">How to Activate</text>
+  <text x="70" y="295" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">Strict DND (1909)</text>
+  <text x="70" y="365" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#e64a19">on Jio, Airtel &amp; Vi</text>
+  <text x="70" y="425" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#475569">Block promotional calls, robocalls &amp; report spam numbers</text>
+  
+  <!-- Badges -->
+  <g transform="translate(70 475)">
+    <rect width="175" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="87" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">TRAI 1909 System</text>
+    <rect x="190" width="175" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="277" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">START 0 to 1909</text>
+    <rect x="380" width="175" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="467" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Carrier Suspension</text>
+  </g>
+  
+  <!-- Alert Banner -->
+  <g transform="translate(70 545)">
+    <rect width="530" height="44" rx="10" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#166534">&#x2713; Reporting unregistered telemarketers within 3 days disconnects their line</text>
+  </g>
+  
+  <!-- Right Column Card -->
+  <g transform="translate(680 75)" filter="url(#shadow)">
+    <rect width="460" height="480" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <rect width="460" height="60" rx="24" fill="#0f172a"/>
+    <rect y="35" width="460" height="25" fill="#0f172a"/>
+    <text x="25" y="38" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#ffffff">TRAI DND ACTIVATION METHODS</text>
+    
+    <!-- Method 1: SMS -->
+    <g transform="translate(25 85)">
+      <rect width="410" height="95" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="20" y="30" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#0f172a">METHOD 1: Instant SMS (All Operators)</text>
+      <text x="20" y="55" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e64a19" font-weight="700">Send SMS: START 0 to 1909</text>
+      <text x="20" y="75" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#64748b">Activates Category 0 (Full Block across all promo sectors)</text>
+    </g>
+    
+    <!-- Method 2: App -->
+    <g transform="translate(25 195)">
+      <rect width="410" height="135" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="20" y="30" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#0f172a">METHOD 2: Telecom Carrier Apps</text>
+      <text x="20" y="55" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; <strong>Jio:</strong> MyJio &gt; Settings &gt; Do Not Disturb &gt; Fully Blocked</text>
+      <text x="20" y="78" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; <strong>Airtel:</strong> airtel.in/airtel-dnd &gt; Enter OTP &gt; Select Block All</text>
+      <text x="20" y="101" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; <strong>Vi:</strong> Vi App &gt; Menu &gt; DND &gt; Full DND Mode</text>
+    </g>
+    
+    <!-- Method 3: Report Spammers -->
+    <g transform="translate(25 345)">
+      <rect width="410" height="110" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#991b1b">HOW TO REPORT PERSISTENT SPAMMERS:</text>
+      <text x="20" y="52" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">Send SMS to 1909 within 3 days of call:</text>
+      <text x="20" y="72" font-family="Courier, monospace" font-size="13" font-weight="700" fill="#b91c1c">COMP TEL NO XXXXXXXXXX, dd/mm/yy, Time</text>
+      <text x="20" y="92" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#64748b">Operator is legally bound to investigate within 7 days</text>
+    </g>
+  </g>
+</svg>

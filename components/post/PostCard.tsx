@@ -66,9 +66,14 @@ export default function PostCard({ post, excerpt = true, priority = false, compa
           </Link>
         </h3>
         {excerpt && post.description && <p className="mt-2 line-clamp-3 text-ink-2">{stripHtml(post.description)}</p>}
-        <p className="mt-auto pt-3 text-sm text-muted">
-          <time dateTime={post.updatedAt}>{formatDate(post.updatedAt)}</time> · {readingMinutes(post.html)} min read
-        </p>
+        <div className="mt-auto flex items-center justify-between pt-3 text-sm">
+          <p className="text-muted">
+            <time dateTime={post.updatedAt}>{formatDate(post.updatedAt)}</time> · {readingMinutes(post.html)} min read
+          </p>
+          <Link href={href} className="inline-flex items-center gap-1 font-semibold text-brand-strong hover:underline">
+            Read guide <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </div>
     </article>
   );

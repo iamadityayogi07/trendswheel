@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="storageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="70%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="25" flood-color="#10b981" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="630" />
+    <line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="500" y1="0" x2="500" y2="630" />
+    <line x1="700" y1="0" x2="700" y2="630" />
+    <line x1="900" y1="0" x2="900" y2="630" />
+    <line x1="1100" y1="0" x2="1100" y2="630" />
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="250" x2="1200" y2="250" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="550" x2="1200" y2="550" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 80)">
+    <rect width="280" height="40" rx="20" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="24" cy="20" r="6" fill="#10b981" />
+    <text x="42" y="26" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">ANDROID STORAGE GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 175)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Clean Hidden Junk &amp; Duplicate Files</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">On Android Without Risky Cleaner Apps</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Reclaim 10GB–25GB: WhatsApp Sent Media, Telegram Cache &amp; Hidden .thumbnails
+    </text>
+  </g>
+
+  <!-- Interactive Graphic Card -->
+  <g transform="translate(80, 360)" filter="url(#cardGlow)">
+    <rect width="1040" height="200" rx="20" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Storage Bar Header -->
+    <text x="40" y="45" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">Internal Storage Breakdown (Before vs After Cleanup)</text>
+    <text x="920" y="45" fill="#10b981" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">+18.4 GB Free</text>
+    
+    <!-- Progress Bar -->
+    <rect x="40" y="65" width="960" height="24" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <rect x="42" y="67" width="580" height="20" rx="10" fill="url(#storageGrad)" />
+    
+    <!-- Three Breakdown Cards -->
+    <g transform="translate(40, 115)">
+      <!-- Card 1 -->
+      <rect width="295" height="60" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <circle cx="28" cy="30" r="14" fill="#22c55e" fill-opacity="0.2" />
+      <text x="28" y="35" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="bold">WA</text>
+      <text x="54" y="28" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">WhatsApp /Sent Folders</text>
+      <text x="54" y="46" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Hidden duplicates sent to others</text>
+      
+      <!-- Card 2 -->
+      <g transform="translate(332, 0)">
+        <rect width="295" height="60" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+        <circle cx="28" cy="30" r="14" fill="#0284c7" fill-opacity="0.2" />
+        <text x="28" y="35" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="bold">TG</text>
+        <text x="54" y="28" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Telegram Local Cache</text>
+        <text x="54" y="46" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Videos &amp; audio auto-cached</text>
+      </g>
+      
+      <!-- Card 3 -->
+      <g transform="translate(664, 0)">
+        <rect width="295" height="60" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+        <circle cx="28" cy="30" r="14" fill="#eab308" fill-opacity="0.2" />
+        <text x="28" y="35" text-anchor="middle" fill="#facc15" font-size="13" font-weight="bold">DC</text>
+        <text x="54" y="28" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">DCIM/.thumbnails Index</text>
+        <text x="54" y="46" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Orphaned gallery thumb caches</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 588)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Tech Guides • 100% Native Files by Google Method • Zero Adware</text>
+  </g>
+</svg>

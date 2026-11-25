@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="usbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#f59e0b" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Abstract Circuit Lines -->
+  <g opacity="0.08" stroke="#f59e0b" stroke-width="1.5" fill="none">
+    <path d="M 0 160 L 300 160 L 350 210 L 800 210" />
+    <path d="M 0 460 L 400 460 L 450 410 L 1200 410" />
+    <circle cx="300" cy="160" r="4" fill="#f59e0b" />
+    <circle cx="350" cy="210" r="4" fill="#f59e0b" />
+    <circle cx="400" cy="460" r="4" fill="#f59e0b" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="260" height="38" rx="19" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#f59e0b" />
+    <text x="40" y="24" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">HARDWARE EXPLAINER</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">USB-C Cables Explained:</tspan>
+      <tspan x="0" y="58" fill="#f59e0b">Why They Aren&apos;t All Created Equal</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Power Delivery (60W vs 100W vs 240W), USB 2.0 vs USB4 Data and E-Marker Chips
+    </text>
+  </g>
+
+  <!-- Comparison Grid Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Box 1: Charge-Only Cable -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#64748b" fill-opacity="0.25" />
+      <text x="80" y="34" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">IN-BOX PHONE CABLE</text>
+      <text x="18" y="72" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Data: 480 Mbps (USB 2.0!)</text>
+      <text x="18" y="96" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Power: Up to 60W (3 Amp)</text>
+      <text x="18" y="120" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Video Output: NONE (Black screen)</text>
+      <text x="18" y="148" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Overnight bedside charging</text>
+    </g>
+
+    <!-- Box 2: 100W / 240W Power Cable -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#f59e0b" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="700">100W&#x2013;240W PD + E-MARK</text>
+      <text x="18" y="72" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Power: Up to 240W (5 Amp)</text>
+      <text x="18" y="96" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Data: Usually 480 Mbps or 10 Gbps</text>
+      <text x="18" y="120" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13">Safety: E-Marker microchip inside</text>
+      <text x="18" y="148" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Best for: Laptops, MacBooks &amp; tablets</text>
+    </g>
+
+    <!-- Box 3: USB4 / Thunderbolt 4 -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#3b82f6" stroke-width="1" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#3b82f6" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="11" font-weight="700">USB4 / THUNDERBOLT 4</text>
+      <text x="18" y="72" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Data: 40 Gbps (80x faster!)</text>
+      <text x="18" y="96" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Power: 100W to 240W PD</text>
+      <text x="18" y="120" fill="#34d399" font-family="system-ui, sans-serif" font-size="13">Video: Dual 4K 120Hz or 8K 60Hz</text>
+      <text x="18" y="148" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: External SSDs &amp; monitors</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Tech Guides &#x2022; Decoding USB-IF Standards and E-Marker Cable Safety</text>
+  </g>
+</svg>

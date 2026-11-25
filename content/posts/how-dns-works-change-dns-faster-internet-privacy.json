@@ -1,0 +1,48 @@
+{
+  "id": 181,
+  "slug": "how-dns-works-change-dns-faster-internet-privacy",
+  "title": "How DNS Works: Why Changing to Cloudflare (1.1.1.1) or Google (8.8.8.8) Speeds Up Your Internet",
+  "html": "<p>Have you ever noticed that when you click a link on your smartphone or laptop, there is a slight 1-to-2 second pause where the browser displays <em>&quot;Resolving host...&quot;</em> before the webpage starts loading? Once the connection begins, content streams smoothly&#x2014;but that initial hesitation happens on almost every new website you visit.</p>\n\n<p><em>Last updated: 25 Nov 2026. This comprehensive networking guide explains how the Domain Name System (DNS) works, why your default telecom provider's DNS is slow and monitors your browsing history, and how switching to Cloudflare (1.1.1.1), Google (8.8.8.8), or AdGuard can make your internet feel noticeably faster.</em></p>\n\n<h2>What Is DNS and Why Does Every Webpage Depend on It?</h2>\n\n<p>Computers and servers communicating across the global internet do not understand human language or website names like <code>trendswheel.com</code> or <code>google.com</code>. They navigate exclusively using numerical <strong>IP (Internet Protocol) addresses</strong> (such as <code>142.250.190.46</code> for IPv4 or <code>2606:4700::6810:84e5</code> for IPv6).</p>\n\n<p>The <strong>Domain Name System (DNS)</strong> is the phonebook of the internet. Every time you tap a link or enter a URL in your browser:</p>\n\n<ol>\n  <li>Your device pauses and queries a <strong>DNS recursive resolver server</strong>: <em>&quot;What is the numerical IP address for this website?&quot;</em></li>\n  <li>The DNS server searches its cache or contacts authoritative root name servers.</li>\n  <li>The DNS server responds with the IP address.</li>\n  <li>Only then can your browser initiate the HTTPS handshake and fetch the webpage.</li>\n</ol>\n\n<p>A single modern news article or blog page often contains content loaded from <strong>15 to 30 different domain names</strong> (fonts, CSS styles, images, analytics, and video embeds). That means loading one webpage can trigger dozens of separate DNS lookup requests.</p>\n\n<h2>The 3 Major Problems with Your ISP's Default DNS</h2>\n\n<p>When you set up home Wi-Fi or turn on mobile data, your phone automatically uses the default DNS servers operated by your telecom provider (Jio, Airtel, Vi, Vodafone, Comcast, etc.). This creates three major issues:</p>\n\n<ol>\n  <li><strong>Sluggish Response Times (High Lookup Latency):</strong> ISP DNS servers are often poorly optimized and geographically centralized. A lookup on a congested ISP resolver can take <strong>65ms to 120ms</strong> per query, compared to just <strong>12ms to 15ms</strong> on Cloudflare's Anycast edge network.</li>\n  <li><strong>Unencrypted Plaintext Snooping:</strong> Traditional DNS queries travel over port 53 in unencrypted plaintext. Even if a website uses secure HTTPS encryption, your ISP sees every single domain name you look up and logs your browsing history, often selling anonymized telemetry to marketing networks.</li>\n  <li><strong>Arbitrary Censorship and DNS Hijacking:</strong> ISPs frequently implement government blocking orders or redirect mistyped URLs to their own ad-heavy &quot;Search Assistance&quot; landing pages.</li>\n</ol>\n\n<h2>The Top Public DNS Resolvers Compared</h2>\n\n<div class=\"table-wrapper\">\n<table>\n  <thead>\n    <tr>\n      <th>Provider</th>\n      <th>Primary IPv4 / IPv6</th>\n      <th>Average Lookup Latency</th>\n      <th>Privacy Policy</th>\n      <th>Standout Superpower</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Cloudflare</strong></td>\n      <td><code>1.1.1.1</code><br><code>1.0.0.1</code></td>\n      <td><strong>12 ms &#x2013; 14 ms (Fastest)</strong></td>\n      <td>Zero logs policy (Audited by KPMG)</td>\n      <td>Fastest raw speed worldwide</td>\n    </tr>\n    <tr>\n      <td><strong>Google Public DNS</strong></td>\n      <td><code>8.8.8.8</code><br><code>8.8.4.4</code></td>\n      <td>~16 ms &#x2013; 19 ms</td>\n      <td>Keeps temporary IP logs for 48 hours</td>\n      <td>Massive global cache reliability</td>\n    </tr>\n    <tr>\n      <td><strong>Quad9</strong></td>\n      <td><code>9.9.9.9</code><br><code>149.112.112.112</code></td>\n      <td>~20 ms &#x2013; 25 ms</td>\n      <td>Swiss non-profit foundation</td>\n      <td><strong>Blocks malware &amp; phishing domains</strong></td>\n    </tr>\n    <tr>\n      <td><strong>AdGuard DNS</strong></td>\n      <td><code>94.140.14.14</code><br><code>94.140.15.15</code></td>\n      <td>~22 ms &#x2013; 28 ms</td>\n      <td>Strict privacy focus</td>\n      <td><strong>Blocks ads &amp; trackers system-wide!</strong></td>\n    </tr>\n  </tbody>\n</table>\n</div>\n\n<h2>How to Change Your DNS in 60 Seconds</h2>\n\n<h3>1. On Android (Private DNS - Recommended):</h3>\n<ol>\n  <li>Open <strong>Settings</strong> &rarr; <strong>Network &amp; internet</strong> (or <em>Connection &amp; sharing</em>).</li>\n  <li>Tap <strong>Private DNS</strong>.</li>\n  <li>Select <strong>Private DNS provider hostname</strong> and enter either:\n    <ul>\n      <li><code>one.one.one.one</code> (for Cloudflare's ultra-fast encrypted DNS).</li>\n      <li><code>dns.adguard-dns.com</code> (for automatic ad and tracker blocking across all apps and games!).</li>\n    </ul>\n  </li>\n  <li>Tap <strong>Save</strong>. All DNS queries on both mobile data and Wi-Fi are now encrypted via DNS-over-TLS (DoT).</li>\n</ol>\n\n<h3>2. On Windows 11:</h3>\n<ol>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Network &amp; internet</strong> &rarr; <strong>Wi-Fi</strong> (or <em>Ethernet</em>) &rarr; <strong>Hardware properties</strong>.</li>\n  <li>Next to <em>DNS server assignment</em>, click <strong>Edit</strong> &rarr; select <strong>Manual</strong>.</li>\n  <li>Toggle <strong>IPv4</strong> ON.</li>\n  <li>Preferred DNS: <code>1.1.1.1</code>. Alternate DNS: <code>1.0.0.1</code>.</li>\n  <li>Set <em>DNS over HTTPS</em> to <strong>On (automatic template)</strong> to enable full encryption.</li>\n</ol>\n\n<h3>3. On Your Home Wi-Fi Router:</h3>\n<p>Log into your home router's admin panel (usually <code>192.168.1.1</code> or <code>192.168.0.1</code>), navigate to <strong>DHCP / WAN Settings</strong>, and enter <code>1.1.1.1</code> and <code>1.0.0.1</code> as primary and secondary DNS. Every smart TV, gaming console, and phone connected to your home Wi-Fi will instantly benefit from faster lookup speeds without configuring individual devices.</p>",
+  "excerpt": "<p>Tired of slow webpage loading and 'Resolving host' pauses? Learn how the Domain Name System (DNS) works, why your telecom provider's DNS is slow and spies on your habits, and how switching to 1.1.1.1 or 8.8.8.8 speeds up your internet.</p>",
+  "description": "<p>How DNS works and why changing to Cloudflare (1.1.1.1) or Google (8.8.8.8) makes your internet faster and more private. Learn about DNS lookup latency, DNS-over-HTTPS (DoH), and Android Private DNS setup.</p>",
+  "metaTitle": "How DNS Works: Why Changing to 1.1.1.1 Speeds Up Your Internet",
+  "metaDescription": "Why does your browser pause on 'Resolving host'? Discover how DNS works, compare Cloudflare 1.1.1.1 vs Google 8.8.8.8, and learn how to configure Private DNS.",
+  "metaKeywords": "how dns works simply explained, 1.1.1.1 vs 8.8.8.8 which is faster, best free public dns 2026, android private dns adguard setup, dns-over-https doh privacy",
+  "publishedAt": "2026-11-25T14:00:00+05:30",
+  "updatedAt": "2026-11-25T14:00:00+05:30",
+  "category": {
+    "name": "Tech",
+    "slug": "tech"
+  },
+  "tags": [
+    "DNS",
+    "Networking",
+    "Internet Speed",
+    "Privacy",
+    "Cybersecurity",
+    "Tech"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/dns-explained-faster-internet-featured.svg",
+  "thumbnailImage": "/posts/dns-explained-faster-internet-featured.svg",
+  "altImage": "How DNS resolver architecture works comparing ISP DNS with Cloudflare and Google Public DNS",
+  "faq": [
+    {
+      "title": "Will changing DNS increase my raw internet download speed?",
+      "description": "DNS does not change your maximum bandwidth cap (e.g. 100 Mbps stays 100 Mbps). However, it drastically cuts the initial lookup latency (from 100ms down to 12ms) whenever you click a link, making webpages snap open noticeably faster."
+    },
+    {
+      "title": "Which is faster: Cloudflare 1.1.1.1 or Google 8.8.8.8?",
+      "description": "Independent global DNS monitoring benchmarks consistently rank Cloudflare 1.1.1.1 as the fastest public DNS resolver worldwide due to its 310+ Anycast edge datacenter network."
+    },
+    {
+      "title": "Can changing DNS block mobile ads without installing apps?",
+      "description": "Yes. Setting Android Private DNS to dns.adguard-dns.com routes DNS lookups through ad-blocking filters, blocking ads inside browser pages, mobile apps, and games system-wide."
+    }
+  ],
+  "impressions": 0,
+  "oldPath": "/tech/how-dns-works-change-dns-faster-internet-privacy"
+}

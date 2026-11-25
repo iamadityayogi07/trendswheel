@@ -50,8 +50,8 @@ export default function ContactPage() {
         )}
         <li className="p-4">
           <span className="block text-sm font-semibold text-muted">Website</span>
-          <a href={SITE_URL} rel="nofollow" className="font-semibold text-brand-strong underline">
-            www.trendswheel.com
+          <a href={SITE_URL} className="font-semibold text-brand-strong underline">
+            https://trendswheel.com/
           </a>
         </li>
       </ul>

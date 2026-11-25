@@ -1,0 +1,48 @@
+{
+  "id": 163,
+  "slug": "cancel-upi-autopay-mandate-gpay-phonepe-paytm",
+  "title": "UPI AutoPay Scams: How Fake Mandates Steal Money & How to Cancel Them",
+  "html": "<p>Scammers in India have largely moved away from asking for one-time OTPs. Instead, they trick victims into approving a &quot;UPI AutoPay Mandate&quot; under the guise of an electricity bill refund, cashback voucher, or KYC renewal. Once approved, the mandate allows money to be deducted automatically from your bank account every month without sending an OTP. Here is how UPI AutoPay scams work and how to find, pause, and permanently revoke active mandates inside Google Pay, PhonePe, and Paytm.</p>\n\n<p><em>Last updated: 25 Nov 2026. Menu paths and revocation steps are verified against current production versions of Google Pay, PhonePe, and Paytm running on Android and iOS in November 2026.</em></p>\n\n<h2>How the UPI AutoPay Scam Actually Works</h2>\n\n<p>UPI AutoPay was introduced by the National Payments Corporation of India (NPCI) for legitimate recurring payments, like Netflix subscriptions, SIP investments, and utility bills. Under RBI regulations, recurring payments up to ₹15,000 do not require a second-factor OTP once the initial mandate is authorized with your UPI PIN.</p>\n\n<p>Fraudsters exploit this convenience through two common tactics:</p>\n\n<ol>\n  <li><strong>The Fake Cashback / Refund Collect Request:</strong> The scammer calls claiming to be from your electricity board or courier delivery service, saying you are owed a ₹200 refund. They send a collect link on WhatsApp or SMS asking you to &quot;tap and verify with PIN to receive the money&quot;. When you enter your UPI PIN, you are not receiving money&mdash;you are authorizing an AutoPay mandate of up to ₹5,000 or ₹15,000 to deduct recurring funds.</li>\n  <li><strong>The Hidden Zero-Rupee Mandate:</strong> Some malicious apps trick users into accepting a &quot;₹1 trial fee&quot; or &quot;₹0 verification mandate&quot;. While only ₹0 is charged upfront, the underlying mandate authorizes the merchant to deduct several thousand rupees on the 1st of every month automatically.</li>\n</ol>\n\n<p><strong>Rule of thumb:</strong> Entering your UPI PIN is <em>only</em> used to transfer money out of your account or approve a debit mandate. You never need to enter your UPI PIN to receive money.</p>\n\n<h2>How to Cancel AutoPay in Google Pay (GPay)</h2>\n\n<p>Follow these steps to inspect and cancel any active mandates in Google Pay:</p>\n\n<ol>\n  <li>Open <strong>Google Pay</strong> on your phone.</li>\n  <li>Tap your <strong>Profile photo</strong> in the top right corner.</li>\n  <li>Under the <em>Payment methods</em> section, tap <strong>Autopay</strong>.</li>\n  <li>You will see two tabs: <strong>Active</strong> and <strong>Completed / Expired</strong>.</li>\n  <li>Review every mandate listed under Active. Look for merchant names you do not recognize or recurring amounts you never agreed to.</li>\n  <li>Tap on the suspicious mandate to view details (Frequency, Start Date, Maximum Amount).</li>\n  <li>Tap <strong>Cancel Autopay</strong> (or <strong>Pause Autopay</strong> if you only want to halt it temporarily).</li>\n  <li>Enter your <strong>UPI PIN</strong> to confirm the cancellation. (NPCI requires entering your PIN once to authorize the removal of an active banking mandate).</li>\n</ol>\n\n<h2>How to Cancel AutoPay in PhonePe</h2>\n\n<p>PhonePe organizes recurring subscriptions under a dedicated payment management menu:</p>\n\n<ol>\n  <li>Open the <strong>PhonePe</strong> app.</li>\n  <li>Tap your <strong>Profile icon</strong> at the top left corner.</li>\n  <li>Scroll down to the <strong>Payment Management</strong> section and tap <strong>AutoPay Settings</strong>.</li>\n  <li>Review all listed mandates under <em>Active AutoPays</em>.</li>\n  <li>Tap on the mandate you wish to terminate.</li>\n  <li>At the bottom of the screen, tap <strong>Remove AutoPay</strong> in red text.</li>\n  <li>Enter your <strong>UPI PIN</strong> to sign the mandate cancellation request.</li>\n  <li>Wait for the confirmation screen showing &quot;AutoPay removed successfully&quot;.</li>\n</ol>\n\n<h2>How to Cancel Automatic Payments in Paytm</h2>\n\n<p>In Paytm, automatic subscriptions are linked under UPI &amp; Payment settings:</p>\n\n<ol>\n  <li>Open <strong>Paytm</strong>.</li>\n  <li>Tap your <strong>Profile avatar</strong> (top left).</li>\n  <li>Scroll down and tap <strong>UPI &amp; Payment Settings</strong>.</li>\n  <li>Under <em>Other Settings</em>, tap <strong>UPI Automatic Payments</strong>.</li>\n  <li>Browse through the active list. Tap the toggle or select the merchant subscription you want to cancel.</li>\n  <li>Tap <strong>Cancel Automatic Payment</strong>.</li>\n  <li>Enter your <strong>UPI PIN</strong> when prompted to authenticate the revocation.</li>\n</ol>\n\n<h2>What to Do If an Unauthorized AutoPay Already Deducted Money</h2>\n\n<p>If you already lost money to an unauthorized AutoPay deduction:</p>\n\n<ol>\n  <li><strong>Revoke the mandate first:</strong> Follow the steps above immediately so the scammer cannot deduct another batch of funds next week or next month.</li>\n  <li><strong>Note down the 12-digit UTR Number:</strong> Open the debit transaction inside your UPI app and copy the 12-digit UTR (Unique Transaction Reference) number.</li>\n  <li><strong>Call 1930 within the Golden Hour:</strong> Follow our <a href=\"/how-to/how-to-report-online-fraud-1930-cybercrime-portal-india\">guide on reporting online fraud on 1930 and cybercrime.gov.in</a> to freeze the recipient bank account before the money is withdrawn.</li>\n  <li><strong>File a Chargeback Dispute with Your Bank:</strong> Contact your bank's customer care and request an unauthorized UPI mandate dispute form. Under NPCI dispute resolution guidelines, banks must investigate unauthorized mandate setups.</li>\n</ol>\n\n<h2>Frequently Asked Questions</h2>\n\n<h3>Can a scammer deduct money if I pause the AutoPay instead of canceling?</h3>\n<p>Pausing prevents immediate deductions until the unpause date, but canceling/removing is always safer. If you did not create the mandate yourself, permanently delete it rather than pausing.</p>\n\n<h3>Why does the app ask for my UPI PIN to cancel an AutoPay mandate?</h3>\n<p>Under NPCI architecture, an AutoPay mandate is a signed legal contract between your bank and the merchant's bank. Just as your signature is required to open an account, entering your UPI PIN is required to issue a cryptographically signed revocation command to your bank.</p>\n\n<h3>Can AutoPay deduct more than my account balance?</h3>\n<p>No. If your bank account does not have sufficient balance on the scheduled date, the AutoPay transaction simply fails. However, some banks charge a mandate failure fee (usually ₹25 to ₹100), so cancelling unauthorized mandates immediately prevents accidental failure penalties.</p>",
+  "excerpt": "<p>How scammers use fake UPI AutoPay mandates to drain money without sending OTPs, and the step-by-step method to inspect, pause, and revoke mandates in GPay, PhonePe, and Paytm.</p>",
+  "description": "<p>How scammers use fake UPI AutoPay mandates to drain money without sending OTPs, and the step-by-step method to inspect, pause, and revoke mandates in GPay, PhonePe, and Paytm.</p>",
+  "metaTitle": "UPI AutoPay Scams: How to Cancel Mandates on GPay, PhonePe & Paytm",
+  "metaDescription": "Stop unauthorized monthly UPI deductions. Step-by-step guide to finding and canceling active AutoPay mandates in Google Pay, PhonePe, and Paytm in 2026.",
+  "metaKeywords": "cancel upi autopay gpay phonepe paytm, upi autopay scam, fake upi collect request, revoke autopay mandate bhim, stop recurring upi payment",
+  "publishedAt": "2026-11-25T13:15:00+05:30",
+  "updatedAt": "2026-11-25T13:15:00+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "UPI Security",
+    "Google Pay",
+    "PhonePe",
+    "Paytm",
+    "Online Safety",
+    "How-To"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/cancel-upi-autopay-featured.svg",
+  "thumbnailImage": "/posts/cancel-upi-autopay-featured.svg",
+  "altImage": "How to inspect and cancel unauthorized UPI AutoPay mandates in Google Pay, PhonePe, and Paytm",
+  "faq": [
+    {
+      "title": "Can a scammer deduct money if I pause the AutoPay instead of canceling?",
+      "description": "Pausing prevents immediate deductions until the unpause date, but canceling/removing is always safer. If you did not create the mandate yourself, permanently delete it rather than pausing."
+    },
+    {
+      "title": "Why does the app ask for my UPI PIN to cancel an AutoPay mandate?",
+      "description": "Under NPCI architecture, an AutoPay mandate is a signed legal contract between your bank and the merchant's bank. Just as your signature is required to open an account, entering your UPI PIN is required to issue a cryptographically signed revocation command to your bank."
+    },
+    {
+      "title": "Can AutoPay deduct more than my account balance?",
+      "description": "No. If your bank account does not have sufficient balance on the scheduled date, the AutoPay transaction simply fails. However, some banks charge a mandate failure fee (usually ₹25 to ₹100), so cancelling unauthorized mandates immediately prevents accidental failure penalties."
+    }
+  ],
+  "impressions": 0,
+  "oldPath": "/how-to/cancel-upi-autopay-mandate-gpay-phonepe-paytm"
+}

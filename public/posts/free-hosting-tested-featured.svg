@@ -13,7 +13,7 @@
   <circle cx="1120" cy="70" r="180" fill="#e64a19" opacity="0.08"/>
   <circle cx="80" cy="620" r="160" fill="#e64a19" opacity="0.06"/>
   
-  <!-- Left Column: Title & Context -->
+  <!-- Left Column: Title and Context -->
   <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">HANDS-ON DEVELOPER BENCHMARK</text>
   <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">Free Blog Hosting</text>
   <text x="70" y="295" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">That Actually Works:</text>

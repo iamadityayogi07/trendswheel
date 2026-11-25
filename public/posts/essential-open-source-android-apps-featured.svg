@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081018" />
+      <stop offset="50%" stop-color="#0f202c" />
+      <stop offset="100%" stop-color="#03080c" />
+    </linearGradient>
+    <linearGradient id="fdroidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#10b981" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Abstract F-Droid robot antenna in background -->
+  <g opacity="0.06" stroke="#10b981" stroke-width="2" fill="none">
+    <circle cx="950" cy="220" r="100" />
+    <line x1="880" y1="140" x2="850" y2="80" />
+    <circle cx="850" cy="80" r="10" fill="#10b981" />
+    <line x1="1020" y1="140" x2="1050" y2="80" />
+    <circle cx="1050" cy="80" r="10" fill="#10b981" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#34d399" />
+    <text x="40" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">OPEN SOURCE ANDROID</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">10 Essential F-Droid Android Apps</tspan>
+      <tspan x="0" y="58" fill="#34d399">Every Power User Needs in 2026</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Zero Trackers, Zero Adware, Complete Code Transparency and Local Freedom
+    </text>
+  </g>
+
+  <!-- 3 Pillar Showcase Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- App 1: LocalSend -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">LOCALSEND (AIRDROP)</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Cross-Platform File Drops</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Speed: 50+ MB/s over local Wi-Fi</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Compatibility: Android, PC, Mac, iOS</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Must Have: Replaces clumsy cables</text>
+    </g>
+
+    <!-- App 2: NewPipe -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#ef4444" stroke-width="1" />
+      <rect x="18" y="18" width="115" height="24" rx="6" fill="#ef4444" fill-opacity="0.2" />
+      <text x="75" y="34" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="11" font-weight="700">NEWPIPE MEDIA</text>
+      <text x="18" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Lightweight YouTube Client</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Features: Zero ads, background audio</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Privacy: Zero Google Services needed</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Podcasts &amp; offline downloads</text>
+    </g>
+
+    <!-- App 3: NetGuard -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">NETGUARD FIREWALL</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Per-App No-Root Firewall</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Blocks apps from phoning home</text>
+      <text x="18" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="13">Saves: Mobile data and battery life</text>
+      <text x="18" y="146" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12">Security: Total network control</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel App Showcase &#x2022; Curated Open-Source Android Software from the F-Droid Repository</text>
+  </g>
+</svg>

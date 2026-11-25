@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091410" />
+      <stop offset="50%" stop-color="#0f261e" />
+      <stop offset="100%" stop-color="#030a08" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#22c55e" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Shield and Padlock outlines in background -->
+  <g opacity="0.06" stroke="#22c55e" stroke-width="2" fill="none">
+    <path d="M 600 80 L 760 140 L 760 350 C 760 450 600 510 600 510 C 600 510 440 450 440 350 L 440 140 Z" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#22c55e" />
+    <text x="40" y="24" fill="#4ade80" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">WHATSAPP SECURITY AUDIT</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">7 Critical WhatsApp Privacy Settings</tspan>
+      <tspan x="0" y="58" fill="#4ade80">You Must Turn On Right Now</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Protect IP in Calls, Silence Unknown Callers, Secret Code Chat Locks and Anti-Scam Rules
+    </text>
+  </g>
+
+  <!-- 3 Pillar Checklist Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Setting 1: Protect IP in Calls -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#22c55e" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#22c55e" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="700">1. PROTECT IP IN CALLS</text>
+      <text x="18" y="70" fill="#4ade80" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Stop P2P IP Leakage</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Routes calls via Meta servers.</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Prevents callers from finding</text>
+      <text x="18" y="146" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12 font-weight=700">your real physical location.</text>
+    </g>
+
+    <!-- Setting 2: Silence Unknown Callers -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-width="1" />
+      <rect x="18" y="18" width="145" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+      <text x="90" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2. SILENCE UNKNOWN</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Block Spam Video Calls</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Random numbers ring silently.</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Stops international fraud</text>
+      <text x="18" y="146" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12">rings (+92, +84, +62) cold.</text>
+    </g>
+
+    <!-- Setting 3: Chat Lock with Secret Code -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1" />
+      <rect x="18" y="18" width="130" height="24" rx="6" fill="#f59e0b" fill-opacity="0.2" />
+      <text x="83" y="34" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="700">3. CHAT LOCK SECRET</text>
+      <text x="18" y="70" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Invisible Hidden Chats</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Hides the &quot;Locked Chats&quot; folder.</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Only appears when you type</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">a secret code into search bar.</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Social Safety &#x2022; Complete WhatsApp Privacy and Anti-Harassment Guide</text>
+  </g>
+</svg>

@@ -54,6 +54,32 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
             <span className="chip">{c.name}</span>
             <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-ink-2 ring-1 ring-line">{posts.length} articles</span>
           </div>
+
+          {/* Quick Category Switching Pills */}
+          <nav aria-label="Category switcher" className="mt-4 flex flex-wrap items-center gap-2">
+            <Link
+              href="/archive"
+              className="inline-flex items-center gap-1 rounded-full border border-line bg-white px-3 py-1 text-xs font-semibold text-ink-2 shadow-sm transition hover:border-brand hover:text-brand-strong"
+            >
+              All Articles
+            </Link>
+            {getCategories().map((x) => (
+              <Link
+                key={x.slug}
+                href={categoryUrl(x.slug)}
+                className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold shadow-sm transition ${
+                  x.slug === c.slug
+                    ? 'bg-brand text-white shadow-brand/20'
+                    : 'border border-line bg-white text-ink-2 hover:border-brand hover:text-brand-strong'
+                }`}
+              >
+                <span>{x.name}</span>
+                <span className={`rounded-full px-1.5 py-0.2 text-[10px] ${x.slug === c.slug ? 'bg-white/25 text-white' : 'bg-surface-2 text-muted'}`}>
+                  {getPostsByCategory(x.slug).length}
+                </span>
+              </Link>
+            ))}
+          </nav>
           <h1 className="font-display mt-4 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">{copy?.heading ?? c.name}</h1>
           <div className="mt-4 h-1 w-16 rounded-full bg-brand" aria-hidden="true" />
           <div className="mt-6 grid gap-5 text-[1.05rem] leading-relaxed text-ink-2 lg:grid-cols-2 lg:gap-10">

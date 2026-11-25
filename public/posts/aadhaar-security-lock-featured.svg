@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Aadhaar privacy and security guide: How to lock biometrics and download masked Aadhaar">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="70" r="180" fill="#e64a19" opacity="0.08"/>
+  <circle cx="80" cy="620" r="160" fill="#e64a19" opacity="0.06"/>
+  
+  <!-- Left Header -->
+  <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">DIGITAL IDENTITY &amp; PRIVACY GUIDE</text>
+  <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" fill="#0f172a">Someone Got Your</text>
+  <text x="70" y="295" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" fill="#0f172a">Aadhaar Number?</text>
+  <text x="70" y="365" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" fill="#e64a19">What They Can &amp; Cannot Do</text>
+  <text x="70" y="425" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#475569">UIDAI facts, biometric locking &amp; masked Aadhaar safety</text>
+  
+  <!-- Badges -->
+  <g transform="translate(70 475)">
+    <rect width="180" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="90" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Lock Biometrics</text>
+    <rect x="195" width="180" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="285" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Masked Aadhaar</text>
+    <rect x="390" width="180" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="480" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Auth History Log</text>
+  </g>
+  
+  <!-- Callout -->
+  <g transform="translate(70 545)">
+    <rect width="530" height="44" rx="10" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#166534">&#x2713; UIDAI fact: Aadhaar number alone cannot withdraw money or open bank loans</text>
+  </g>
+  
+  <!-- Right Column Card -->
+  <g transform="translate(680 75)" filter="url(#shadow)">
+    <rect width="460" height="480" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <rect width="460" height="60" rx="24" fill="#0f172a"/>
+    <rect y="35" width="460" height="25" fill="#0f172a"/>
+    <text x="25" y="38" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#ffffff">AADHAAR SAFETY PROTOCOL</text>
+    
+    <!-- Rule 1: Cannot Do -->
+    <g transform="translate(25 85)">
+      <rect width="410" height="95" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#991b1b">&#x2717; WHAT SCAMMERS CANNOT DO</text>
+      <text x="20" y="52" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; Cannot withdraw bank funds without OTP or fingerprint</text>
+      <text x="20" y="72" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">&#x2022; Cannot issue new SIM cards without physical biometric verification</text>
+    </g>
+    
+    <!-- Rule 2: Immediate Protection -->
+    <g transform="translate(25 195)">
+      <rect width="410" height="150" rx="12" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#166534">&#x2713; 3 STEPS TO SECURE YOUR AADHAAR</text>
+      <text x="20" y="55" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#0f172a">1. Lock Biometrics in mAadhaar App</text>
+      <text x="20" y="73" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#64748b">Freezes fingerprint &amp; iris authentication instantly</text>
+      <text x="20" y="98" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#0f172a">2. Share Only &quot;Masked Aadhaar&quot;</text>
+      <text x="20" y="116" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#64748b">Hides first 8 digits; legally valid everywhere</text>
+      <text x="20" y="140" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#166534" font-weight="700">3. Check Authentication History on myaadhaar.uidai.gov.in</text>
+    </g>
+    
+    <!-- Bottom note -->
+    <rect x="25" y="360" width="410" height="95" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Why Masked Aadhaar Works:</text>
+    <text x="20" y="50" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#475569">Displays: &#x2A;&#x2A;&#x2A;&#x2A; &#x2A;&#x2A;&#x2A;&#x2A; 1234 + QR Code</text>
+    <text x="20" y="72" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#475569">Hotels, airports, and sim vendors must accept it by law.</text>
+  </g>
+</svg>

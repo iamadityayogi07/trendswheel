@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14081c" />
+      <stop offset="50%" stop-color="#241033" />
+      <stop offset="100%" stop-color="#09030d" />
+    </linearGradient>
+    <linearGradient id="instaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#ec4899" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Shield and Eye background outline -->
+  <g opacity="0.06" stroke="#ec4899" stroke-width="2" fill="none">
+    <path d="M 600 90 L 760 150 L 760 360 C 760 460 600 520 600 520 C 600 520 440 460 440 360 L 440 150 Z" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#ec4899" fill-opacity="0.15" stroke="#ec4899" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#f43f5e" />
+    <text x="40" y="24" fill="#fb7185" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">SOCIAL PRIVACY GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Stop Instagram From Tracking</tspan>
+      <tspan x="0" y="58" fill="#f43f5e">What You Browse on Other Websites</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Turn Off Meta Pixel Snooping, Disconnect Off-Meta Activity &amp; In-App Tracking
+    </text>
+  </g>
+
+  <!-- 3 Step Privacy Blueprint Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Step 1: Off-Meta Activity -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#ec4899" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#ec4899" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#fb7185" font-family="system-ui, sans-serif" font-size="11" font-weight="700">STEP 1: OFF-META</text>
+      <text x="18" y="70" fill="#fb7185" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Disconnect Past History</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Purges years of shopping &amp;</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">browsing data shared by 1000s</text>
+      <text x="18" y="146" fill="#fb7185" font-family="system-ui, sans-serif" font-size="12" font-weight="700">of third-party retail websites.</text>
+    </g>
+
+    <!-- Step 2: Kill Future Tracking -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1" />
+      <rect x="18" y="18" width="145" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+      <text x="90" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">STEP 2: FUTURE BLOCK</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Disconnect Future Activity</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Toggle to &quot;Disconnect&quot; in</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Accounts Center. Prevents future</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">pixel telemetry from linking.</text>
+    </g>
+
+    <!-- Step 3: Ditch In-App Browser -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1" />
+      <rect x="18" y="18" width="140" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="88" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">STEP 3: EXTERNAL WEB</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Open Links in Browser</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Instagram injects JS trackers</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">in webviews. Tap three dots</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">&#x2192; &quot;Open in Chrome / Brave&quot;.</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Social Privacy &#x2022; Meta Accounts Center &amp; Off-Technologies Lockdown</text>
+  </g>
+</svg>

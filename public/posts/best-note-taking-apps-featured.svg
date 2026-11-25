@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d18" />
+      <stop offset="50%" stop-color="#14182a" />
+      <stop offset="100%" stop-color="#04060e" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#8b5cf6" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Graph node lines in background -->
+  <g opacity="0.08" stroke="#8b5cf6" stroke-width="1.5" fill="none">
+    <circle cx="850" cy="180" r="12" fill="#8b5cf6" />
+    <circle cx="1020" cy="140" r="8" fill="#8b5cf6" />
+    <circle cx="940" cy="300" r="10" fill="#8b5cf6" />
+    <circle cx="1100" cy="260" r="6" fill="#8b5cf6" />
+    <line x1="850" y1="180" x2="1020" y2="140" />
+    <line x1="850" y1="180" x2="940" y2="300" />
+    <line x1="1020" y1="140" x2="940" y2="300" />
+    <line x1="940" y1="300" x2="1100" y2="260" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="270" height="38" rx="19" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#a78bfa" />
+    <text x="40" y="24" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">PRODUCTIVITY &amp; NOTES</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Best Note-Taking Apps for Android:</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">Obsidian vs Notion vs Keep</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Local-First Markdown, Knowledge Graphs, Offline Reliability and Zero Lock-in
+    </text>
+  </g>
+
+  <!-- 3 Apps Comparison Matrix Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- App 1: Obsidian -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#8b5cf6" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#8b5cf6" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OBSIDIAN (POWER PICK)</text>
+      <text x="18" y="70" fill="#a78bfa" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Local-First Plain Markdown</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Offline: 100% works without cloud</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Features: Bidirectional linking &amp; graph</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Best for: Students &amp; Knowledge Workers</text>
+    </g>
+
+    <!-- App 2: Notion -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#64748b" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">NOTION WORKSPACE</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Relational Database Engine</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Offline: Very poor (Needs internet)</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Features: Kanban boards, calendars</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Team project collaboration</text>
+    </g>
+
+    <!-- App 3: Google Keep -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1" />
+      <rect x="18" y="18" width="120" height="24" rx="6" fill="#f59e0b" fill-opacity="0.2" />
+      <text x="78" y="34" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="700">GOOGLE KEEP</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Instant Digital Sticky Notes</text>
+      <text x="18" y="94" fill="#34d399" font-family="system-ui, sans-serif" font-size="13">Launch: Snaps open in 0.5 seconds</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Features: Checklists &amp; audio notes</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Quick grocery lists &amp; memos</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel App Guide &#x2022; Local-First Markdown, Cloud Databases and Personal Knowledge Management</text>
+  </g>
+</svg>

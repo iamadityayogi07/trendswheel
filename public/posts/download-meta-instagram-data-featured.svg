@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1c" />
+      <stop offset="50%" stop-color="#141a33" />
+      <stop offset="100%" stop-color="#04060d" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#3b82f6" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Download Arrow and File Box in background -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="2" fill="none">
+    <rect x="840" y="80" width="280" height="380" rx="16" />
+    <path d="M 980 180 L 980 320" stroke-width="4" />
+    <path d="M 940 280 L 980 320 L 1020 280" stroke-width="4" />
+    <line x1="900" y1="360" x2="1060" y2="360" stroke-width="4" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#38bdf8" />
+    <text x="40" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">DATA FREEDOM GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Download Everything Instagram</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">&amp; Facebook Know About You</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Export Private DMs, Location Traces, Ad Dossiers and What&apos;s Inside the Archive
+    </text>
+  </g>
+
+  <!-- 3 Archive Pillar Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Box 1: How to Request -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#0284c7" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">1. THE EXPORT REQUEST</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Meta Accounts Center</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Format: Choose HTML or JSON</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Range: &quot;All time&quot; recommended</text>
+      <text x="18" y="146" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Delivery: Sent securely via email</text>
+    </g>
+
+    <!-- Box 2: What's Inside -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#f59e0b" fill-opacity="0.2" />
+      <text x="85" y="34" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2. HIDDEN CONTENTS</text>
+      <text x="18" y="70" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="600">The Secret Dossier</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Complete chat histories &amp; DMs</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Every ad you ever clicked</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Off-site tracking partner lists</text>
+    </g>
+
+    <!-- Box 3: Why It Matters -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1" />
+      <rect x="18" y="18" width="130" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="83" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">3. DIGITAL FREEDOM</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Total Backup Security</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Keep 10 years of photos &amp; reels</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">safe locally before closing or</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">deleting social accounts.</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Social Data Rights &#x2022; Meta Accounts Center Data Export Walkthrough</text>
+  </g>
+</svg>

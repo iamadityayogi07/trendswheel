@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091410" />
+      <stop offset="50%" stop-color="#11271f" />
+      <stop offset="100%" stop-color="#040a08" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#22c55e" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Dual Chat Bubbles in background -->
+  <g opacity="0.06" fill="#22c55e">
+    <circle cx="850" cy="180" r="100" />
+    <circle cx="1020" cy="240" r="70" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#22c55e" />
+    <text x="40" y="24" fill="#4ade80" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">MESSAGING APPS GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Run Two WhatsApp Accounts on One Phone:</tspan>
+      <tspan x="0" y="58" fill="#4ade80">Official Multi-Account &amp; Dual Apps</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Meta Built-in Switcher, Samsung Dual Messenger, Xiaomi Dual Apps and Ban Risks
+    </text>
+  </g>
+
+  <!-- 3 Method Comparison Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Method 1: Official In-App Switcher -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#22c55e" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#22c55e" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="700">METHOD 1: OFFICIAL</text>
+      <text x="18" y="70" fill="#4ade80" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Meta Multi-Account Toggle</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Setup: Tap arrow next to name</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Switching: 1-tap account switch</text>
+      <text x="18" y="146" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Winner: Built right into WhatsApp</text>
+    </g>
+
+    <!-- Method 2: OEM Dual Apps / Messenger -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-width="1" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+      <text x="85" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">METHOD 2: DUAL APPS</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Clone Second App Icon</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Samsung / Xiaomi / OnePlus</text>
+      <text x="18" y="118" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13">Benefit: Both online simultaneously</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Separate work/home icons</text>
+    </g>
+
+    <!-- Method 3: Unofficial Mods (AVOID) -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#ef4444" stroke-width="1" />
+      <rect x="18" y="18" width="130" height="24" rx="6" fill="#ef4444" fill-opacity="0.2" />
+      <text x="83" y="34" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="11" font-weight="700">GBWHATSAPP (AVOID)</text>
+      <text x="18" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Account Ban Hazard</text>
+      <text x="18" y="94" fill="#f87171" font-family="system-ui, sans-serif" font-size="13">Meta bans numbers permanently</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Security: Leaks private encryption keys</text>
+      <text x="18" y="146" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12">Warning: Never use modified APKs</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Messaging Guides &#x2022; Safe Dual-SIM WhatsApp Management for Work and Personal Life</text>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#141a28" />
+      <stop offset="100%" stop-color="#04060b" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#38bdf8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Minimalist Phone Outline in background -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="2" fill="none">
+    <rect x="860" y="60" width="240" height="500" rx="28" />
+    <line x1="890" y1="140" x2="1000" y2="140" stroke="#38bdf8" stroke-width="3" />
+    <line x1="890" y1="180" x2="980" y2="180" stroke="#38bdf8" stroke-width="2" />
+    <line x1="890" y1="220" x2="1020" y2="220" stroke="#38bdf8" stroke-width="2" />
+    <line x1="890" y1="260" x2="960" y2="260" stroke="#38bdf8" stroke-width="2" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#38bdf8" />
+    <text x="40" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">DIGITAL WELLBEING &amp; APPS</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Best Minimalist Android Launchers</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">For a Distraction-Free Home Screen</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Niagara Launcher, Olauncher, Cut Daily Screen Time by 45 Minutes and Boost Battery
+    </text>
+  </g>
+
+  <!-- 3 Launcher Comparison Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Launcher 1: Niagara -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-width="1.5" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#0284c7" fill-opacity="0.25" />
+      <text x="85" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">NIAGARA LAUNCHER</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">The Ergonomic Wave</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Control: 100% one-handed scroll</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Widgets: Integrated notifications</text>
+      <text x="18" y="146" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Best: Beautiful, fast &amp; functional</text>
+    </g>
+
+    <!-- Launcher 2: Olauncher -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OLAUNCHER (OPEN)</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Zero Icons / Text-Only</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Wellbeing: Cuts dopamine loops</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Privacy: 100% FOSS &amp; zero data</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Best for: Beating phone addiction</text>
+    </g>
+
+    <!-- Launcher 3: Lawnchair -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="130" height="24" rx="6" fill="#64748b" fill-opacity="0.2" />
+      <text x="83" y="34" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">LAWNCHAIR LAUNCHER</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Pixel Launcher Freedom</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Design: Stock Android Material You</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Custom: Icon packs &amp; gesture nav</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Clean stock Pixel aesthetic</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel App Guide &#x2022; Digital Wellbeing, Screen Time Reduction and Ergonomics</text>
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#04060d" />
+    </linearGradient>
+    <linearGradient id="tvGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#818cf8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- TV Outline in background -->
+  <g opacity="0.06" stroke="#818cf8" stroke-width="2" fill="none">
+    <rect x="150" y="80" width="900" height="480" rx="16" />
+    <line x1="450" y1="560" x2="750" y2="560" />
+    <line x1="600" y1="560" x2="600" y2="590" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#818cf8" />
+    <text x="40" y="24" fill="#a5b4fc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">SMART TV OS GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Google TV vs Samsung Tizen vs LG webOS:</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">Which Smart TV OS Is Best in 2026?</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      App Selection, Sideloading Freedom, Interface Speed, Home Screen Ads &amp; Longevity
+    </text>
+  </g>
+
+  <!-- 3 OS Matrix Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Box 1: Google TV -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-width="1.5" />
+      <rect x="18" y="18" width="95" height="24" rx="6" fill="#0284c7" fill-opacity="0.25" />
+      <text x="65" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">GOOGLE TV</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Apps: 10,000+ (Play Store)</text>
+      <text x="18" y="94" fill="#34d399" font-family="system-ui, sans-serif" font-size="13">Sideloading: 100% Supported</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Casting: Chromecast Built-in</text>
+      <text x="18" y="146" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Winner: App Variety &amp; Freedom</text>
+    </g>
+
+    <!-- Box 2: Samsung Tizen -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#3b82f6" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="11" font-weight="700">SAMSUNG TIZEN</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Gaming: Xbox Cloud Gaming</text>
+      <text x="18" y="94" fill="#f87171" font-family="system-ui, sans-serif" font-size="13">Sideloading: Locked (No APKs)</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Smart Home: SmartThings Hub</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Winner: Console-Free Cloud Gaming</text>
+    </g>
+
+    <!-- Box 3: LG webOS -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="105" height="24" rx="6" fill="#a855f7" fill-opacity="0.2" />
+      <text x="70" y="34" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">LG WEBOS</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Navigation: Magic Remote Pointer</text>
+      <text x="18" y="94" fill="#f87171" font-family="system-ui, sans-serif" font-size="13">Sideloading: None (Strict store)</text>
+      <text x="18" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="13">Longevity: 5 Years Re:New Updates</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Winner: Easiest Remote Experience</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Tech Comparisons &#x2022; Tested on Sony Bravia, Samsung Neo QLED and LG OLED</text>
+  </g>
+</svg>

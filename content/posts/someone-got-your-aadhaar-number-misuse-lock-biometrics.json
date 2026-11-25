@@ -1,0 +1,48 @@
+{
+  "id": 164,
+  "slug": "someone-got-your-aadhaar-number-misuse-lock-biometrics",
+  "title": "Someone Got Your Aadhaar Number? What They Can and Cannot Do With It (2026)",
+  "html": "<p>Discovering that your Aadhaar card photocopy was leaked or that someone knows your 12-digit Aadhaar number causes immediate panic. WhatsApp forwards often claim scammers can empty your bank account, take loans in your name, or issue duplicate SIM cards with just your Aadhaar number. The truth is far more nuanced: under official UIDAI architecture, an Aadhaar number is an identity proof, not a secret financial PIN. Here is what scammers can and cannot do if they get your number, and the exact steps to lock your biometrics and switch to Masked Aadhaar.</p>\n\n<p><em>Last updated: 25 Nov 2026. All security rules, biometric locking mechanisms, and regulatory guidelines cited below follow official notifications from the Unique Identification Authority of India (UIDAI) and the Reserve Bank of India (RBI).</em></p>\n\n<h2>The Myth vs Reality: What Scammers CANNOT Do</h2>\n\n<p>Let's debunk the most common fears first:</p>\n\n<ol>\n  <li><strong>They CANNOT withdraw money from your bank account:</strong> Simply knowing your Aadhaar number does not give anyone access to your money. Even for Aadhaar Enabled Payment System (AePS) cash withdrawals at micro-ATMs, the transaction strictly requires a live physical fingerprint or iris scan matched against UIDAI servers.</li>\n  <li><strong>They CANNOT take a personal loan in your name:</strong> Regulated banks and NBFCs require full e-KYC (which triggers an OTP sent directly to your registered mobile number) or in-person biometric verification and video KYC before disbursing loans.</li>\n  <li><strong>They CANNOT buy a new SIM card in your name:</strong> Telecom operators in India are mandated by the Department of Telecommunications (DoT) to use live biometric POS verification and live photograph capture for SIM issuance. A photocopy alone is legally rejected.</li>\n</ol>\n\n<h2>What Scammers CAN Do (The Real Risks)</h2>\n\n<p>While someone cannot instantly rob your bank account with an Aadhaar number, having your personal identity details exposed creates secondary social engineering risks:</p>\n\n<ul>\n  <li><strong>Targeted Phishing Calls:</strong> A scammer can call you pretending to be from your bank, police department, or electricity board. They recite your real name, address, and Aadhaar number to build instant trust, making you believe they are genuine authority figures. Once you trust them, they ask for a &quot;verification OTP&quot; or ask you to <a href=\"/how-to/cancel-upi-autopay-mandate-gpay-phonepe-paytm\">approve a UPI collect request</a>.</li>\n  <li><strong>AePS Fingerprint Cloning (Silicon Spoofing):</strong> In rare rural cases, scammers obtain scanned copies of documents from property registration offices where physical fingerprints were stamped on deeds, creating silicone thumb impressions for AePS withdrawals. This specific loophole is 100% neutralized by locking your biometrics as shown below.</li>\n</ul>\n\n<h2>Action 1: Lock Your Biometrics on the mAadhaar App (Takes 60 Seconds)</h2>\n\n<p>Locking your biometrics is the single most effective security feature provided by UIDAI. When locked, any system attempting to authenticate using your fingerprint or iris scan is instantly rejected by UIDAI servers:</p>\n\n<ol>\n  <li>Install the official <strong>mAadhaar app</strong> on your phone (or go to <a href=\"https://myaadhaar.uidai.gov.in\" rel=\"noopener\">myaadhaar.uidai.gov.in</a>).</li>\n  <li>Log in with your Aadhaar number and enter the OTP sent to your registered mobile number.</li>\n  <li>On the dashboard, tap <strong>Lock/Unlock Biometrics</strong>.</li>\n  <li>Read the warning prompt and tap <strong>Next</strong>.</li>\n  <li>Enter the OTP to confirm.</li>\n</ol>\n\n<p>Your biometrics are now locked. Whenever you need to visit a bank or register a SIM card in the future, you simply open the app, tap &quot;Unlock Biometrics&quot; for 10 minutes, complete your KYC, and the system automatically locks itself again.</p>\n\n<h2>Action 2: Switch to &quot;Masked Aadhaar&quot; for Daily Life</h2>\n\n<p>Whenever a hotel, airport, SIM vendor, or office asks for an Aadhaar copy, <strong>never hand over a standard copy displaying your full 12-digit number</strong>. Instead, use a legal <strong>Masked Aadhaar</strong>:</p>\n\n<ol>\n  <li>Go to <strong>myaadhaar.uidai.gov.in</strong> and click <strong>Download Aadhaar</strong>.</li>\n  <li>Enter your 12-digit Aadhaar number and captcha.</li>\n  <li>Check the box that asks: <strong>&quot;Do you want a masked Aadhaar?&quot;</strong></li>\n  <li>Enter the OTP and download the password-protected PDF.</li>\n</ol>\n\n<p>A Masked Aadhaar displays only the last 4 digits (e.g., <code>XXXX XXXX 1234</code>) while keeping your photograph and QR code visible. Under Ministry of Electronics and IT (MeitY) directives, masked Aadhaar is legally recognized and valid across all government and private institutions in India.</p>\n\n<h2>Action 3: Check Your Aadhaar Authentication History</h2>\n\n<p>If you suspect someone attempted to use your identity, UIDAI lets you view an exact audit log of every authentication request made in the past 6 months:</p>\n\n<ol>\n  <li>Log into <strong>myaadhaar.uidai.gov.in</strong>.</li>\n  <li>Select <strong>Authentication History</strong>.</li>\n  <li>Choose the date range (up to 6 months) and select &quot;All&quot; modalities (OTP, Biometric, Demographic).</li>\n  <li>Review the list. It displays the exact date, time, and name of the requesting agency (e.g., State Bank of India, Jio, Airtel, NSDL).</li>\n  <li>If you spot an unauthorized biometric or OTP request you did not initiate, immediately call the UIDAI toll-free helpline at <strong>1947</strong> or email <code>help@uidai.gov.in</code>.</li>\n</ol>\n\n<h2>Frequently Asked Questions</h2>\n\n<h3>Can someone link their mobile number to my Aadhaar without me knowing?</h3>\n<p>No. Changing or updating the mobile number linked to an Aadhaar card requires physical in-person biometric authentication at an authorized Aadhaar Seva Kendra. It cannot be done online or without your presence.</p>\n\n<h3>Is sharing an Aadhaar number as dangerous as sharing a bank password?</h3>\n<p>No. UIDAI has repeatedly clarified that an Aadhaar number is a public identity identifier like a PAN card or passport number. Knowing the number alone is not sufficient to authenticate financial transactions.</p>\n\n<h3>What should I do if money was stolen using AePS?</h3>\n<p>If you noticed an unauthorized cash withdrawal via AePS, immediately call <strong>1930</strong> (the National Cybercrime Helpline), report the transaction to your bank within 3 days for an unauthorized debit refund under RBI guidelines, and lock your biometrics inside mAadhaar.</p>",
+  "excerpt": "<p>What fraudsters can and cannot do if they get your Aadhaar card number, how to lock your biometrics in 60 seconds on mAadhaar, and how to download legally valid Masked Aadhaar.</p>",
+  "description": "<p>What fraudsters can and cannot do if they get your Aadhaar card number, how to lock your biometrics in 60 seconds on mAadhaar, and how to download legally valid Masked Aadhaar.</p>",
+  "metaTitle": "Someone Got Your Aadhaar Number? What They Can & Cannot Do",
+  "metaDescription": "Leaked Aadhaar number? UIDAI facts on what scammers can and cannot do. Learn how to lock biometrics on mAadhaar and download masked Aadhaar in 2026.",
+  "metaKeywords": "aadhaar card misuse, lock aadhaar biometric online, masked aadhaar download, what if someone knows my aadhaar number, maadhaar lock biometrics",
+  "publishedAt": "2026-11-25T13:30:00+05:30",
+  "updatedAt": "2026-11-25T13:30:00+05:30",
+  "category": {
+    "name": "Tech",
+    "slug": "tech"
+  },
+  "tags": [
+    "Aadhaar Security",
+    "Privacy",
+    "UIDAI",
+    "Digital India",
+    "Online Safety",
+    "Tech"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/aadhaar-security-lock-featured.svg",
+  "thumbnailImage": "/posts/aadhaar-security-lock-featured.svg",
+  "altImage": "UIDAI Aadhaar safety protocol showing how to lock biometrics and download masked Aadhaar",
+  "faq": [
+    {
+      "title": "Can someone link their mobile number to my Aadhaar without me knowing?",
+      "description": "No. Changing or updating the mobile number linked to an Aadhaar card requires physical in-person biometric authentication at an authorized Aadhaar Seva Kendra. It cannot be done online or without your presence."
+    },
+    {
+      "title": "Is sharing an Aadhaar number as dangerous as sharing a bank password?",
+      "description": "No. UIDAI has repeatedly clarified that an Aadhaar number is a public identity identifier like a PAN card or passport number. Knowing the number alone is not sufficient to authenticate financial transactions."
+    },
+    {
+      "title": "What should I do if money was stolen using AePS?",
+      "description": "If you noticed an unauthorized cash withdrawal via AePS, immediately call 1930 (the National Cybercrime Helpline), report the transaction to your bank within 3 days for an unauthorized debit refund under RBI guidelines, and lock your biometrics inside mAadhaar."
+    }
+  ],
+  "impressions": 0,
+  "oldPath": "/tech/someone-got-your-aadhaar-number-misuse-lock-biometrics"
+}

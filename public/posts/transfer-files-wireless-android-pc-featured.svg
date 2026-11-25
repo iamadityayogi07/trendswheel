@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e1a" />
+      <stop offset="50%" stop-color="#0f192c" />
+      <stop offset="100%" stop-color="#03070f" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#38bdf8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Wireless wave arrows in background -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="2" fill="none">
+    <path d="M 450 250 C 550 200 650 200 750 250" />
+    <path d="M 400 200 C 550 130 650 130 800 200" />
+    <path d="M 350 150 C 550 60 650 60 850 150" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#38bdf8" />
+    <text x="40" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">PRODUCTIVITY &amp; UTILITIES</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Transfer Large Files Wirelessly:</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">Android to PC Faster Than USB Cables</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      LocalSend, Google Quick Share, 60+ MB/s Local Wi-Fi Speeds and Zero Cloud Data
+    </text>
+  </g>
+
+  <!-- 3 Method Comparison Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Method 1: LocalSend -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">LOCALSEND (TOP PICK)</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Cross-Platform &amp; Open Source</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Speed: 50&#x2013;80 MB/s peer-to-peer</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Devices: Windows, Mac, Linux, Android</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Winner: 100% private, no setup</text>
+    </g>
+
+    <!-- Method 2: Google Quick Share -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-width="1" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+      <text x="85" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">GOOGLE QUICK SHARE</text>
+      <text x="18" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Built-in Android Native</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Requires: Quick Share for Windows</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Speed: Wi-Fi Direct (40&#x2013;60 MB/s)</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Pure Android &amp; Windows</text>
+    </g>
+
+    <!-- Method 3: In-Box USB Cable -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#64748b" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">TRADITIONAL USB CABLE</text>
+      <text x="18" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">USB 2.0 Speed Bottleneck</text>
+      <text x="18" y="94" fill="#f87171" font-family="system-ui, sans-serif" font-size="13">Speed: Capped at 35&#x2013;40 MB/s!</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">MTP: Freezes on large folders</text>
+      <text x="18" y="146" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Verdict: Slower than 5GHz Wi-Fi</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Utility Guides &#x2022; Local Peer-to-Peer Wi-Fi File Sharing Mastery</text>
+  </g>
+</svg>

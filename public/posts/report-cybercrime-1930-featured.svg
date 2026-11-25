@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="How to report online financial fraud on the 1930 National Cybercrime helpline in India">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="70" r="180" fill="#e64a19" opacity="0.08"/>
+  <circle cx="80" cy="620" r="160" fill="#e64a19" opacity="0.06"/>
+  
+  <!-- Left Header -->
+  <text x="70" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#b83310" letter-spacing="3">INDIA CYBERCRIME RESPONSE GUIDE</text>
+  <text x="70" y="225" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">How to Report</text>
+  <text x="70" y="295" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#0f172a">Online Fraud on 1930</text>
+  <text x="70" y="365" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#e64a19">Helpline &amp; Portal</text>
+  <text x="70" y="425" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#475569">The &quot;Golden Hour&quot; rule to freeze stolen UPI &amp; bank funds</text>
+  
+  <!-- Badges -->
+  <g transform="translate(70 475)">
+    <rect width="175" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="87" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Dial 1930 Toll-Free</text>
+    <rect x="190" width="175" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="277" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Freeze Bank UTR</text>
+    <rect x="380" width="175" height="46" rx="23" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="467" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Official I4C System</text>
+  </g>
+  
+  <!-- Alert Banner -->
+  <g transform="translate(70 545)">
+    <rect width="530" height="44" rx="10" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#b91c1c">&#x26A0; Act within 2 hours: report before scammers cash out via ATMs</text>
+  </g>
+  
+  <!-- Right Card / Checklist Graphic -->
+  <g transform="translate(680 75)" filter="url(#shadow)">
+    <rect width="460" height="480" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <rect width="460" height="60" rx="24" fill="#0f172a"/>
+    <rect y="35" width="460" height="25" fill="#0f172a"/>
+    <text x="25" y="38" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" fill="#ffffff">EMERGENCY ACTION STEPS</text>
+    <circle cx="425" cy="35" r="8" fill="#ef4444"/>
+    
+    <!-- Step 1 -->
+    <g transform="translate(25 90)">
+      <circle cx="24" cy="24" r="20" fill="#fee2e2"/>
+      <text x="24" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#b91c1c">1</text>
+      <text x="58" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Dial 1930 Immediately</text>
+      <text x="58" y="42" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Operator triggers bank account freeze ticket</text>
+    </g>
+    
+    <!-- Step 2 -->
+    <g transform="translate(25 175)">
+      <circle cx="24" cy="24" r="20" fill="#fee2e2"/>
+      <text x="24" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#b91c1c">2</text>
+      <text x="58" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Provide 12-Digit UTR Number</text>
+      <text x="58" y="42" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">From your bank SMS or UPI transaction details</text>
+    </g>
+    
+    <!-- Step 3 -->
+    <g transform="translate(25 260)">
+      <circle cx="24" cy="24" r="20" fill="#fee2e2"/>
+      <text x="24" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#b91c1c">3</text>
+      <text x="58" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Log in to cybercrime.gov.in</text>
+      <text x="58" y="42" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Upload bank statement &amp; chat screenshots</text>
+    </g>
+    
+    <!-- Step 4 -->
+    <g transform="translate(25 345)">
+      <circle cx="24" cy="24" r="20" fill="#dcfce7"/>
+      <text x="24" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#15803d">&#x2713;</text>
+      <text x="58" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Save 14-Digit Acknowledgment</text>
+      <text x="58" y="42" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748b">Required for court court-ordered refund</text>
+    </g>
+    
+    <!-- Bottom note -->
+    <rect x="25" y="415" width="410" height="38" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="230" y="439" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#334155">Official Indian Cyber Crime Coordination Centre (I4C)</text>
+  </g>
+</svg>

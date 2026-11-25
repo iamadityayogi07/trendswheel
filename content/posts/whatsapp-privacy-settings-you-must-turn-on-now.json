@@ -1,0 +1,47 @@
+{
+  "id": 193,
+  "slug": "whatsapp-privacy-settings-you-must-turn-on-now",
+  "title": "7 Critical WhatsApp Privacy Settings You Should Turn On Right Now",
+  "html": "<p>With more than 500 million active users in India alone, WhatsApp is our primary channel for family chats, banking updates, work discussions, and doctor appointments. While WhatsApp encrypts messages end-to-end using the Signal protocol, its default out-of-the-box settings leave multiple glaring privacy vulnerabilities wide open.</p>\n\n<p><em>Last updated: 25 Nov 2026. This comprehensive WhatsApp security checklist walks you through 7 critical privacy toggles&#x2014;including IP address call relaying, silencing international scam callers, and hiding locked chats with secret search codes.</em></p>\n\n<p>By default, strangers can see when you are online, add you to sketchy crypto investment groups without your consent, and even extract your home's physical IP address during a WhatsApp voice call. Here is how to lock down your account in under three minutes.</p>\n\n<h2>1. Protect IP Address in Calls (Stop Physical Location Leaks)</h2>\n\n<p>By default, WhatsApp voice and video calls use <strong>Peer-to-Peer (P2P) direct connections</strong> to provide the lowest latency audio. However, a P2P connection connects your phone directly to the other person's device, exposing your numerical IP address in network packet headers. Anyone with basic networking knowledge can inspect the call packets and pinpoint your internet service provider and approximate physical location.</p>\n\n<ol>\n  <li>Open WhatsApp &rarr; tap three dots &rarr; <strong>Settings</strong> &rarr; <strong>Privacy</strong>.</li>\n  <li>Scroll down to the very bottom and tap <strong>Advanced</strong>.</li>\n  <li>Toggle ON: <strong>&quot;Protect IP address in calls&quot;</strong>.</li>\n</ol>\n\n<p>When enabled, WhatsApp securely relays all incoming and outgoing calls through Meta's secure cloud servers, masking your personal IP address completely with zero noticeable audio lag.</p>\n\n<h2>2. Silence Unknown Callers (Kill Spam and Sextortion Rings)</h2>\n\n<p>Scammers operating overseas call rings (frequently displaying country codes like +92, +84, +62, or +234) use automated bot dialers to initiate surprise WhatsApp video calls to random Indian mobile numbers. If an unsuspecting user answers, scammers record the screen to initiate blackmail schemes.</p>\n\n<ol>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Privacy</strong> &rarr; <strong>Calls</strong>.</li>\n  <li>Toggle ON: <strong>&quot;Silence unknown callers&quot;</strong>.</li>\n</ol>\n\n<p>Your phone will never ring or vibrate for calls originating from numbers not saved in your contacts list. The call will still be logged quietly in your <em>Calls tab</em> so you never miss a genuine delivery courier, but you will never be startled by rogue spam rings.</p>\n\n<h2>3. Hide &quot;Locked Chats&quot; Behind a Secret Search Code</h2>\n\n<p>WhatsApp's Chat Lock feature lets you lock sensitive chats behind your fingerprint. However, having a folder prominently labeled <strong>&quot;Locked Chats&quot;</strong> pinned at the very top of your chat list immediately signals to anyone glancing at your phone that you are hiding something.</p>\n\n<ol>\n  <li>Swipe down on your chat list &rarr; tap <strong>Locked chats</strong> &rarr; unlock with fingerprint.</li>\n  <li>Tap the three dots in the top right &rarr; <strong>Chat lock settings</strong>.</li>\n  <li>Toggle ON: <strong>&quot;Hide locked chats&quot;</strong>.</li>\n  <li>Create a <strong>Secret code</strong> (e.g., an emoji, a favorite word, or a custom PIN like <code>#Secret99</code>).</li>\n</ol>\n\n<p>The &quot;Locked chats&quot; folder completely disappears from your WhatsApp interface. To access your hidden chats, you must type your secret code into WhatsApp's top search bar.</p>\n\n<h2>4. Stop Random Scammers from Adding You to Groups</h2>\n\n<p>By default, anyone who has your mobile number can add you to investment scams, fake stock tip groups, or adult marketing channels without your permission.</p>\n\n<ol>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Privacy</strong> &rarr; <strong>Groups</strong>.</li>\n  <li>Change the setting from <em>&quot;Everyone&quot;</em> to <strong>&quot;My contacts&quot;</strong> (or <em>&quot;My contacts except...&quot;</em>).</li>\n</ol>\n\n<p>If someone outside your contacts tries to add you to a group, they are forced to send you a private invite message that expires automatically in 3 days, giving you complete veto power.</p>\n\n<h2>5. Disable Link Previews (Prevent Pre-Click IP Tracking)</h2>\n\n<p>When you type or receive a URL link in a chat, WhatsApp automatically fetches a thumbnail preview from the destination web server. This means that simply receiving a malicious phishing link in a chat can send an HTTP request revealing your IP address to the scammer's server before you even tap the link!</p>\n\n<ol>\n  <li>Go to <strong>Settings</strong> &rarr; <strong>Privacy</strong> &rarr; <strong>Advanced</strong>.</li>\n  <li>Toggle OFF: <strong>&quot;Disable link previews&quot;</strong>.</li>\n</ol>\n\n<h2>6. Turn On Two-Step Verification (Prevent SIM Swap Takeovers)</h2>\n\n<p>If a criminal bribes a telecom store employee to clone your SIM card, they could register your WhatsApp on their phone and access your incoming messages.</p>\n\n<p>Go to <strong>Settings</strong> &rarr; <strong>Account</strong> &rarr; <strong>Two-step verification</strong> &rarr; tap <strong>Turn on</strong>. Set a 6-digit PIN and add your backup email address. Even if someone steals your physical SIM card, they cannot register your WhatsApp without this secret PIN.</p>\n\n<h2>7. Synchronize Online Status with &quot;Last Seen&quot;</h2>\n\n<p>Under <strong>Settings &rarr; Privacy &rarr; Last seen and online</strong>:</p>\n\n<ul>\n  <li>Who can see my last seen: <strong>My contacts</strong> (or <em>Nobody</em>).</li>\n  <li>Who can see when I'm online: <strong>Same as last seen</strong>.</li>\n</ul>\n\n<p>This prevents strangers, nosy coworkers, or stalkers from tracking your active sleeping hours by monitoring when your status flips to &quot;Online&quot;.</p>",
+  "excerpt": "<p>Did you know WhatsApp calls can reveal your physical IP address to callers by default? Discover the 7 critical privacy settings you must turn on immediately to stop scammers and safeguard your chats.</p>",
+  "description": "<p>Essential WhatsApp privacy checklist for 2026. Learn how to protect your IP address in calls, silence unknown scam callers, hide locked chats with secret codes, and stop group spam.</p>",
+  "metaTitle": "7 Critical WhatsApp Privacy Settings You Must Turn On in 2026",
+  "metaDescription": "Is your WhatsApp leaking your IP address? Learn the 7 critical WhatsApp privacy settings: protect IP in calls, silence spam callers, and secret code chat lock.",
+  "metaKeywords": "whatsapp privacy settings checklist, protect ip address in whatsapp calls, silence unknown callers whatsapp, secret code locked chats whatsapp, stop whatsapp group spam 2026",
+  "publishedAt": "2026-11-25T14:24:00+05:30",
+  "updatedAt": "2026-11-25T14:24:00+05:30",
+  "category": {
+    "name": "Social",
+    "slug": "social"
+  },
+  "tags": [
+    "WhatsApp",
+    "Privacy",
+    "Cybersecurity",
+    "Messaging",
+    "Social"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/whatsapp-privacy-settings-checklist-featured.svg",
+  "thumbnailImage": "/posts/whatsapp-privacy-settings-checklist-featured.svg",
+  "altImage": "WhatsApp privacy settings checklist illustrating IP call protection, secret code chat lock and spam caller silencing",
+  "faq": [
+    {
+      "title": "Does 'Protect IP address in calls' reduce call audio quality?",
+      "description": "In almost all cases, no. Modern Meta relay servers have massive low-latency Anycast routing. Voice and video calls remain crystal clear while your personal IP address is completely shielded."
+    },
+    {
+      "title": "How do I find my locked chats after setting a secret code?",
+      "description": "The Locked Chats folder will be completely hidden from the main screen. Open WhatsApp, tap the top search icon, type your exact secret code or emoji, and your locked chats will appear."
+    },
+    {
+      "title": "Can silenced unknown callers still message me on WhatsApp?",
+      "description": "Yes. Silencing unknown callers only blocks spontaneous ringing from incoming phone and video calls. If you wish to stop text messages from an unknown number, you must block the contact."
+    }
+  ],
+  "impressions": 0,
+  "oldPath": "/social/whatsapp-privacy-settings-you-must-turn-on-now"
+}

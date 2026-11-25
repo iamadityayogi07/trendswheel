@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1215" />
+      <stop offset="50%" stop-color="#112228" />
+      <stop offset="100%" stop-color="#050a0c" />
+    </linearGradient>
+    <linearGradient id="moneyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#10b981" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Rupee Symbol in background -->
+  <g opacity="0.06" fill="#10b981" font-family="system-ui, sans-serif" font-weight="800" font-size="280">
+    <text x="850" y="380">&#x20B9;</text>
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#34d399" />
+    <text x="40" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">PERSONAL FINANCE APPS</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">Best Expense Tracker Apps in India</tspan>
+      <tspan x="0" y="58" fill="#34d399">That Don&apos;t Spy on Your Bank SMS</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      Zero SMS Permissions, Complete Financial Privacy and Modern Material You Design
+    </text>
+  </g>
+
+  <!-- 3 Pillars Matrix Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Box 1: Why SMS Trackers Are Risky -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#ef4444" stroke-width="1" />
+      <rect x="18" y="18" width="135" height="24" rx="6" fill="#ef4444" fill-opacity="0.2" />
+      <text x="85" y="34" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="11" font-weight="700">SMS TRACKER DANGER</text>
+      <text x="18" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">The READ_SMS Trap</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Apps scrape salary, bank</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">balances and credit limits to</text>
+      <text x="18" y="142" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12">profile users for loan offers.</text>
+    </g>
+
+    <!-- Box 2: Cashew -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" />
+      <rect x="18" y="18" width="115" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="75" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">CASHEW BUDGET</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Open-Source &amp; Private</text>
+      <text x="18" y="94" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Permissions: ZERO internet/SMS</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Sync: Private Google Drive</text>
+      <text x="18" y="142" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Best: Gorgeous Material You UI</text>
+    </g>
+
+    <!-- Box 3: Money Manager -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1" />
+      <rect x="18" y="18" width="125" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+      <text x="80" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">MONEY MANAGER</text>
+      <text x="18" y="70" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">The Powerhouse Ledger</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Double-entry bookkeeping</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Backup: Local Excel / CSV export</text>
+      <text x="18" y="142" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">Best for: Strict budgeting control</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel App Guide &#x2022; Financial Privacy and Zero-Permission Android Budgeting</text>
+  </g>
+</svg>

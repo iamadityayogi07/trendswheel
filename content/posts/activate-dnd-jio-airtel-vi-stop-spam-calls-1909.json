@@ -1,0 +1,49 @@
+{
+  "id": 166,
+  "slug": "activate-dnd-jio-airtel-vi-stop-spam-calls-1909",
+  "title": "How to Activate Strict DND (1909) on Jio, Airtel, and Vi to Stop Spam Calls",
+  "html": "<p>If you are receiving five to ten spam calls a day from real estate agents, loan companies, and insurance telemarketers across India, standard Android caller ID blocking is not enough. You need to activate the Telecom Regulatory Authority of India (TRAI) statutory Do Not Disturb (DND) preference across your telecom operator. Here is how to activate Category 0 (Full DND) on Jio, Airtel, and Vodafone Idea (Vi) using the 1909 system, and how to report persistent telemarketers to get their phone numbers disconnected.</p>\n\n<p><em>Last updated: 25 Nov 2026. All SMS codes, USSD formats, and reporting timelines follow the Telecom Commercial Communications Customer Preference Regulations (TCCCPR) issued by TRAI.</em></p>\n\n<h2>The Difference Between Full DND and Partial DND</h2>\n\n<p>TRAI categorizes commercial telemarketing into distinct consumer sectors. When you register with the National Customer Preference Register (NCPR), you have two options:</p>\n\n<ul>\n  <li><strong>Fully Blocked (Category 0):</strong> Blocks all promotional SMS and commercial phone calls from all commercial sectors. Only transactional banking alerts (OTP, debit SMS, flight updates) will reach your phone.</li>\n  <li><strong>Partially Blocked:</strong> Allows promotional messages from specific sectors you choose (e.g., Banking, Real Estate, Education, Health, Consumer Goods, Communication, Tourism).</li>\n</ul>\n\n<p>To eliminate 99% of spam, you should always choose <strong>Category 0 (Fully Blocked)</strong>.</p>\n\n<h2>Method 1: Instant SMS to 1909 (Works on All Networks)</h2>\n\n<p>The fastest and most reliable way to activate DND across Jio, Airtel, Vi, and BSNL is via toll-free SMS:</p>\n\n<ol>\n  <li>Open your default SMS app.</li>\n  <li>Create a new message to recipient <strong>1909</strong>.</li>\n  <li>Type the exact command in capital letters: <code>START 0</code></li>\n  <li>Send the SMS from the SIM card you want to protect.</li>\n  <li>Within 10 to 15 minutes, you will receive an official confirmation SMS from your carrier (e.g., <code>VK-JIO-PR</code> or <code>AX-AIRTEL</code>) containing your <strong>DND Registration Request Number</strong>.</li>\n</ol>\n\n<p>Under TRAI mandates, telecom operators must update their central preference database within <strong>24 hours</strong> of receiving your request.</p>\n\n<h2>Method 2: Activating via Carrier Apps</h2>\n\n<h3>For Reliance Jio (MyJio App):</h3>\n<ol>\n  <li>Open the <strong>MyJio app</strong>.</li>\n  <li>Tap the <strong>Menu icon</strong> (bottom right) and select <strong>Settings</strong>.</li>\n  <li>Under the <em>Service Settings</em> section, tap <strong>Do Not Disturb (DND)</strong>.</li>\n  <li>Select <strong>Fully Blocked</strong> (this blocks all promotional voice and SMS).</li>\n  <li>Tap <strong>Save Preferences</strong>. You will receive an on-screen confirmation code.</li>\n</ol>\n\n<h3>For Bharti Airtel (Airtel Thanks App or Web):</h3>\n<ol>\n  <li>Go to official Airtel DND portal: <strong><a href=\"https://www.airtel.in/airtel-dnd\" rel=\"noopener\">airtel.in/airtel-dnd</a></strong> (or open Airtel Thanks app &gt; Help &gt; Manage Services).</li>\n  <li>Enter your 10-digit Airtel mobile number and request an OTP.</li>\n  <li>Enter the OTP to log in.</li>\n  <li>Select <strong>Block All</strong> (stops all categories of telemarketing calls and promotional SMS).</li>\n  <li>Submit the form.</li>\n</ol>\n\n<h3>For Vodafone Idea (Vi App):</h3>\n<ol>\n  <li>Open the <strong>Vi app</strong>.</li>\n  <li>Tap <strong>My Account</strong> and scroll to <strong>Help &amp; Support</strong>.</li>\n  <li>Tap <strong>Do Not Disturb (DND)</strong>.</li>\n  <li>Select <strong>Full DND</strong> and tap submit.</li>\n</ol>\n\n<h2>How to Report Rogue Telemarketers (And Get Their Lines Suspended)</h2>\n\n<p>What happens if an unregistered real estate broker or loan telemarketer calls you from a standard 10-digit personal mobile number despite active DND? TRAI allows you to file a statutory complaint that triggers financial penalties and line suspension:</p>\n\n<p>You must file the complaint <strong>within 3 days (72 hours)</strong> of receiving the spam call or SMS:</p>\n\n<ol>\n  <li>Open your SMS app.</li>\n  <li>Send a message to <strong>1909</strong> in the following exact format:</li>\n</ol>\n<pre><code>COMP TEL NO XXXXXXXXXX, dd/mm/yy, Time, Brief Description</code></pre>\n<p><em>Example:</em> <code>COMP TEL NO 9876543210, 25/11/26, 11:30 AM, Unsolicited personal loan telemarketing call</code></p>\n\n<p><strong>What happens next:</strong></p>\n<ul>\n  <li>Your operator issues an SMS acknowledgement within 24 hours.</li>\n  <li>Your carrier contacts the sender's carrier (e.g., Airtel to Jio) to verify the call records.</li>\n  <li>On the first offense, the unregistered telemarketer receives an official notice and a monetary penalty. On repeated offenses, TRAI regulations mandate that the scammer&#39;s telecom connection is permanently disconnected across all Indian operators.</li>\n</ul>\n\n<h2>Frequently Asked Questions</h2>\n\n<h3>Will activating DND stop bank OTPs and delivery notifications?</h3>\n<p>No. TRAI strictly exempts Service Explicit and Transactional messages. Your banking OTPs, debit/credit transaction SMS, courier OTPs (Amazon, Flipkart, Swiggy, Zomato), and flight booking alerts will continue to arrive instantly.</p>\n\n<h3>Why do I still get calls after sending START 0?</h3>\n<p>Full DND stops registered telemarketers who scrub their lists against the TRAI NCPR database. Unregistered scammers who buy leaked data and call from personal SIM cards bypass automated filters. Reporting them via <code>COMP TEL NO</code> to 1909 is the legal method to get their personal SIM suspended.</p>\n\n<h3>Is DND registration free of charge?</h3>\n<p>Yes. Both sending SMS to 1909 and registering via carrier apps are 100% free under Indian telecom regulations.</p>",
+  "excerpt": "<p>A complete guide to activating Category 0 (Full DND) on Jio, Airtel, and Vi via 1909 SMS, and how to legally report rogue telemarketers within 72 hours to suspend their numbers.</p>",
+  "description": "<p>A complete guide to activating Category 0 (Full DND) on Jio, Airtel, and Vi via 1909 SMS, and how to legally report rogue telemarketers within 72 hours to suspend their numbers.</p>",
+  "metaTitle": "How to Activate Strict DND on Jio, Airtel & Vi (1909 Guide)",
+  "metaDescription": "Stop promotional spam calls in India. Learn how to activate TRAI Category 0 Full DND via 1909 SMS and carrier apps, plus how to report persistent spammers.",
+  "metaKeywords": "how to activate dnd jio airtel vi, trai dnd registration 1909, stop promotional calls india, report spam telemarketer 1909, block spam calls india",
+  "publishedAt": "2026-11-25T14:00:00+05:30",
+  "updatedAt": "2026-11-25T14:00:00+05:30",
+  "category": {
+    "name": "How-To",
+    "slug": "how-to"
+  },
+  "tags": [
+    "Telecom",
+    "TRAI",
+    "Jio",
+    "Airtel",
+    "Vi",
+    "Spam Protection",
+    "How-To"
+  ],
+  "author": {
+    "name": "Aditya Yogi",
+    "slug": "aditya-yogi"
+  },
+  "featuredImage": "/posts/activate-dnd-telecom-featured.svg",
+  "thumbnailImage": "/posts/activate-dnd-telecom-featured.svg",
+  "altImage": "How to activate strict DND on Jio, Airtel, and Vi using TRAI 1909 system",
+  "faq": [
+    {
+      "title": "Will activating DND stop bank OTPs and delivery notifications?",
+      "description": "No. TRAI strictly exempts Service Explicit and Transactional messages. Your banking OTPs, debit/credit transaction SMS, courier OTPs (Amazon, Flipkart, Swiggy, Zomato), and flight booking alerts will continue to arrive instantly."
+    },
+    {
+      "title": "Why do I still get calls after sending START 0?",
+      "description": "Full DND stops registered telemarketers who scrub their lists against the TRAI NCPR database. Unregistered scammers who buy leaked data and call from personal SIM cards bypass automated filters. Reporting them via COMP TEL NO to 1909 is the legal method to get their personal SIM suspended."
+    },
+    {
+      "title": "Is DND registration free of charge?",
+      "description": "Yes. Both sending SMS to 1909 and registering via carrier apps are 100% free under Indian telecom regulations."
+    }
+  ],
+  "impressions": 0,
+  "oldPath": "/how-to/activate-dnd-jio-airtel-vi-stop-spam-calls-1909"
+}

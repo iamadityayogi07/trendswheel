@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e1a" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#030611" />
+    </linearGradient>
+    <linearGradient id="dnsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#38bdf8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Binary data streams in background -->
+  <g opacity="0.06" fill="#38bdf8" font-family="monospace" font-size="12">
+    <text x="80" y="100">1.1.1.1 &#x2192; ANYCAST &#x2192; 104.16.132.229</text>
+    <text x="80" y="130">8.8.8.8 &#x2192; RESOLVER &#x2192; 142.250.190.46</text>
+    <text x="80" y="520">DNS-OVER-HTTPS (DoH) ENCRYPTED PORT 443</text>
+    <text x="80" y="550">ZERO ISP TELEMETRY LOGS</text>
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="280" height="38" rx="19" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.5" />
+    <circle cx="22" cy="19" r="6" fill="#38bdf8" />
+    <text x="40" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">INTERNET NETWORKING GUIDE</text>
+  </g>
+
+  <!-- Title and Subtitle -->
+  <g transform="translate(80, 165)">
+    <text fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+      <tspan x="0" y="0">How DNS Works &amp; Why Changing It</tspan>
+      <tspan x="0" y="58" fill="#38bdf8">Instantly Speeds Up Your Internet</tspan>
+    </text>
+    <text x="0" y="125" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+      ISP DNS Bottlenecks, Cloudflare 1.1.1.1, Google 8.8.8.8 and Private DNS Setup
+    </text>
+  </g>
+
+  <!-- 3 Column Resolver Comparison Card -->
+  <g transform="translate(80, 345)" filter="url(#softGlow)">
+    <rect width="1040" height="215" rx="18" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Col 1: Default ISP DNS -->
+    <g transform="translate(30, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#ef4444" stroke-width="1" />
+      <rect x="18" y="18" width="130" height="24" rx="6" fill="#ef4444" fill-opacity="0.2" />
+      <text x="83" y="34" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="11" font-weight="700">DEFAULT ISP DNS</text>
+      <text x="18" y="70" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Lookup Latency: ~65&#x2013;120ms</text>
+      <text x="18" y="94" fill="#f87171" font-family="system-ui, sans-serif" font-size="13">Privacy: Logs all websites you visit</text>
+      <text x="18" y="118" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Security: Plaintext UDP (Sniffable)</text>
+      <text x="18" y="146" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12">Verdict: Slow and spies on your habits</text>
+    </g>
+
+    <!-- Col 2: Cloudflare 1.1.1.1 -->
+    <g transform="translate(365, 22)">
+      <rect width="305" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#f97316" stroke-width="1.5" />
+      <rect x="18" y="18" width="145" height="24" rx="6" fill="#f97316" fill-opacity="0.25" />
+      <text x="90" y="34" text-anchor="middle" fill="#fb923c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">CLOUDFLARE (1.1.1.1)</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Lookup Latency: ~12&#x2013;15ms (Fastest!)</text>
+      <text x="18" y="94" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13">Privacy: Never sells browsing logs</text>
+      <text x="18" y="118" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">Protocol: DNS-over-HTTPS (DoH)</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Best for: Pure speed &amp; fast browsing</text>
+    </g>
+
+    <!-- Col 3: AdGuard Private DNS -->
+    <g transform="translate(700, 22)">
+      <rect width="310" height="170" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="#10b981" stroke-width="1" />
+      <rect x="18" y="18" width="140" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+      <text x="88" y="34" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">ADGUARD PRIVATE DNS</text>
+      <text x="18" y="70" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Blocks Ads System-Wide!</text>
+      <text x="18" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Blocks banner ads inside games/apps</text>
+      <text x="18" y="118" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13">Setup: dns.adguard-dns.com</text>
+      <text x="18" y="146" fill="#34d399" font-family="system-ui, sans-serif" font-size="12 font-weight=700">Best for: Clean ad-free phone</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(80, 590)">
+    <text fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TrendsWheel Tech Networking &#x2022; Works on Android Private DNS, Windows 11, Mac &amp; Home Routers</text>
+  </g>
+</svg>
