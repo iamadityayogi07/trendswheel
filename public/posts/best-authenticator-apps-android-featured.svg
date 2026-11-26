@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e" />
+      <stop offset="50%" stop-color="#082f49" />
+      <stop offset="100%" stop-color="#031726" />
+    </linearGradient>
+    <linearGradient id="titleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="200" cy="160" r="150" fill="#0284c7" opacity="0.12" filter="url(#glow)" />
+  <circle cx="1020" cy="460" r="180" fill="#38bdf8" opacity="0.1" filter="url(#glow)" />
+  <rect x="140" y="70" width="180" height="34" rx="17" fill="#0284c7" fill-opacity="0.18" stroke="#0284c7" stroke-width="1.5" />
+  <text x="230" y="93" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">AUTHENTICATION 2FA</text>
+  <text x="140" y="165" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+    <tspan x="140" dy="0">Best 2FA Authenticator Apps</tspan>
+    <tspan x="140" dy="56" fill="url(#titleGlow)">Client-Side Encrypted Cloud Sync</tspan>
+  </text>
+  <text x="140" y="275" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400">
+    <tspan x="140" dy="0">Protect your two-factor TOTP security tokens from device loss and cloud leaks</tspan>
+    <tspan x="140" dy="30">using open-source authenticators featuring AES-256 encrypted backups and biometric gates.</tspan>
+  </text>
+  <g transform="translate(140, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">1</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Aegis Authenticator</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">The offline champion</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; AES-256 encrypted JSON</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Automatic local backups</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; 100% open-source F-Droid</text>
+  </g>
+  <g transform="translate(460, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#0284c7" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#0284c7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">2</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Ente Auth</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">End-to-end cloud sync</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Zero-knowledge encryption</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Seamless cross-device sync</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Desktop &amp; mobile apps</text>
+  </g>
+  <g transform="translate(780, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#10b981" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">&#x2713;</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">2FAS Authenticator</text>
+    <text x="86" y="64" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">The turnkey hybrid</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Syncs to private Google Drive</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Browser push notifications</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Zero account registration</text>
+  </g>
+</svg>

@@ -74,22 +74,25 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
               {post.category.name}
             </Link>
             <h1 className="font-display mt-3 text-3xl font-bold leading-tight sm:text-4xl">{post.title}</h1>
-            <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted">
-              <span>
-                Published on: <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
+              <span className="inline-flex items-center gap-1.5">
+                <span className="font-medium text-ink-2">Published:</span>
+                <time dateTime={post.publishedAt} className="font-semibold text-ink">{formatDate(post.publishedAt)}</time>
               </span>
-              {updated && (
-                <span>
-                  Updated on: <time dateTime={post.updatedAt}>{formatDate(post.updatedAt)}</time>
-                </span>
-              )}
+              <span className="inline-flex items-center gap-1.5">
+                <span className="font-medium text-ink-2">Last Updated:</span>
+                <time dateTime={post.updatedAt} className="font-semibold text-ink">{formatDate(post.updatedAt)}</time>
+              </span>
+              <span className="text-muted/60">•</span>
               <span>{readingMinutes(post.html)} min read</span>
+              <span className="text-muted/60">•</span>
               <span>
-                <Link href={authorUrl(post.author.slug)} className="font-semibold text-ink-2 no-underline hover:text-brand-strong hover:underline">
+                By{' '}
+                <Link href={authorUrl(post.author.slug)} className="font-semibold text-brand-strong no-underline hover:underline">
                   {post.author.name}
                 </Link>
               </span>
-            </p>
+            </div>
           </header>
 
           <figure className="mt-5">

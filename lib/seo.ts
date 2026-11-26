@@ -97,7 +97,12 @@ export const authorMetadata = (a: Author, postCount: number) =>
 
 // ---- JSON-LD ----
 const logoObject = () => ({ '@type': 'ImageObject', url: absoluteUrl(LOGO_PATH), width: 162, height: 162 });
-const publisher = () => ({ '@type': 'Organization', name: SITE_NAME, logo: logoObject() });
+const publisher = () => ({
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: logoObject(),
+});
 
 export const organizationSchema = () => ({
   '@context': 'https://schema.org',
@@ -147,6 +152,8 @@ export function postSchemas(post: Post, author: Author | undefined) {
     alternativeHeadline: post.metaTitle,
     description: post.metaDescription,
     articleSection: post.category.name,
+    inLanguage: 'en',
+    isAccessibleForFree: true,
     keywords: post.metaKeywords ?? undefined,
     wordCount: wordCount(post.html),
     image: { '@type': 'ImageObject', url: abs(post.featuredImage), width: 1200, height: 630 },

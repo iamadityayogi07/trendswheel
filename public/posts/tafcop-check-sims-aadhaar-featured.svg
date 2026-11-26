@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="titleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="200" cy="160" r="150" fill="#0ea5e9" opacity="0.12" filter="url(#glow)" />
+  <circle cx="1020" cy="460" r="180" fill="#38bdf8" opacity="0.1" filter="url(#glow)" />
+  <rect x="140" y="70" width="180" height="34" rx="17" fill="#0ea5e9" fill-opacity="0.18" stroke="#0ea5e9" stroke-width="1.5" />
+  <text x="230" y="93" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">IDENTITY AUDIT</text>
+  <text x="140" y="165" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+    <tspan x="140" dy="0">Check Registered SIM Cards</tspan>
+    <tspan x="140" dy="56" fill="url(#titleGlow)">Via Official DoT TAFCOP Portal</tspan>
+  </text>
+  <text x="140" y="275" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400">
+    <tspan x="140" dy="0">Identify unauthorized burner phone numbers issued against your Aadhaar,</tspan>
+    <tspan x="140" dy="30">report fraudulent connections, and trigger mandatory carrier disconnections.</tspan>
+  </text>
+  <g transform="translate(140, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">1</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">TAFCOP Query</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Sanchar Saathi interface</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Visit tafcop.sancharsaathi.gov.in</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Enter active primary mobile number</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Verify via government OTP</text>
+  </g>
+  <g transform="translate(460, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#0ea5e9" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#0ea5e9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">2</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Audit Active Numbers</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Inspect 9-SIM ceiling</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Examines all telecom operators</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Identifies unknown phone digits</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Flags potential mule numbers</text>
+  </g>
+  <g transform="translate(780, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#10b981" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">&#x2713;</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Report &amp; Disconnect</text>
+    <text x="86" y="64" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">One-click carrier action</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Select 'Not My Number'</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Obtain Ticket Request ID</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Permanent telecom deactivation</text>
+  </g>
+</svg>

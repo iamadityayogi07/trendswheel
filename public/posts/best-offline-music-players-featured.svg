@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="titleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="200" cy="160" r="150" fill="#d97706" opacity="0.12" filter="url(#glow)" />
+  <circle cx="1020" cy="460" r="180" fill="#f59e0b" opacity="0.1" filter="url(#glow)" />
+  <rect x="140" y="70" width="180" height="34" rx="17" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="1.5" />
+  <text x="230" y="93" fill="#fde68a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">AUDIOPHILE SOUND</text>
+  <text x="140" y="165" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+    <tspan x="140" dy="0">Best Offline Music Players</tspan>
+    <tspan x="140" dy="56" fill="url(#titleGlow)">Bit-Perfect Hi-Res FLAC Audio</tspan>
+  </text>
+  <text x="140" y="275" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400">
+    <tspan x="140" dy="0">Bypass Android's 48 kHz resampler and enjoy lossless studio masters</tspan>
+    <tspan x="140" dy="30">with parametric equalizers, USB DAC passthrough, and 100% offline playback without ads.</tspan>
+  </text>
+  <g transform="translate(140, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#f59e0b" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">1</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Poweramp</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">The DSP powerhouse</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; 32-bit internal DSP engine</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Parametric &amp; graphic EQ</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Custom Direct HD output</text>
+  </g>
+  <g transform="translate(460, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#d97706" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#d97706" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">2</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Musicolet</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Zero internet permissions</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; 100% free and ad-free</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Multiple parallel queues</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Advanced tag editor &amp; lyrics</text>
+  </g>
+  <g transform="translate(780, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#10b981" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">&#x2713;</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">UAPP</text>
+    <text x="86" y="64" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Bit-perfect DAC master</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Bypasses Android mixer</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Direct USB DAC hardware</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; DSD / MQA / 384kHz audio</text>
+  </g>
+</svg>
