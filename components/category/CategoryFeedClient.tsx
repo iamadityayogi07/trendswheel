@@ -495,12 +495,12 @@ export default function CategoryFeedClient({
               </h2>
             </div>
 
-            <ul className="mt-3.5 space-y-3">
+            <ul className="mt-3.5 divide-y divide-line/60">
               {latest.map((p) => (
-                <li key={p.slug}>
+                <li key={p.slug} className="py-3 first:pt-0 last:pb-0">
                   <Link
                     href={p.href}
-                    className="group flex items-center gap-3 no-underline"
+                    className="group flex items-start gap-3 no-underline"
                   >
                     <img
                       src={p.img.src}
