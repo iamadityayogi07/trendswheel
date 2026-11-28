@@ -537,7 +537,7 @@ export default function CategoryFeedClient({
 
         {/* Sticky High-RPM Sidebar Display Unit */}
         <div className="sticky top-28 z-10">
-          <AdUnit kind="display" className="!my-0 shadow-xs" />
+          <AdUnit kind="display" className="!my-0" />
         </div>
       </aside>
     </div>

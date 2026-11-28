@@ -16,7 +16,6 @@ declare global {
 export default function AdUnit({
   kind = 'display',
   className = '',
-  showLabel = true,
 }: {
   kind?: AdKind;
   className?: string;
@@ -60,18 +59,11 @@ export default function AdUnit({
   const common = { className: 'adsbygoogle', 'data-ad-client': ADSENSE_CLIENT, 'data-ad-slot': slot } as const;
   return (
     <aside
-      className={`ad-slot my-8 mx-auto w-full max-w-5xl overflow-hidden rounded-xl border border-line/70 bg-[#fafbfc] p-3 text-center transition-shadow ${className}`}
+      className={`ad-slot my-6 mx-auto w-full max-w-5xl overflow-hidden text-center ${className}`}
       aria-label="Advertisement"
       ref={box}
-      style={{ minHeight: adMinHeight[kind] + (showLabel ? 28 : 0) }}
+      style={{ minHeight: adMinHeight[kind] }}
     >
-      {showLabel && (
-        <div className="mb-2 flex items-center justify-center gap-2">
-          <span className="h-px w-8 bg-line" aria-hidden="true" />
-          <span className="text-[10px] font-bold uppercase tracking-widest text-muted/80">Advertisement</span>
-          <span className="h-px w-8 bg-line" aria-hidden="true" />
-        </div>
-      )}
       <div className="flex items-center justify-center overflow-hidden">
         {kind === 'inArticle' && (
           <ins {...common} style={{ display: 'block', textAlign: 'center', width: '100%' }} data-ad-layout="in-article" data-ad-format="fluid" />
