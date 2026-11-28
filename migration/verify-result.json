@@ -1,12 +1,8 @@
 [
   {
     "name": "1  URL and slug parity",
-    "ok": false,
-    "problems": [
-      "extra slug: /how-to/android-backup-plan-photos-whatsapp-contacts",
-      "extra slug: /tech/moved-laravel-blog-godaddy-to-cloudflare-pages",
-      "extra slug: /social/remove-third-party-apps-google-facebook-instagram-login"
-    ]
+    "ok": true,
+    "problems": []
   },
   {
     "name": "1b Text parity (body, title, meta description, h1)",

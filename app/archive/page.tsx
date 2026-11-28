@@ -5,7 +5,7 @@ import ArchiveClient, { type ArchiveCategoryItem, type ArchivePostItem } from '@
 import CategoryNewsletter from '@/components/category/CategoryNewsletter';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
-import { getAllPosts, getCategories } from '@/lib/content';
+import { getAllPosts, getCategories, readingMinutes } from '@/lib/content';
 import { buildMetadata, simplePageSchema } from '@/lib/seo';
 import { archiveUrl, categoryUrl, postUrl } from '@/lib/url';
 
@@ -29,7 +29,7 @@ export default function ArchivePage() {
     description: p.description || '',
     publishedAt: p.publishedAt,
     updatedAt: p.updatedAt,
-    readMinutes: p.readMinutes,
+    readMinutes: readingMinutes(p.html),
     category: {
       name: p.category.name,
       slug: p.category.slug,
@@ -47,7 +47,7 @@ export default function ArchivePage() {
     <>
       <JsonLd
         data={simplePageSchema(
-          'CollectionPage',
+          'WebPage',
           'All Articles Archive - TrendsWheel',
           'Complete master index of all 248 verified guides, tutorials, and technical analyses on TrendsWheel.',
           path

@@ -359,6 +359,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
       {/* Full-Width Same-Category Guides: 3 Articles in a Row */}
       {related.length > 0 && (
         <section
+          id="read-next"
           aria-labelledby="same-category-guides"
           className="mt-14 border-t border-line/80 pt-10"
         >
