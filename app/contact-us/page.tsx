@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdUnit from '@/components/ads/AdUnit';
-import ContactForm from '@/components/contact/ContactForm';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
 import { SITE_URL } from '@/config/site';
@@ -14,7 +13,7 @@ const path = staticPageUrl('contact-us');
 export const metadata: Metadata = buildMetadata({
   title: 'Contact TrendsWheel | Editorial Desk & Reader Support',
   description:
-    'Have questions, feedback, or a correction to report? Contact TrendsWheel — your source for tech news, app reviews, and hardware-verified how-to guides.',
+    'Have questions, feedback, or a correction to report? Contact TrendsWheel directly via email or WhatsApp — your source for tech news, app reviews, and hardware-verified how-to guides.',
   keywords:
     'contact TrendsWheel, contact us, TrendsWheel support, tech news contact, app guides, how to guides, tech trends 2026',
   path,
@@ -59,6 +58,10 @@ export default function ContactPage() {
     'Have questions or feedback? Contact TrendsWheel anytime.',
     path
   );
+
+  const mainMailto = `mailto:${site.email}?subject=${encodeURIComponent(
+    'Message for TrendsWheel Editorial Team'
+  )}`;
 
   return (
     <>
@@ -106,11 +109,11 @@ export default function ContactPage() {
               <div className="mt-5 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
                 <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-line/70 px-3 py-1.5 text-ink shadow-2xs">
                   <span className="size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-                  <span>Response Time: &lt; 24–48 Hours</span>
+                  <span>Direct Editorial Email: {site.email}</span>
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-line/70 px-3 py-1.5 text-ink shadow-2xs">
-                  <span aria-hidden="true">✓</span>
-                  <span>Direct Editorial Review</span>
+                  <span aria-hidden="true">⚡</span>
+                  <span>Response Time: &lt; 24–48 Hours</span>
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-line/70 px-3 py-1.5 text-ink shadow-2xs">
                   <span aria-hidden="true">📍</span>
@@ -126,59 +129,65 @@ export default function ContactPage() {
           </div>
         </header>
 
-        {/* 3 Inquiry Category Cards */}
-        <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Inquiry Categories">
-          <div className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs transition hover:border-brand/40">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-brand/10 text-brand-strong text-lg">
-              ✍️
-            </span>
-            <h2 className="font-display mt-3 text-base font-bold text-ink">
-              Editorial Pitches &amp; Reviews
-            </h2>
-            <p className="mt-1 text-xs text-ink-2 leading-relaxed">
-              Software developer pitches, hardware testbench review units, and technical op-eds.
-            </p>
+        {/* 3 Dedicated Department Email Cards */}
+        <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Department Contact Options">
+          <div className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs transition hover:border-brand/40 flex flex-col justify-between">
+            <div>
+              <span className="flex size-10 items-center justify-center rounded-xl bg-brand/10 text-brand-strong text-lg">
+                ✍️
+              </span>
+              <h2 className="font-display mt-3 text-base font-bold text-ink">
+                Editorial Pitches &amp; Reviews
+              </h2>
+              <p className="mt-1 text-xs text-ink-2 leading-relaxed">
+                Software developer pitches, hardware testbench review units, and technical op-eds.
+              </p>
+            </div>
             <a
-              href={`mailto:${site.email}?subject=Editorial%20Pitch`}
-              className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-brand-strong hover:underline"
+              href={`mailto:${site.email}?subject=${encodeURIComponent('Editorial Pitch / Review Unit')}`}
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-brand-strong hover:underline"
             >
-              <span>{site.email}</span>
+              <span>Email Editorial Team</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
 
-          <div className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs transition hover:border-brand/40">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 text-lg">
-              🛠️
-            </span>
-            <h2 className="font-display mt-3 text-base font-bold text-ink">
-              Corrections &amp; Bug Reports
-            </h2>
-            <p className="mt-1 text-xs text-ink-2 leading-relaxed">
-              Found a changed Android menu path, obsolete firmware step, or outdated link? Tell us.
-            </p>
+          <div className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs transition hover:border-brand/40 flex flex-col justify-between">
+            <div>
+              <span className="flex size-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 text-lg">
+                🛠️
+              </span>
+              <h2 className="font-display mt-3 text-base font-bold text-ink">
+                Corrections &amp; Bug Reports
+              </h2>
+              <p className="mt-1 text-xs text-ink-2 leading-relaxed">
+                Found a changed Android menu path, obsolete firmware step, or outdated link? Tell us.
+              </p>
+            </div>
             <a
-              href={`mailto:${site.email}?subject=Correction%20Report`}
-              className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-emerald-700 hover:underline"
+              href={`mailto:${site.email}?subject=${encodeURIComponent('Guide Correction / Menu Discrepancy Report')}`}
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:underline"
             >
               <span>Submit a Correction</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
 
-          <div className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs transition hover:border-brand/40">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-sky-100 text-sky-700 text-lg">
-              📢
-            </span>
-            <h2 className="font-display mt-3 text-base font-bold text-ink">
-              Advertising &amp; Partnerships
-            </h2>
-            <p className="mt-1 text-xs text-ink-2 leading-relaxed">
-              Explore direct programmatic advertising, sponsored dispatches, and technical partnerships.
-            </p>
+          <div className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs transition hover:border-brand/40 flex flex-col justify-between">
+            <div>
+              <span className="flex size-10 items-center justify-center rounded-xl bg-sky-100 text-sky-700 text-lg">
+                📢
+              </span>
+              <h2 className="font-display mt-3 text-base font-bold text-ink">
+                Advertising &amp; Partnerships
+              </h2>
+              <p className="mt-1 text-xs text-ink-2 leading-relaxed">
+                Explore direct programmatic advertising, sponsored dispatches, and technical partnerships.
+              </p>
+            </div>
             <a
-              href={`mailto:${site.email}?subject=Advertising%20Inquiry`}
-              className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-sky-700 hover:underline"
+              href={`mailto:${site.email}?subject=${encodeURIComponent('Advertising & Partnership Inquiry')}`}
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:underline"
             >
               <span>Partner With Us</span>
               <span aria-hidden="true">→</span>
@@ -186,12 +195,84 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* 2-Column Main Form & Sidebar Layout */}
+        {/* 2-Column Main Contact Guide & Sidebar Layout */}
         <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_350px]">
-          {/* Left Column: Interactive Form + Map Embed */}
+          {/* Left Column: Direct Email Action Card + Formatting Guide + Map */}
           <main className="space-y-6">
-            {/* Interactive Form Component */}
-            <ContactForm recipientEmail={site.email} />
+            {/* Primary Direct Email Dispatch Card */}
+            <div className="rounded-2xl border border-line/80 bg-white p-6 sm:p-8 lg:p-9 shadow-2xs">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-line/60 pb-5">
+                <div>
+                  <h2 className="font-display text-xl sm:text-2xl font-bold text-ink">
+                    Email Our Editorial Desk
+                  </h2>
+                  <p className="mt-1 text-xs sm:text-sm text-ink-2">
+                    Direct emails go straight to our lead editors and technical contributors.
+                  </p>
+                </div>
+
+                <a
+                  href={mainMailto}
+                  className="inline-flex min-h-11 items-center justify-center rounded-xl bg-brand px-6 py-2.5 font-display text-sm font-bold text-white shadow-xs hover:bg-brand-strong transition shrink-0"
+                >
+                  <span className="mr-2">✉️</span>
+                  <span>Open in Mail App</span>
+                </a>
+              </div>
+
+              {/* Direct Address Badge */}
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-surface-2/70 border border-line/70 p-4">
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-muted block">
+                    Direct Email Address
+                  </span>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="font-display text-base sm:text-lg font-bold text-ink hover:text-brand-strong transition"
+                  >
+                    {site.email}
+                  </a>
+                </div>
+
+                <a
+                  href={`mailto:${site.email}`}
+                  className="inline-flex items-center gap-1 text-xs font-bold text-brand-strong hover:underline"
+                >
+                  <span>Compose Email</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              {/* Helpful Tips to get a faster response */}
+              <div className="mt-7">
+                <h3 className="font-display text-sm font-bold text-ink uppercase tracking-wider text-muted">
+                  How to get a faster response:
+                </h3>
+                <ul className="mt-3.5 space-y-3 text-xs sm:text-sm text-ink-2">
+                  <li className="flex items-start gap-3 rounded-xl bg-white border border-line/60 p-3.5">
+                    <span className="text-base" aria-hidden="true">📱</span>
+                    <div>
+                      <strong className="text-ink block font-bold">For How-To Troubleshooting:</strong>
+                      <span>Mention your device make, model, and OS version (e.g. <em>Samsung Galaxy S24 running One UI 6.1 / Android 14</em>) and which specific step failed.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3 rounded-xl bg-white border border-line/60 p-3.5">
+                    <span className="text-base" aria-hidden="true">🛠️</span>
+                    <div>
+                      <strong className="text-ink block font-bold">For Corrections &amp; Updates:</strong>
+                      <span>Include the URL of the article and the updated menu text or setting path so our lab can verify on our test devices.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3 rounded-xl bg-white border border-line/60 p-3.5">
+                    <span className="text-base" aria-hidden="true">📦</span>
+                    <div>
+                      <strong className="text-ink block font-bold">For Hardware Review Units:</strong>
+                      <span>Include product specifications, availability in the Indian/global market, and whether early test software is provided.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
             {/* Interactive Location Map Card */}
             <div className="overflow-hidden rounded-2xl border border-line/80 bg-white p-5 sm:p-6 shadow-2xs">
@@ -245,12 +326,15 @@ export default function ContactPage() {
                 </li>
                 {site.phone && (
                   <li>
-                    <span className="block text-muted font-medium mb-0.5">Direct Helpline</span>
+                    <span className="block text-muted font-medium mb-0.5">Direct Helpline / WhatsApp</span>
                     <a
-                      href={`tel:${site.phone}`}
-                      className="font-bold text-ink hover:text-brand-strong transition"
+                      href={`https://wa.me/${site.phone.replace(/[^0-9]/g, '')}`}
+                      target="_blank"
+                      rel="noopener nofollow"
+                      className="font-bold text-emerald-700 hover:underline inline-flex items-center gap-1"
                     >
-                      {site.phone}
+                      <span>{site.phone}</span>
+                      <span aria-hidden="true">↗</span>
                     </a>
                   </li>
                 )}
