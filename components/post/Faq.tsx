@@ -7,18 +7,20 @@ type Props = {
   subtitle?: string;
   headingLevel?: 2 | 3;
   centered?: boolean;
+  className?: string;
 };
 
 /**
- * Modern Editorial FAQ Accordion with native <details> elements.
+ * Modern Editorial FAQ Section with heading on top and accordion below.
  * Fully static, zero-JS accessible, and structured for Google FAQPage rich snippets.
  */
 export default function Faq({
   items,
   heading,
-  subtitle = 'Clear, verified answers to common reader questions about our guides, testing methodology, and technical support.',
+  subtitle = 'Clear, verified answers to common reader questions about our guides, testing methodology, and technical troubleshooting.',
   headingLevel = 2,
   centered = false,
+  className = '',
 }: Props) {
   const list = items.filter(
     (i) => (i.title ?? '').trim() || (i.description ?? '').trim()
@@ -30,19 +32,13 @@ export default function Faq({
   return (
     <section
       aria-labelledby="faq-heading"
-      className={`my-14 ${
-        centered
-          ? ''
-          : 'rounded-2xl border border-line/80 bg-gradient-to-br from-surface-2/80 via-white to-brand-soft/20 p-6 sm:p-10 lg:grid lg:grid-cols-[330px_1fr] lg:gap-12 shadow-2xs'
-      }`}
+      className={`my-12 rounded-2xl border border-line/80 bg-white p-6 sm:p-8 lg:p-9 shadow-2xs ${className}`}
     >
-      {/* Header Block */}
+      {/* Top Header Block: Heading & Subtitle */}
       <div
-        className={
-          centered
-            ? 'text-center max-w-2xl mx-auto'
-            : 'lg:sticky lg:top-28 lg:self-start'
-        }
+        className={`border-b border-line/70 pb-6 ${
+          centered ? 'text-center max-w-2xl mx-auto' : ''
+        }`}
       >
         <div
           className={`flex items-center gap-2 ${
@@ -53,70 +49,37 @@ export default function Faq({
             ?
           </span>
           <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
-            Knowledge Base • {list.length} Answers
+            Knowledge Base • {list.length} Verified Answers
           </span>
         </div>
 
         <H
           id="faq-heading"
-          className={`font-display mt-2.5 font-bold tracking-tight text-ink ${
-            centered
-              ? 'text-2xl sm:text-3xl lg:text-4xl'
-              : 'text-2xl sm:text-3xl'
-          }`}
+          className="font-display mt-2.5 text-2xl sm:text-3xl font-bold tracking-tight text-ink"
         >
           {heading}
         </H>
 
-        <p className="mt-2.5 text-xs sm:text-sm text-ink-2 leading-relaxed">
-          {subtitle}
-        </p>
-
-        <div
-          className={`mt-4 h-1 w-12 rounded-full bg-brand ${
-            centered ? 'mx-auto' : ''
-          }`}
-          aria-hidden="true"
-        />
-
-        {/* Sidebar Help Card (shown on 2-column category/article layout) */}
-        {!centered && (
-          <div className="mt-6 rounded-xl border border-line/80 bg-white p-4 shadow-2xs">
-            <div className="flex items-center gap-2 text-xs font-bold text-ink">
-              <span aria-hidden="true">💡</span>
-              <span>Still need assistance?</span>
-            </div>
-            <p className="mt-1.5 text-xs leading-relaxed text-ink-2">
-              Encountered a different OS menu or need help with a step? Reach out to our editorial lab.
-            </p>
-            <Link
-              href="/contact-us"
-              className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-brand-strong hover:underline"
-            >
-              <span>Ask Editorial Desk</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
+        {subtitle && (
+          <p className="mt-2 text-xs sm:text-sm text-ink-2 leading-relaxed max-w-3xl">
+            {subtitle}
+          </p>
         )}
       </div>
 
-      {/* Accordion List */}
-      <div
-        className={`space-y-3 ${
-          centered ? 'mx-auto mt-8 max-w-3xl' : 'mt-8 lg:mt-0'
-        }`}
-      >
+      {/* Accordion Below Heading (Full Width) */}
+      <div className="mt-6 sm:mt-7 space-y-3.5 w-full">
         {list.map((f, i) => {
           const numberLabel = String(i + 1).padStart(2, '0');
 
           return (
             <details
               key={f.title || i}
-              className="group rounded-xl border border-line/80 bg-white shadow-2xs transition-all duration-200 hover:border-brand/40 open:border-brand/50 open:shadow-sm"
+              className="group rounded-xl border border-line/80 bg-[#fafbfc] transition duration-200 hover:border-brand/40 hover:bg-white open:border-brand/50 open:bg-white open:shadow-xs"
               open={i === 0}
             >
               <summary className="flex min-h-14 cursor-pointer select-none items-center justify-between gap-4 px-5 py-4 text-left list-none [&::-webkit-details-marker]:hidden">
-                <span className="flex items-center gap-3.5">
+                <span className="flex items-center gap-3.5 min-w-0">
                   <span
                     className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-surface-2 font-display text-xs font-bold text-ink-2 transition-colors group-hover:bg-brand-soft group-hover:text-brand-strong group-open:bg-brand group-open:text-white"
                     aria-hidden="true"
@@ -129,7 +92,7 @@ export default function Faq({
                 </span>
 
                 <span
-                  className="flex size-7 shrink-0 items-center justify-center rounded-full border border-line/80 bg-surface-2 text-ink-2 transition-all duration-200 group-hover:border-brand/40 group-open:rotate-180 group-open:bg-brand group-open:text-white group-open:border-brand"
+                  className="flex size-7 shrink-0 items-center justify-center rounded-full border border-line/80 bg-white text-ink-2 transition-transform duration-200 group-hover:border-brand/40 group-open:rotate-180 group-open:bg-brand group-open:text-white group-open:border-brand shadow-3xs"
                   aria-hidden="true"
                 >
                   <svg
@@ -147,35 +110,31 @@ export default function Faq({
                 </span>
               </summary>
 
-              <div className="border-t border-line/50 bg-surface-2/25 px-5 pb-5 pt-3.5 sm:px-6 sm:pl-16 text-xs sm:text-sm leading-relaxed text-ink-2">
+              <div className="border-t border-line/50 bg-white px-5 pb-5 pt-3.5 sm:px-6 sm:pl-16 text-xs sm:text-sm leading-relaxed text-ink-2">
                 <p className="whitespace-pre-line">{f.description ?? ''}</p>
               </div>
             </details>
           );
         })}
+      </div>
 
-        {/* Centered Layout Bottom Help Desk Banner */}
-        {centered && (
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-xl border border-line/80 bg-surface-2/70 p-4 sm:p-5 text-xs text-ink-2">
-            <div className="flex items-center gap-2.5">
-              <span className="text-base" aria-hidden="true">
-                💡
-              </span>
-              <span>
-                Have a technical question or encountered an OS discrepancy not covered above?
-              </span>
-            </div>
-            <div className="flex items-center gap-4 shrink-0">
-              <Link
-                href="/contact-us"
-                className="font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
-              >
-                <span>Ask Editorial Desk</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-        )}
+      {/* Bottom Editorial Assistance Banner */}
+      <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-xl border border-line/80 bg-surface-2/60 p-4 sm:p-4.5 text-xs text-ink-2">
+        <div className="flex items-center gap-2.5">
+          <span className="text-base" aria-hidden="true">
+            💡
+          </span>
+          <span>
+            Have a technical question or encountered an OS version discrepancy not covered above?
+          </span>
+        </div>
+        <Link
+          href="/contact-us"
+          className="font-bold text-brand-strong hover:underline inline-flex items-center gap-1 shrink-0"
+        >
+          <span>Ask Editorial Desk</span>
+          <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </section>
   );
