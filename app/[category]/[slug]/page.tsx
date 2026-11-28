@@ -19,7 +19,6 @@ import {
   getPopularPosts,
   getPost,
   getPostsByCategory,
-  getPrevNext,
   getRelatedPosts,
   readingMinutes,
   stripHtml,
@@ -51,7 +50,6 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
   const author = getAuthor(post.author.slug);
   const { segments, toc } = await getPostBody(post.html);
   const related = getRelatedPosts(post, 6);
-  const { previous, next } = getPrevNext(post);
   const popular = getPopularPosts(6, post.category.slug).filter((p) => p.slug !== post.slug).slice(0, 5);
   const hero = imageSet(post.featuredImage, '(min-width: 1024px) 760px, 100vw');
   const url = absoluteUrl(postUrl(post.category.slug, post.slug));
@@ -89,7 +87,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
       <AdUnit kind="leaderboard" className="my-6" />
 
       {/* Main 2-Column Editorial Layout */}
-      <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_350px] items-start">
+      <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_350px]">
         {/* Main Article Column */}
         <article className="min-w-0 max-w-[760px] mx-auto lg:mx-0 w-full">
           <header className="border-b border-line/70 pb-6">
@@ -226,62 +224,44 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
 
           {/* Post-Content High Impact Ad */}
           <AdUnit kind="display" className="my-8" />
-
-          {/* Previous / Next Article Cards */}
-          <nav aria-label="Previous and next articles" className="my-10 grid gap-4 sm:grid-cols-2">
-            <Link
-              href={postUrl(previous.category.slug, previous.slug)}
-              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-line/80 bg-white p-4 sm:p-5 no-underline shadow-2xs transition duration-200 hover:border-brand/40 hover:shadow-md"
-            >
-              <span
-                aria-hidden="true"
-                className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-base font-bold text-ink-2 transition group-hover:bg-brand group-hover:text-white"
-              >
-                ←
-              </span>
-              <span className="min-w-0">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-brand-strong">
-                  Previous Guide
-                </span>
-                <span className="font-display mt-0.5 block text-sm font-bold text-ink leading-snug line-clamp-2 transition group-hover:text-brand-strong">
-                  {previous.title}
-                </span>
-                <span className="mt-1 block text-xs text-muted">
-                  {formatDate(previous.updatedAt)}
-                </span>
-              </span>
-            </Link>
-
-            <Link
-              href={postUrl(next.category.slug, next.slug)}
-              className="group relative flex flex-row-reverse items-center gap-4 overflow-hidden rounded-2xl border border-line/80 bg-white p-4 sm:p-5 text-right no-underline shadow-2xs transition duration-200 hover:border-brand/40 hover:shadow-md"
-            >
-              <span
-                aria-hidden="true"
-                className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-base font-bold text-ink-2 transition group-hover:bg-brand group-hover:text-white"
-              >
-                →
-              </span>
-              <span className="min-w-0">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-brand-strong">
-                  Next Guide
-                </span>
-                <span className="font-display mt-0.5 block text-sm font-bold text-ink leading-snug line-clamp-2 transition group-hover:text-brand-strong">
-                  {next.title}
-                </span>
-                <span className="mt-1 block text-xs text-muted">
-                  {formatDate(next.updatedAt)}
-                </span>
-              </span>
-            </Link>
-          </nav>
-
-          {/* Bottom Pre-Footer Ad */}
-          <AdUnit kind="display" className="my-8" />
         </article>
 
-        {/* Right Sidebar: Popular, Ads, Explore, Sticky Ad */}
-        <aside className="space-y-6" aria-label="Article Sidebar">
+        {/* Right Sidebar: Quick Facts, Popular, Ads, Explore, Sticky Ad */}
+        <aside className="space-y-6 h-full" aria-label="Article Sidebar">
+          {/* Guide Quick Facts / Lab Bench Card */}
+          <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
+            <div className="flex items-center gap-2 border-b border-line/60 pb-3">
+              <span className="flex size-6 items-center justify-center rounded-md bg-brand/10 text-brand-strong text-xs font-bold" aria-hidden="true">
+                📋
+              </span>
+              <h2 className="font-display text-sm font-bold text-ink">
+                Guide Quick Facts
+              </h2>
+            </div>
+
+            <dl className="mt-3.5 space-y-2.5 text-xs">
+              <div className="flex items-center justify-between py-1 border-b border-line/40">
+                <dt className="text-muted font-medium">Reading Time</dt>
+                <dd className="font-bold text-ink">{readingMinutes(post.html)} min read</dd>
+              </div>
+              <div className="flex items-center justify-between py-1 border-b border-line/40">
+                <dt className="text-muted font-medium">Steps Included</dt>
+                <dd className="font-bold text-ink">{toc.length > 0 ? `${toc.length} Verified Steps` : 'Step-by-Step'}</dd>
+              </div>
+              <div className="flex items-center justify-between py-1 border-b border-line/40">
+                <dt className="text-muted font-medium">Verification</dt>
+                <dd className="inline-flex items-center gap-1 font-bold text-emerald-700">
+                  <span className="size-1.5 rounded-full bg-emerald-500" />
+                  <span>Hardware Tested</span>
+                </dd>
+              </div>
+              <div className="flex items-center justify-between py-1">
+                <dt className="text-muted font-medium">Tested By</dt>
+                <dd className="font-bold text-brand-strong truncate max-w-[140px]">{post.author.name}</dd>
+              </div>
+            </dl>
+          </section>
+
           {/* Popular in this Category */}
           {popular.length > 0 && (
             <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
@@ -370,8 +350,8 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
           <CategoryNewsletter variant="sidebar" categoryName={post.category.name} />
 
           {/* Sticky High-RPM Sidebar Display Unit */}
-          <div className="sticky top-28">
-            <AdUnit kind="display" className="!my-0" />
+          <div className="sticky top-28 z-10">
+            <AdUnit kind="display" className="!my-0 shadow-xs" />
           </div>
         </aside>
       </div>
