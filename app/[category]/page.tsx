@@ -1,35 +1,31 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AdUnit from '@/components/ads/AdUnit';
+import CategoryFeedClient, {
+  type CategoryPostSummary,
+} from '@/components/category/CategoryFeedClient';
+import CategoryNewsletter from '@/components/category/CategoryNewsletter';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
 import Faq from '@/components/post/Faq';
-import LoadMore from '@/components/post/LoadMore';
-import PostCard from '@/components/post/PostCard';
-import EditorialNote from '@/components/category/EditorialNote';
 import { categoryCopy } from '@/config/category-content';
 import {
-  getAllPosts,
   getCategories,
   getCategory,
   getPopularPosts,
   getPostsByCategory,
+  getSite,
   readingMinutes,
+  stripHtml,
+  type Post,
 } from '@/lib/content';
+import { imageSet } from '@/lib/images';
 import { categoryMetadata, categorySchemas } from '@/lib/seo';
-import { categoryUrl, postUrl } from '@/lib/url';
+import { postUrl } from '@/lib/url';
 
 export const dynamicParams = false;
 
 type Params = { category: string };
-
-const categoryAccentDots: Record<string, string> = {
-  'how-to': 'bg-brand',
-  apps: 'bg-indigo-500',
-  tech: 'bg-emerald-500',
-  social: 'bg-pink-500',
-};
 
 export const generateStaticParams = (): Params[] =>
   getCategories().map((c) => ({ category: c.slug }));
@@ -44,6 +40,41 @@ export async function generateMetadata({
   return c ? categoryMetadata(c) : {};
 }
 
+function toSummary(p: Post): CategoryPostSummary {
+  return {
+    id: p.id,
+    slug: p.slug,
+    title: p.title,
+    description: stripHtml(p.description || p.excerpt),
+    publishedAt: p.publishedAt,
+    readMinutes: readingMinutes(p.html),
+    impressions: p.impressions,
+    tags: p.tags,
+    href: postUrl(p.category.slug, p.slug),
+    img: imageSet(p.thumbnailImage || p.featuredImage, '260px'),
+    alt: p.altImage || p.title,
+  };
+}
+
+const bannerThemes: Record<string, { bg: string; iconBg: string }> = {
+  'how-to': {
+    bg: 'from-[#eef2ff] via-[#f5f3ff] to-[#eef6ff] border-indigo-100',
+    iconBg: 'from-indigo-500 to-violet-600',
+  },
+  apps: {
+    bg: 'from-[#f0f9ff] via-[#eef2ff] to-[#f5f3ff] border-sky-100',
+    iconBg: 'from-sky-500 to-indigo-600',
+  },
+  tech: {
+    bg: 'from-[#ecfdf5] via-[#f0fdfa] to-[#eef2ff] border-emerald-100',
+    iconBg: 'from-emerald-500 to-teal-600',
+  },
+  social: {
+    bg: 'from-[#fff1f2] via-[#fdf2f8] to-[#f5f3ff] border-pink-100',
+    iconBg: 'from-pink-500 to-rose-600',
+  },
+};
+
 export default async function CategoryPage({
   params,
 }: {
@@ -53,19 +84,18 @@ export default async function CategoryPage({
   const c = getCategory(category);
   if (!c) notFound();
 
+  const site = getSite();
   const posts = getPostsByCategory(c.slug);
   const copy = categoryCopy[c.slug];
-  const picks = (copy?.picks ?? []).flatMap(([slug, why]) => {
-    const p = posts.find((x) => x.slug === slug);
-    return p ? [{ post: p, why }] : [];
-  });
-  const popular = getPopularPosts(5, c.slug);
-  const related = getAllPosts()
-    .filter((p) => p.category.slug !== c.slug)
-    .sort((a, b) => b.id - a.id)
-    .slice(0, 6);
+  const popular = getPopularPosts(5, c.slug).map(toSummary);
+  const latest = posts.slice(0, 3).map(toSummary);
+  const summaries = posts.map(toSummary);
+  const allCategories = getCategories().map((x) => ({
+    name: x.name,
+    slug: x.slug,
+  }));
 
-  const allCategories = getCategories();
+  const theme = bannerThemes[c.slug] || bannerThemes['how-to'];
 
   return (
     <>
@@ -73,369 +103,103 @@ export default async function CategoryPage({
         <JsonLd key={i} data={s} />
       ))}
 
-      {/* Modern Editorial Category Masthead */}
-      <div className="hero-band border-b border-line/70">
-        <header className="container-page py-8 sm:py-12">
-          <Breadcrumbs
-            items={[{ name: 'Home', href: '/' }, { name: c.name }]}
-          />
+      <div className="container-page pt-5 pb-12">
+        {/* Breadcrumbs */}
+        <Breadcrumbs
+          items={[{ name: 'Home', href: '/' }, { name: c.name }]}
+        />
 
-          {/* Quick Category Switcher Pills */}
-          <nav
-            aria-label="Category switcher"
-            className="mt-5 flex flex-wrap items-center gap-2"
-          >
-            <Link
-              href="/archive"
-              className="inline-flex items-center gap-1.5 rounded-xl border border-line/80 bg-white px-3.5 py-1.5 text-xs font-semibold text-ink-2 shadow-2xs transition hover:border-brand hover:text-brand-strong"
-            >
-              <span>All Guides</span>
-            </Link>
-            {allCategories.map((x) => {
-              const isCurrent = x.slug === c.slug;
-              const count = getPostsByCategory(x.slug).length;
-              return (
-                <Link
-                  key={x.slug}
-                  href={categoryUrl(x.slug)}
-                  className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-1.5 text-xs font-semibold shadow-2xs transition ${
-                    isCurrent
-                      ? 'bg-brand text-white shadow-brand/20'
-                      : 'border border-line/80 bg-white text-ink-2 hover:border-brand hover:text-brand-strong'
-                  }`}
+        {/* Modern Category Hero Banner */}
+        <header
+          className={`mt-4 relative overflow-hidden rounded-2xl border bg-gradient-to-r p-6 sm:p-8 lg:px-10 lg:py-9 shadow-2xs ${theme.bg}`}
+        >
+          <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-4">
+                <span
+                  className={`flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-md ${theme.iconBg}`}
+                  aria-hidden="true"
                 >
-                  {!isCurrent && (
-                    <span
-                      className={`size-1.5 rounded-full ${
-                        categoryAccentDots[x.slug] || 'bg-brand'
-                      }`}
-                      aria-hidden="true"
-                    />
-                  )}
-                  <span>{x.name}</span>
-                  <span
-                    className={`rounded-md px-1.5 py-0.5 text-[10px] font-bold ${
-                      isCurrent
-                        ? 'bg-white/25 text-white'
-                        : 'bg-surface-2 text-muted'
-                    }`}
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    {count}
-                  </span>
-                </Link>
-              );
-            })}
-          </nav>
+                    <path d="m12 2 9 4.9v10.2L12 22l-9-4.9V6.9L12 2z" />
+                    <path d="m12 22 9-4.9M12 22V11.8M12 11.8 3 6.9M12 11.8l9-4.9" />
+                  </svg>
+                </span>
+                <div>
+                  <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-ink">
+                    {copy?.heading ?? `${c.name} Guides`}
+                  </h1>
+                  <p className="mt-1 text-xs sm:text-sm text-ink-2 leading-relaxed">
+                    {c.metaDescription || copy?.intro?.[0]}
+                  </p>
+                </div>
+              </div>
 
-          {/* Category Eyebrow & Title */}
-          <div className="mt-6">
-            <div className="flex flex-wrap items-center gap-2.5 text-xs font-bold uppercase tracking-widest text-brand-strong">
-              <span>Category Hub</span>
-              <span className="text-line" aria-hidden="true">
-                •
-              </span>
-              <span className="text-ink-2">
-                {posts.length} Verified Guides
-              </span>
-              <span className="text-line" aria-hidden="true">
-                •
-              </span>
-              <span className="text-emerald-600">Hardware Tested</span>
+              {/* Metadata Pills */}
+              <div className="mt-5 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-line/70 px-3 py-1.5 text-ink shadow-2xs">
+                  <span aria-hidden="true">📄</span>
+                  <span>{posts.length} Guides</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-line/70 px-3 py-1.5 text-ink shadow-2xs">
+                  <span aria-hidden="true">✓</span>
+                  <span>Hardware Verified</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-line/70 px-3 py-1.5 text-ink shadow-2xs">
+                  <span aria-hidden="true">📅</span>
+                  <span>Updated Weekly</span>
+                </span>
+              </div>
             </div>
 
-            <h1 className="font-display mt-2 text-3xl font-bold leading-[1.12] tracking-tight text-ink sm:text-4xl lg:text-5xl">
-              {copy?.heading ?? c.name}
-            </h1>
-            <div
-              className="mt-4 h-1 w-14 rounded-full bg-brand"
-              aria-hidden="true"
-            />
+            {/* Decorative Vector Checklist Graphic (Right) */}
+            <div className="hidden md:block shrink-0 opacity-90" aria-hidden="true">
+              <svg width="180" height="115" viewBox="0 0 180 115" fill="none">
+                <rect x="24" y="12" width="132" height="86" rx="10" fill="white" fillOpacity="0.9" stroke="#C7D2FE" strokeWidth="2" />
+                <rect x="10" y="96" width="160" height="10" rx="5" fill="#C7D2FE" />
+                <rect x="44" y="28" width="92" height="14" rx="4" fill="#EEF2FF" />
+                <circle cx="52" cy="35" r="3.5" fill="#6366F1" />
+                <rect x="62" y="33" width="58" height="4" rx="2" fill="#818CF8" />
+                <rect x="44" y="50" width="92" height="14" rx="4" fill="#EEF2FF" />
+                <circle cx="52" cy="57" r="3.5" fill="#10B981" />
+                <rect x="62" y="55" width="48" height="4" rx="2" fill="#A5B4FC" />
+                <rect x="44" y="72" width="92" height="14" rx="4" fill="#EEF2FF" />
+                <circle cx="52" cy="79" r="3.5" fill="#F97316" />
+                <rect x="62" y="77" width="64" height="4" rx="2" fill="#A5B4FC" />
+              </svg>
+            </div>
           </div>
-
-          {/* Clean 2-Column Editorial Intro */}
-          {copy?.intro && (
-            <div className="mt-6 grid gap-5 text-sm sm:text-base leading-relaxed text-ink-2 lg:grid-cols-2 lg:gap-10">
-              {copy.intro.map((t) => (
-                <p key={t}>{t}</p>
-              ))}
-            </div>
-          )}
         </header>
-      </div>
 
-      <div className="container-page py-8">
-        {/* Cornerstone "Start Here" Picks */}
-        {picks.length > 0 && (
-          <section className="mb-10" aria-labelledby="start-here">
-            <div className="flex items-center gap-2.5 mb-4">
-              <span className="flex size-6 items-center justify-center rounded-lg bg-brand text-xs font-black text-white shadow-xs">
-                ★
-              </span>
-              <h2
-                id="start-here"
-                className="font-display text-xs font-bold uppercase tracking-widest text-ink sm:text-sm"
-              >
-                Essential Cornerstone Guides
-              </h2>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {picks.map(({ post, why }, idx) => (
-                <article
-                  key={post.slug}
-                  className="card group flex flex-col justify-between rounded-xl border border-line/80 bg-white p-5 shadow-2xs transition duration-200 hover:border-brand/40 hover:shadow-md"
-                >
-                  <div>
-                    <div className="flex items-center justify-between gap-2 text-[11px] font-bold uppercase tracking-wider">
-                      <span className="text-brand-strong">
-                        0{idx + 1} · ESSENTIAL
-                      </span>
-                      <span className="text-muted">
-                        {readingMinutes(post.html)} min read
-                      </span>
-                    </div>
-                    <h3 className="font-display mt-2 text-base font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
-                      <Link
-                        href={postUrl(post.category.slug, post.slug)}
-                        className="no-underline"
-                      >
-                        {post.title}
-                      </Link>
-                    </h3>
-                    <p className="mt-2 text-xs leading-relaxed text-ink-2 line-clamp-2">
-                      {why}
-                    </p>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-line/50">
-                    <Link
-                      href={postUrl(post.category.slug, post.slug)}
-                      className="inline-flex items-center gap-1 text-xs font-bold text-brand-strong hover:underline"
-                    >
-                      <span>Read Guide</span>
-                      <span
-                        aria-hidden="true"
-                        className="transition group-hover:translate-x-1"
-                      >
-                        →
-                      </span>
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* High-Viewability Top Leaderboard Ad */}
+        {/* Top High-RPM Leaderboard Ad */}
         <AdUnit kind="leaderboard" className="my-6" />
 
-        {/* Main 2-Column Content & Sticky Sidebar */}
-        <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px]">
-          {/* Left Column: Complete Category Feed */}
-          <div className="min-w-0">
-            <section aria-labelledby="all-posts">
-              <div className="flex items-end justify-between gap-4 border-b border-line/80 pb-3.5">
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-brand-strong">
-                    Complete Library
-                  </span>
-                  <h2
-                    id="all-posts"
-                    className="font-display mt-0.5 text-2xl font-bold tracking-tight text-ink"
-                  >
-                    All {c.name} Guides
-                  </h2>
-                </div>
-                <span className="rounded-lg bg-surface-2 px-2.5 py-1 text-xs font-semibold text-muted">
-                  {posts.length} articles
-                </span>
-              </div>
-
-              <div className="mt-6">
-                <LoadMore initial={12} className="grid gap-6 sm:grid-cols-2">
-                  {posts.map((p, i) => (
-                    <PostCard key={p.slug} post={p} priority={i < 2} />
-                  ))}
-                </LoadMore>
-              </div>
-            </section>
-
-            {/* In-Feed Ad below Main Grid */}
-            <AdUnit kind="inFeed" className="my-10" />
-          </div>
-
-          {/* Right Column: Ranked Popular, Directory & Sticky Ad */}
-          <aside aria-label="Sidebar" className="space-y-8">
-            {/* Popular in Category */}
-            {popular.length > 0 && (
-              <section
-                aria-labelledby="popular"
-                className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs"
-              >
-                <div className="flex items-center justify-between border-b border-line/60 pb-3">
-                  <h2
-                    id="popular"
-                    className="font-display flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-ink"
-                  >
-                    <span
-                      className="size-2 rounded-full bg-brand"
-                      aria-hidden="true"
-                    />
-                    <span>Popular in {c.name}</span>
-                  </h2>
-                </div>
-
-                <ul className="mt-4 divide-y divide-line/60">
-                  {popular.map((p, idx) => (
-                    <li
-                      key={p.slug}
-                      className="py-3 first:pt-0 last:pb-0"
-                    >
-                      <div className="flex items-start gap-2.5">
-                        <span className="font-display text-xs font-black text-brand-strong/70 pt-1">
-                          0{idx + 1}
-                        </span>
-                        <div className="min-w-0 flex-1">
-                          <PostCard post={p} compact />
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            {/* Sidebar Display Ad #1 */}
-            <AdUnit kind="display" className="!my-0" />
-
-            {/* Explore Other Hubs */}
-            <section
-              aria-labelledby="side-cats"
-              className="rounded-2xl border border-line/80 bg-surface-2/50 p-5 shadow-2xs"
-            >
-              <h2
-                id="side-cats"
-                className="font-display text-xs font-bold uppercase tracking-widest text-ink mb-4"
-              >
-                Explore Other Hubs
-              </h2>
-              <ul className="space-y-2.5">
-                {allCategories.map((x) => {
-                  const isCurrent = x.slug === c.slug;
-                  const count = getPostsByCategory(x.slug).length;
-                  return (
-                    <li key={x.slug}>
-                      <Link
-                        href={categoryUrl(x.slug)}
-                        aria-current={isCurrent ? 'page' : undefined}
-                        className={`group flex min-h-11 items-center justify-between gap-3 rounded-xl border px-4 no-underline transition duration-200 ${
-                          isCurrent
-                            ? 'border-brand bg-brand-soft/60 text-brand-strong font-bold'
-                            : 'border-line/80 bg-white text-ink-2 hover:border-brand hover:text-brand-strong'
-                        }`}
-                      >
-                        <span className="flex items-center gap-2.5 font-display text-sm font-bold">
-                          <span
-                            className={`size-2 rounded-full ${
-                              categoryAccentDots[x.slug] || 'bg-brand'
-                            }`}
-                            aria-hidden="true"
-                          />
-                          <span>{x.name}</span>
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <span className="rounded-md bg-surface-2 px-2 py-0.5 text-xs font-bold text-muted group-hover:text-ink">
-                            {count}
-                          </span>
-                          <span
-                            aria-hidden="true"
-                            className="text-xs transition group-hover:translate-x-1"
-                          >
-                            →
-                          </span>
-                        </span>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-
-            {/* Sticky High-RPM Sidebar Ad */}
-            <div className="sticky top-28">
-              <AdUnit kind="display" className="!my-0" />
-            </div>
-          </aside>
-        </div>
-
-        {/* Testing Methodology */}
-        {copy && <EditorialNote note={copy.note} />}
+        {/* 3-Column Interactive Category Layout */}
+        <CategoryFeedClient
+          category={{ name: c.name, slug: c.slug }}
+          posts={summaries}
+          popular={popular}
+          latest={latest}
+          allCategories={allCategories}
+          socialLinks={site.social}
+        />
 
         {/* Category Knowledge Base FAQ */}
-        <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
+        <div className="mt-14">
+          <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
+        </div>
 
-        <AdUnit kind="display" className="my-10" />
-
-        {/* Cross-Topic Discovery */}
-        {related.length > 0 && (
-          <section aria-labelledby="related" className="mt-12">
-            <div className="flex items-end justify-between border-b border-line/80 pb-3.5">
-              <div>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-brand-strong">
-                  Cross-Topic Discovery
-                </span>
-                <h2
-                  id="related"
-                  className="font-display mt-0.5 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
-                >
-                  More From Other Hubs
-                </h2>
-              </div>
-              <Link
-                href="/archive"
-                className="text-xs font-bold text-brand-strong hover:underline"
-              >
-                Full Library →
-              </Link>
-            </div>
-
-            <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((p) => (
-                <li key={p.slug}>
-                  <PostCard post={p} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {/* Bottom Category Navigation Strip */}
-        <nav
-          aria-label="Other categories"
-          className="mt-12 flex flex-wrap items-center gap-3 border-t border-line/70 pt-8"
-        >
-          <span className="text-xs font-bold uppercase tracking-wider text-muted mr-2">
-            Switch Hub:
-          </span>
-          {allCategories
-            .filter((x) => x.slug !== c.slug)
-            .map((x) => (
-              <Link
-                key={x.slug}
-                href={categoryUrl(x.slug)}
-                className="group inline-flex min-h-10 items-center gap-2 rounded-xl border border-line/80 bg-white px-4 py-2 text-sm font-bold text-ink no-underline shadow-2xs transition hover:border-brand hover:bg-brand hover:text-white"
-              >
-                <span>{x.name}</span>
-                <span
-                  aria-hidden="true"
-                  className="transition group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </Link>
-            ))}
-        </nav>
+        {/* Bottom Horizontal Newsletter Banner */}
+        <CategoryNewsletter variant="banner" categoryName={c.name} />
       </div>
     </>
   );
