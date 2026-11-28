@@ -264,57 +264,39 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
 
           {/* Popular in this Category */}
           {popular.length > 0 && (
-            <section className="rounded-2xl border border-line/80 bg-white p-5 sm:p-6 shadow-2xs">
-              <div className="flex items-center gap-2 border-b border-line/60 pb-3.5">
-                <span className="flex size-7 items-center justify-center rounded-lg bg-orange-100 text-brand-strong text-sm" aria-hidden="true">
+            <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
+              <div className="flex items-center gap-2 border-b border-line/60 pb-3">
+                <span className="text-base" aria-hidden="true">
                   🔥
                 </span>
-                <h2 className="font-display text-base font-bold text-ink">
+                <h2 className="font-display text-sm font-bold text-ink">
                   Popular in {post.category.name}
                 </h2>
               </div>
 
-              <ul className="mt-4 divide-y divide-line/60">
+              <ul className="mt-3.5 divide-y divide-line/60">
                 {popular.map((p, idx) => {
-                  const pImg = imageSet(p.thumbnailImage || p.featuredImage, '100px');
+                  const pImg = imageSet(p.thumbnailImage || p.featuredImage, '80px');
                   return (
-                    <li key={p.slug} className="py-3.5 first:pt-0 last:pb-0">
+                    <li key={p.slug} className="py-3 first:pt-0 last:pb-0">
                       <Link
                         href={postUrl(p.category.slug, p.slug)}
                         className="group flex items-start gap-3 no-underline"
                       >
-                        <span
-                          className={`flex size-6 shrink-0 items-center justify-center rounded-md font-display text-xs font-bold transition mt-0.5 ${
-                            idx === 0
-                              ? 'bg-brand text-white shadow-2xs'
-                              : idx === 1
-                              ? 'bg-brand-soft text-brand-strong'
-                              : idx === 2
-                              ? 'bg-amber-100 text-amber-800'
-                              : 'bg-surface-2 text-ink-2 group-hover:bg-brand-soft group-hover:text-brand-strong'
-                          }`}
-                          aria-hidden="true"
-                        >
+                        <span className="font-display text-xs font-bold text-muted pt-0.5 w-3 shrink-0">
                           {idx + 1}
                         </span>
                         <img
                           src={pImg.src}
                           alt=""
-                          width={100}
-                          height={65}
+                          width={80}
+                          height={50}
                           loading="lazy"
-                          className="w-20 h-[54px] shrink-0 rounded-xl object-cover bg-surface-2 border border-line/50 transition-transform duration-200 group-hover:scale-105"
+                          className="w-16 h-11 shrink-0 rounded-lg object-cover bg-surface-2"
                         />
-                        <div className="min-w-0 flex-1">
-                          <h3 className="font-display text-[13.5px] font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
-                            {p.title}
-                          </h3>
-                          <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
-                            <span>{readingMinutes(p.html)} min read</span>
-                            <span>•</span>
-                            <span>{formatDate(p.publishedAt)}</span>
-                          </div>
-                        </div>
+                        <span className="font-display text-xs font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
+                          {p.title}
+                        </span>
                       </Link>
                     </li>
                   );
