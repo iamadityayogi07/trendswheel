@@ -8,7 +8,7 @@ type NavLink = { label: string; href: string };
 type Cat = { name: string; slug: string };
 type Props = { categories: Cat[]; links: NavLink[] };
 
-const baseTab = 'relative inline-flex h-11 items-center px-3.5 font-display text-sm font-bold no-underline transition-colors';
+const baseTab = 'relative inline-flex h-11 items-center px-3.5 font-display text-[15.5px] font-bold tracking-tight no-underline transition-colors';
 const idleTab = 'text-ink-2 hover:text-brand-strong';
 const activeTab = 'text-brand-strong after:absolute after:bottom-0 after:left-2 after:right-2 after:h-[2.5px] after:bg-brand after:rounded-full';
 
@@ -50,7 +50,7 @@ export function DesktopNav({ categories, links }: Props) {
       <div className="group relative">
         <button
           type="button"
-          className="relative inline-flex h-11 items-center gap-1.5 px-3 font-display text-sm font-bold text-ink-2 transition-colors hover:text-brand-strong cursor-pointer"
+          className="relative inline-flex h-11 items-center gap-1.5 px-3 font-display text-[15.5px] font-bold tracking-tight text-ink-2 transition-colors hover:text-brand-strong cursor-pointer"
           aria-haspopup="true"
         >
           <span>More</span>
