@@ -113,8 +113,8 @@ export default function CategoryFeedClient({
   allCategories,
   socialLinks,
 }: Props) {
-  const INITIAL_COUNT = 6;
-  const STEP_COUNT = 6;
+  const INITIAL_COUNT = 8;
+  const STEP_COUNT = 8;
 
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'latest' | 'popular' | 'alpha'>('latest');
@@ -374,8 +374,8 @@ export default function CategoryFeedClient({
                 </div>
               </article>
 
-              {/* Strategic In-Feed Ads: after 3rd article, then every 6 articles as user loads more */}
-              {(idx === 2 || (idx > 2 && (idx - 2) % 6 === 0)) && (
+              {/* Strategic In-Feed Ads: after 3rd article, then every 8 articles as user loads more */}
+              {(idx === 2 || (idx > 2 && (idx - 2) % 8 === 0)) && (
                 <AdUnit key={`feed-ad-${idx}`} kind="inFeed" className="!my-4" />
               )}
             </Fragment>
