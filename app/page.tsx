@@ -3,35 +3,47 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import AboutSection from '@/components/home/AboutSection';
 import TrustSection from '@/components/home/TrustSection';
+import EditorialHero from '@/components/home/EditorialHero';
+import TrendingStrip from '@/components/home/TrendingStrip';
+import CategoryHubSection from '@/components/home/CategoryHubSection';
+import NewsletterCard from '@/components/home/NewsletterCard';
 import AdUnit from '@/components/ads/AdUnit';
 import JsonLd from '@/components/JsonLd';
 import Faq from '@/components/post/Faq';
 import PostCard from '@/components/post/PostCard';
 import { homeFaq } from '@/config/home-content';
 import { HOME_TITLE } from '@/config/site';
-import { getAllPosts, getCategories, getPostsByCategory, getSite, readingMinutes, stripHtml } from '@/lib/content';
-import { formatDate } from '@/lib/format';
-import { imageSet } from '@/lib/images';
+import { getAllPosts, getCategories, getPostsByCategory, getSite } from '@/lib/content';
 import { faqSchema, homeMetadata, websiteSchema } from '@/lib/seo';
-import { absoluteUrl, archiveUrl, categoryUrl, postUrl } from '@/lib/url';
+import { absoluteUrl, archiveUrl, categoryUrl } from '@/lib/url';
 
 export const metadata: Metadata = homeMetadata(HOME_TITLE);
 
 export default function HomePage() {
   const site = getSite();
-  const posts = getAllPosts();
-  const [featured, ...rest] = posts;
-  const latest = rest.slice(0, 6);
-  const hero = imageSet(featured.featuredImage, '(min-width: 1024px) 560px, 100vw');
-  const shown = new Set([featured.slug, ...latest.map((p) => p.slug)]);
-  const sections = getCategories()
-    .map((c) => {
-      const all = getPostsByCategory(c.slug);
-      // Prefer posts not already shown above; a small category still lists its newest posts so none goes missing.
-      const unseen = all.filter((p) => !shown.has(p.slug));
-      return { c, posts: (unseen.length >= 3 ? unseen : all).slice(0, 3), total: all.length };
-    })
-    .filter((s) => s.posts.length > 0);
+  const allPosts = getAllPosts();
+  const categories = getCategories();
+
+  // Top Editorial Curation:
+  // Post 0: Main Flagship Lead Story
+  // Posts 1..3: Spotlight Top Editorial Picks
+  // Posts 4..7: Trending Deep Dives
+  // Posts 8..13: Latest In-Depth Guides (6 posts)
+  const featured = allPosts[0];
+  const sideStories = allPosts.slice(1, 4);
+  const trending = allPosts.slice(4, 8);
+  const latestArticles = allPosts.slice(8, 14);
+
+  // Category Hubs: extract top 3 unseen or primary posts per category
+  const categorySections = categories.map((cat) => {
+    const catPosts = getPostsByCategory(cat.slug);
+    return {
+      category: cat,
+      posts: catPosts.slice(0, 3),
+      totalCount: catPosts.length,
+    };
+  });
+
   const faqLd = faqSchema(homeFaq, `${absoluteUrl('/')}#faq`);
 
   return (
@@ -39,100 +51,81 @@ export default function HomePage() {
       <JsonLd data={websiteSchema()} />
       {faqLd && <JsonLd data={faqLd} />}
 
-      <div className="hero-band">
-      <section aria-labelledby="hero-title" className="container-page grid items-center gap-8 py-10 lg:grid-cols-2 lg:py-14">
-        <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-brand-strong">{site.name}</p>
-          <h1 id="hero-title" className="font-display mt-2 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            Tech News, App Reviews &amp; How-To Guides
-          </h1>
-          <p className="mt-4 text-lg text-ink-2">{site.tagline}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link href={archiveUrl()} className="group inline-flex min-h-12 items-center gap-2 rounded-full bg-gradient-to-r from-brand to-brand-strong px-7 py-3 font-bold text-white no-underline shadow-lg shadow-brand/30 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand/40">
-              Browse all articles
-              <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
-            </Link>
-            <Link href={categoryUrl('how-to')} className="group inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-line bg-white px-7 py-3 font-bold text-ink no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft hover:text-brand-strong hover:shadow-md">
-              Android how-to guides
-              <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
-            </Link>
-          </div>
+      {/* Main Editorial Hero Band */}
+      <div className="hero-band border-b border-line/70">
+        <div className="container-page">
+          <EditorialHero featured={featured} sideStories={sideStories} />
         </div>
-        <article className="card">
-          <Link href={postUrl(featured.category.slug, featured.slug)} tabIndex={-1} aria-hidden="true">
-            <img src={hero.src} srcSet={hero.srcSet} sizes={hero.sizes} alt={featured.altImage || featured.title} width={1200} height={675} fetchPriority="high" className="thumb" />
-          </Link>
-          <div className="p-5">
-            <div className="flex items-center gap-3">
-              <Link href={categoryUrl(featured.category.slug)} className="chip">
-                {featured.category.name}
-              </Link>
-              <span className="text-sm text-muted">Featured</span>
-            </div>
-            <h2 className="font-display mt-3 text-2xl font-bold leading-snug">
-              <Link href={postUrl(featured.category.slug, featured.slug)} className="no-underline hover:text-brand-strong hover:underline">
-                {featured.title}
-              </Link>
-            </h2>
-            {featured.description && <p className="mt-2 line-clamp-3 text-ink-2">{stripHtml(featured.description)}</p>}
-            <p className="mt-3 text-sm text-muted">
-              {formatDate(featured.updatedAt)} · {readingMinutes(featured.html)} min read
-            </p>
-          </div>
-        </article>
-      </section>
       </div>
 
-      <div className="container-page pb-6">
-      <section className="mt-12" aria-labelledby="latest">
-        <div className="flex items-end justify-between gap-4">
-          <h2 id="latest" className="font-display text-2xl font-bold sm:text-3xl">
-            Latest articles
-          </h2>
-          <Link href={archiveUrl()} className="font-semibold text-brand-strong underline underline-offset-2">
-            View all
-          </Link>
-        </div>
-        <ul className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {latest.map((p) => (
-            <li key={p.slug}>
-              <PostCard post={p} />
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="container-page pb-12">
+        {/* Trending Highlights Strip */}
+        <TrendingStrip posts={trending} />
 
-      <AdUnit kind="inFeed" />
+        {/* AdSense Placement #1: Top Leaderboard */}
+        <AdUnit kind="display" className="my-6" />
 
-      {sections.map(({ c, posts: ps, total }) => (
-        <Fragment key={c.slug}>
-        <section className="mt-12" aria-labelledby={`cat-${c.slug}`}>
-          <div className="flex items-end justify-between gap-4">
-            <h2 id={`cat-${c.slug}`} className="font-display text-2xl font-bold">
-              {c.name}
-            </h2>
-            <Link href={categoryUrl(c.slug)} className="font-semibold text-brand-strong underline underline-offset-2">
-              All {total} articles
+        {/* Latest In-Depth Guides Section */}
+        <section className="mt-12" aria-labelledby="latest-heading">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-line/80 pb-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
+                Continuous Research
+              </span>
+              <h2 id="latest-heading" className="font-display mt-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+                Latest Deep Dives &amp; Field Guides
+              </h2>
+            </div>
+            <Link
+              href={archiveUrl()}
+              className="inline-flex items-center gap-1.5 font-bold text-sm text-brand-strong hover:underline"
+            >
+              <span>View all 248 guides in archive</span>
+              <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <ul className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {ps.map((p) => (
+
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {latestArticles.map((p) => (
               <li key={p.slug}>
                 <PostCard post={p} />
               </li>
             ))}
           </ul>
         </section>
-        <AdUnit kind="display" />
-        </Fragment>
-      ))}
 
-      <AboutSection site={site} />
-      <TrustSection />
+        {/* AdSense Placement #2: Mid-Content In-Feed Unit */}
+        <AdUnit kind="inFeed" className="my-12" />
 
-      <AdUnit kind="display" />
+        {/* Category-Wise Dedicated In-Depth Hubs */}
+        <div className="space-y-4">
+          {categorySections.map(({ category, posts, totalCount }, index) => (
+            <Fragment key={category.slug}>
+              <CategoryHubSection
+                category={category}
+                posts={posts}
+                totalCount={totalCount}
+              />
+              {/* Strategic AdSense placement after every 2 categories */}
+              {index === 1 && <AdUnit kind="display" className="my-8" />}
+            </Fragment>
+          ))}
+        </div>
 
-      <Faq items={homeFaq} heading="Frequently Asked Questions" centered />
+        {/* Modern Editorial Newsletter Dispatch */}
+        <NewsletterCard />
+
+        {/* Authority & Trust Standards */}
+        <TrustSection />
+
+        {/* Editorial About Section */}
+        <AboutSection site={site} />
+
+        {/* AdSense Placement #3: Bottom Display Unit */}
+        <AdUnit kind="display" className="my-10" />
+
+        {/* Frequently Asked Questions */}
+        <Faq items={homeFaq} heading="Frequently Asked Questions" centered />
       </div>
     </>
   );

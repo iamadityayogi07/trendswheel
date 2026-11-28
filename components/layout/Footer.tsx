@@ -71,7 +71,13 @@ export default function Footer() {
       <div className="container-page grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         <div>
           <Logo />
-          <p className="mt-5 max-w-xs text-ink-2">The TrendsWheel team — turning complex tech into simple, insightful stories.</p>
+          <p className="mt-4 max-w-sm text-sm text-ink-2 leading-relaxed">
+            TrendsWheel is an independent digital publication providing lab-tested technology guides, system diagnostics, and cyber forensics.
+          </p>
+          <div className="mt-3 flex items-center gap-2 text-xs font-semibold text-brand-strong">
+            <span className="size-2 rounded-full bg-emerald-500" aria-hidden="true" />
+            <span>248 In-Depth Guides Published</span>
+          </div>
           {Object.keys(site.social).length > 0 && (
             <ul className="mt-6 flex flex-wrap gap-2.5">
               {Object.entries(site.social).map(([name, url]) => (

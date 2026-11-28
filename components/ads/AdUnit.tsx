@@ -10,10 +10,18 @@ declare global {
 }
 
 /**
- * One AdSense unit. Renders nothing when its slot id is empty.
- * The unit is pushed once, when it is within ~300px of the viewport (better speed + viewability).
+ * One AdSense unit with guaranteed min-height (0 CLS) and clear editorial labeling.
+ * The unit is pushed once when it approaches viewport (300px rootMargin) for optimal viewability and speed.
  */
-export default function AdUnit({ kind = 'display', className = '' }: { kind?: AdKind; className?: string }) {
+export default function AdUnit({
+  kind = 'display',
+  className = '',
+  showLabel = true,
+}: {
+  kind?: AdKind;
+  className?: string;
+  showLabel?: boolean;
+}) {
   const slot = adSlots[kind];
   const box = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
@@ -22,7 +30,7 @@ export default function AdUnit({ kind = 'display', className = '' }: { kind?: Ad
     const el = box.current;
     if (!slot || !el) return;
     const push = () => {
-      if (pushed.current) return; // also guards React Strict Mode's double effect
+      if (pushed.current) return;
       pushed.current = true;
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -51,16 +59,30 @@ export default function AdUnit({ kind = 'display', className = '' }: { kind?: Ad
 
   const common = { className: 'adsbygoogle', 'data-ad-client': ADSENSE_CLIENT, 'data-ad-slot': slot } as const;
   return (
-    <aside className={`ad-slot ${className}`} aria-label="Advertisement" ref={box} style={{ minHeight: adMinHeight[kind] }}>
-      {kind === 'inArticle' && (
-        <ins {...common} style={{ display: 'block', textAlign: 'center' }} data-ad-layout="in-article" data-ad-format="fluid" />
+    <aside
+      className={`ad-slot my-8 mx-auto w-full max-w-5xl overflow-hidden rounded-xl border border-line/70 bg-[#fafbfc] p-3 text-center transition-shadow ${className}`}
+      aria-label="Advertisement"
+      ref={box}
+      style={{ minHeight: adMinHeight[kind] + (showLabel ? 28 : 0) }}
+    >
+      {showLabel && (
+        <div className="mb-2 flex items-center justify-center gap-2">
+          <span className="h-px w-8 bg-line" aria-hidden="true" />
+          <span className="text-[10px] font-bold uppercase tracking-widest text-muted/80">Advertisement</span>
+          <span className="h-px w-8 bg-line" aria-hidden="true" />
+        </div>
       )}
-      {kind === 'inFeed' && (
-        <ins {...common} style={{ display: 'block' }} data-ad-format="fluid" data-ad-layout-key={adSlots.inFeedLayoutKey} />
-      )}
-      {kind === 'display' && (
-        <ins {...common} style={{ display: 'block' }} data-ad-format="auto" data-full-width-responsive="true" />
-      )}
+      <div className="flex items-center justify-center overflow-hidden">
+        {kind === 'inArticle' && (
+          <ins {...common} style={{ display: 'block', textAlign: 'center', width: '100%' }} data-ad-layout="in-article" data-ad-format="fluid" />
+        )}
+        {kind === 'inFeed' && (
+          <ins {...common} style={{ display: 'block', width: '100%' }} data-ad-format="fluid" data-ad-layout-key={adSlots.inFeedLayoutKey} />
+        )}
+        {kind === 'display' && (
+          <ins {...common} style={{ display: 'block', width: '100%' }} data-ad-format="auto" data-full-width-responsive="true" />
+        )}
+      </div>
     </aside>
   );
 }
