@@ -375,7 +375,7 @@ export default function CategoryFeedClient({
 
               {/* Strategic In-Feed Ads: after 3rd article, then every 6 articles as user loads more */}
               {(idx === 2 || (idx > 2 && (idx - 2) % 6 === 0)) && (
-                <AdUnit kind="inFeed" className="!my-4" />
+                <AdUnit key={`feed-ad-${idx}`} kind="inFeed" className="!my-4" />
               )}
             </Fragment>
           ))}
