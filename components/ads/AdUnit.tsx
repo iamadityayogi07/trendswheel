@@ -22,7 +22,7 @@ export default function AdUnit({
   className?: string;
   showLabel?: boolean;
 }) {
-  const slot = adSlots[kind];
+  const slot = kind === 'leaderboard' ? adSlots.display : adSlots[kind];
   const box = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
 
@@ -78,6 +78,9 @@ export default function AdUnit({
         )}
         {kind === 'inFeed' && (
           <ins {...common} style={{ display: 'block', width: '100%' }} data-ad-format="fluid" data-ad-layout-key={adSlots.inFeedLayoutKey} />
+        )}
+        {kind === 'leaderboard' && (
+          <ins {...common} style={{ display: 'block', width: '100%' }} data-ad-format="auto" data-full-width-responsive="true" />
         )}
         {kind === 'display' && (
           <ins {...common} style={{ display: 'block', width: '100%' }} data-ad-format="auto" data-full-width-responsive="true" />

@@ -59,14 +59,17 @@ export default function HomePage() {
       </div>
 
       <div className="container-page pb-12">
+        {/* AdSense Placement #1: High-RPM Top Billboard (placed before Trending for 85%+ Active View rate) */}
+        <AdUnit kind="leaderboard" className="my-6" />
+
         {/* Trending Highlights Strip */}
         <TrendingStrip posts={trending} />
 
-        {/* AdSense Placement #1: Top Leaderboard */}
-        <AdUnit kind="display" className="my-6" />
+        {/* AdSense Placement #2: High-CTR Native In-Feed Unit */}
+        <AdUnit kind="inFeed" className="my-8" />
 
         {/* Latest In-Depth Guides Section */}
-        <section className="mt-12" aria-labelledby="latest-heading">
+        <section className="mt-8" aria-labelledby="latest-heading">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-line/80 pb-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
@@ -94,11 +97,8 @@ export default function HomePage() {
           </ul>
         </section>
 
-        {/* AdSense Placement #2: Mid-Content In-Feed Unit */}
-        <AdUnit kind="inFeed" className="my-12" />
-
         {/* Category-Wise Dedicated In-Depth Hubs */}
-        <div className="space-y-4">
+        <div className="mt-12 space-y-4">
           {categorySections.map(({ category, posts, totalCount }, index) => (
             <Fragment key={category.slug}>
               <CategoryHubSection
@@ -106,8 +106,9 @@ export default function HomePage() {
                 posts={posts}
                 totalCount={totalCount}
               />
-              {/* Strategic AdSense placement after every 2 categories */}
-              {index === 1 && <AdUnit kind="display" className="my-8" />}
+              {/* Strategic AdSense placements between Category Hubs for continuous engagement */}
+              {index === 0 && <AdUnit kind="inFeed" className="my-8" />}
+              {index === 2 && <AdUnit kind="display" className="my-8" />}
             </Fragment>
           ))}
         </div>

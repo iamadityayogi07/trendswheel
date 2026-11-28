@@ -11,13 +11,14 @@ export const adSlots = {
   inFeedLayoutKey: '-gi-2e+as-aj-bs',
 } as const;
 
-export type AdKind = 'display' | 'inArticle' | 'inFeed';
+export type AdKind = 'display' | 'inArticle' | 'inFeed' | 'leaderboard';
 
 /** Reserved heights (px) so an ad never makes the page jump. */
 export const adMinHeight: Record<AdKind, number> = {
   display: 280,
   inArticle: 250,
   inFeed: 250,
+  leaderboard: 110,
 };
 
 /** Roughly one in-article ad per this many words, never above the cap. */
