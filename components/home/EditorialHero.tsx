@@ -41,7 +41,6 @@ export default function EditorialHero({ featured, sideStories }: Props) {
 
         {/* Quick Topic Jump Pills */}
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-muted shrink-0">Topics:</span>
           {trendingTopics.map((topic) => (
             <Link
               key={topic.name}
