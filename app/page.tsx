@@ -26,13 +26,13 @@ export default function HomePage() {
 
   // Top Editorial Curation:
   // Post 0: Main Flagship Lead Story
-  // Posts 1..3: Spotlight Top Editorial Picks
-  // Posts 4..7: Trending Deep Dives
-  // Posts 8..13: Latest In-Depth Guides (6 posts)
+  // Posts 1..4: Spotlight Deep Dives (4 posts to balance column height perfectly)
+  // Posts 5..8: Trending Highlights (4 posts)
+  // Posts 9..14: Latest In-Depth Guides (6 posts)
   const featured = allPosts[0];
-  const sideStories = allPosts.slice(1, 4);
-  const trending = allPosts.slice(4, 8);
-  const latestArticles = allPosts.slice(8, 14);
+  const sideStories = allPosts.slice(1, 5);
+  const trending = allPosts.slice(5, 9);
+  const latestArticles = allPosts.slice(9, 15);
 
   // Category Hubs: extract top 3 unseen or primary posts per category
   const categorySections = categories.map((cat) => {
