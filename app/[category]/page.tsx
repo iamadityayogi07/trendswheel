@@ -5,6 +5,7 @@ import CategoryFeedClient, {
   type CategoryPostSummary,
 } from '@/components/category/CategoryFeedClient';
 import CategoryNewsletter from '@/components/category/CategoryNewsletter';
+import RelatedCategories from '@/components/category/RelatedCategories';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
 import Faq from '@/components/post/Faq';
@@ -94,6 +95,17 @@ export default async function CategoryPage({
     name: x.name,
     slug: x.slug,
   }));
+
+  const relatedCategories = getCategories()
+    .filter((cat) => cat.slug !== c.slug)
+    .map((cat) => {
+      const catPosts = getPostsByCategory(cat.slug);
+      return {
+        category: cat,
+        posts: catPosts.slice(0, 3),
+        totalCount: catPosts.length,
+      };
+    });
 
   const theme = bannerThemes[c.slug] || bannerThemes['how-to'];
 
@@ -191,6 +203,12 @@ export default async function CategoryPage({
           latest={latest}
           allCategories={allCategories}
           socialLinks={site.social}
+        />
+
+        {/* Related Categories: 3 Posts Each */}
+        <RelatedCategories
+          currentCategoryName={c.name}
+          relatedCategories={relatedCategories}
         />
 
         {/* High-Impact Pre-FAQ Display Unit */}
