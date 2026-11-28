@@ -59,7 +59,7 @@ export default function EditorialHero({ featured, sideStories }: Props) {
         {/* Left Column: Flagship Story Card (7 cols) */}
         <article className="card group relative flex flex-col h-full border border-line/90 bg-white shadow-md lg:col-span-7 transition-all duration-300 hover:shadow-xl hover:border-brand/30">
           {/* Featured Image with Badges */}
-          <Link href={heroHref} className="relative aspect-video w-full overflow-hidden bg-surface-2 shrink-0" tabIndex={-1} aria-hidden="true">
+          <Link href={heroHref} className="relative aspect-[16/10] sm:aspect-video lg:h-[290px] w-full overflow-hidden bg-surface-2 shrink-0" tabIndex={-1} aria-hidden="true">
             <img
               src={heroImg.src}
               srcSet={heroImg.srcSet}
@@ -86,7 +86,7 @@ export default function EditorialHero({ featured, sideStories }: Props) {
           </Link>
 
           {/* Article Info & Body */}
-          <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
+          <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
             <div>
               <div className="flex flex-wrap items-center gap-2.5 text-xs text-muted">
                 <span className="flex items-center gap-1.5 font-bold text-ink">
@@ -107,21 +107,21 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                 </span>
               </div>
 
-              <h1 id="editorial-lead" className="font-display mt-3 text-2xl font-bold leading-tight tracking-tight sm:text-3xl text-ink">
+              <h1 id="editorial-lead" className="font-display mt-2.5 text-xl sm:text-2xl font-bold leading-snug tracking-tight text-ink line-clamp-2">
                 <Link href={heroHref} className="no-underline transition hover:text-brand-strong">
                   {featured.title}
                 </Link>
               </h1>
 
               {featured.description && (
-                <p className="mt-2.5 line-clamp-3 text-sm sm:text-base leading-relaxed text-ink-2">
+                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-2">
                   {stripHtml(featured.description)}
                 </p>
               )}
             </div>
 
             {/* Bottom Action Row */}
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-4 border-t border-line/70 pt-4">
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-4 border-t border-line/70 pt-3.5">
               <div className="flex flex-wrap items-center gap-1.5">
                 {displayTags.map((tag) => (
                   <span
@@ -144,7 +144,7 @@ export default function EditorialHero({ featured, sideStories }: Props) {
           </div>
         </article>
 
-        {/* Right Column: Unified Spotlight Panel (5 cols) matching Left Card height with 5 posts */}
+        {/* Right Column: Unified Spotlight Panel (5 cols) matching Left Card height naturally */}
         <aside aria-label="Spotlight Deep Dives" className="card flex flex-col h-full border border-line/90 bg-white shadow-md lg:col-span-5 overflow-hidden">
           {/* Panel Header */}
           <div className="flex items-center justify-between border-b border-line bg-surface-2/60 px-5 py-3 shrink-0">
@@ -159,9 +159,9 @@ export default function EditorialHero({ featured, sideStories }: Props) {
             </span>
           </div>
 
-          {/* 5 Compact, Content-Filled Editorial Rows (No excessive white space) */}
-          <div className="flex flex-1 flex-col justify-between divide-y divide-line/60">
-            {sideStories.slice(0, 5).map((post, idx) => {
+          {/* 4 Content-Filled Editorial Rows (Zero artificial white space) */}
+          <div className="flex flex-1 flex-col divide-y divide-line/60">
+            {sideStories.slice(0, 4).map((post, idx) => {
               const href = postUrl(post.category.slug, post.slug);
               const img = imageSet(post.thumbnailImage || post.featuredImage, '160px');
               const chipClass = `chip chip-${post.category.slug}`;
@@ -170,18 +170,17 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                 '02 · TRENDING TECH',
                 '03 · SYSTEM GUIDE',
                 '04 · PRIVACY AUDIT',
-                '05 · MUST READ',
               ];
 
               return (
                 <article
                   key={post.slug}
-                  className="group flex items-center gap-3.5 px-4 py-2.5 sm:px-5 sm:py-2.5 transition duration-150 hover:bg-brand-soft/25"
+                  className="group flex flex-1 items-center gap-3.5 px-4 py-3 sm:px-5 transition duration-150 hover:bg-brand-soft/25"
                 >
                   {/* Thumbnail */}
                   <Link
                     href={href}
-                    className="relative aspect-video w-22 sm:w-24 shrink-0 overflow-hidden rounded-lg bg-surface-2 shadow-2xs"
+                    className="relative aspect-video w-24 sm:w-28 shrink-0 overflow-hidden rounded-lg bg-surface-2 shadow-2xs"
                     tabIndex={-1}
                     aria-hidden="true"
                   >
@@ -190,8 +189,8 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                       srcSet={img.srcSet}
                       sizes={img.sizes}
                       alt=""
-                      width={180}
-                      height={101}
+                      width={200}
+                      height={112}
                       loading="lazy"
                       decoding="async"
                       className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -214,6 +213,12 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                         {post.title}
                       </Link>
                     </h3>
+
+                    {post.description && (
+                      <p className="mt-0.5 text-[11px] text-muted line-clamp-1">
+                        {stripHtml(post.description)}
+                      </p>
+                    )}
 
                     <div className="mt-1 flex items-center justify-between gap-2 text-xs">
                       <Link href={categoryUrl(post.category.slug)} className={chipClass}>
