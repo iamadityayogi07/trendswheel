@@ -276,35 +276,6 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
             </Link>
           </nav>
 
-          {/* More Guides in Current Category */}
-          {related.length > 0 && (
-            <section aria-labelledby="same-category-guides" className="mt-10 border-t border-line/70 pt-8">
-              <div className="flex items-center justify-between gap-4 mb-5">
-                <div className="flex items-center gap-2">
-                  <span className={`chip chip-${post.category.slug}`}>
-                    {post.category.name}
-                  </span>
-                  <h2 id="same-category-guides" className="font-display text-lg sm:text-xl font-bold text-ink">
-                    More in {post.category.name}
-                  </h2>
-                </div>
-                <Link
-                  href={categoryUrl(post.category.slug)}
-                  className="text-xs font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
-                >
-                  <span>All {post.category.name}</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {related.slice(0, 2).map((p) => (
-                  <PostCard key={p.slug} post={p} sizes="(min-width: 640px) 340px, 100vw" />
-                ))}
-              </div>
-            </section>
-          )}
-
           {/* Bottom Pre-Footer Ad */}
           <AdUnit kind="display" className="my-8" />
         </article>
@@ -404,6 +375,54 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
           </div>
         </aside>
       </div>
+
+      {/* Full-Width Same-Category Guides: 3 Articles in a Row */}
+      {related.length > 0 && (
+        <section
+          aria-labelledby="same-category-guides"
+          className="mt-14 border-t border-line/80 pt-10"
+        >
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-line/60">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className={`chip chip-${post.category.slug}`}>
+                  {post.category.name}
+                </span>
+                <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
+                  Recommended Reading
+                </span>
+              </div>
+              <h2
+                id="same-category-guides"
+                className="font-display mt-1.5 text-2xl sm:text-3xl font-bold tracking-tight text-ink"
+              >
+                More in {post.category.name}
+              </h2>
+              <p className="mt-1 text-xs sm:text-sm text-ink-2 max-w-2xl leading-relaxed">
+                Continue reading our latest field-tested guides, tutorials, and deep dives in {post.category.name}.
+              </p>
+            </div>
+
+            <Link
+              href={categoryUrl(post.category.slug)}
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-strong hover:underline shrink-0"
+            >
+              <span>Explore all {post.category.name} guides</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {related.slice(0, 3).map((p) => (
+              <PostCard
+                key={p.slug}
+                post={p}
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Full-Width Recommended Reading: Related Categories & Recommended Guides (3 posts each) */}
       <RelatedCategories
