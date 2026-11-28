@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AdUnit from '@/components/ads/AdUnit';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
 import { getLegalPage } from '@/lib/content';
@@ -108,7 +109,7 @@ export default function PrivacyPolicyPage() {
         </header>
 
         {/* 2-Column Responsive Layout */}
-        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_320px] items-start">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_320px]">
           {/* Main Legal Content */}
           <main className="space-y-6">
             {/* Quick Summary Highlights Box */}
@@ -182,10 +183,10 @@ export default function PrivacyPolicyPage() {
             </div>
           </main>
 
-          {/* Right Sidebar: Sticky Table of Contents & Legal Links */}
-          <aside className="space-y-6" aria-label="Legal Navigation">
+          {/* Right Sidebar: Policy Sections, Legal Links, Sticky Ad */}
+          <aside className="space-y-6 h-full" aria-label="Legal Navigation">
             {/* Table of Contents Jump Nav */}
-            <nav className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs sticky top-28">
+            <nav className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
               <div className="flex items-center gap-2 border-b border-line/60 pb-3">
                 <span className="flex size-6 items-center justify-center rounded-md bg-brand/10 text-brand-strong text-xs font-bold" aria-hidden="true">
                   📑
@@ -244,6 +245,11 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
             </nav>
+
+            {/* Sticky Sidebar High-RPM Display Unit */}
+            <div className="sticky top-28 z-10">
+              <AdUnit kind="display" className="!my-0 shadow-xs" />
+            </div>
           </aside>
         </div>
       </div>
