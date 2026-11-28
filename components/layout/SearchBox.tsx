@@ -5,6 +5,13 @@ import { useEffect, useId, useRef, useState } from 'react';
 
 type Item = { title: string; url: string; category: string; description: string; keywords: string };
 
+const categoryBadgeClass: Record<string, string> = {
+  'how-to': 'bg-brand/10 text-brand-strong',
+  apps: 'bg-indigo-50 text-indigo-700',
+  tech: 'bg-emerald-50 text-emerald-700',
+  social: 'bg-pink-50 text-pink-700',
+};
+
 /**
  * Autocomplete search box with keyboard shortcut (Cmd+K / Ctrl+K),
  * fast static index caching, and editorial result badges.
@@ -62,12 +69,12 @@ export default function SearchBox({ className = '' }: { className?: string }) {
       <div className="relative flex items-center">
         <svg
           className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted"
-          width="17"
-          height="17"
+          width="16"
+          height="16"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.4"
           strokeLinecap="round"
           aria-hidden="true"
         >
@@ -79,7 +86,7 @@ export default function SearchBox({ className = '' }: { className?: string }) {
           id={id}
           type="search"
           value={q}
-          placeholder="Search 248 guides..."
+          placeholder="Search 248 verified guides..."
           autoComplete="off"
           onFocus={() => {
             load();
@@ -90,46 +97,49 @@ export default function SearchBox({ className = '' }: { className?: string }) {
             setOpen(true);
           }}
           onKeyDown={(e) => e.key === 'Escape' && setOpen(false)}
-          className="h-10 w-full rounded-full border border-line bg-surface-2/70 pl-10 pr-12 text-sm text-ink placeholder:text-muted transition duration-200 focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand-soft shadow-inner"
+          className="h-10 w-full rounded-xl border border-line/80 bg-surface-2/60 pl-10 pr-12 text-sm text-ink placeholder:text-muted transition duration-200 hover:border-line focus:border-brand focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/15 shadow-2xs"
         />
-        <kbd className="pointer-events-none absolute right-3 hidden rounded border border-line bg-white px-1.5 py-0.5 text-[10px] font-semibold text-muted shadow-xs sm:inline-block">
+        <kbd className="pointer-events-none absolute right-2.5 hidden rounded-md border border-line/80 bg-white px-1.5 py-0.5 font-mono text-[10px] font-bold text-muted shadow-2xs sm:inline-block">
           ⌘K
         </kbd>
       </div>
 
       {open && term.length >= 2 && (
-        <ul className="absolute right-0 z-50 mt-2 max-h-96 w-[min(92vw,420px)] overflow-auto rounded-2xl border border-line bg-white p-2 shadow-2xl animate-in fade-in slide-in-from-top-2">
+        <ul className="absolute right-0 z-50 mt-2 max-h-96 w-[min(92vw,440px)] overflow-auto rounded-2xl border border-line bg-white/95 p-2 shadow-2xl backdrop-blur-md animate-in fade-in slide-in-from-top-2">
           {results.length === 0 && (
-            <li className="px-4 py-4 text-center text-sm text-muted">
-              {items ? 'No matching guides found.' : 'Loading index...'}
+            <li className="px-4 py-6 text-center text-sm text-muted">
+              {items ? 'No matching guides found in library.' : 'Loading search index...'}
             </li>
           )}
-          {results.map((r) => (
-            <li key={r.url}>
-              <Link
-                href={r.url}
-                onClick={() => setOpen(false)}
-                className="group flex flex-col gap-1 rounded-xl px-3.5 py-2.5 no-underline transition hover:bg-brand-soft/50"
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-brand-strong">
-                    {r.category}
+          {results.map((r) => {
+            const badgeClass = categoryBadgeClass[r.category.toLowerCase()] || 'bg-surface-2 text-ink-2';
+            return (
+              <li key={r.url}>
+                <Link
+                  href={r.url}
+                  onClick={() => setOpen(false)}
+                  className="group flex flex-col gap-1 rounded-xl px-3.5 py-2.5 no-underline transition hover:bg-brand-soft/40"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className={`inline-block rounded-md px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${badgeClass}`}>
+                      {r.category}
+                    </span>
+                    <span className="text-[11px] font-medium text-brand-strong opacity-0 group-hover:opacity-100 transition">
+                      Read guide →
+                    </span>
+                  </div>
+                  <span className="text-sm font-semibold text-ink group-hover:text-brand-strong transition line-clamp-1">
+                    {r.title}
                   </span>
-                  <span className="text-[11px] text-muted opacity-0 group-hover:opacity-100 transition">
-                    Read guide →
-                  </span>
-                </div>
-                <span className="text-sm font-semibold text-ink group-hover:text-brand-strong transition line-clamp-1">
-                  {r.title}
-                </span>
-                {r.description && (
-                  <span className="text-xs text-muted line-clamp-1">
-                    {r.description}
-                  </span>
-                )}
-              </Link>
-            </li>
-          ))}
+                  {r.description && (
+                    <span className="text-xs text-muted line-clamp-1">
+                      {r.description}
+                    </span>
+                  )}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
