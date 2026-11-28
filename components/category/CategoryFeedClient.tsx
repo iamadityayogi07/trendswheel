@@ -400,37 +400,55 @@ export default function CategoryFeedClient({
       <aside aria-label="Popular and related guides" className="space-y-6 h-full">
         {/* Popular Guides Card */}
         {popular.length > 0 && (
-          <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
-            <div className="flex items-center gap-2 border-b border-line/60 pb-3">
-              <span className="text-base" aria-hidden="true">
+          <section className="rounded-2xl border border-line/80 bg-white p-5 sm:p-6 shadow-2xs">
+            <div className="flex items-center gap-2 border-b border-line/60 pb-3.5">
+              <span className="flex size-7 items-center justify-center rounded-lg bg-orange-100 text-brand-strong text-sm" aria-hidden="true">
                 🔥
               </span>
-              <h2 className="font-display text-sm font-bold text-ink">
+              <h2 className="font-display text-base font-bold text-ink">
                 Popular {category.name} Guides
               </h2>
             </div>
 
-            <ul className="mt-3.5 divide-y divide-line/60">
+            <ul className="mt-4 divide-y divide-line/60">
               {popular.map((p, idx) => (
-                <li key={p.slug} className="py-3 first:pt-0 last:pb-0">
+                <li key={p.slug} className="py-3.5 first:pt-0 last:pb-0">
                   <Link
                     href={p.href}
                     className="group flex items-start gap-3 no-underline"
                   >
-                    <span className="font-display text-xs font-bold text-muted pt-0.5 w-3 shrink-0">
+                    <span
+                      className={`flex size-6 shrink-0 items-center justify-center rounded-md font-display text-xs font-bold transition mt-0.5 ${
+                        idx === 0
+                          ? 'bg-brand text-white shadow-2xs'
+                          : idx === 1
+                          ? 'bg-brand-soft text-brand-strong'
+                          : idx === 2
+                          ? 'bg-amber-100 text-amber-800'
+                          : 'bg-surface-2 text-ink-2 group-hover:bg-brand-soft group-hover:text-brand-strong'
+                      }`}
+                      aria-hidden="true"
+                    >
                       {idx + 1}
                     </span>
                     <img
                       src={p.img.src}
                       alt=""
-                      width={80}
-                      height={50}
+                      width={100}
+                      height={65}
                       loading="lazy"
-                      className="w-16 h-11 shrink-0 rounded-lg object-cover bg-surface-2"
+                      className="w-20 h-[54px] shrink-0 rounded-xl object-cover bg-surface-2 border border-line/50 transition-transform duration-200 group-hover:scale-105"
                     />
-                    <span className="font-display text-xs font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
-                      {p.title}
-                    </span>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-display text-[13.5px] font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
+                        {p.title}
+                      </h3>
+                      <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
+                        <span>{p.readMinutes} min read</span>
+                        <span>•</span>
+                        <span>{formatDate(p.publishedAt)}</span>
+                      </div>
+                    </div>
                   </Link>
                 </li>
               ))}
@@ -482,43 +500,50 @@ export default function CategoryFeedClient({
 
         {/* Latest Guides Card */}
         {latest.length > 0 && (
-          <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
-            <div className="flex items-center gap-2 border-b border-line/60 pb-3">
-              <span className="text-brand-strong" aria-hidden="true">
+          <section className="rounded-2xl border border-line/80 bg-white p-5 sm:p-6 shadow-2xs">
+            <div className="flex items-center gap-2 border-b border-line/60 pb-3.5">
+              <span className="flex size-7 items-center justify-center rounded-lg bg-brand/10 text-brand-strong" aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 6v6l4 2" />
                 </svg>
               </span>
-              <h2 className="font-display text-sm font-bold text-ink">
+              <h2 className="font-display text-base font-bold text-ink">
                 Latest {category.name} Guides
               </h2>
             </div>
 
-            <ul className="mt-3.5 space-y-3">
+            <ul className="mt-4 space-y-3.5">
               {latest.map((p) => (
                 <li key={p.slug}>
                   <Link
                     href={p.href}
-                    className="group flex items-center gap-3 no-underline"
+                    className="group flex items-start gap-3 no-underline"
                   >
                     <img
                       src={p.img.src}
                       alt=""
-                      width={80}
-                      height={50}
+                      width={100}
+                      height={65}
                       loading="lazy"
-                      className="w-16 h-11 shrink-0 rounded-lg object-cover bg-surface-2"
+                      className="w-20 h-[54px] shrink-0 rounded-xl object-cover bg-surface-2 border border-line/50 transition-transform duration-200 group-hover:scale-105"
                     />
-                    <span className="font-display text-xs font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
-                      {p.title}
-                    </span>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-display text-[13.5px] font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
+                        {p.title}
+                      </h3>
+                      <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
+                        <span>{p.readMinutes} min read</span>
+                        <span>•</span>
+                        <span>{formatDate(p.publishedAt)}</span>
+                      </div>
+                    </div>
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-4 border-t border-line/60 pt-3 text-center">
+            <div className="mt-5 border-t border-line/60 pt-3.5 text-center">
               <button
                 type="button"
                 onClick={() => {
@@ -527,9 +552,10 @@ export default function CategoryFeedClient({
                   setShown(INITIAL_COUNT);
                   window.scrollTo({ top: 320, behavior: 'smooth' });
                 }}
-                className="text-xs font-bold text-brand-strong hover:underline cursor-pointer"
+                className="inline-flex w-full items-center justify-center rounded-xl border border-line/80 bg-surface-2/60 py-2.5 text-xs font-bold text-brand-strong transition hover:bg-brand hover:text-white cursor-pointer"
               >
-                View All {category.name} Guides →
+                <span>View All {category.name} Guides</span>
+                <span aria-hidden="true" className="ml-1">→</span>
               </button>
             </div>
           </section>
