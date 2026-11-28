@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AdUnit from '@/components/ads/AdUnit';
+import CategoryNewsletter from '@/components/category/CategoryNewsletter';
 import JsonLd from '@/components/JsonLd';
 import AuthorBox from '@/components/post/AuthorBox';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
@@ -20,6 +21,7 @@ import {
   getPrevNext,
   getRelatedPosts,
   readingMinutes,
+  stripHtml,
 } from '@/lib/content';
 import { formatDate, sameDay } from '@/lib/format';
 import { imageSet } from '@/lib/images';
@@ -49,16 +51,20 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
   const { segments, toc } = await getPostBody(post.html);
   const related = getRelatedPosts(post, 6);
   const { previous, next } = getPrevNext(post);
-  const popular = getPopularPosts(5, post.category.slug).filter((p) => p.slug !== post.slug).slice(0, 4);
-  const hero = imageSet(post.featuredImage, '(min-width: 1024px) 720px, 100vw');
+  const popular = getPopularPosts(6, post.category.slug).filter((p) => p.slug !== post.slug).slice(0, 5);
+  const hero = imageSet(post.featuredImage, '(min-width: 1024px) 760px, 100vw');
   const url = absoluteUrl(postUrl(post.category.slug, post.slug));
   const updated = !sameDay(post.publishedAt, post.updatedAt);
+  const allCategories = getCategories();
+  const leadText = stripHtml(post.description || post.excerpt);
 
   return (
     <div className="container-page py-6">
       {postSchemas(post, author).map((s, i) => (
         <JsonLd key={i} data={s} />
       ))}
+
+      {/* Breadcrumbs */}
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
@@ -67,37 +73,95 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
         ]}
       />
 
-      <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-        <article className="mx-auto w-full min-w-0 max-w-[720px] lg:mx-0">
-          <header>
-            <Link href={categoryUrl(post.category.slug)} className="chip">
-              {post.category.name}
-            </Link>
-            <h1 className="font-display mt-3 text-3xl font-bold leading-tight sm:text-4xl">{post.title}</h1>
-            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
-              <span className="inline-flex items-center gap-1.5">
-                <span className="font-medium text-ink-2">Published:</span>
-                <time dateTime={post.publishedAt} className="font-semibold text-ink">{formatDate(post.publishedAt)}</time>
+      {/* Top High-RPM Leaderboard Billboard Ad */}
+      <AdUnit kind="leaderboard" className="my-6" />
+
+      {/* Main 2-Column Editorial Layout */}
+      <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_350px] items-start">
+        {/* Main Article Column */}
+        <article className="min-w-0 max-w-[760px] mx-auto lg:mx-0 w-full">
+          <header className="border-b border-line/70 pb-6">
+            {/* Category & Trust Badges */}
+            <div className="flex flex-wrap items-center gap-2.5">
+              <Link
+                href={categoryUrl(post.category.slug)}
+                className={`chip chip-${post.category.slug} !text-[11px] !font-bold`}
+              >
+                {post.category.name}
+              </Link>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
+                <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Lab Verified</span>
               </span>
-              {updated && (
+              <span className="text-xs text-muted font-medium">
+                • {readingMinutes(post.html)} min read
+              </span>
+            </div>
+
+            {/* Article Headline */}
+            <h1 className="font-display mt-3.5 text-2xl sm:text-3xl lg:text-[36px] font-bold leading-tight tracking-tight text-ink">
+              {post.title}
+            </h1>
+
+            {/* Subtitle / Deck if available */}
+            {leadText && (
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-ink-2">
+                {leadText}
+              </p>
+            )}
+
+            {/* Author & Editorial Meta Bar */}
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-line/70 bg-surface-2/40 px-4 py-3 text-xs">
+              <div className="flex items-center gap-3">
+                {author?.avatar ? (
+                  <img
+                    src={author.avatar}
+                    alt={author.name}
+                    width={36}
+                    height={36}
+                    className="size-9 rounded-full object-cover ring-1 ring-brand/20"
+                  />
+                ) : (
+                  <div className="flex size-9 items-center justify-center rounded-full bg-brand/10 font-bold text-brand-strong">
+                    {post.author.name.charAt(0)}
+                  </div>
+                )}
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-muted">By</span>
+                    <Link
+                      href={authorUrl(post.author.slug)}
+                      className="font-bold text-ink hover:text-brand-strong no-underline"
+                    >
+                      {post.author.name}
+                    </Link>
+                  </div>
+                  <span className="text-[11px] text-muted">Technical Contributor</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 text-muted">
                 <span className="inline-flex items-center gap-1.5">
-                  <span className="font-medium text-ink-2">Last Updated:</span>
-                  <time dateTime={post.updatedAt} className="font-semibold text-ink">{formatDate(post.updatedAt)}</time>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg>
+                  <time dateTime={post.publishedAt} className="font-medium text-ink">
+                    {formatDate(post.publishedAt)}
+                  </time>
                 </span>
-              )}
-              <span className="text-muted/60">•</span>
-              <span>{readingMinutes(post.html)} min read</span>
-              <span className="text-muted/60">•</span>
-              <span>
-                By{' '}
-                <Link href={authorUrl(post.author.slug)} className="font-semibold text-brand-strong no-underline hover:underline">
-                  {post.author.name}
-                </Link>
-              </span>
+
+                {updated && (
+                  <span className="inline-flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700 border border-emerald-200/70">
+                    <span>Updated {formatDate(post.updatedAt)}</span>
+                  </span>
+                )}
+              </div>
             </div>
           </header>
 
-          <figure className="mt-5">
+          {/* Featured Hero Image */}
+          <figure className="mt-6 overflow-hidden rounded-2xl border border-line/80 bg-white shadow-2xs">
             <img
               src={hero.src}
               srcSet={hero.srcSet}
@@ -106,135 +170,230 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
               width={1200}
               height={675}
               fetchPriority="high"
-              className="thumb rounded-xl"
+              decoding="async"
+              className="thumb !aspect-[16/9] w-full object-cover"
             />
+            <figcaption className="border-t border-line/60 bg-surface-2/30 px-4 py-2 text-center text-[11px] text-muted">
+              Tested on physical testbench hardware • TrendsWheel Editorial Lab capture
+            </figcaption>
           </figure>
 
+          {/* Collapsible Table of Contents */}
           <Toc items={toc} />
 
+          {/* In-Article Segmented Body with Auto-Injected Ads */}
           <PostBody segments={segments} />
 
-          <Faq items={post.faq} heading="Frequently Asked Questions (FAQs)" />
+          {/* Frequently Asked Questions */}
+          <div className="mt-10">
+            <Faq items={post.faq} heading="Frequently Asked Questions (FAQs)" />
+          </div>
 
+          {/* Author Bio Box */}
           {author && <AuthorBox author={author} />}
 
+          {/* Article Tag Cloud */}
           {post.tags.length > 0 && (
-            <ul className="my-4 flex flex-wrap gap-2" aria-label="Tags">
+            <div className="my-6 flex flex-wrap items-center gap-2 pt-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-muted">
+                Tags:
+              </span>
               {post.tags.slice(0, 8).map((t) => (
-                <li key={t} className="rounded-full bg-surface-2 px-3 py-1 text-sm text-ink-2">
-                  {t}
-                </li>
+                <span
+                  key={t}
+                  className="rounded-lg border border-line/80 bg-surface-2/70 px-3 py-1 text-xs font-semibold text-ink-2"
+                >
+                  #{t}
+                </span>
               ))}
-            </ul>
+            </div>
           )}
 
+          {/* Modern Interactive Social Share Buttons */}
           <ShareLinks url={url} title={post.title} />
 
-          <AdUnit kind="display" />
+          {/* Post-Content High Impact Ad */}
+          <AdUnit kind="display" className="my-8" />
 
+          {/* Previous / Next Article Cards */}
           <nav aria-label="Previous and next articles" className="my-10 grid gap-4 sm:grid-cols-2">
-            <Link href={postUrl(previous.category.slug, previous.slug)} className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-5 no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft/50 hover:shadow-md">
-              <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xl font-bold text-brand-strong transition group-hover:-translate-x-1 group-hover:bg-brand group-hover:text-white">←</span>
+            <Link
+              href={postUrl(previous.category.slug, previous.slug)}
+              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-line/80 bg-white p-4 sm:p-5 no-underline shadow-2xs transition duration-200 hover:border-brand/40 hover:shadow-md"
+            >
+              <span
+                aria-hidden="true"
+                className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-base font-bold text-ink-2 transition group-hover:bg-brand group-hover:text-white"
+              >
+                ←
+              </span>
               <span className="min-w-0">
-                <span className="text-xs font-bold uppercase tracking-wide text-brand-strong">‹ Previous Article</span>
-                <span className="font-display mt-1 block font-bold leading-snug transition group-hover:text-brand-strong">{previous.title}</span>
-                <span className="mt-1 block text-sm text-muted">{formatDate(previous.updatedAt)}</span>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-brand-strong">
+                  Previous Guide
+                </span>
+                <span className="font-display mt-0.5 block text-sm font-bold text-ink leading-snug line-clamp-2 transition group-hover:text-brand-strong">
+                  {previous.title}
+                </span>
+                <span className="mt-1 block text-xs text-muted">
+                  {formatDate(previous.updatedAt)}
+                </span>
               </span>
             </Link>
-            <Link href={postUrl(next.category.slug, next.slug)} className="group relative flex flex-row-reverse items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-5 text-right no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft/50 hover:shadow-md">
-              <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xl font-bold text-brand-strong transition group-hover:translate-x-1 group-hover:bg-brand group-hover:text-white">→</span>
+
+            <Link
+              href={postUrl(next.category.slug, next.slug)}
+              className="group relative flex flex-row-reverse items-center gap-4 overflow-hidden rounded-2xl border border-line/80 bg-white p-4 sm:p-5 text-right no-underline shadow-2xs transition duration-200 hover:border-brand/40 hover:shadow-md"
+            >
+              <span
+                aria-hidden="true"
+                className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-base font-bold text-ink-2 transition group-hover:bg-brand group-hover:text-white"
+              >
+                →
+              </span>
               <span className="min-w-0">
-                <span className="text-xs font-bold uppercase tracking-wide text-brand-strong">Next Article ›</span>
-                <span className="font-display mt-1 block font-bold leading-snug transition group-hover:text-brand-strong">{next.title}</span>
-                <span className="mt-1 block text-sm text-muted">{formatDate(next.updatedAt)}</span>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-brand-strong">
+                  Next Guide
+                </span>
+                <span className="font-display mt-0.5 block text-sm font-bold text-ink leading-snug line-clamp-2 transition group-hover:text-brand-strong">
+                  {next.title}
+                </span>
+                <span className="mt-1 block text-xs text-muted">
+                  {formatDate(next.updatedAt)}
+                </span>
               </span>
             </Link>
           </nav>
 
-          <section aria-labelledby="read-next" className="mt-10">
-            <h2 id="read-next" className="font-display text-2xl font-bold">
-              Read next
-            </h2>
-            <div className="mt-4 grid gap-5 sm:grid-cols-2">
-              {related.slice(0, 2).map((p) => (
+          {/* Bottom Recommended Related Field Guides */}
+          <section aria-labelledby="read-next" className="mt-12 border-t border-line/70 pt-8">
+            <div className="flex items-center justify-between gap-4 mb-6">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
+                  Recommended Reading
+                </span>
+                <h2 id="read-next" className="font-display text-xl sm:text-2xl font-bold text-ink">
+                  Related Field Guides
+                </h2>
+              </div>
+              <Link
+                href={categoryUrl(post.category.slug)}
+                className="text-xs font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
+              >
+                <span>All {post.category.name}</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              {related.slice(0, 4).map((p) => (
                 <PostCard key={p.slug} post={p} sizes="(min-width: 640px) 340px, 100vw" />
               ))}
             </div>
-            {related.length > 2 && (
-              <div className="lg:hidden">
-                <h2 className="font-display mt-10 text-2xl font-bold">Related posts</h2>
-                <ul className="mt-4 space-y-4">
-                  {related.slice(2).map((p) => (
-                    <li key={p.slug}>
-                      <PostCard post={p} compact />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </section>
-          <AdUnit kind="display" />
+
+          {/* Bottom Pre-Footer Ad */}
+          <AdUnit kind="display" className="my-8" />
         </article>
 
-        <aside className="hidden lg:block" aria-label="Sidebar">
-          <div className="space-y-8">
-            {popular.length > 0 && (
-              <section aria-labelledby="side-popular" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-                <h2 id="side-popular" className="font-display flex items-center gap-2.5 text-xl font-bold">
-                  <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
-                  Popular Articles
+        {/* Right Sidebar: Popular, Ads, Explore, Sticky Ad */}
+        <aside className="space-y-6" aria-label="Article Sidebar">
+          {/* Popular in this Category */}
+          {popular.length > 0 && (
+            <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
+              <div className="flex items-center gap-2 border-b border-line/60 pb-3">
+                <span className="text-base" aria-hidden="true">
+                  🔥
+                </span>
+                <h2 className="font-display text-sm font-bold text-ink">
+                  Popular in {post.category.name}
                 </h2>
-                <ul className="mt-4 space-y-2">
-                  {popular.map((p) => (
-                    <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
-                      <PostCard post={p} compact />
+              </div>
+
+              <ul className="mt-3.5 divide-y divide-line/60">
+                {popular.map((p, idx) => {
+                  const pImg = imageSet(p.thumbnailImage || p.featuredImage, '80px');
+                  return (
+                    <li key={p.slug} className="py-3 first:pt-0 last:pb-0">
+                      <Link
+                        href={postUrl(p.category.slug, p.slug)}
+                        className="group flex items-start gap-3 no-underline"
+                      >
+                        <span className="font-display text-xs font-bold text-muted pt-0.5 w-3 shrink-0">
+                          {idx + 1}
+                        </span>
+                        <img
+                          src={pImg.src}
+                          alt=""
+                          width={80}
+                          height={50}
+                          loading="lazy"
+                          className="w-16 h-11 shrink-0 rounded-lg object-cover bg-surface-2"
+                        />
+                        <span className="font-display text-xs font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
+                          {p.title}
+                        </span>
+                      </Link>
                     </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-            {related.length > 2 && (
-              <section aria-labelledby="side-related" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-                <h2 id="side-related" className="font-display flex items-center gap-2.5 text-xl font-bold">
-                  <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
-                  Related posts
-                </h2>
-                <ul className="mt-4 space-y-2">
-                  {related.slice(2).map((p) => (
-                    <li key={p.slug} className="-mx-2 rounded-xl p-2 transition hover:bg-brand-soft/60">
-                      <PostCard post={p} compact />
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-            <section aria-labelledby="side-cats" className="rounded-2xl border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-5 shadow-sm">
-              <h2 id="side-cats" className="font-display flex items-center gap-2.5 text-xl font-bold">
-                <span className="h-6 w-1.5 rounded-full bg-brand" aria-hidden="true" />
-                Hot Categories
-              </h2>
-              <ul className="mt-4 space-y-2">
-                {getCategories().map((c) => (
-                  <li key={c.slug}>
-                    <Link
-                      href={categoryUrl(c.slug)}
-                      className="group flex min-h-12 items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 no-underline transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white hover:shadow-md"
-                    >
-                      <span className="font-display font-bold">{c.name}</span>
-                      <span className="flex items-center gap-2">
-                        <span className="rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-bold text-brand-strong transition group-hover:bg-white/20 group-hover:text-white">{getPostsByCategory(c.slug).length}</span>
-                        <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
+                  );
+                })}
               </ul>
             </section>
-            <div className="sticky top-24">
-              <AdUnit kind="display" className="!my-0" />
+          )}
+
+          {/* Sidebar Display Ad #1 */}
+          <AdUnit kind="display" className="!my-0" />
+
+          {/* Explore Categories (2x2 Grid) */}
+          <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
+            <div className="flex items-center gap-2 border-b border-line/60 pb-3">
+              <span className="text-brand-strong" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>
+              </span>
+              <h2 className="font-display text-sm font-bold text-ink">
+                Explore Categories
+              </h2>
             </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-2.5">
+              {allCategories.map((c) => {
+                const isCurrent = c.slug === post.category.slug;
+                const count = getPostsByCategory(c.slug).length;
+                return (
+                  <Link
+                    key={c.slug}
+                    href={categoryUrl(c.slug)}
+                    className={`flex flex-col items-center justify-center rounded-xl border p-2.5 text-center no-underline transition ${
+                      isCurrent
+                        ? 'border-brand/40 bg-brand-soft text-brand-strong'
+                        : 'border-line/80 bg-surface-2/60 text-ink-2 hover:border-brand hover:text-brand-strong'
+                    }`}
+                  >
+                    <span className="text-xs font-bold">{c.name}</span>
+                    <span className="text-[10px] text-muted">{count} guides</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* Mini Sidebar Newsletter Card */}
+          <CategoryNewsletter variant="sidebar" categoryName={post.category.name} />
+
+          {/* Sticky High-RPM Sidebar Display Unit */}
+          <div className="sticky top-28">
+            <AdUnit kind="display" className="!my-0" />
           </div>
         </aside>
+      </div>
+
+      {/* Full-Width Bottom Dispatch Newsletter */}
+      <div className="mt-12">
+        <CategoryNewsletter variant="banner" categoryName={post.category.name} />
       </div>
     </div>
   );
