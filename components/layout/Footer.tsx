@@ -4,8 +4,8 @@ import { getCategories, getSite } from '@/lib/content';
 import { archiveUrl, categoryUrl, homeUrl, staticPageUrl } from '@/lib/url';
 
 const ico = {
-  width: 17,
-  height: 17,
+  width: 15,
+  height: 15,
   viewBox: '0 0 24 24',
   fill: 'none',
   stroke: 'currentColor',
@@ -49,134 +49,50 @@ const socialIcons: Record<string, React.ReactNode> = {
   ),
 };
 
-const categoryDots: Record<string, string> = {
-  'how-to': 'bg-brand shadow-[0_0_8px_rgba(230,74,25,0.6)]',
-  apps: 'bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.6)]',
-  tech: 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]',
-  social: 'bg-pink-400 shadow-[0_0_8px_rgba(244,114,182,0.6)]',
-};
-
 export default function Footer() {
   const site = getSite();
   const categories = getCategories();
 
   return (
-    <footer className="mt-28 border-t border-white/10 bg-[#090d16] text-slate-200 selection:bg-brand selection:text-white relative overflow-hidden">
-      {/* Subtle Ambient Radial Glow */}
+    <footer className="mt-16 border-t border-line/80 bg-white text-ink">
+      {/* Signature Thin Editorial Top Line */}
       <div
-        className="pointer-events-none absolute -top-40 right-1/4 size-96 rounded-full bg-brand/10 blur-[120px]"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 size-80 rounded-full bg-cyan-500/5 blur-[100px]"
+        className="h-0.5 bg-gradient-to-r from-brand via-orange-400 to-amber-300"
         aria-hidden="true"
       />
 
-      {/* Top Radiant Gradient Line */}
-      <div
-        className="h-[2px] bg-gradient-to-r from-brand via-orange-500 to-amber-400"
-        aria-hidden="true"
-      />
-
-      {/* Authority Masthead Strip */}
-      <div className="border-b border-white/10 bg-white/[0.02] py-6">
-        <div className="container-page flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-          <div className="flex items-center gap-3.5">
-            <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-strong font-display text-xs font-black text-white shadow-md shadow-brand/20">
-              TW
-            </span>
-            <div>
-              <p className="font-display text-sm font-bold tracking-wide text-white">
-                TrendsWheel Systems &amp; Forensics Lab
-              </p>
-              <p className="text-xs text-slate-400">
-                Independent Hardware Diagnostics, OS Internals &amp; Deep Technical Journalism
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3 text-xs font-medium">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3.5 py-1.5 text-slate-300">
-              <span className="size-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
-              <span className="font-semibold text-white">248 Lab Guides</span>
-              <span className="text-slate-500">•</span>
-              <span>Live Library</span>
-            </span>
-
-            <Link
-              href="/feed.xml"
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3.5 py-1.5 text-slate-300 transition hover:bg-white/10 hover:border-brand/50 hover:text-white"
-            >
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M4 11a9 9 0 0 1 9 9" />
-                <path d="M4 4a16 16 0 0 1 16 16" />
-                <circle cx="5" cy="19" r="1" />
-              </svg>
-              <span>RSS Feed</span>
+      <div className="container-page py-10">
+        {/* Main Compact Grid */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:items-start">
+          {/* Brand & Publication Summary (5 cols) */}
+          <div className="lg:col-span-5">
+            <Link href={homeUrl()} className="inline-block" aria-label="TrendsWheel Home">
+              <img
+                src={site.logo || '/settings/trendswheel-logo-3471a0.png'}
+                alt="TrendsWheel"
+                width={140}
+                height={40}
+                className="h-9 w-auto object-contain"
+                loading="lazy"
+              />
             </Link>
 
-            <Link
-              href="/archive"
-              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-1.5 font-bold text-white shadow-sm shadow-brand/25 transition hover:bg-brand-strong"
-            >
-              <span>Explore Archive →</span>
-            </Link>
-          </div>
-        </div>
-      </div>
+            <p className="mt-3 max-w-sm text-xs leading-relaxed text-ink-2">
+              Independent systems journalism covering physical hardware diagnostics, mobile operating systems, software audits, and privacy architecture.
+            </p>
 
-      {/* Main 4-Column Editorial Body */}
-      <div className="container-page grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
-        {/* Column 1: Brand & Mission (5 cols) */}
-        <div className="lg:col-span-5">
-          <Link href={homeUrl()} className="inline-block" aria-label="TrendsWheel Home">
-            <img
-              src="/settings/trendswheel-logo-dark-d38b5d.png"
-              alt="TrendsWheel"
-              width={180}
-              height={52}
-              className="h-11 w-auto object-contain"
-              loading="lazy"
-            />
-          </Link>
-
-          <p className="mt-5 max-w-md text-xs sm:text-sm text-slate-400 leading-relaxed">
-            TrendsWheel is an independent digital publication producing peer-verified technical tutorials, Android system diagnostics, mobile software audits, and digital privacy architecture analyses. Every workflow is reproduced on physical hardware prior to publication.
-          </p>
-
-          {/* Dark Glass Trust Badges */}
-          <div className="mt-6 flex flex-wrap gap-2 text-xs">
-            <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/5 border border-white/10 px-3 py-1 font-medium text-slate-300">
-              <span className="text-emerald-400 font-bold" aria-hidden="true">✓</span>
-              <span>100% Hardware Tested</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/5 border border-white/10 px-3 py-1 font-medium text-slate-300">
-              <span className="text-cyan-400 font-bold" aria-hidden="true">●</span>
-              <span>Named Human Authors</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/5 border border-white/10 px-3 py-1 font-medium text-slate-300">
-              <span className="text-amber-400 font-bold" aria-hidden="true">★</span>
-              <span>Zero Paywalls</span>
-            </span>
-          </div>
-
-          {/* Social Channels */}
-          {Object.keys(site.social).length > 0 && (
-            <div className="mt-7">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                Follow our investigations
+            <div className="mt-3.5 flex items-center gap-3 text-xs text-muted">
+              <span className="inline-flex items-center gap-1.5 font-semibold text-ink">
+                <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                248 Verified Guides
               </span>
-              <ul className="mt-2.5 flex flex-wrap gap-2.5">
+              <span aria-hidden="true">•</span>
+              <span>100% Tested on Hardware</span>
+            </div>
+
+            {/* Compact Social Row */}
+            {Object.keys(site.social).length > 0 && (
+              <ul className="mt-4 flex flex-wrap gap-2">
                 {Object.entries(site.social).map(([name, url]) => (
                   <li key={name}>
                     <a
@@ -185,183 +101,124 @@ export default function Footer() {
                       rel="noopener nofollow"
                       aria-label={name}
                       title={name}
-                      className="flex size-9.5 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white shadow-xs"
+                      className="flex size-8 items-center justify-center rounded-md border border-line/80 bg-surface-2 text-ink-2 transition-all hover:border-brand hover:bg-brand hover:text-white"
                     >
                       {socialIcons[name] ?? (
-                        <span className="text-xs font-bold uppercase">
-                          {name.slice(0, 2)}
-                        </span>
+                        <span className="text-[10px] font-bold uppercase">{name.slice(0, 2)}</span>
                       )}
                     </a>
                   </li>
                 ))}
               </ul>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
 
-        {/* Column 2: Editorial Sections (2 cols) */}
-        <nav aria-label="Editorial Categories" className="lg:col-span-2">
-          <h2 className="font-display text-xs font-bold uppercase tracking-widest text-white mb-5 flex items-center gap-2">
-            <span>Editorial Hubs</span>
-            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
-          </h2>
-          <ul className="space-y-3 text-xs sm:text-sm">
-            {categories.map((c) => {
-              const dotClass = categoryDots[c.slug] || 'bg-brand';
-              return (
+          {/* Quick Links: Categories (2 cols) */}
+          <div className="lg:col-span-2">
+            <span className="font-display text-[11px] font-bold uppercase tracking-wider text-ink">
+              Categories
+            </span>
+            <ul className="mt-3 space-y-2 text-xs">
+              {categories.map((c) => (
                 <li key={c.slug}>
                   <Link
                     href={categoryUrl(c.slug)}
-                    className="group inline-flex items-center gap-2.5 text-slate-400 no-underline transition hover:translate-x-1 hover:text-white"
+                    className="text-ink-2 transition hover:text-brand-strong"
                   >
-                    <span
-                      className={`size-2 rounded-full ${dotClass} transition-transform group-hover:scale-125`}
-                      aria-hidden="true"
-                    />
-                    <span>{c.name}</span>
+                    {c.name}
                   </Link>
                 </li>
-              );
-            })}
-            <li className="pt-2">
-              <Link
-                href={archiveUrl()}
-                className="font-bold text-xs uppercase tracking-wider text-brand hover:text-orange-400 transition inline-flex items-center gap-1.5"
-              >
-                <span>Full Archive</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Column 3: Governance & Feeds (2 cols) */}
-        <nav aria-label="Quick links" className="lg:col-span-2">
-          <h2 className="font-display text-xs font-bold uppercase tracking-widest text-white mb-5 flex items-center gap-2">
-            <span>Governance</span>
-            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
-          </h2>
-          <ul className="space-y-3 text-xs sm:text-sm">
-            {footerLinks.map((l) => (
-              <li key={l.href}>
+              ))}
+              <li className="pt-1">
                 <Link
-                  href={l.href}
-                  className="inline-flex items-center gap-2 text-slate-400 no-underline transition hover:translate-x-1 hover:text-white"
+                  href={archiveUrl()}
+                  className="font-semibold text-brand-strong hover:underline"
                 >
-                  <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
-                  <span>{l.label}</span>
+                  All Guides →
                 </Link>
               </li>
-            ))}
-            <li>
-              <Link
-                href="/feed.xml"
-                className="inline-flex items-center gap-2 text-slate-400 no-underline transition hover:translate-x-1 hover:text-white"
-              >
-                <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
-                <span>XML RSS Feed</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/sitemap.xml"
-                className="inline-flex items-center gap-2 text-slate-400 no-underline transition hover:translate-x-1 hover:text-white"
-              >
-                <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
-                <span>Sitemap Index</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+            </ul>
+          </div>
 
-        {/* Column 4: Editorial Desk Card (3 cols) */}
-        <div className="lg:col-span-3">
-          <h2 className="font-display text-xs font-bold uppercase tracking-widest text-white mb-5 flex items-center gap-2">
-            <span>Editorial Lab Desk</span>
-            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
-          </h2>
+          {/* Quick Links: Governance (2 cols) */}
+          <div className="lg:col-span-2">
+            <span className="font-display text-[11px] font-bold uppercase tracking-wider text-ink">
+              Company
+            </span>
+            <ul className="mt-3 space-y-2 text-xs">
+              {footerLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-ink-2 transition hover:text-brand-strong"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/feed.xml"
+                  className="text-ink-2 transition hover:text-brand-strong"
+                >
+                  RSS Feed
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-xl backdrop-blur-xs space-y-4 text-xs">
-            <div className="flex items-start gap-3 text-slate-300">
-              <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-brand">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </span>
-              <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Lab Headquarters</span>
-                <span className="text-slate-200">{site.address}</span>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 text-slate-300">
-              <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-brand">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <rect x="2" y="4" width="20" height="16" rx="3" />
-                  <path d="m2 7 10 7 10-7" />
-                </svg>
-              </span>
-              <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Direct Inquiries</span>
+          {/* Compact Editorial Desk (3 cols) */}
+          <div className="lg:col-span-3">
+            <span className="font-display text-[11px] font-bold uppercase tracking-wider text-ink">
+              Editorial Desk
+            </span>
+            <div className="mt-3 space-y-2 text-xs text-ink-2">
+              <p className="flex items-center gap-1.5 text-muted">
+                <span>📍</span>
+                <span>{site.address}</span>
+              </p>
+              <p className="flex items-center gap-1.5">
+                <span>✉️</span>
                 <a
                   href={`mailto:${site.email}`}
-                  className="font-semibold text-brand hover:text-orange-400 transition break-all"
+                  className="font-medium text-brand-strong hover:underline"
                 >
                   {site.email}
                 </a>
-              </div>
-            </div>
-
-            <div className="pt-3 border-t border-white/10">
-              <p className="text-[11px] text-slate-400 leading-relaxed">
-                Spotted an updated app setting or OS beta discrepancy?
               </p>
-              <Link
-                href={staticPageUrl('contact-us')}
-                className="mt-2.5 inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-brand/15 border border-brand/30 py-2 px-3 font-display text-xs font-bold text-orange-300 transition hover:bg-brand hover:text-white"
-              >
-                <span>Submit a Lab Correction</span>
-                <span aria-hidden="true">→</span>
-              </Link>
+              <div className="pt-2 text-[11px]">
+                <span className="text-muted">Need a guide updated? </span>
+                <Link
+                  href={staticPageUrl('contact-us')}
+                  className="font-bold text-brand-strong hover:underline"
+                >
+                  Submit correction →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Sub-Footer Legal Bar */}
-      <div className="border-t border-white/10 bg-[#05070c] py-6">
-        <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>
-            © {new Date().getFullYear()} TrendsWheel. All rights reserved. Published under independent editorial standards.
-          </p>
+        {/* Compact Bottom Bar */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-line/70 pt-5 text-xs text-muted">
+          <p>© {new Date().getFullYear()} TrendsWheel. All rights reserved.</p>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <Link
-              href={staticPageUrl('privacy-policy')}
-              className="hover:text-white transition"
-            >
-              Privacy Policy
+          <div className="flex items-center gap-4">
+            <Link href={staticPageUrl('privacy-policy')} className="hover:text-ink">
+              Privacy
             </Link>
-            <span aria-hidden="true" className="text-slate-600">•</span>
-            <Link
-              href={staticPageUrl('terms-conditions')}
-              className="hover:text-white transition"
-            >
-              Terms &amp; Conditions
+            <span>•</span>
+            <Link href={staticPageUrl('terms-conditions')} className="hover:text-ink">
+              Terms
             </Link>
-            <span aria-hidden="true" className="text-slate-600">•</span>
-            <Link
-              href={staticPageUrl('contact-us')}
-              className="hover:text-white transition"
-            >
-              Contact Desk
+            <span>•</span>
+            <Link href={staticPageUrl('contact-us')} className="hover:text-ink">
+              Contact
             </Link>
-            <span aria-hidden="true" className="text-slate-600">•</span>
+            <span>•</span>
             <a
               href="#top"
-              className="font-bold text-brand hover:text-orange-400 transition inline-flex items-center gap-1"
+              className="font-semibold text-brand-strong hover:underline inline-flex items-center gap-0.5"
             >
               <span>Back to Top</span>
               <span aria-hidden="true">↑</span>
