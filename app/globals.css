@@ -97,8 +97,18 @@ body {
 }
 
 .hero-band {
-  background: radial-gradient(circle at 10% 20%, rgba(255, 241, 236, 0.8) 0%, rgba(255, 255, 255, 1) 50%, rgba(248, 250, 252, 0.9) 100%);
+  position: relative;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 237, 230, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%, rgba(248, 250, 252, 0.95) 100%);
   border-bottom: 1px solid var(--line-subtle);
+}
+.hero-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.75;
 }
 
 .chip {
