@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AdUnit from '@/components/ads/AdUnit';
 import CategoryNewsletter from '@/components/category/CategoryNewsletter';
+import RelatedCategories from '@/components/category/RelatedCategories';
 import JsonLd from '@/components/JsonLd';
 import AuthorBox from '@/components/post/AuthorBox';
 import Breadcrumbs from '@/components/post/Breadcrumbs';
@@ -57,6 +58,17 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
   const updated = !sameDay(post.publishedAt, post.updatedAt);
   const allCategories = getCategories();
   const leadText = stripHtml(post.description || post.excerpt);
+
+  const relatedCategories = getCategories()
+    .filter((c) => c.slug !== post.category.slug)
+    .map((c) => {
+      const catPosts = getPostsByCategory(c.slug);
+      return {
+        category: c,
+        posts: catPosts.slice(0, 3),
+        totalCount: catPosts.length,
+      };
+    });
 
   return (
     <div className="container-page py-6">
@@ -264,32 +276,34 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
             </Link>
           </nav>
 
-          {/* Bottom Recommended Related Field Guides */}
-          <section aria-labelledby="read-next" className="mt-12 border-t border-line/70 pt-8">
-            <div className="flex items-center justify-between gap-4 mb-6">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
-                  Recommended Reading
-                </span>
-                <h2 id="read-next" className="font-display text-xl sm:text-2xl font-bold text-ink">
-                  Related Field Guides
-                </h2>
+          {/* More Guides in Current Category */}
+          {related.length > 0 && (
+            <section aria-labelledby="same-category-guides" className="mt-10 border-t border-line/70 pt-8">
+              <div className="flex items-center justify-between gap-4 mb-5">
+                <div className="flex items-center gap-2">
+                  <span className={`chip chip-${post.category.slug}`}>
+                    {post.category.name}
+                  </span>
+                  <h2 id="same-category-guides" className="font-display text-lg sm:text-xl font-bold text-ink">
+                    More in {post.category.name}
+                  </h2>
+                </div>
+                <Link
+                  href={categoryUrl(post.category.slug)}
+                  className="text-xs font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
+                >
+                  <span>All {post.category.name}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
-              <Link
-                href={categoryUrl(post.category.slug)}
-                className="text-xs font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
-              >
-                <span>All {post.category.name}</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-            </div>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              {related.slice(0, 4).map((p) => (
-                <PostCard key={p.slug} post={p} sizes="(min-width: 640px) 340px, 100vw" />
-              ))}
-            </div>
-          </section>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {related.slice(0, 2).map((p) => (
+                  <PostCard key={p.slug} post={p} sizes="(min-width: 640px) 340px, 100vw" />
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Bottom Pre-Footer Ad */}
           <AdUnit kind="display" className="my-8" />
@@ -390,6 +404,12 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
           </div>
         </aside>
       </div>
+
+      {/* Full-Width Recommended Reading: Related Categories & Recommended Guides (3 posts each) */}
+      <RelatedCategories
+        currentCategoryName={post.category.name}
+        relatedCategories={relatedCategories}
+      />
 
       {/* Full-Width Bottom Dispatch Newsletter */}
       <div className="mt-12">
