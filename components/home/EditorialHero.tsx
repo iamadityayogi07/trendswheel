@@ -9,15 +9,6 @@ type Props = {
   sideStories: Post[];
 };
 
-const trendingTopics = [
-  { name: 'Android Recovery', query: 'bootloop' },
-  { name: 'Silicon & 6G', query: 'architecture' },
-  { name: 'FOSS Apps', query: 'foss' },
-  { name: 'Privacy Forensics', query: 'privacy' },
-  { name: 'SSD & Hardware', query: 'ssd' },
-  { name: 'Battery Physics', query: 'battery' },
-];
-
 export default function EditorialHero({ featured, sideStories }: Props) {
   const heroImg = imageSet(featured.featuredImage, '(min-width: 1024px) 760px, 100vw');
   const heroHref = postUrl(featured.category.slug, featured.slug);
@@ -28,29 +19,22 @@ export default function EditorialHero({ featured, sideStories }: Props) {
 
   return (
     <section aria-labelledby="editorial-lead" className="py-6 sm:py-8 lg:py-10">
-      {/* Editorial Masthead & Topics Bar */}
-      <div className="mb-6 flex flex-col gap-3.5 border-b border-line/80 pb-4 sm:flex-row sm:items-center sm:justify-between">
+      {/* Editorial Header Bar */}
+      <div className="mb-6 flex items-center justify-between border-b border-line/80 pb-3.5">
         <div className="flex items-center gap-2.5">
           <span className="flex size-6 items-center justify-center rounded-lg bg-brand text-xs font-black text-white shadow-xs">
             ★
           </span>
-          <span className="font-display text-xs font-bold uppercase tracking-widest text-ink sm:text-sm">
+          <h2 className="font-display text-xs font-bold uppercase tracking-widest text-ink sm:text-sm">
             Today&apos;s Flagship Investigation
-          </span>
+          </h2>
         </div>
-
-        {/* Quick Topic Jump Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
-          {trendingTopics.map((topic) => (
-            <Link
-              key={topic.name}
-              href={`/archive?q=${encodeURIComponent(topic.query)}`}
-              className="inline-flex shrink-0 items-center rounded-full border border-line bg-white/90 px-2.5 py-1 text-xs font-semibold text-ink-2 transition duration-150 hover:border-brand hover:bg-brand-soft hover:text-brand-strong"
-            >
-              #{topic.name}
-            </Link>
-          ))}
-        </div>
+        <Link
+          href="/archive"
+          className="text-xs font-bold text-brand-strong hover:underline"
+        >
+          Explore Library →
+        </Link>
       </div>
 
       {/* Main Grid: Equal Height via items-stretch */}
