@@ -94,6 +94,7 @@ export default async function CategoryPage({
   const allCategories = getCategories().map((x) => ({
     name: x.name,
     slug: x.slug,
+    count: getPostsByCategory(x.slug).length,
   }));
 
   const relatedCategories = getCategories()

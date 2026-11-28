@@ -24,6 +24,7 @@ export type CategoryPostSummary = {
 type CategoryNavItem = {
   name: string;
   slug: string;
+  count?: number;
 };
 
 type Props = {
@@ -178,7 +179,7 @@ export default function CategoryFeedClient({
   };
 
   return (
-    <div className="mt-8 grid gap-7 lg:grid-cols-[240px_minmax(0,1fr)_300px] xl:grid-cols-[260px_minmax(0,1fr)_310px] items-start">
+    <div className="mt-8 grid gap-7 lg:grid-cols-[240px_minmax(0,1fr)_300px] xl:grid-cols-[260px_minmax(0,1fr)_310px]">
       {/* LEFT SIDEBAR: Topic Filters + Mini Newsletter + Follow */}
       <aside aria-label="Category filters and updates" className="space-y-6">
         {/* Subtopic Filter Card */}
@@ -463,13 +464,16 @@ export default function CategoryFeedClient({
                 <Link
                   key={c.slug}
                   href={categoryUrl(c.slug)}
-                  className={`flex items-center justify-center rounded-xl border py-2.5 px-3 text-xs font-bold no-underline transition ${
+                  className={`flex flex-col items-center justify-center rounded-xl border p-2.5 text-center no-underline transition ${
                     isCurrent
                       ? 'border-brand/40 bg-brand-soft text-brand-strong'
                       : 'border-line/80 bg-surface-2/60 text-ink-2 hover:border-brand hover:text-brand-strong'
                   }`}
                 >
-                  {c.name}
+                  <span className="text-xs font-bold">{c.name}</span>
+                  {c.count !== undefined && (
+                    <span className="text-[10px] text-muted">{c.count} guides</span>
+                  )}
                 </Link>
               );
             })}
@@ -532,8 +536,8 @@ export default function CategoryFeedClient({
         )}
 
         {/* Sticky High-RPM Sidebar Display Unit */}
-        <div className="sticky top-28">
-          <AdUnit kind="display" className="!my-0" />
+        <div className="sticky top-28 z-10">
+          <AdUnit kind="display" className="!my-0 shadow-xs" />
         </div>
       </aside>
     </div>
