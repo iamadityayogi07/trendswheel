@@ -34,12 +34,12 @@ export default function HomePage() {
   const trending = allPosts.slice(5, 9);
   const latestArticles = allPosts.slice(9, 15);
 
-  // Category Hubs: extract top 3 unseen or primary posts per category
+  // Category Hubs: extract top 6 primary posts per category (2 rows of 3)
   const categorySections = categories.map((cat) => {
     const catPosts = getPostsByCategory(cat.slug);
     return {
       category: cat,
-      posts: catPosts.slice(0, 3),
+      posts: catPosts.slice(0, 6),
       totalCount: catPosts.length,
     };
   });
