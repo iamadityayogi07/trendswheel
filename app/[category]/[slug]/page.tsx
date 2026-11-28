@@ -294,7 +294,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
                           loading="lazy"
                           className="w-16 h-11 shrink-0 rounded-lg object-cover bg-surface-2"
                         />
-                        <span className="font-display text-xs font-bold leading-snug text-ink group-hover:text-brand-strong transition line-clamp-2">
+                        <span className="font-display text-sm font-bold leading-snug text-ink group-hover:text-brand-strong transition">
                           {p.title}
                         </span>
                       </Link>
