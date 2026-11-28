@@ -4,8 +4,8 @@ import { getCategories, getSite } from '@/lib/content';
 import { archiveUrl, categoryUrl, homeUrl, staticPageUrl } from '@/lib/url';
 
 const ico = {
-  width: 15,
-  height: 15,
+  width: 17,
+  height: 17,
   viewBox: '0 0 24 24',
   fill: 'none',
   stroke: 'currentColor',
@@ -61,29 +61,29 @@ export default function Footer() {
         aria-hidden="true"
       />
 
-      <div className="container-page py-10">
+      <div className="container-page py-12">
         {/* Main Compact Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:items-start">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:items-start">
           {/* Brand & Publication Summary (5 cols) */}
           <div className="lg:col-span-5">
             <Link href={homeUrl()} className="inline-block" aria-label="TrendsWheel Home">
               <img
                 src={site.logo || '/settings/trendswheel-logo-3471a0.png'}
                 alt="TrendsWheel"
-                width={140}
-                height={40}
-                className="h-9 w-auto object-contain"
+                width={150}
+                height={44}
+                className="h-10 sm:h-11 w-auto object-contain"
                 loading="lazy"
               />
             </Link>
 
-            <p className="mt-3 max-w-sm text-xs leading-relaxed text-ink-2">
+            <p className="mt-3.5 max-w-md text-sm leading-relaxed text-ink-2">
               Independent systems journalism covering physical hardware diagnostics, mobile operating systems, software audits, and privacy architecture.
             </p>
 
-            <div className="mt-3.5 flex items-center gap-3 text-xs text-muted">
+            <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted">
               <span className="inline-flex items-center gap-1.5 font-semibold text-ink">
-                <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                <span className="size-2 rounded-full bg-emerald-500" aria-hidden="true" />
                 248 Verified Guides
               </span>
               <span aria-hidden="true">•</span>
@@ -92,7 +92,7 @@ export default function Footer() {
 
             {/* Compact Social Row */}
             {Object.keys(site.social).length > 0 && (
-              <ul className="mt-4 flex flex-wrap gap-2">
+              <ul className="mt-5 flex flex-wrap gap-2.5">
                 {Object.entries(site.social).map(([name, url]) => (
                   <li key={name}>
                     <a
@@ -101,10 +101,10 @@ export default function Footer() {
                       rel="noopener nofollow"
                       aria-label={name}
                       title={name}
-                      className="flex size-8 items-center justify-center rounded-md border border-line/80 bg-surface-2 text-ink-2 transition-all hover:border-brand hover:bg-brand hover:text-white"
+                      className="flex size-9 items-center justify-center rounded-lg border border-line/80 bg-surface-2 text-ink-2 transition-all hover:border-brand hover:bg-brand hover:text-white"
                     >
                       {socialIcons[name] ?? (
-                        <span className="text-[10px] font-bold uppercase">{name.slice(0, 2)}</span>
+                        <span className="text-xs font-bold uppercase">{name.slice(0, 2)}</span>
                       )}
                     </a>
                   </li>
@@ -115,26 +115,27 @@ export default function Footer() {
 
           {/* Quick Links: Categories (2 cols) */}
           <div className="lg:col-span-2">
-            <span className="font-display text-[11px] font-bold uppercase tracking-wider text-ink">
+            <span className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-ink">
               Categories
             </span>
-            <ul className="mt-3 space-y-2 text-xs">
+            <ul className="mt-4 space-y-2.5 text-sm">
               {categories.map((c) => (
                 <li key={c.slug}>
                   <Link
                     href={categoryUrl(c.slug)}
-                    className="text-ink-2 transition hover:text-brand-strong"
+                    className="text-ink-2 transition hover:text-brand-strong font-medium"
                   >
                     {c.name}
                   </Link>
                 </li>
               ))}
-              <li className="pt-1">
+              <li className="pt-1.5">
                 <Link
                   href={archiveUrl()}
-                  className="font-semibold text-brand-strong hover:underline"
+                  className="font-bold text-sm text-brand-strong hover:underline inline-flex items-center gap-1"
                 >
-                  All Guides →
+                  <span>All Guides</span>
+                  <span aria-hidden="true">→</span>
                 </Link>
               </li>
             </ul>
@@ -142,15 +143,15 @@ export default function Footer() {
 
           {/* Quick Links: Governance (2 cols) */}
           <div className="lg:col-span-2">
-            <span className="font-display text-[11px] font-bold uppercase tracking-wider text-ink">
+            <span className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-ink">
               Company
             </span>
-            <ul className="mt-3 space-y-2 text-xs">
+            <ul className="mt-4 space-y-2.5 text-sm">
               {footerLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-ink-2 transition hover:text-brand-strong"
+                    className="text-ink-2 transition hover:text-brand-strong font-medium"
                   >
                     {l.label}
                   </Link>
@@ -159,7 +160,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/feed.xml"
-                  className="text-ink-2 transition hover:text-brand-strong"
+                  className="text-ink-2 transition hover:text-brand-strong font-medium"
                 >
                   RSS Feed
                 </Link>
@@ -169,30 +170,31 @@ export default function Footer() {
 
           {/* Compact Editorial Desk (3 cols) */}
           <div className="lg:col-span-3">
-            <span className="font-display text-[11px] font-bold uppercase tracking-wider text-ink">
+            <span className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-ink">
               Editorial Desk
             </span>
-            <div className="mt-3 space-y-2 text-xs text-ink-2">
-              <p className="flex items-center gap-1.5 text-muted">
-                <span>📍</span>
-                <span>{site.address}</span>
+            <div className="mt-4 space-y-3 text-sm text-ink-2">
+              <p className="flex items-start gap-2 text-muted">
+                <span className="shrink-0 pt-0.5">📍</span>
+                <span className="leading-snug">{site.address}</span>
               </p>
-              <p className="flex items-center gap-1.5">
-                <span>✉️</span>
+              <p className="flex items-center gap-2">
+                <span className="shrink-0">✉️</span>
                 <a
                   href={`mailto:${site.email}`}
-                  className="font-medium text-brand-strong hover:underline"
+                  className="font-semibold text-brand-strong hover:underline"
                 >
                   {site.email}
                 </a>
               </p>
-              <div className="pt-2 text-[11px]">
+              <div className="pt-2 text-xs sm:text-sm">
                 <span className="text-muted">Need a guide updated? </span>
                 <Link
                   href={staticPageUrl('contact-us')}
-                  className="font-bold text-brand-strong hover:underline"
+                  className="font-bold text-brand-strong hover:underline inline-flex items-center gap-0.5"
                 >
-                  Submit correction →
+                  <span>Submit correction</span>
+                  <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
@@ -200,25 +202,25 @@ export default function Footer() {
         </div>
 
         {/* Compact Bottom Bar */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-line/70 pt-5 text-xs text-muted">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-line/70 pt-6 text-xs sm:text-sm text-muted">
           <p>© {new Date().getFullYear()} TrendsWheel. All rights reserved.</p>
 
-          <div className="flex items-center gap-4">
-            <Link href={staticPageUrl('privacy-policy')} className="hover:text-ink">
-              Privacy
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link href={staticPageUrl('privacy-policy')} className="hover:text-ink transition">
+              Privacy Policy
             </Link>
-            <span>•</span>
-            <Link href={staticPageUrl('terms-conditions')} className="hover:text-ink">
-              Terms
+            <span aria-hidden="true">•</span>
+            <Link href={staticPageUrl('terms-conditions')} className="hover:text-ink transition">
+              Terms &amp; Conditions
             </Link>
-            <span>•</span>
-            <Link href={staticPageUrl('contact-us')} className="hover:text-ink">
-              Contact
+            <span aria-hidden="true">•</span>
+            <Link href={staticPageUrl('contact-us')} className="hover:text-ink transition">
+              Contact Desk
             </Link>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <a
               href="#top"
-              className="font-semibold text-brand-strong hover:underline inline-flex items-center gap-0.5"
+              className="font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
             >
               <span>Back to Top</span>
               <span aria-hidden="true">↑</span>
