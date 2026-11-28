@@ -159,7 +159,7 @@ export default function EditorialHero({ featured, sideStories }: Props) {
             </span>
           </div>
 
-          {/* 4 Content-Filled Editorial Rows (Zero artificial white space) */}
+          {/* 4 Content-Filled Editorial Rows (Image height matched to text section) */}
           <div className="flex flex-1 flex-col divide-y divide-line/60">
             {sideStories.slice(0, 4).map((post, idx) => {
               const href = postUrl(post.category.slug, post.slug);
@@ -175,12 +175,12 @@ export default function EditorialHero({ featured, sideStories }: Props) {
               return (
                 <article
                   key={post.slug}
-                  className="group flex flex-1 items-center gap-3.5 px-4 py-3 sm:px-5 transition duration-150 hover:bg-brand-soft/25"
+                  className="group flex flex-1 items-stretch gap-3.5 px-4 py-3 sm:px-5 transition duration-150 hover:bg-brand-soft/25"
                 >
-                  {/* Thumbnail */}
+                  {/* Thumbnail: stretches to match text section height 1:1 */}
                   <Link
                     href={href}
-                    className="relative aspect-video w-24 sm:w-28 shrink-0 overflow-hidden rounded-lg bg-surface-2 shadow-2xs"
+                    className="relative w-26 sm:w-32 shrink-0 self-stretch min-h-[84px] overflow-hidden rounded-xl bg-surface-2 shadow-xs"
                     tabIndex={-1}
                     aria-hidden="true"
                   >
@@ -197,28 +197,24 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                     />
                   </Link>
 
-                  {/* Story Details */}
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center justify-between gap-1">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-brand-strong">
-                        {rankLabels[idx] || `0${idx + 1} · RECOMMENDED`}
-                      </span>
-                      <span className="text-[10px] text-muted">
-                        {readingMinutes(post.html)}m
-                      </span>
+                  {/* Story Details: matched with image height */}
+                  <div className="min-w-0 flex-1 flex flex-col justify-between py-0.5">
+                    <div>
+                      <div className="flex items-center justify-between gap-1">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-brand-strong">
+                          {rankLabels[idx] || `0${idx + 1} · RECOMMENDED`}
+                        </span>
+                        <span className="text-[10px] text-muted">
+                          {readingMinutes(post.html)}m
+                        </span>
+                      </div>
+
+                      <h3 className="font-display mt-0.5 text-xs sm:text-[13px] font-bold leading-snug line-clamp-2 text-ink">
+                        <Link href={href} className="no-underline transition group-hover:text-brand-strong">
+                          {post.title}
+                        </Link>
+                      </h3>
                     </div>
-
-                    <h3 className="font-display mt-0.5 text-xs sm:text-[13px] font-bold leading-snug line-clamp-2 text-ink">
-                      <Link href={href} className="no-underline transition group-hover:text-brand-strong">
-                        {post.title}
-                      </Link>
-                    </h3>
-
-                    {post.description && (
-                      <p className="mt-0.5 text-[11px] text-muted line-clamp-1">
-                        {stripHtml(post.description)}
-                      </p>
-                    )}
 
                     <div className="mt-1 flex items-center justify-between gap-2 text-xs">
                       <Link href={categoryUrl(post.category.slug)} className={chipClass}>
