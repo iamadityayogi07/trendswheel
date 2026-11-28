@@ -144,10 +144,10 @@ export default function EditorialHero({ featured, sideStories }: Props) {
           </div>
         </article>
 
-        {/* Right Column: Unified Spotlight Panel (5 cols) matching Left Card height 1:1 */}
+        {/* Right Column: Unified Spotlight Panel (5 cols) matching Left Card height with 5 posts */}
         <aside aria-label="Spotlight Deep Dives" className="card flex flex-col h-full border border-line/90 bg-white shadow-md lg:col-span-5 overflow-hidden">
           {/* Panel Header */}
-          <div className="flex items-center justify-between border-b border-line bg-surface-2/60 px-5 py-3.5">
+          <div className="flex items-center justify-between border-b border-line bg-surface-2/60 px-5 py-3 shrink-0">
             <div className="flex items-center gap-2">
               <span className="size-2 rounded-full bg-brand" aria-hidden="true" />
               <h2 className="font-display text-xs font-bold uppercase tracking-widest text-ink">
@@ -159,23 +159,29 @@ export default function EditorialHero({ featured, sideStories }: Props) {
             </span>
           </div>
 
-          {/* 4 Evenly Distributed Editorial Rows with Zero Gaps */}
+          {/* 5 Compact, Content-Filled Editorial Rows (No excessive white space) */}
           <div className="flex flex-1 flex-col justify-between divide-y divide-line/60">
-            {sideStories.slice(0, 4).map((post, idx) => {
+            {sideStories.slice(0, 5).map((post, idx) => {
               const href = postUrl(post.category.slug, post.slug);
               const img = imageSet(post.thumbnailImage || post.featuredImage, '160px');
               const chipClass = `chip chip-${post.category.slug}`;
-              const rankLabels = ['01 · MOST POPULAR', '02 · TRENDING TECH', '03 · SYSTEM GUIDE', '04 · PRIVACY AUDIT'];
+              const rankLabels = [
+                '01 · MOST POPULAR',
+                '02 · TRENDING TECH',
+                '03 · SYSTEM GUIDE',
+                '04 · PRIVACY AUDIT',
+                '05 · MUST READ',
+              ];
 
               return (
                 <article
                   key={post.slug}
-                  className="group flex flex-1 items-center gap-3.5 px-5 py-3.5 transition duration-150 hover:bg-brand-soft/25"
+                  className="group flex items-center gap-3.5 px-4 py-2.5 sm:px-5 sm:py-2.5 transition duration-150 hover:bg-brand-soft/25"
                 >
                   {/* Thumbnail */}
                   <Link
                     href={href}
-                    className="relative aspect-video w-24 shrink-0 overflow-hidden rounded-lg bg-surface-2 sm:w-28 shadow-2xs"
+                    className="relative aspect-video w-22 sm:w-24 shrink-0 overflow-hidden rounded-lg bg-surface-2 shadow-2xs"
                     tabIndex={-1}
                     aria-hidden="true"
                   >
@@ -184,8 +190,8 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                       srcSet={img.srcSet}
                       sizes={img.sizes}
                       alt=""
-                      width={200}
-                      height={112}
+                      width={180}
+                      height={101}
                       loading="lazy"
                       decoding="async"
                       className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -203,13 +209,13 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                       </span>
                     </div>
 
-                    <h3 className="font-display mt-0.5 text-xs sm:text-sm font-bold leading-snug line-clamp-2 text-ink">
+                    <h3 className="font-display mt-0.5 text-xs sm:text-[13px] font-bold leading-snug line-clamp-2 text-ink">
                       <Link href={href} className="no-underline transition group-hover:text-brand-strong">
                         {post.title}
                       </Link>
                     </h3>
 
-                    <div className="mt-1.5 flex items-center justify-between gap-2 text-xs">
+                    <div className="mt-1 flex items-center justify-between gap-2 text-xs">
                       <Link href={categoryUrl(post.category.slug)} className={chipClass}>
                         {post.category.name}
                       </Link>
