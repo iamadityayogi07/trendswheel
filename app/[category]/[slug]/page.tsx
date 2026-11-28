@@ -79,10 +79,12 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
                 <span className="font-medium text-ink-2">Published:</span>
                 <time dateTime={post.publishedAt} className="font-semibold text-ink">{formatDate(post.publishedAt)}</time>
               </span>
-              <span className="inline-flex items-center gap-1.5">
-                <span className="font-medium text-ink-2">Last Updated:</span>
-                <time dateTime={post.updatedAt} className="font-semibold text-ink">{formatDate(post.updatedAt)}</time>
-              </span>
+              {updated && (
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="font-medium text-ink-2">Last Updated:</span>
+                  <time dateTime={post.updatedAt} className="font-semibold text-ink">{formatDate(post.updatedAt)}</time>
+                </span>
+              )}
               <span className="text-muted/60">•</span>
               <span>{readingMinutes(post.html)} min read</span>
               <span className="text-muted/60">•</span>

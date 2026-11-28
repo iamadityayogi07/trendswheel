@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002b49" />
+      <stop offset="50%" stop-color="#004182" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="titleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="200" cy="160" r="150" fill="#60a5fa" opacity="0.12" filter="url(#glow)" />
+  <circle cx="1020" cy="460" r="180" fill="#38bdf8" opacity="0.1" filter="url(#glow)" />
+  <rect x="140" y="70" width="180" height="34" rx="17" fill="#60a5fa" fill-opacity="0.18" stroke="#60a5fa" stroke-width="1.5" />
+  <text x="230" y="93" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">TELECOM ENGINEERING</text>
+  <text x="140" y="165" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" line-height="1.2">
+    <tspan x="140" dy="0">Fix VoLTE &amp; VoWiFi Calling</tspan>
+    <tspan x="140" dy="56" fill="url(#titleGlow)">IMS Status, APN Provisioning &amp; ePDG Tunnels</tspan>
+  </text>
+  <text x="140" y="275" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400">
+    <tspan x="140" dy="0">Deconstructing IP Multimedia Subsystem (IMS) registration, secret *#*#4636#*#* menus,</tspan>
+    <tspan x="140" dy="30">carrier APN bearer tags, UDP Port 500/4500 IPsec traversal, and Wi-Fi calling preference.</tspan>
+  </text>
+  <g transform="translate(140, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">1</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">IMS Status</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Core packet voice</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Dial *#*#4636#*#*</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Verify 'Registered' status</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Flags carrier provisioning</text>
+  </g>
+  <g transform="translate(460, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#60a5fa" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#60a5fa" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">2</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">APN Carrier</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Packet gateway tags</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Add 'ims,ia' to APN type</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Reset APN to factory default</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Binds VoLTE voice bearer</text>
+  </g>
+  <g transform="translate(780, 360)">
+    <rect width="280" height="180" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="48" cy="48" r="24" fill="#10b981" fill-opacity="0.2" />
+    <text x="48" y="55" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" text-anchor="middle">&#x2713;</text>
+    <text x="86" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">VoWiFi Tunnel</text>
+    <text x="86" y="64" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Home router setup</text>
+    <text x="24" y="105" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Unblock UDP 500 &amp; 4500</text>
+    <text x="24" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Enable IPsec Passthrough</text>
+    <text x="24" y="155" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">&#x2022; Set 'Call over Wi-Fi' preferred</text>
+  </g>
+</svg>
