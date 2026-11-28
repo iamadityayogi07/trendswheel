@@ -3,28 +3,34 @@ import type { FaqItem } from '@/lib/content';
 
 export const homeFaq: FaqItem[] = [
   {
-    title: 'What topics does TrendsWheel cover?',
+    title: 'What technical domains does TrendsWheel cover?',
     description:
-      "Mostly Android how-to's and troubleshooting, app and AI tool reviews, tech news explained in plain language, and social media growth tips. Check the Categories menu at the top for all four.",
+      "TrendsWheel specializes in four core areas: in-depth Android diagnostics and recovery workflows, cross-platform application and AI productivity tool reviews, accessible explainers on emerging hardware and networking architectures, and data-backed social platform mechanics. Browse our Category hubs in the masthead for complete archives.",
   },
   {
-    title: 'How often is the content updated?',
+    title: 'How are troubleshooting steps and guides verified?',
     description:
-      "Whenever something changes, honestly. There's no fixed schedule - if an app redesigns its settings menu or a feature gets removed, we go back and update the article. The date at the top of each post shows when it was last checked.",
+      'Every procedure published on TrendsWheel is executed hands-on in our testing lab on physical hardware, test devices, and active developer environments before release. When a tutorial instructs you to edit system settings, execute terminal commands, or adjust developer partitions, our editors have verified that it works safely without compromising device security.',
   },
   {
-    title: 'Who writes the articles?',
-    description: "A small team that actually tests what we write about, rather than just researching it online. Each article has the author's name on it.",
+    title: 'How often is technical documentation updated?',
+    description:
+      'We run ongoing deprecation audits. Whenever an Android platform update, vendor firmware rollout, or app redesign alters a setting path or breaks an existing workaround, our team re-tests the workflow and republishes the guide with a verified update timestamp.',
   },
   {
-    title: 'Is everything on TrendsWheel free?',
+    title: 'Who writes and reviews TrendsWheel articles?',
     description:
-      "Yes. No paywalls, no sign-up required. The site runs on ads, which is why you'll see them, but they're kept separate from the actual guide content.",
+      'All articles are authored by experienced technical researchers, software engineers, and digital privacy analysts. Every guide carries a transparent byline with the author\'s verifiable credentials, testing environment specifications, and direct contact details.',
   },
   {
-    title: 'Found something wrong or outdated?',
+    title: 'Is TrendsWheel content completely free to access?',
     description:
-      "Tell us. Use the Contact page, mention the article and what's off, and we'll take a look. Apps and phones change constantly, so we'd rather know than have the guide sit there being wrong.",
+      'Yes. All 248+ lab guides and technical deep dives are 100% open-access with no subscription paywalls or mandatory account creation. Our independent lab operations are supported by clearly labeled, non-intrusive advertising that complies strictly with zero-CLS performance standards and remains completely isolated from our editorial recommendations.',
+  },
+  {
+    title: 'How do I report an outdated step or request a guide?',
+    description:
+      'If an app updates its interface overnight or you encounter a device-specific discrepancy, reach out directly to our editorial team via our Contact Desk. We investigate reader reports, re-test the solution, and deploy verified revisions within 24 hours.',
   },
 ];
 

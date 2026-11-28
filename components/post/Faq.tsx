@@ -1,42 +1,135 @@
+import Link from 'next/link';
 import type { FaqItem } from '@/lib/content';
 
-/** FAQ accordion with native <details>; answers are in the static HTML. Text is rendered escaped, newlines kept. */
-export default function Faq({ items, heading, headingLevel = 2, centered = false }: { items: FaqItem[]; heading: string; headingLevel?: 2 | 3; centered?: boolean }) {
-  const list = items.filter((i) => (i.title ?? '').trim() || (i.description ?? '').trim());
+type Props = {
+  items: FaqItem[];
+  heading: string;
+  headingLevel?: 2 | 3;
+  centered?: boolean;
+};
+
+/**
+ * Modern Editorial FAQ Accordion with native <details> elements.
+ * Fully static, zero-JS accessible, and structured for Google FAQPage rich snippets.
+ */
+export default function Faq({
+  items,
+  heading,
+  headingLevel = 2,
+  centered = false,
+}: Props) {
+  const list = items.filter(
+    (i) => (i.title ?? '').trim() || (i.description ?? '').trim()
+  );
   if (!list.length) return null;
+
   const H = `h${headingLevel}` as 'h2' | 'h3';
+
   return (
-    <section className={`my-12 ${centered ? '' : 'rounded-[28px] border border-line bg-gradient-to-br from-brand-soft/60 via-white to-surface-2 p-6 sm:p-10 lg:grid lg:grid-cols-[300px_1fr] lg:gap-12'}`} aria-labelledby="faq-heading">
-      <div className={centered ? 'text-center' : 'lg:sticky lg:top-28 lg:self-start'}>
-        {!centered && (
-          <span className="mb-4 flex size-14 items-center justify-center rounded-2xl bg-brand text-2xl font-bold text-white shadow-lg" aria-hidden="true">
+    <section
+      aria-labelledby="faq-heading"
+      className={`my-14 ${
+        centered
+          ? ''
+          : 'rounded-2xl border border-line/80 bg-surface-2/40 p-6 sm:p-10 lg:grid lg:grid-cols-[320px_1fr] lg:gap-12 shadow-2xs'
+      }`}
+    >
+      {/* Header Block */}
+      <div className={centered ? 'text-center max-w-2xl mx-auto' : 'lg:sticky lg:top-28 lg:self-start'}>
+        <div className={`flex items-center gap-2 ${centered ? 'justify-center' : ''}`}>
+          <span className="flex size-5 items-center justify-center rounded-md bg-brand/10 text-[11px] font-bold text-brand-strong">
             ?
           </span>
-        )}
-        <H id="faq-heading" className="font-display text-3xl font-bold sm:text-4xl">
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-strong">
+            Knowledge Base &amp; Editorial FAQ
+          </span>
+        </div>
+
+        <H
+          id="faq-heading"
+          className="font-display mt-2.5 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-ink"
+        >
           {heading}
         </H>
-        <div className={`mt-3 h-1 w-14 rounded-full bg-brand ${centered ? 'mx-auto' : ''}`} aria-hidden="true" />
+
+        <p className="mt-2.5 text-xs sm:text-sm text-ink-2 leading-relaxed">
+          Direct answers regarding our physical hardware verification, editorial independence, update lifecycle, and reader support.
+        </p>
+
+        <div
+          className={`mt-3.5 h-1 w-12 rounded-full bg-brand ${
+            centered ? 'mx-auto' : ''
+          }`}
+          aria-hidden="true"
+        />
       </div>
-      <div className={`space-y-3 ${centered ? 'mx-auto mt-8 max-w-3xl' : 'mt-8 lg:mt-0'}`}>
-        {list.map((f, i) => (
-          <details key={i} className="group rounded-2xl border border-line bg-white shadow-sm transition open:border-brand/40 open:bg-brand-soft/40 open:shadow-md" open={i === 0}>
-            <summary className="flex min-h-14 items-center justify-between gap-4 px-5 py-4 text-left font-display text-lg font-bold leading-snug">
-              <span className="flex items-center gap-3">
-                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-sm font-bold text-brand-strong" aria-hidden="true">
-                  {i + 1}
+
+      {/* Accordion List */}
+      <div className={`space-y-3.5 ${centered ? 'mx-auto mt-8 max-w-3xl' : 'mt-8 lg:mt-0'}`}>
+        {list.map((f, i) => {
+          const numberLabel = String(i + 1).padStart(2, '0');
+
+          return (
+            <details
+              key={f.title || i}
+              className="group rounded-xl border border-line/80 bg-white transition-all duration-200 hover:border-brand/40 open:border-brand/50 open:bg-brand-soft/10 open:shadow-xs"
+              open={i === 0}
+            >
+              <summary className="flex min-h-14 cursor-pointer select-none items-center justify-between gap-4 px-5 py-4 text-left list-none [&::-webkit-details-marker]:hidden">
+                <span className="flex items-center gap-3.5">
+                  <span
+                    className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-surface-2 font-display text-xs font-bold text-ink-2 transition-colors group-hover:bg-brand-soft group-hover:text-brand-strong group-open:bg-brand group-open:text-white"
+                    aria-hidden="true"
+                  >
+                    {numberLabel}
+                  </span>
+                  <span className="font-display text-sm sm:text-base font-bold leading-snug text-ink transition-colors group-hover:text-brand-strong">
+                    {f.title ?? 'Frequently Asked Question'}
+                  </span>
                 </span>
-                <span>{f.title ?? 'FAQ'}</span>
-              </span>
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-line bg-white text-brand-strong transition group-open:rotate-45 group-open:border-brand/40" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </span>
-            </summary>
-            <p className="whitespace-pre-line px-5 pb-5 pl-[4.25rem] text-[1.02rem] leading-relaxed text-ink-2">{f.description ?? ''}</p>
-          </details>
-        ))}
+
+                <span
+                  className="flex size-7 shrink-0 items-center justify-center rounded-full border border-line/80 bg-surface-2 text-ink-2 transition-all duration-200 group-hover:border-brand/40 group-open:rotate-180 group-open:bg-brand group-open:text-white group-open:border-brand"
+                  aria-hidden="true"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </span>
+              </summary>
+
+              <div className="border-t border-line/50 px-5 pb-5 pt-3 sm:px-6 sm:pl-16 text-xs sm:text-sm leading-relaxed text-ink-2">
+                <p className="whitespace-pre-line">{f.description ?? ''}</p>
+              </div>
+            </details>
+          );
+        })}
+
+        {/* Editorial Help Desk Banner */}
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-xl border border-line/80 bg-surface-2/70 p-4 sm:p-5 text-xs text-ink-2">
+          <div className="flex items-center gap-2.5">
+            <span className="text-base" aria-hidden="true">💡</span>
+            <span>Have a technical question or encountered an OS discrepancy not covered above?</span>
+          </div>
+          <div className="flex items-center gap-4 shrink-0">
+            <Link
+              href="/contact-us"
+              className="font-bold text-brand-strong hover:underline inline-flex items-center gap-1"
+            >
+              <span>Ask Editorial Desk</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
