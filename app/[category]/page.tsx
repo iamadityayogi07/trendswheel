@@ -193,8 +193,11 @@ export default async function CategoryPage({
           socialLinks={site.social}
         />
 
+        {/* High-Impact Pre-FAQ Display Unit */}
+        <AdUnit kind="display" className="my-10" />
+
         {/* Category Knowledge Base FAQ */}
-        <div className="mt-14">
+        <div className="mt-10">
           <Faq items={c.faq} heading="Frequently Asked Questions (FAQs)" />
         </div>
 

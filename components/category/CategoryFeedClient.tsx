@@ -373,8 +373,10 @@ export default function CategoryFeedClient({
                 </div>
               </article>
 
-              {/* Strategic In-Feed Ad after 3rd article (high CTR & RPM) */}
-              {idx === 2 && <AdUnit kind="inFeed" className="!my-4" />}
+              {/* Strategic In-Feed Ads: after 3rd article, then every 6 articles as user loads more */}
+              {(idx === 2 || (idx > 2 && (idx - 2) % 6 === 0)) && (
+                <AdUnit kind="inFeed" className="!my-4" />
+              )}
             </Fragment>
           ))}
         </div>
@@ -393,8 +395,8 @@ export default function CategoryFeedClient({
         )}
       </div>
 
-      {/* RIGHT SIDEBAR: Popular + Display Ad + Explore Categories + Latest */}
-      <aside aria-label="Popular and related guides" className="space-y-6">
+      {/* RIGHT SIDEBAR: Popular + Display Ad + Explore Categories + Latest + Sticky Ad */}
+      <aside aria-label="Popular and related guides" className="space-y-6 h-full">
         {/* Popular Guides Card */}
         {popular.length > 0 && (
           <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
@@ -528,6 +530,11 @@ export default function CategoryFeedClient({
             </div>
           </section>
         )}
+
+        {/* Sticky High-RPM Sidebar Display Unit */}
+        <div className="sticky top-28">
+          <AdUnit kind="display" className="!my-0" />
+        </div>
       </aside>
     </div>
   );
