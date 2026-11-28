@@ -171,9 +171,6 @@ export default function ArchivePage() {
               </nav>
             </section>
 
-            {/* High-RPM Sticky Display Ad */}
-            <AdUnit kind="display" className="!my-0 sticky top-28 z-10" />
-
             {/* Explore Topic Hubs Card */}
             <section className="rounded-2xl border border-line/80 bg-white p-5 shadow-2xs">
               <div className="flex items-center gap-2 border-b border-line/60 pb-3">
@@ -207,6 +204,9 @@ export default function ArchivePage() {
 
             {/* Mini Newsletter Card */}
             <CategoryNewsletter variant="sidebar" categoryName="TrendsWheel" />
+
+            {/* High-RPM Sticky Display Ad */}
+            <AdUnit kind="display" className="!my-0 sticky top-28 z-10" />
           </aside>
         </div>
       </div>
