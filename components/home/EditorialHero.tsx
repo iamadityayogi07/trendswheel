@@ -177,10 +177,10 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                   key={post.slug}
                   className="group flex flex-1 items-stretch gap-3.5 px-4 py-3 sm:px-5 transition duration-150 hover:bg-brand-soft/25"
                 >
-                  {/* Thumbnail: stretches to match text section height 1:1 */}
+                  {/* Thumbnail: stretches to match text section height 1:1 with crisp 90-degree edges */}
                   <Link
                     href={href}
-                    className="relative w-26 sm:w-32 shrink-0 self-stretch min-h-[84px] overflow-hidden rounded-xl bg-surface-2 shadow-xs"
+                    className="relative w-26 sm:w-32 shrink-0 self-stretch min-h-[84px] overflow-hidden rounded-none bg-surface-2 shadow-2xs"
                     tabIndex={-1}
                     aria-hidden="true"
                   >
@@ -193,7 +193,7 @@ export default function EditorialHero({ featured, sideStories }: Props) {
                       height={112}
                       loading="lazy"
                       decoding="async"
-                      className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="size-full object-cover rounded-none transition-transform duration-300 group-hover:scale-105"
                     />
                   </Link>
 
